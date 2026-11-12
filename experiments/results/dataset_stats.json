@@ -1,0 +1,345 @@
+{
+  "source_files": [
+    "MSRVTT_JSFUSION_test.csv",
+    "MSRVTT_data.json",
+    "MSRVTT_train.7k.csv",
+    "MSRVTT_train.9k.csv"
+  ],
+  "full_dataset": {
+    "n_videos": 10000,
+    "n_captions": 200000,
+    "captions_per_video": {
+      "mean": 20,
+      "median": 20.0,
+      "min": 20,
+      "max": 20,
+      "std": 0.0
+    },
+    "split_field_values_in_json": {
+      "train": 10000
+    },
+    "official_split_counts_by_id_range": {
+      "train": 6513,
+      "validate": 497,
+      "test": 2990
+    },
+    "clip_duration_sec": {
+      "mean": 15.01,
+      "median": 13.0,
+      "min": 10.0,
+      "max": 30.0,
+      "std": 5.12
+    },
+    "total_hours": 41.7,
+    "n_categories": 20
+  },
+  "protocol": {
+    "train_9k": {
+      "n_videos": 9000,
+      "n_train_pairs": 180000,
+      "from_official_splits": {
+        "train": 6513,
+        "validate": 497,
+        "test": 1990
+      }
+    },
+    "train_7k": {
+      "n_videos": 7010,
+      "n_train_pairs": 140200,
+      "from_official_splits": {
+        "train": 6513,
+        "validate": 497
+      }
+    },
+    "test_1kA": {
+      "n_pairs": 1000,
+      "n_videos": 1000,
+      "from_official_splits": {
+        "test": 1000
+      },
+      "query_in_MSRVTT_captions": 965
+    },
+    "overlap_train9k_test1kA": 0,
+    "overlap_train7k_test1kA": 0,
+    "unused_videos_in_9k_protocol": 0,
+    "steps_per_epoch_bs32_9k": 5625
+  },
+  "caption_length_words": {
+    "train_9k": {
+      "mean": 9.28,
+      "median": 8.0,
+      "min": 2,
+      "max": 72,
+      "std": 4.25
+    },
+    "test_1kA": {
+      "mean": 9.4,
+      "median": 9.0,
+      "min": 3,
+      "max": 30,
+      "std": 4.09
+    }
+  },
+  "vocab_size": {
+    "train_9k": 26259,
+    "test_1kA": 2002
+  },
+  "test_queries_with_temporal_words": {
+    "per_word": {
+      "then": 10,
+      "after": 1,
+      "before": 1,
+      "while": 40,
+      "start": 1,
+      "first": 2,
+      "later": 1,
+      "until": 1,
+      "next": 6,
+      "end": 1,
+      "ends": 1
+    },
+    "any": 63
+  },
+  "categories": {
+    "0": {
+      "train_9k_videos": 659,
+      "test_1kA_videos": 74,
+      "top_words": [
+        "singing",
+        "song",
+        "dancing",
+        "video",
+        "music",
+        "playing"
+      ]
+    },
+    "1": {
+      "train_9k_videos": 234,
+      "test_1kA_videos": 18,
+      "top_words": [
+        "dancing",
+        "talking",
+        "about",
+        "playing",
+        "video",
+        "guitar"
+      ]
+    },
+    "2": {
+      "train_9k_videos": 420,
+      "test_1kA_videos": 53,
+      "top_words": [
+        "game",
+        "video",
+        "playing",
+        "someone",
+        "minecraft",
+        "talking"
+      ]
+    },
+    "3": {
+      "train_9k_videos": 1013,
+      "test_1kA_videos": 95,
+      "top_words": [
+        "playing",
+        "game",
+        "basketball",
+        "ball",
+        "football",
+        "players"
+      ]
+    },
+    "4": {
+      "train_9k_videos": 434,
+      "test_1kA_videos": 58,
+      "top_words": [
+        "about",
+        "talking",
+        "news",
+        "talks",
+        "suit",
+        "speaking"
+      ]
+    },
+    "5": {
+      "train_9k_videos": 248,
+      "test_1kA_videos": 26,
+      "top_words": [
+        "about",
+        "talking",
+        "talks",
+        "stage",
+        "giving",
+        "shirt"
+      ]
+    },
+    "6": {
+      "train_9k_videos": 269,
+      "test_1kA_videos": 30,
+      "top_words": [
+        "talking",
+        "show",
+        "about",
+        "letterman",
+        "singing",
+        "video"
+      ]
+    },
+    "7": {
+      "train_9k_videos": 897,
+      "test_1kA_videos": 122,
+      "top_words": [
+        "talking",
+        "movie",
+        "about",
+        "girl",
+        "video",
+        "scene"
+      ]
+    },
+    "8": {
+      "train_9k_videos": 305,
+      "test_1kA_videos": 38,
+      "top_words": [
+        "cartoon",
+        "animated",
+        "characters",
+        "video",
+        "character",
+        "minecraft"
+      ]
+    },
+    "9": {
+      "train_9k_videos": 739,
+      "test_1kA_videos": 76,
+      "top_words": [
+        "car",
+        "driving",
+        "about",
+        "video",
+        "game",
+        "talking"
+      ]
+    },
+    "10": {
+      "train_9k_videos": 530,
+      "test_1kA_videos": 46,
+      "top_words": [
+        "paper",
+        "how",
+        "showing",
+        "someone",
+        "about",
+        "girl"
+      ]
+    },
+    "11": {
+      "train_9k_videos": 234,
+      "test_1kA_videos": 29,
+      "top_words": [
+        "about",
+        "water",
+        "talking",
+        "walking",
+        "there",
+        "shown"
+      ]
+    },
+    "12": {
+      "train_9k_videos": 342,
+      "test_1kA_videos": 43,
+      "top_words": [
+        "about",
+        "talking",
+        "computer",
+        "black",
+        "talks",
+        "screen"
+      ]
+    },
+    "13": {
+      "train_9k_videos": 555,
+      "test_1kA_videos": 58,
+      "top_words": [
+        "playing",
+        "video",
+        "horse",
+        "about",
+        "game",
+        "dog"
+      ]
+    },
+    "14": {
+      "train_9k_videos": 511,
+      "test_1kA_videos": 47,
+      "top_words": [
+        "girl",
+        "singing",
+        "kids",
+        "show",
+        "stage",
+        "young"
+      ]
+    },
+    "15": {
+      "train_9k_videos": 146,
+      "test_1kA_videos": 13,
+      "top_words": [
+        "about",
+        "talking",
+        "clinton",
+        "news",
+        "hillary",
+        "playing"
+      ]
+    },
+    "16": {
+      "train_9k_videos": 579,
+      "test_1kA_videos": 64,
+      "top_words": [
+        "food",
+        "cooking",
+        "kitchen",
+        "about",
+        "dish",
+        "talking"
+      ]
+    },
+    "17": {
+      "train_9k_videos": 309,
+      "test_1kA_videos": 33,
+      "top_words": [
+        "food",
+        "cooking",
+        "kitchen",
+        "how",
+        "about",
+        "talking"
+      ]
+    },
+    "18": {
+      "train_9k_videos": 425,
+      "test_1kA_videos": 53,
+      "top_words": [
+        "girl",
+        "talking",
+        "about",
+        "show",
+        "makeup",
+        "walking"
+      ]
+    },
+    "19": {
+      "train_9k_videos": 151,
+      "test_1kA_videos": 24,
+      "top_words": [
+        "talking",
+        "car",
+        "about",
+        "girl",
+        "video",
+        "commercial"
+      ]
+    }
+  }
+}

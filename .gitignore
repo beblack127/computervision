@@ -1,0 +1,20 @@
+# third-party code is cloned at a pinned commit by scripts/setup_xpool.sh (not vendored)
+third_party/
+# data, caches, checkpoints, run outputs (live on Colab local disk / Google Drive)
+data/
+cache/
+outputs/
+runs/
+logs/
+*.pth
+*.pt
+*.npy
+*.zip
+*.tar
+# python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+# keep small result summaries
+!experiments/results/**/*.json

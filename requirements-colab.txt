@@ -1,0 +1,9 @@
+# Colab already provides torch / torchvision / opencv / pandas / numpy / scipy / tensorboard.
+# We pin only what matters for faithful reproduction of X-Pool (originally transformers 4.6.1):
+transformers==4.46.3     # tested with torch 2.15 in tests/; avoids transformers 5.x API changes
+ftfy                     # CLIP tokenizer text cleaning, as in the original CLIP preprocessing
+ujson                    # imported by the official X-Pool utils
+gdown                    # official checkpoints are on Google Drive
+huggingface_hub          # MSR-VTT fallback mirror + CLIP weights
+psutil
+pytest
