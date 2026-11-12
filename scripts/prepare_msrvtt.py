@@ -9,7 +9,7 @@ Annotations/splits are NOT downloaded: the official X-Pool repo ships them in
 third_party/xpool/data/MSRVTT (MSRVTT_data.json, MSRVTT_train.9k.csv, MSRVTT_JSFUSION_test.csv).
 
 Usage (Colab):
-  python scripts/prepare_msrvtt.py --drive_dir /content/drive/MyDrive/cv_hw2/data \
+  python scripts/prepare_msrvtt.py --drive_dir "/content/drive/MyDrive/컴비 프로젝트/data" \
       --local_dir /content/data/msrvtt
 Writes <local_dir>/videos/videoN.mp4 (flat) and <local_dir>/prepare_report.json.
 """

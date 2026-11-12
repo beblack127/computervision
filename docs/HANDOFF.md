@@ -13,7 +13,7 @@
 
 | # | 담당 | 할 일 | 상태 |
 |---|---|---|---|
-| 1 | 사용자 | PR `setup/xpool-baseline` 검토 후 merge | ⏳ |
+| 1 | 사용자 | PR `setup/xpool-baseline` 검토 후 merge | ✅ (11/12) |
 | 2 | 사용자 | Colab A100(High-RAM)에서 `notebooks/00_go_no_go.ipynb` 실행 → `experiments/results/go_no_go.json` 커밋, 아래 "go/no-go 결과"에 요약 붙이기 | ⏳ |
 | 3 | Claude | go/no-go 해석 → GO 확정 또는 fallback 결정, ROADMAP §3 연산 예산 갱신 | 2번 이후 |
 | 4 | 사용자 | GO이면 `01_train_baseline.ipynb` seed 24 학습 시작 (Proposal 쓰는 동안 돌려두기) | 3번 이후 |
@@ -30,3 +30,4 @@
 
 ## 세션 로그
 - 2026-11-12 새벽 · Claude · 초기 셋업: 공식 X-Pool 코드 분석, 호환성 수정 3건 발견·적용(antialias, position_ids, torch.load), 프레임 캐시+동일성 테스트, 학습/평가/재개 래퍼, 분석·프록시 도구, 데이터 통계, 문서 일체, 노트북 3개. 남은 일: GPU에서 go/no-go. 다음 담당: 사용자.
+- 2026-11-12 · Claude · Drive 폴더를 `cv_hw2` → `내 드라이브/컴비 프로젝트`로 변경. 이름에 공백이 있어 노트북은 `/content/cv_drive` 심볼릭 링크(DRIVE_ROOT)로 접근함. 노트북 재생성, 스크립트·문서 경로 갱신. 남은 일: go/no-go 실행. 다음 담당: 사용자.
