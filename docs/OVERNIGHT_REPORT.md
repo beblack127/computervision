@@ -116,7 +116,7 @@ X-Pool 후속 연구 9개를 정리했습니다(학회, 핵심 아이디어, 확
 1. **PR 확인 후 merge** (5분): GitHub에서 PR을 열어 훑어보고 Merge하세요. 노트북이 `main` 브랜치에서 코드를 받아오므로 merge가 먼저 필요합니다.
 2. **go/no-go 실행** (1~1.5시간, 대부분 기다리는 시간)
    - Colab → 런타임 유형: **A100 + 높은 RAM** → `notebooks/00_go_no_go.ipynb` 열기 (GitHub에서 열기 또는 업로드) → 모두 실행
-   - 처음에 Google Drive 마운트를 허용해야 합니다. 데이터 사본(~6.5GB)이 `내 드라이브/cv_hw2/`에 저장됩니다.
+   - 처음에 Google Drive 마운트를 허용해야 합니다. 데이터 사본(~6.5GB)이 `내 드라이브/컴비 프로젝트/`에 저장됩니다.
    - 마지막 셀에 **DECISION: GO / NO-GO**가 출력됩니다.
 3. **결과 공유**: 마지막 셀 출력을 `docs/HANDOFF.md`의 "go/no-go 결과"에 붙여넣고 `experiments/results/go_no_go.json`과 함께 커밋하세요. 또는 그냥 채팅에 붙여주셔도 됩니다. 제가 해석해서 다음 계획을 확정합니다.
 4. **GO이면 바로 baseline 학습 시작**: `01_train_baseline.ipynb`(SEED=24). Proposal을 쓰는 동안 돌려 두면 일정에 여유가 생깁니다.
@@ -138,7 +138,7 @@ X-Pool 후속 연구 9개를 정리했습니다(학회, 핵심 아이디어, 확
 | 증상 | 해결 |
 |---|---|
 | `wget` 다운로드 실패/매우 느림 | 스크립트가 자동으로 Hugging Face 미러로 전환합니다. 둘 다 실패하면 알려주세요 |
-| `gdown` 실패("Too many users…") | 브라우저에서 README 링크(`scripts/download_checkpoints.sh` 안)를 열어 `내 드라이브/cv_hw2/checkpoints/official_9k/model_best.pth`로 직접 저장한 뒤 셀을 다시 실행 |
+| `gdown` 실패("Too many users…") | 브라우저에서 README 링크(`scripts/download_checkpoints.sh` 안)를 열어 `내 드라이브/컴비 프로젝트/checkpoints/official_9k/model_best.pth`로 직접 저장한 뒤 셀을 다시 실행 |
 | 디스크 부족 (프레임 캐시) | 캐시 셀의 `build` 명령에 `--format png`를 추가(약 절반 크기, 약간 느림) |
 | 재평가 R@1이 46.9와 1 이상 차이 | ROADMAP §4 디버그 체크리스트 순서로 확인. 결과 JSON을 주시면 제가 진단하겠습니다 |
 | 학습 중 Colab 끊김 | 노트북 01을 처음부터 다시 실행하면 마지막으로 끝난 epoch부터 이어서 학습 |

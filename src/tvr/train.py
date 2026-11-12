@@ -7,7 +7,7 @@ Official command being reproduced (README of the authors, MSR-VTT-9k):
 Equivalent here:
   python -m tvr.train --exp_name xpool_9k_s24 --cache_dir /content/cache --batch_size 32 \
       --noclip_lr 3e-5 --transformer_dropout 0.3 --huggingface --dataset_name MSRVTT \
-      --msrvtt_train_file 9k --output_dir /content/drive/MyDrive/cv_hw2/runs
+      --msrvtt_train_file 9k --output_dir "/content/drive/MyDrive/컴비 프로젝트/runs"
 
 Benchmark mode (go/no-go): add --max_steps 200 --evals_per_epoch 0
 """

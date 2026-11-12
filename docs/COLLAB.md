@@ -43,7 +43,7 @@
 - run 이름: `<method>_<split>_s<seed>`. 예: `xpool_9k_s24`, `ours-i1_9k_s0`
 - 베이스라인 seed: **24(공식 기본값), 0, 1**. 우리 방법도 같은 seed를 씁니다.
 - 프록시 실행 이름: `P###`. Full 실행 이름: `E###`(LOG.md에 번호 부여)
-- 체크포인트와 dump는 Google Drive(`cv_hw2/runs/`)에 두고, git에는 작은 JSON만 넣습니다.
+- 체크포인트와 dump는 Google Drive(`내 드라이브/컴비 프로젝트/runs/`)에 두고, git에는 작은 JSON만 넣습니다.
 - 숫자 표기: 소수 첫째 자리, seed 3개는 평균 ± 표준편차
 
 ## 4. 디렉터리 소유

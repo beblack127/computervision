@@ -10,7 +10,8 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 OUT = os.path.join(ROOT, "notebooks")
 
 SETUP = r'''# ==== 0. Settings (edit if needed) ====
-DRIVE_ROOT = "/content/drive/MyDrive/cv_hw2"      # persistent: archive copy, checkpoints, runs
+DRIVE_DIR  = "/content/drive/MyDrive/컴비 프로젝트"  # Google Drive folder (persistent: data copy, checkpoints, runs)
+DRIVE_ROOT = "/content/cv_drive"                   # space-free alias (symlink) of DRIVE_DIR, used in all shell commands
 REPO_URL   = "https://github.com/beblack127/computervision.git"
 BRANCH     = "main"
 REPO       = "/content/computervision"
@@ -21,7 +22,13 @@ NUM_WORKERS = 8                                    # official default; keep fixe
 from google.colab import drive
 drive.mount("/content/drive")
 import os, subprocess, json, time
-os.makedirs(DRIVE_ROOT, exist_ok=True)
+os.makedirs(DRIVE_DIR, exist_ok=True)
+# The folder name contains a space, which would split unquoted paths in `!` shell commands -> use a symlink
+if os.path.islink(DRIVE_ROOT) and os.readlink(DRIVE_ROOT) != DRIVE_DIR:
+    os.remove(DRIVE_ROOT)
+if not os.path.exists(DRIVE_ROOT):
+    os.symlink(DRIVE_DIR, DRIVE_ROOT)
+print("Drive folder:", DRIVE_DIR, "->", DRIVE_ROOT, "| contents:", sorted(os.listdir(DRIVE_ROOT)))
 !nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
 !nproc && free -g | head -2 && df -h /content | tail -1
 '''
@@ -109,7 +116,7 @@ def go_no_go():
             "print('\\nDECISION:', 'GO ✅' if summary['GO'] else 'NO-GO ⚠️  -> see docs/ROADMAP.md Fallbacks')\n"),
         nbf.v4.new_markdown_cell(
             "## After running\n"
-            "1. Download `experiments/results/go_no_go.json` (or copy from Drive `cv_hw2/go_no_go.json`) and commit it "
+            "1. Download `experiments/results/go_no_go.json` (or copy from Drive `컴비 프로젝트/go_no_go.json`) and commit it "
             "in VSCode (`experiments/results/go_no_go.json`).\n"
             "2. Paste the printed summary into `docs/HANDOFF.md` (Status section) so Claude/Codex can plan the next step.\n"
             "3. These numbers (GPU, memory, timings) feed the Proposal's *Dataset & compute* section."),
