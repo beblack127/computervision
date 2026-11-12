@@ -61,20 +61,26 @@ def fetch_archive(drive_dir, local_tmp):
     return dst, src
 
 
+def is_video_entry(name):
+    """True for real videos; skips macOS AppleDouble files (e.g. MSRVTT.zip ships 4 `._videoN.mp4`, 4 KB each)."""
+    base = os.path.basename(name)
+    return base.endswith(".mp4") and not base.startswith("._") and "__MACOSX" not in name
+
+
 def extract_flat(archive, out_videos):
     os.makedirs(out_videos, exist_ok=True)
     n = 0
     if archive.endswith(".zip"):
         with zipfile.ZipFile(archive) as z:
             for m in z.infolist():
-                if m.filename.endswith(".mp4"):
+                if is_video_entry(m.filename):
                     with z.open(m) as src, open(os.path.join(out_videos, os.path.basename(m.filename)), "wb") as dst:
                         shutil.copyfileobj(src, dst)
                     n += 1
     else:
         with tarfile.open(archive) as t:
             for m in t.getmembers():
-                if m.isfile() and m.name.endswith(".mp4"):
+                if m.isfile() and is_video_entry(m.name):
                     f = t.extractfile(m)
                     with open(os.path.join(out_videos, os.path.basename(m.name)), "wb") as dst:
                         shutil.copyfileobj(f, dst)
@@ -93,6 +99,9 @@ def main():
     videos = os.path.join(a.local_dir, "videos")
     n = extract_flat(archive, videos)
     t2 = time.time()
+    for f in os.listdir(videos):  # remove AppleDouble files left by an older extraction
+        if f.startswith("._"):
+            os.remove(os.path.join(videos, f))
     ids = {f[:-4] for f in os.listdir(videos) if f.endswith(".mp4")}
     expected = {f"video{i}" for i in range(10000)}
     report = {"source": source, "archive": os.path.basename(archive),

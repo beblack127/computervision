@@ -108,7 +108,8 @@ def _work(job):
 
 def build(videos_dir, cache_dir, fmt="npy", workers=None, video_ids=None):
     os.makedirs(cache_dir, exist_ok=True)
-    files = sorted(f for f in os.listdir(videos_dir) if f.endswith(".mp4"))
+    # skip macOS AppleDouble files such as `._video7.mp4` (not videos; MSRVTT.zip contains 4)
+    files = sorted(f for f in os.listdir(videos_dir) if f.endswith(".mp4") and not f.startswith("._"))
     if video_ids is not None:
         keep = set(video_ids)
         files = [f for f in files if f[:-4] in keep]
