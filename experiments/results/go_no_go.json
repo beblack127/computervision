@@ -1,0 +1,49 @@
+{
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_GB": 39.49,
+  "cpu_count": 12,
+  "ram_GB": 83.5,
+  "data_source": "drive-cache",
+  "n_videos": 10000,
+  "n_missing": 0,
+  "cache_build_seconds": 760.1,
+  "cache_GB": 27.6,
+  "official_ckpt_t2v": {
+    "R1": 46.9,
+    "R5": 72.8,
+    "R10": 82.2,
+    "R50": 95.3,
+    "R100": 97.6,
+    "MedR": 2.0,
+    "MeanR": 14.293
+  },
+  "official_ckpt_v2t": {
+    "R1": 44.4,
+    "R5": 73.3,
+    "R10": 84.0,
+    "R50": 96.8,
+    "R100": 98.5,
+    "MedR": 2.0,
+    "MeanR": 8.961
+  },
+  "eval_seconds": 43.6,
+  "benchmark": {
+    "steps_measured": 189,
+    "sec_per_step_mean": 0.7040026263585166,
+    "sec_per_step_median": 0.7029414176940918,
+    "data_wait_mean": 0.000168106430455258,
+    "data_wait_fraction": 0.00023878665243735756,
+    "train_seconds": 149.1,
+    "one_eval_seconds": 44.0,
+    "estimated_full_run_hours": 6.1
+  },
+  "peak_gpu_mem_GB": 17.05,
+  "versions": {
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "transformers": "4.46.3",
+    "opencv": "4.14.0",
+    "python": "3.13.16"
+  },
+  "GO": false
+}
