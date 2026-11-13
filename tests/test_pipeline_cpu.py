@@ -146,8 +146,31 @@ def test_full_mini_run_eval_and_resume(tiny_world, monkeypatch):
         load_xpool_state_dict(m, {"state_dict": sd}, verbose=False)
 
     # resume from end of epoch 1 state file (written after epoch 2 here; just check it loads)
+    meta1 = json.load(open(run / "run_meta.json"))
+    assert meta1["n_sessions"] == 1 and all(h["session"] == 0 for h in hist if "R1" in h)
     _run(w["train"], w["common"] + ["--exp_name", "mini", "--num_epochs", "2", "--evals_per_epoch", "2",
                                     "--resume_state", str(run / "resume_state.pth")], monkeypatch)
+    # session bookkeeping survives the resume (total time = all sessions, not only the last one)
+    meta2 = json.load(open(run / "run_meta.json"))
+    assert meta2["n_sessions"] == 2 and meta2["sessions"][0] == meta1["sessions"][0]
+    assert meta2["sessions"][1]["resumed"] is True
+    assert meta2["total_wall_hours"] >= meta1["total_wall_hours"]
+    assert meta2["started_at"] == meta1["started_at"] and "best_checkpoint" in meta2
+
+
+def test_runlog_upgrades_legacy_meta(tmp_path):
+    """run_meta.json written before session tracking (seed 24 run) is kept as session 0."""
+    from types import SimpleNamespace
+    from tvr.runlog import RunLogger
+    legacy = {"started_at": "2026-11-13 02:09:53", "finished_at": "2026-11-13 03:23:09", "total_wall_hours": 1.221,
+              "train_seconds": 4356.1, "env": {"gpu_name": "NVIDIA A100-SXM4-80GB"}, "best_checkpoint": {"epoch": 5}}
+    json.dump(legacy, open(tmp_path / "run_meta.json", "w"))
+    rl = RunLogger(str(tmp_path), SimpleNamespace(exp_name="x", resume_state="r.pth"))
+    meta = json.load(open(tmp_path / "run_meta.json"))
+    assert meta["n_sessions"] == 2 and meta["sessions"][0]["wall_hours"] == 1.221
+    assert meta["sessions"][0]["gpu_name"] == "NVIDIA A100-SXM4-80GB" and meta["best_checkpoint"] == {"epoch": 5}
+    rl.log_eval({"R1": 1.0})
+    assert json.loads(open(tmp_path / "eval_history.jsonl").readline())["session"] == 1
 
 
 def test_proxy_extract_and_train(tiny_world, monkeypatch, tmp_path):

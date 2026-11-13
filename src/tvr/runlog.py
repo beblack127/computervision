@@ -73,44 +73,106 @@ def environment_info(repo_root=None):
     return info
 
 
+def _now():
+    return time.strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _previous_sessions(prev):
+    """Sessions recorded by an earlier (interrupted or finished) run of the same experiment."""
+    if not prev:
+        return []
+    if "sessions" in prev:
+        return list(prev["sessions"])
+    env = prev.get("env", {})  # run_meta.json written before session tracking existed
+    return [{"index": 0, "started_at": prev.get("started_at"), "last_update": prev.get("finished_at"),
+             "finished_at": prev.get("finished_at"), "wall_hours": prev.get("total_wall_hours"),
+             "train_seconds": prev.get("train_seconds"), "gpu_name": env.get("gpu_name"),
+             "gpu_total_memory_GB": env.get("gpu_total_memory_GB"),
+             "peak_gpu_mem_reserved_GB": prev.get("peak_gpu_mem_reserved_GB"),
+             "note": "legacy record: sessions before this one were not tracked"}]
+
+
 class RunLogger:
+    """Writes run_meta.json and eval_history.jsonl.
+
+    A run interrupted on Colab is continued with --resume_state. Each process is one *session*;
+    run_meta.json keeps every session (time, GPU, peak memory) so totals cover the whole run.
+    Every eval record carries its session index; `wall_seconds` is measured from session start.
+    """
+
     def __init__(self, run_dir, config, repo_root=None, xpool_commit=None):
         self.run_dir = run_dir
         os.makedirs(run_dir, exist_ok=True)
         self.t_start = time.time()
+        self.meta_path = os.path.join(run_dir, "run_meta.json")
+        prev = None
+        if getattr(config, "resume_state", None) and os.path.exists(self.meta_path):
+            try:
+                with open(self.meta_path) as f:
+                    prev = json.load(f)
+            except (OSError, ValueError):
+                prev = None
+        env = environment_info(repo_root)
+        self.sessions = _previous_sessions(prev)
+        self.session = {"index": len(self.sessions), "started_at": _now(), "last_update": None,
+                        "wall_hours": 0.0, "gpu_name": env.get("gpu_name"),
+                        "gpu_total_memory_GB": env.get("gpu_total_memory_GB"),
+                        "resumed": bool(getattr(config, "resume_state", None))}
+        self.sessions.append(self.session)
         self.meta = {
             "exp_name": getattr(config, "exp_name", None),
-            "started_at": time.strftime("%Y-%m-%d %H:%M:%S"),
-            "env": environment_info(repo_root),
+            "started_at": self.sessions[0].get("started_at") or self.session["started_at"],
+            "env": env,
             "xpool_commit": xpool_commit,
             "config": {k: v for k, v in vars(config).items() if _jsonable(v)},
         }
+        if prev and "best_checkpoint" in prev:
+            self.meta["best_checkpoint"] = prev["best_checkpoint"]
         self.hist_path = os.path.join(run_dir, "eval_history.jsonl")
         self.flush()
 
     def log_eval(self, record):
         record = {k: (float(v) if hasattr(v, "__float__") and not isinstance(v, (str, bool)) else v)
                   for k, v in record.items()}
+        record["session"] = self.session["index"]
+        record["time"] = _now()
         record["wall_seconds"] = round(time.time() - self.t_start, 1)
         with open(self.hist_path, "a") as f:
             f.write(json.dumps(record) + "\n")
+        self.flush()  # heartbeat: an interrupted session still records its time up to the last eval
 
     def update(self, **kw):
         self.meta.update(kw)
         self.flush()
 
     def finish(self, **kw):
-        self.meta["finished_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
-        self.meta["total_wall_hours"] = round((time.time() - self.t_start) / 3600, 3)
+        self.session["finished_at"] = _now()
         if torch.cuda.is_available():
-            self.meta["peak_gpu_mem_allocated_GB"] = round(torch.cuda.max_memory_allocated() / 1024 ** 3, 2)
-            self.meta["peak_gpu_mem_reserved_GB"] = round(torch.cuda.max_memory_reserved() / 1024 ** 3, 2)
+            self.session["peak_gpu_mem_allocated_GB"] = round(torch.cuda.max_memory_allocated() / 1024 ** 3, 2)
+            self.session["peak_gpu_mem_reserved_GB"] = round(torch.cuda.max_memory_reserved() / 1024 ** 3, 2)
+            self.meta["peak_gpu_mem_allocated_GB"] = self.session["peak_gpu_mem_allocated_GB"]
+            self.meta["peak_gpu_mem_reserved_GB"] = self.session["peak_gpu_mem_reserved_GB"]
+        if "train_seconds" in kw:
+            self.session["train_seconds"] = kw["train_seconds"]
+        self.meta["finished_at"] = self.session["finished_at"]
         self.meta.update(kw)
         self.flush()
 
     def flush(self):
-        with open(os.path.join(self.run_dir, "run_meta.json"), "w") as f:
+        self.session["last_update"] = _now()
+        self.session["wall_hours"] = round((time.time() - self.t_start) / 3600, 3)
+        self.meta["sessions"] = self.sessions
+        self.meta["n_sessions"] = len(self.sessions)
+        self.meta["this_session_wall_hours"] = self.session["wall_hours"]
+        self.meta["total_wall_hours"] = round(sum(s.get("wall_hours") or 0 for s in self.sessions), 3)
+        peaks = [s["peak_gpu_mem_reserved_GB"] for s in self.sessions if s.get("peak_gpu_mem_reserved_GB")]
+        if peaks:
+            self.meta["peak_gpu_mem_reserved_GB_all_sessions"] = max(peaks)
+        self.meta["gpus_used"] = sorted({s["gpu_name"] for s in self.sessions if s.get("gpu_name")})
+        tmp = self.meta_path + ".tmp"
+        with open(tmp, "w") as f:
             json.dump(self.meta, f, indent=2, default=str)
+        os.replace(tmp, self.meta_path)
 
 
 def _jsonable(v):
