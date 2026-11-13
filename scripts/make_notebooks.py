@@ -129,37 +129,59 @@ def train_baseline():
     nb.cells = [
         nbf.v4.new_markdown_cell(
             "# 01 · Train X-Pool baseline (MSR-VTT 9k, official recipe)\n"
-            "One run per seed (planned seeds: 24 = official default, 0, 1). ~ see go_no_go.json for time.\n"
-            "If Colab disconnects, just re-run all cells: training resumes from the last finished epoch "
-            "(`resume_state.pth` on Drive)."),
-        nbf.v4.new_code_cell(SETUP + "\nSEED = 24   # <- change per run\nEXP = f\"xpool_9k_s{SEED}\"\n"),
+            "Runs every seed in `SEEDS` **in order**: train → evaluate (best/last + frame-order probes) → collect "
+            "small result files into Drive `results/<run>/`. Planned seeds: 24 (done 11/13), 0, 1. ~6.1 h per seed.\n\n"
+            "**If Colab disconnects, just re-run all cells.** Finished seeds/steps are skipped and training resumes "
+            "from the last finished epoch (`resume_state.pth` on Drive). If training crashes inside a session it is "
+            "resumed automatically (up to 3 attempts)."),
+        nbf.v4.new_code_cell(SETUP + "\nSEEDS = [0, 1]   # <- run in this order; finished seeds are skipped\n"),
         nbf.v4.new_code_cell(CLONE),
         nbf.v4.new_code_cell(DATA),
         nbf.v4.new_code_cell(CACHE),
         nbf.v4.new_code_cell(
-            "# ==== 4. Train (official 9k hyper-parameters) ====\n"
-            "RUN_DIR = f'{DRIVE_ROOT}/runs/{EXP}'; os.makedirs(RUN_DIR, exist_ok=True)\n"
-            "resume = f'--resume_state {RUN_DIR}/resume_state.pth' if os.path.exists(f'{RUN_DIR}/resume_state.pth') else ''\n"
-            "print('resume:', bool(resume))\n"
-            "!PYTHONPATH=src python -m tvr.train --exp_name {EXP} --seed {SEED} " + COMMON +
+            "# ==== 4. For each seed: train -> evaluate -> collect (re-running skips what is already done) ====\n"
+            "import glob, shutil\n"
+            "for SEED in SEEDS:\n"
+            "    EXP = f'xpool_9k_s{SEED}'\n"
+            "    RUN_DIR = f'{DRIVE_ROOT}/runs/{EXP}'; os.makedirs(RUN_DIR, exist_ok=True)\n"
+            "    print(f'\\n========== {EXP} ==========', flush=True)\n"
+            "    # -- train (official 9k hyper-parameters); model_last.pth exists only after all 5 epochs --\n"
+            "    for attempt in range(1, 4):\n"
+            "        if os.path.exists(f'{RUN_DIR}/model_last.pth'):\n"
+            "            break\n"
+            "        resume = f'--resume_state {RUN_DIR}/resume_state.pth' if os.path.exists(f'{RUN_DIR}/resume_state.pth') else ''\n"
+            "        print(f'[{EXP}] train attempt {attempt}, resume: {bool(resume)}', flush=True)\n"
+            "        !PYTHONPATH=src python -m tvr.train --exp_name {EXP} --seed {SEED} " + COMMON +
             " --noclip_lr 3e-5 --transformer_dropout 0.3 --output_dir {DRIVE_ROOT}/runs"
-            " --tb_log_dir {DRIVE_ROOT}/tb {resume} 2>&1 | tee -a {RUN_DIR}/train.log | grep -E 'Val Epoch|R@1|Best|Saving|resume|Error|Traceback'\n"),
-        nbf.v4.new_code_cell(
-            "# ==== 5. Evaluate best (official protocol) and last checkpoints, with analysis dumps ====\n"
-            "for ck in ['model_best', 'model_last']:\n"
-            "    !PYTHONPATH=src python -m tvr.evaluate --exp_name {EXP}_eval_{ck} " + COMMON +
-            " --output_dir {DRIVE_ROOT}/runs --ckpt {RUN_DIR}/{ck}.pth --dump_dir {RUN_DIR}/dump_{ck}\n"
-            "# temporal-sensitivity probes on the official-protocol checkpoint\n"
-            "for order in ['reversed', 'shuffled', 'middle']:\n"
-            "    !PYTHONPATH=src python -m tvr.evaluate --exp_name {EXP}_eval_probe " + COMMON +
+            " --tb_log_dir {DRIVE_ROOT}/tb {resume} 2>&1 | tee -a {RUN_DIR}/train.log"
+            " | grep --line-buffered -E 'Val Epoch|R@1|Best|Saving|resume|runlog|Error|Traceback'\n"
+            "    if not os.path.exists(f'{RUN_DIR}/model_last.pth'):\n"
+            "        raise RuntimeError(f'{EXP}: training did not finish after 3 attempts, see {RUN_DIR}/train.log')\n"
+            "    print(f'[{EXP}] training finished', flush=True)\n"
+            "    # -- evaluate best (official protocol) and last, plus temporal probes on best --\n"
+            "    for ck in ['model_best', 'model_last']:\n"
+            "        if not os.path.exists(f'{RUN_DIR}/dump_{ck}/eval_original.json'):\n"
+            "            !PYTHONPATH=src python -m tvr.evaluate --exp_name {EXP}_eval_{ck} " + COMMON +
+            " --output_dir {DRIVE_ROOT}/runs --ckpt {RUN_DIR}/{ck}.pth --dump_dir {RUN_DIR}/dump_{ck} 2>&1 | tail -20\n"
+            "    for order in ['reversed', 'shuffled', 'middle']:\n"
+            "        if not os.path.exists(f'{RUN_DIR}/dump_model_best/eval_{order}.json'):\n"
+            "            !PYTHONPATH=src python -m tvr.evaluate --exp_name {EXP}_eval_probe " + COMMON +
             " --output_dir {DRIVE_ROOT}/runs --ckpt {RUN_DIR}/model_best.pth --dump_dir {RUN_DIR}/dump_model_best"
-            " --frame_order {order}\n"),
-        nbf.v4.new_code_cell(
-            "# ==== 6. Collect small result files into the repo (commit them from VSCode) ====\n"
-            "dst = f'{REPO}/experiments/results/{EXP}'; os.makedirs(dst, exist_ok=True)\n"
-            "!cp {RUN_DIR}/run_meta.json {RUN_DIR}/eval_history.jsonl {dst}/ 2>/dev/null; "
-            "cp {RUN_DIR}/dump_model_best/eval_*.json {dst}/ 2>/dev/null; "
-            "cp {RUN_DIR}/dump_model_last/eval_original.json {dst}/eval_last_original.json 2>/dev/null; ls {dst}\n"),
+            " --frame_order {order} 2>&1 | tail -20\n"
+            "    # -- collect small files: Drive results/<run>/ (download this folder) + repo copy --\n"
+            "    for dst in [f'{DRIVE_ROOT}/results/{EXP}', f'{REPO}/experiments/results/{EXP}']:\n"
+            "        os.makedirs(dst, exist_ok=True)\n"
+            "        for f in ['run_meta.json', 'eval_history.jsonl', 'train.log']:\n"
+            "            if os.path.exists(f'{RUN_DIR}/{f}'):\n"
+            "                shutil.copy(f'{RUN_DIR}/{f}', dst)\n"
+            "        for f in glob.glob(f'{RUN_DIR}/dump_model_best/eval_*.json'):\n"
+            "            shutil.copy(f, dst)\n"
+            "        if os.path.exists(f'{RUN_DIR}/dump_model_last/eval_original.json'):\n"
+            "            shutil.copy(f'{RUN_DIR}/dump_model_last/eval_original.json', f'{dst}/eval_last_original.json')\n"
+            "    best = json.load(open(f'{RUN_DIR}/dump_model_best/eval_original.json'))['t2v']\n"
+            "    last = json.load(open(f'{RUN_DIR}/dump_model_last/eval_original.json'))['t2v']\n"
+            "    print(f'[{EXP}] DONE  t2v R@1 best {best[\"R1\"]} / last {last[\"R1\"]}  ->  {DRIVE_DIR}/results/{EXP}/', flush=True)\n"
+            "print('\\nALL SEEDS DONE:', SEEDS)\n"),
     ]
     return nb
 

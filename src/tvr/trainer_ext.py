@@ -10,6 +10,7 @@ import random
 import numpy as np
 import torch
 
+from tvr.runlog import retry_io
 from tvr.xpool_bridge import ensure_xpool_on_path
 
 ensure_xpool_on_path()
@@ -41,7 +42,7 @@ class ProjectTrainer(Trainer):
         state = {"epoch": epoch, "global_step": self.global_step, "state_dict": self.model.state_dict()}
         if self.save_optimizer:
             state["optimizer"] = self.optimizer.state_dict()
-        torch.save(state, os.path.join(self.checkpoint_dir, "model_best.pth"))
+        retry_io(lambda: torch.save(state, os.path.join(self.checkpoint_dir, "model_best.pth")), "save model_best.pth")
         self.best_record = {"epoch": epoch, "global_step": self.global_step,
                             "best_window_R1": float(self.best_window)}
         if self.run_logger is not None:
@@ -64,8 +65,12 @@ class ProjectTrainer(Trainer):
             "best_record": self.best_record,
         }
         tmp = self._resume_path() + ".tmp"
-        torch.save(state, tmp)
-        os.replace(tmp, self._resume_path())
+
+        def _write():
+            torch.save(state, tmp)
+            os.replace(tmp, self._resume_path())
+
+        retry_io(_write, "save resume_state.pth")
 
     def load_resume_state(self, path):
         s = torch.load(path, map_location="cpu", weights_only=False)
@@ -94,6 +99,5 @@ class ProjectTrainer(Trainer):
                 self.run_logger.log_eval({"epoch": epoch, "type": "epoch_end", **res})
             self._save_resume_state(epoch)
         if self.save_last:
-            torch.save({"epoch": self.num_epochs, "global_step": self.global_step,
-                        "state_dict": self.model.state_dict()},
-                       os.path.join(self.checkpoint_dir, "model_last.pth"))
+            last = {"epoch": self.num_epochs, "global_step": self.global_step, "state_dict": self.model.state_dict()}
+            retry_io(lambda: torch.save(last, os.path.join(self.checkpoint_dir, "model_last.pth")), "save model_last.pth")

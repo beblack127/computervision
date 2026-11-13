@@ -77,6 +77,26 @@ def _now():
     return time.strftime("%Y-%m-%d %H:%M:%S")
 
 
+def retry_io(fn, what, tries=5, wait=3.0, fatal=True):
+    """Run a file operation, retrying on OSError.
+
+    Google Drive (FUSE) on Colab sometimes reports a file as missing for a moment; in the
+    seed-24 run this killed training (FileNotFoundError on eval_history.jsonl). Checkpoint
+    writes use fatal=True (re-raise after the last try); bookkeeping uses fatal=False.
+    """
+    for i in range(tries):
+        try:
+            return fn()
+        except OSError as e:
+            if i == tries - 1:
+                if fatal:
+                    raise
+                print(f"[runlog] WARNING: {what} failed after {tries} tries ({e!r}); continuing", flush=True)
+                return None
+            print(f"[runlog] {what}: {e!r}; retry {i + 1}/{tries - 1} in {wait * (i + 1):.0f}s", flush=True)
+            time.sleep(wait * (i + 1))
+
+
 def _previous_sessions(prev):
     """Sessions recorded by an earlier (interrupted or finished) run of the same experiment."""
     if not prev:
@@ -129,6 +149,7 @@ class RunLogger:
         if prev and "best_checkpoint" in prev:
             self.meta["best_checkpoint"] = prev["best_checkpoint"]
         self.hist_path = os.path.join(run_dir, "eval_history.jsonl")
+        self._pending = []
         self.flush()
 
     def log_eval(self, record):
@@ -137,8 +158,15 @@ class RunLogger:
         record["session"] = self.session["index"]
         record["time"] = _now()
         record["wall_seconds"] = round(time.time() - self.t_start, 1)
-        with open(self.hist_path, "a") as f:
-            f.write(json.dumps(record) + "\n")
+        self._pending.append(json.dumps(record) + "\n")
+
+        def _append():
+            with open(self.hist_path, "a") as f:
+                f.write("".join(self._pending))
+            self._pending.clear()
+
+        # never let bookkeeping kill training; unwritten lines are retried at the next eval
+        retry_io(_append, "append eval_history.jsonl", fatal=False)
         self.flush()  # heartbeat: an interrupted session still records its time up to the last eval
 
     def update(self, **kw):
@@ -169,10 +197,13 @@ class RunLogger:
         if peaks:
             self.meta["peak_gpu_mem_reserved_GB_all_sessions"] = max(peaks)
         self.meta["gpus_used"] = sorted({s["gpu_name"] for s in self.sessions if s.get("gpu_name")})
-        tmp = self.meta_path + ".tmp"
-        with open(tmp, "w") as f:
-            json.dump(self.meta, f, indent=2, default=str)
-        os.replace(tmp, self.meta_path)
+        def _write():
+            tmp = self.meta_path + ".tmp"
+            with open(tmp, "w") as f:
+                json.dump(self.meta, f, indent=2, default=str)
+            os.replace(tmp, self.meta_path)
+
+        retry_io(_write, "write run_meta.json", fatal=False)
 
 
 def _jsonable(v):
