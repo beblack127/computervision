@@ -193,3 +193,33 @@ def test_proxy_extract_and_train(tiny_world, monkeypatch, tmp_path):
                   "--out", str(out)], monkeypatch)
         r = json.load(open(out))
         assert 0 <= r["final"]["t2v"]["R1"] <= 100
+
+
+def test_bookkeeping_survives_transient_drive_errors(tmp_path):
+    """A momentary FileNotFoundError on Drive must not stop training (seed 24, session 1)."""
+    from types import SimpleNamespace
+    from tvr.runlog import RunLogger, retry_io
+    calls = {"n": 0}
+
+    def flaky():
+        calls["n"] += 1
+        if calls["n"] < 3:
+            raise FileNotFoundError("drive hiccup")
+        return "ok"
+    assert retry_io(flaky, "flaky", wait=0) == "ok" and calls["n"] == 3
+    with pytest.raises(FileNotFoundError):
+        retry_io(lambda: open(tmp_path / "missing" / "x"), "fatal", tries=2, wait=0)
+
+    rl = RunLogger(str(tmp_path / "run"), SimpleNamespace(exp_name="x"))
+    good = rl.hist_path
+    rl.hist_path = str(tmp_path / "gone" / "eval_history.jsonl")  # directory vanished for a moment
+    import tvr.runlog as runlog
+    orig, runlog.time.sleep = runlog.time.sleep, (lambda s: None)
+    try:
+        rl.log_eval({"R1": 1.0})  # must not raise
+    finally:
+        runlog.time.sleep = orig
+    rl.hist_path = good
+    rl.log_eval({"R1": 2.0})  # the missed line is written now, in order
+    lines = [json.loads(x) for x in open(good)]
+    assert [x["R1"] for x in lines] == [1.0, 2.0]

@@ -2,12 +2,13 @@
 
 > 모든 참여자(사용자/Claude/Codex)가 세션을 시작할 때 읽고, 끝날 때 맨 아래 "세션 로그"에 한 줄을 추가합니다(추가만 함).
 
-## 현재 상태 (2026-11-12 기준)
+## 현재 상태 (2026-11-14 기준)
 
-- 단계: **Phase 1 (Proposal) + Phase 2 (재현) 진행 중**. G0는 **GO 확정**(11/12, 사용자). 9k 전체, 축소 없음
-- 진행 중: `01_train_baseline.ipynb` seed 24 학습(E001, 11/12 시작, 약 6.1h 예상)
-- 검증 완료(GPU/실데이터): 공식 9k ckpt 재평가 t2v R@1 46.9(논문과 동일), MSR-VTT 영상 10,000개 누락 없음, A100에서 0.704 s/step
-- 검증 완료(CPU): 테스트 9개 통과(HF `datasets` 설치 환경 포함)
+- 단계: **Phase 1 (Proposal, 11/15 마감) + Phase 2 (재현) 진행 중**. G0는 **GO 확정**(11/12, 사용자). 9k 전체, 축소 없음
+- 완료: seed 24 (E001) t2v R@1 46.7 (best=last), 논문 46.9 대비 −0.2. 결과 `experiments/results/xpool_9k_s24/`
+- 진행 중: `01_train_baseline.ipynb`로 seed 0 → 1 연속 학습 (E002, E003, 각 약 6.1h)
+- 검증 완료(GPU/실데이터): 공식 9k ckpt 재평가 t2v R@1 46.9(논문과 동일), MSR-VTT 영상 10,000개 누락 없음, A100에서 0.704 s/step, 이어서 학습해도 결과 동일(E001 세션 간 7개 step 비교)
+- 검증 완료(CPU): 테스트 11개 통과(HF `datasets` 설치 환경 포함)
 
 ## 다음 할 일
 
@@ -16,9 +17,11 @@
 | 1 | 사용자 | PR `setup/xpool-baseline` 검토 후 merge | ✅ (11/12) |
 | 2 | 사용자 | Colab A100(High-RAM)에서 `notebooks/00_go_no_go.ipynb` 실행 → `experiments/results/go_no_go.json` 커밋, 아래 "go/no-go 결과"에 요약 붙이기 | ✅ (11/12) |
 | 3 | Claude | go/no-go 해석 → GO 확정 또는 fallback 결정, ROADMAP §3 연산 예산 갱신 | ✅ (11/12, GO) |
-| 4 | 사용자 | GO이면 `01_train_baseline.ipynb` seed 24 학습 시작 (Proposal 쓰는 동안 돌려두기) | ⏳ 진행 중 (11/12) |
-| 4a | 사용자 | seed 24가 끝나면 결과 파일(`experiments/results/xpool_9k_s24/`) 커밋, LOG.md E001 채우기 → seed 0, 1 순서로 학습 | 4번 이후 |
-| 4b | Claude | E001 학습 곡선(`eval_history.jsonl`)과 best/last 결과 해석, 재현 표 초안 | 4a 이후 |
+| 4 | 사용자 | GO이면 `01_train_baseline.ipynb` seed 24 학습 시작 (Proposal 쓰는 동안 돌려두기) | ✅ (11/13) |
+| 4a | 사용자 | seed 24가 끝나면 결과 파일(`experiments/results/xpool_9k_s24/`) 커밋, LOG.md E001 채우기 → seed 0, 1 순서로 학습 | ✅ 결과 정리(11/14) · seed 0→1 ⏳ |
+| 4b | Claude | E001 학습 곡선(`eval_history.jsonl`)과 best/last 결과 해석, 재현 표 초안 | ✅ 해석(11/14) · 재현 표는 3 seed 후 |
+| 4c | 사용자 | seed 0, 1이 끝나면 Drive `컴비 프로젝트/results/xpool_9k_s0`, `_s1` 폴더를 `experiments/results/`에 넣기 | seed 1 이후 |
+| 4d | Claude | 3 seed 평균±표준편차 재현 표, G1 판정, LOG E002·E003 | 4c 이후 |
 | 5 | 사용자 | X-Pool 논문 정독 (`BASELINE_XPOOL.md`를 옆에 두고) → 모르는 부분은 Claude에게 질문 | ⏳ |
 | 6 | 사용자 | MSR-VTT 라이선스/이용 조건을 공식 페이지에서 확인 (`DATASET_FACTSHEET.md`) | ⏳ |
 | 7 | Codex | (선택) 노트북 00 실행 중 문제가 생기면 디버깅 | 대기 |
@@ -45,3 +48,4 @@
 - 2026-11-12 · Claude · Drive 폴더를 `cv_hw2` → `내 드라이브/컴비 프로젝트`로 변경. 이름에 공백이 있어 노트북은 `/content/cv_drive` 심볼릭 링크(DRIVE_ROOT)로 접근함. 노트북 재생성, 스크립트·문서 경로 갱신. 남은 일: go/no-go 실행. 다음 담당: 사용자.
 - 2026-11-12 · Claude · go/no-go 1차 실행 실패 수정: ① 공식 X-Pool 폴더(`datasets/` 등)는 `__init__.py`가 없는 namespace 패키지라 Colab의 HF `datasets`에 가려짐 → `xpool_bridge`가 공식 패키지를 직접 바인딩, 회귀 테스트 추가(HF datasets 설치 환경에서 9/9 통과) ② 캐시 에러 4건은 MSRVTT.zip 안의 macOS `._videoN.mp4`(4KB, 영상 아님) → 추출·캐시에서 제외. 실제 영상 10,000개는 정상 ③ 공식 ckpt는 개당 1.83GB(옵티마이저 포함) → 7k는 `--with-7k`일 때만 다운로드. 1차 실행 관측: 프레임 캐시 793s, 27.6GB, 해상도 전부 240x320. 다음 담당: 사용자(노트북 00 재실행).
 - 2026-11-12 · Claude · go/no-go 결과 해석: 공식 ckpt 재평가 t2v 46.9/72.8/82.2/2/14.3으로 논문과 일치, full run 추정 6.1h(자동 판정 NO-GO, 6h 기준 0.1h 초과). 사용자가 9k 전체로 GO 확정. go_no_go.json을 experiments/results/로 이동, LOG B001·B002 기록, ROADMAP §0·Phase 0·§3(A100 61–79h, Drive 용량) 갱신. 남은 일: seed 24 학습 완료 후 결과 커밋, Drive 용량(Q1)·compute unit(Q2) 답변. 다음 담당: 사용자.
+- 2026-11-14 · Claude · E001(seed 24) 결과 정리: t2v R@1 46.7/R@5 71.9/R@10 82.0/MdR 2/MnR 13.8, best=last. 순서 probe(reversed·shuffled 동일, middle 29.9)로 H1 구조적 확인. 학습이 세션 3개로 나뉘었고(끊김 1, Drive 쓰기 오류로 중단 1) run_meta가 마지막 세션만 기록 → PR #4로 세션 누적 기록, 이번에 Drive 일시 오류 재시도(기록은 실패해도 학습 계속) 추가, 노트북 01을 SEEDS=[0,1] 순차 실행·자동 재개·결과 Drive results/ 수집으로 변경. seed 24 세션 기록은 sessions_reconstructed.json으로 복원(합 ≥7.27h). 남은 일: seed 0→1 학습. 다음 담당: 사용자.

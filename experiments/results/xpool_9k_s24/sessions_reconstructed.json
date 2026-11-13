@@ -1,0 +1,38 @@
+{
+  "source": "reconstructed from eval_history.jsonl (wall_seconds resets at each session) and train.log; run_meta.json of this run only covers the last session (bug fixed in PR #4)",
+  "n_sessions": 3,
+  "resume_count_in_train_log": 2,
+  "sessions": [
+    {
+      "index": 0,
+      "evals_logged": 42,
+      "global_step_first_eval": 563,
+      "global_step_last_eval": 23625,
+      "wall_hours_until_last_eval": 5.172,
+      "end": "Colab disconnected during epoch 5 (time after the last eval is not recorded)"
+    },
+    {
+      "index": 1,
+      "evals_logged": 7,
+      "global_step_first_eval": 23063,
+      "global_step_last_eval": 26437,
+      "wall_hours_until_last_eval": 0.879,
+      "end": "crashed: FileNotFoundError writing eval_history.jsonl on Drive (train.log), resumed from epoch 5 start"
+    },
+    {
+      "index": 2,
+      "evals_logged": 10,
+      "global_step_first_eval": 23063,
+      "global_step_last_eval": 28125,
+      "wall_hours_until_last_eval": 1.218,
+      "end": "finished",
+      "gpu_name": "NVIDIA A100-SXM4-80GB",
+      "wall_hours_run_meta": 1.221,
+      "peak_gpu_mem_reserved_GB": 17.56
+    }
+  ],
+  "total_wall_hours_lower_bound": 7.27,
+  "counted_evals_for_model_selection": 50,
+  "resume_determinism": "7 global steps were evaluated in two sessions; all metrics identical",
+  "gpu_note": "all sessions on A100 (user); memory size recorded only for the last session"
+}
