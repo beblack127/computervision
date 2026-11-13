@@ -9,7 +9,7 @@
 |---|---|---|
 | 주제 | Text-to-Video Retrieval | 영상 주제 선호. 교수님 연구실(Cap4Bridge)과 접점 |
 | 베이스라인 | X-Pool (CVPR 2022), 공식 코드 고정 커밋 | 예시 목록에 있음. A100 1장으로 전체 재현 가능 |
-| 데이터 | MSR-VTT, **9k 학습 / 1k-A 테스트, 축소 없음** | X-Pool 주 설정. go/no-go로 시간 확인 후 확정 |
+| 데이터 | MSR-VTT, **9k 학습 / 1k-A 테스트, 축소 없음** | X-Pool 주 설정. **11/12 GO 확정**(사용자): 공식 ckpt 재평가가 논문 값과 일치, full run 추정 6.1h(기준 6h를 0.1h 초과했으나 허용) |
 | 보고 방식 | t2v R@1/5/10, MdR, MnR (+v2t). **best-on-test와 last 둘 다**, seed 3개 평균±표준편차 | `BASELINE_XPOOL.md` §3 |
 | 플랜 B | 시간 부족 → 7k 학습(논문 보고값 43.9) / 재현 실패 → 디버그 체크리스트 / 치명적 실패(11/14 전) → QD-DETR | 아래 §4 |
 
@@ -36,6 +36,7 @@
 - [사용자] `experiments/results/go_no_go.json` 커밋 + `HANDOFF.md`에 요약 붙이기
 - [Claude] 결과 해석 → GO/NO-GO 확정, Phase 1 계획 조정
 - **G0 통과 조건**: 공식 ckpt 재평가 R@1이 46.9±1.0 이내 **그리고** full run 추정 ≤ 6시간
+- **G0 결과 (11/12)**: R@1 46.9(논문과 동일), full run 추정 6.1h → 자동 판정 NO-GO였으나 **GO 확정**. 근거: data_wait 0.02%로 GPU 연산이 병목이라 설정으로 줄일 여지가 없고, 평가 50회는 공식 모델 선택 규칙이라 줄이면 안 됨. 7k로 줄여도 4.9h로 1.2h만 절약되는데 데이터 기준(충실한 재현)에서 손해. 상세: `HANDOFF.md` "go/no-go 결과"
 
 ### Phase 1. Proposal (~11/15)
 과제가 요구하는 세 항목과 우리 근거:
@@ -78,15 +79,28 @@
 - [Codex] 코드 zip 정리(README 실행법, third_party 포함 여부 결정), 그림 최종화
 - [사용자] Final 작성: 시도했으나 실패한 아이디어 포함, 최고 방법과 이유, 시각화, 남은 한계
 
-## 3. 연산 예산 (G0 후 갱신)
+## 3. 연산 예산 (G0 후 갱신, 11/12)
 
-| 항목 | full run 횟수 | 비고 |
+T = **6.1h/run** (A100-40GB 측정: 0.704 s/step × 28,125 step + 평가 50회 × 44s). 본 방법이 모듈을 추가하면 늘어날 수 있음.
+
+| 항목 | full run 횟수 | A100 시간 | 비고 |
+|---|---|---|---|
+| 베이스라인 재현 | 3 | 18.3h | seed 24/0/1 |
+| 예비 결과 | 1–2 | 6.1–12.2h | Intermediate용 |
+| 본 방법 | 3 | 18.3h | 동일 seed |
+| ablation | 3–5 | 18.3–30.5h | 가능하면 seed 1개 |
+| **합계** | **10–13** | **약 61–79h** | 프록시 실험은 별도(무시 가능 수준) |
+
+Google Drive 용량 (추정, 첫 run 후 실측으로 교체):
+
+| 항목 | 용량 | 비고 |
 |---|---|---|
-| 베이스라인 재현 | 3 | seed 24/0/1 |
-| 예비 결과 | 1–2 | Intermediate용 |
-| 본 방법 | 3 | 동일 seed |
-| ablation | 3–5 | 가능하면 seed 1개 |
-| **합계** | **10–13 runs × T시간** | T = go_no_go 추정치. 프록시 실험은 별도(무시 가능 수준) |
+| `data/MSRVTT.zip` | 6.55GB | 고정 |
+| `checkpoints/official_9k` | 1.83GB | 고정. `official_7k`(1.83GB)는 플랜 B가 아니면 삭제 가능 |
+| run 1회 | 약 3.2GB | model_best·model_last 각 ~0.6GB + resume_state ~1.8GB(모델+옵티마이저) + dump <0.2GB |
+| run이 끝난 뒤 | 약 1.4GB | 학습이 끝나면 `resume_state.pth`는 지워도 됨(이어서 학습할 때만 필요) |
+
+주의: resume_state는 저장 중에 임시 파일(.tmp)이 하나 더 생기므로 ~1.8GB 여유가 더 필요. 무료 15GB로는 run 1회 진행 중에도 빠듯함.
 
 ## 4. Fallback / 디버그 체크리스트
 
