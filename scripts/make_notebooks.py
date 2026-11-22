@@ -190,9 +190,13 @@ def analysis():
     nb = nbf.v4.new_notebook()
     nb.cells = [
         nbf.v4.new_markdown_cell(
-            "# 02 · Limitation analysis on a trained run (CPU runtime is enough)\n"
-            "Inputs: `dump_model_best/dump_*.pt` from notebook 01 and the frame cache (only for thumbnails)."),
-        nbf.v4.new_code_cell(SETUP + "\nEXP = 'xpool_9k_s24'\nRUN_DIR = f'{DRIVE_ROOT}/runs/{EXP}'\n"),
+            "# 02 · Limitation analysis on a trained run\n"
+            "Inputs: `dump_model_best/dump_*.pt` + `model_best.pth` written by notebook 01 (seed 24 already has them "
+            "on Drive), and the frame cache (only for gallery thumbnails).\n\n"
+            "Runtime: **A100 recommended** so the cost timings (cell 5) are meaningful; cells 3–4 also run on CPU.\n\n"
+            "Outputs go to Drive `runs/<EXP>/analysis/` and are copied to `results/<EXP>/analysis/` (download that "
+            "folder and commit it as `experiments/results/<EXP>/analysis/`)."),
+        nbf.v4.new_code_cell(SETUP + "\nEXP = 'xpool_9k_s24'   # <- change to xpool_9k_s0 / _s1 once they exist\nRUN_DIR = f'{DRIVE_ROOT}/runs/{EXP}'\nassert os.path.exists(f'{RUN_DIR}/dump_model_best/dump_original.pt'), 'run notebook 01 for this seed first'\n"),
         nbf.v4.new_code_cell(CLONE),
         nbf.v4.new_code_cell(
             "# ==== Analysis report: per-category, query length, temporal words, hubness, frame-order probes ====\n"
@@ -206,7 +210,24 @@ def analysis():
             "    !python scripts/prepare_msrvtt.py --drive_dir {DRIVE_ROOT}/data --local_dir {LOCAL_DATA}\n"
             "    !PYTHONPATH=src python -m tvr.frame_cache build --videos_dir {LOCAL_DATA}/videos --cache_dir {CACHE_DIR}\n"
             "!PYTHONPATH=src python analysis/failure_gallery.py --dump {RUN_DIR}/dump_model_best/dump_original.pt "
-            "--ckpt {RUN_DIR}/model_best.pth --cache_dir {CACHE_DIR} --out_dir {RUN_DIR}/analysis/gallery --n 12\n"),
+            "--ckpt {RUN_DIR}/model_best.pth --cache_dir {CACHE_DIR} --out_dir {RUN_DIR}/analysis/gallery --n 12\n"
+            "!PYTHONPATH=src python analysis/failure_gallery.py --dump {RUN_DIR}/dump_model_best/dump_original.pt "
+            "--ckpt {RUN_DIR}/model_best.pth --cache_dir {CACHE_DIR} --out_dir {RUN_DIR}/analysis/gallery_near_miss "
+            "--n 12 --select near_miss\n"),
+        nbf.v4.new_code_cell(
+            "# ==== 5. Query-dependent pooling vs cost (proposal feedback): accuracy, per-query gain, two-stage, timing ====\n"
+            "!PYTHONPATH=src python analysis/cost_tradeoff.py --dump {RUN_DIR}/dump_model_best/dump_original.pt "
+            "--ckpt {RUN_DIR}/model_best.pth --data_dir third_party/xpool/data/MSRVTT --out_dir {RUN_DIR}/analysis/cost\n"
+            "print(open(f'{RUN_DIR}/analysis/cost/cost_report.md').read())\n"),
+        nbf.v4.new_code_cell(
+            "# ==== 6. Collect analysis outputs (small files) into Drive results/<EXP>/analysis/ ====\n"
+            "import shutil\n"
+            "dst = f'{DRIVE_ROOT}/results/{EXP}/analysis'\n"
+            "if os.path.exists(dst):\n"
+            "    shutil.rmtree(dst)\n"
+            "shutil.copytree(f'{RUN_DIR}/analysis', dst)\n"
+            "!du -sh {dst}\n"
+            "print('download this folder and commit it as experiments/results/' + EXP + '/analysis/ :', dst)\n"),
     ]
     return nb
 
