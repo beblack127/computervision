@@ -2,7 +2,11 @@
 
 > 모든 참여자(사용자/Claude/Codex)가 세션을 시작할 때 읽고, 끝날 때 맨 아래 "세션 로그"에 한 줄을 추가합니다(추가만 함).
 
-## 현재 상태 (2026-11-14 기준)
+## 현재 상태 (2026-11-23 기준)
+
+- **11/23 업데이트**: Proposal 제출 완료(11/15), 피드백 수신. 피드백 반영으로 Phase 3에 비용-정확도 분석 추가(ROADMAP §5). Intermediate 마감 11/29 23:59. seed 0·1 결과는 아직 저장소에 없음(확인 필요)
+
+### 11/14 기준 기록
 
 - 단계: **Phase 1 (Proposal, 11/15 마감) + Phase 2 (재현) 진행 중**. G0는 **GO 확정**(11/12, 사용자). 9k 전체, 축소 없음
 - 완료: seed 24 (E001) t2v R@1 46.7 (best=last), 논문 46.9 대비 −0.2. 결과 `experiments/results/xpool_9k_s24/`
@@ -10,7 +14,20 @@
 - 검증 완료(GPU/실데이터): 공식 9k ckpt 재평가 t2v R@1 46.9(논문과 동일), MSR-VTT 영상 10,000개 누락 없음, A100에서 0.704 s/step, 이어서 학습해도 결과 동일(E001 세션 간 7개 step 비교)
 - 검증 완료(CPU): 테스트 11개 통과(HF `datasets` 설치 환경 포함)
 
-## 다음 할 일
+## 다음 할 일 (11/23~, Intermediate)
+
+| # | 담당 | 할 일 | 상태 |
+|---|---|---|---|
+| N1 | 사용자 | seed 0·1 진행 상황 확인: Drive `컴비 프로젝트/runs/xpool_9k_s0`, `_s1`에 `model_last.pth`가 있으면 완료. 없으면 `01_train_baseline.ipynb` 다시 실행(끝난 부분은 건너뛰고 이어서 학습) | ⏳ |
+| N2 | 사용자 | `02_analysis.ipynb` 실행(EXP=xpool_9k_s24, A100 권장) → Drive `results/xpool_9k_s24/analysis/`를 `experiments/results/xpool_9k_s24/analysis/`로 커밋 | ⏳ |
+| N3 | Claude | 분석 결과 해석: H1~H7 판정, Intermediate용 표·그림·정성 예시 선정 | N2 이후 |
+| N4 | 함께 | 개선 방향 1개 확정 (G2', 11/25) | N3 이후 |
+| N5 | Codex | 선정 방향 프록시 구현 + 테스트 | N4 이후 |
+| N6 | 사용자 | 프록시 실행 → (가능하면) full run 1회 | N5 이후 |
+| N7 | Claude | seed 0·1 결과 들어오면 3 seed 재현 표, G1 판정, LOG E002·E003 | N1 이후 |
+| N8 | 사용자 | Intermediate 작성(11/27~29) → Claude 점검 | |
+
+### 이전 할 일 (11/14 기준)
 
 | # | 담당 | 할 일 | 상태 |
 |---|---|---|---|
@@ -50,3 +67,4 @@
 - 2026-11-12 · Claude · go/no-go 결과 해석: 공식 ckpt 재평가 t2v 46.9/72.8/82.2/2/14.3으로 논문과 일치, full run 추정 6.1h(자동 판정 NO-GO, 6h 기준 0.1h 초과). 사용자가 9k 전체로 GO 확정. go_no_go.json을 experiments/results/로 이동, LOG B001·B002 기록, ROADMAP §0·Phase 0·§3(A100 61–79h, Drive 용량) 갱신. 남은 일: seed 24 학습 완료 후 결과 커밋, Drive 용량(Q1)·compute unit(Q2) 답변. 다음 담당: 사용자.
 - 2026-11-14 · Claude · E001(seed 24) 결과 정리: t2v R@1 46.7/R@5 71.9/R@10 82.0/MdR 2/MnR 13.8, best=last. 순서 probe(reversed·shuffled 동일, middle 29.9)로 H1 구조적 확인. 학습이 세션 3개로 나뉘었고(끊김 1, Drive 쓰기 오류로 중단 1) run_meta가 마지막 세션만 기록 → PR #4로 세션 누적 기록, 이번에 Drive 일시 오류 재시도(기록은 실패해도 학습 계속) 추가, 노트북 01을 SEEDS=[0,1] 순차 실행·자동 재개·결과 Drive results/ 수집으로 변경. seed 24 세션 기록은 sessions_reconstructed.json으로 복원(합 ≥7.27h). 남은 일: seed 0→1 학습. 다음 담당: 사용자.
 - 2026-11-14 새벽 · Claude · Proposal 작성 가이드 `docs/PROPOSAL_OUTLINE.md` 작성: 목차(배점 3항목 뼈대), 섹션별 개조식(사실·수치·출처 표시, 해석 자리는 사용자 몫으로 비움), 표·그림 9종 제안, 작성 팁·용어 통일표·제출 체크리스트, 선행연구 지도(14편), 논문 읽기 가이드. 결정 반영: 후속 연구 = Prompt Switch·T-MASS·Cap4Bridge, Proposal에는 개선 방향과 E001 수치 제외(파이프라인 검증만), 충실성 조치는 Plan 본문, AI 사용 고지 포함. 새로 확인한 사실: 논문(새 파라미터 lr 1e-5, warmup 언급 없음) vs 공식 README/코드(3e-5, warmup 10%), 클립 길이 논문 10–32초 vs annotation 10–30초. 미확인: Cap4Bridge MSR-VTT 수치, 실제 영상 50개 verify 출력. 다음 담당: 사용자(Proposal 작성).
+- 2026-11-23 · Claude · Proposal 피드백 반영: ROADMAP Phase 3에 3-B 비용-정확도 분석·3-C 실패-풀링 연결 추가, 일정 재조정(§1, §5), IDEAS에 H7·I6 추가. 새 스크립트 `analysis/cost_tradeoff.py`(같은 모델로 X-Pool vs 평균 풀링, 질의별 득실, 2단계 검색, 갤러리 1k~10k 시간·메모리) + 테스트 2개, 노트북 02에 비용 셀·아슬아슬한 실패 갤러리·결과 수집 셀 추가. 남은 일: N1(seed 0·1 확인), N2(노트북 02 실행). 다음 담당: 사용자.
