@@ -1,6 +1,6 @@
 # Query-dependent pooling: accuracy vs cost (auto-generated)
 
-dump: `/content/cv_drive/runs/xpool_9k_s24/dump_model_best/dump_original.pt`  ·  device: cuda
+dump: `/content/cv_drive/runs/xpool_9k_s24/dump_model_best/dump_original.pt`  ·  device: cuda (NVIDIA A100-SXM4-80GB, 79.3 GB)
 sanity (re-computed X-Pool sims vs dump, max |diff|): 2.98e-08
 
 ## Same trained model, two scoring rules (1k-A, t2v)
@@ -85,7 +85,7 @@ Caveat: the encoder was trained with X-Pool pooling; mean pooling is swapped in 
 
 | gallery | mean ms | X-Pool ms | two-stage P=100 ms | X-Pool peak MB | index MB mean / X-Pool |
 |---|---|---|---|---|---|
-| 1000 | 0.23 | 104.3 | 1008.2 | 1304 | 2.0 / 23.4 |
-| 2000 | 0.17 | 174.0 | 964.3 | 1333 | 3.9 / 46.9 |
-| 5000 | 0.36 | 434.0 | 943.9 | 1422 | 9.8 / 117.2 |
-| 10000 | 0.64 | 867.4 | 944.3 | 1567 | 19.5 / 234.4 |
+| 1000 | 0.23 | 96.4 | 22.7 | 1304 | 2.0 / 23.4 |
+| 2000 | 0.19 | 173.9 | 24.1 | 1333 | 3.9 / 46.9 |
+| 5000 | 0.36 | 433.5 | 27.3 | 1422 | 9.8 / 117.2 |
+| 10000 | 0.67 | 865.9 | 32.0 | 1567 | 19.5 / 234.4 |
