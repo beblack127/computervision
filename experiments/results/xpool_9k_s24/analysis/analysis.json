@@ -1,0 +1,687 @@
+{
+  "overall": {
+    "n": 1000,
+    "R1": 46.7,
+    "R5": 71.89999999999999,
+    "R10": 82.0,
+    "MdR": 2.0,
+    "MnR": 13.786
+  },
+  "per_category": {
+    "0": {
+      "n": 74,
+      "R1": 36.486486486486484,
+      "R5": 66.21621621621621,
+      "R10": 79.72972972972973,
+      "MdR": 2.0,
+      "MnR": 16.054054054054056
+    },
+    "1": {
+      "n": 18,
+      "R1": 27.77777777777778,
+      "R5": 38.88888888888889,
+      "R10": 55.55555555555556,
+      "MdR": 8.0,
+      "MnR": 49.94444444444444
+    },
+    "2": {
+      "n": 53,
+      "R1": 26.41509433962264,
+      "R5": 52.83018867924528,
+      "R10": 66.0377358490566,
+      "MdR": 5.0,
+      "MnR": 29.60377358490566
+    },
+    "3": {
+      "n": 95,
+      "R1": 40.0,
+      "R5": 74.73684210526315,
+      "R10": 90.52631578947368,
+      "MdR": 2.0,
+      "MnR": 7.105263157894737
+    },
+    "4": {
+      "n": 58,
+      "R1": 43.103448275862064,
+      "R5": 67.24137931034483,
+      "R10": 77.58620689655173,
+      "MdR": 2.0,
+      "MnR": 15.913793103448276
+    },
+    "5": {
+      "n": 26,
+      "R1": 53.84615384615385,
+      "R5": 88.46153846153845,
+      "R10": 96.15384615384616,
+      "MdR": 1.0,
+      "MnR": 3.423076923076923
+    },
+    "6": {
+      "n": 30,
+      "R1": 40.0,
+      "R5": 66.66666666666666,
+      "R10": 76.66666666666667,
+      "MdR": 2.0,
+      "MnR": 8.966666666666667
+    },
+    "7": {
+      "n": 122,
+      "R1": 41.80327868852459,
+      "R5": 66.39344262295081,
+      "R10": 76.22950819672131,
+      "MdR": 2.0,
+      "MnR": 19.581967213114755
+    },
+    "8": {
+      "n": 38,
+      "R1": 55.26315789473685,
+      "R5": 76.31578947368422,
+      "R10": 78.94736842105263,
+      "MdR": 1.0,
+      "MnR": 11.289473684210526
+    },
+    "9": {
+      "n": 76,
+      "R1": 50.0,
+      "R5": 72.36842105263158,
+      "R10": 84.21052631578947,
+      "MdR": 1.5,
+      "MnR": 8.118421052631579
+    },
+    "10": {
+      "n": 46,
+      "R1": 50.0,
+      "R5": 73.91304347826086,
+      "R10": 82.6086956521739,
+      "MdR": 1.5,
+      "MnR": 18.58695652173913
+    },
+    "11": {
+      "n": 29,
+      "R1": 62.06896551724138,
+      "R5": 96.55172413793103,
+      "R10": 100.0,
+      "MdR": 1.0,
+      "MnR": 1.6896551724137931
+    },
+    "12": {
+      "n": 43,
+      "R1": 55.81395348837209,
+      "R5": 69.76744186046511,
+      "R10": 76.74418604651163,
+      "MdR": 1.0,
+      "MnR": 35.325581395348834
+    },
+    "13": {
+      "n": 58,
+      "R1": 62.06896551724138,
+      "R5": 86.20689655172413,
+      "R10": 89.65517241379311,
+      "MdR": 1.0,
+      "MnR": 6.258620689655173
+    },
+    "14": {
+      "n": 47,
+      "R1": 44.680851063829785,
+      "R5": 72.3404255319149,
+      "R10": 89.36170212765957,
+      "MdR": 2.0,
+      "MnR": 4.0
+    },
+    "15": {
+      "n": 13,
+      "R1": 69.23076923076923,
+      "R5": 84.61538461538461,
+      "R10": 84.61538461538461,
+      "MdR": 1.0,
+      "MnR": 5.153846153846154
+    },
+    "16": {
+      "n": 64,
+      "R1": 51.5625,
+      "R5": 76.5625,
+      "R10": 82.8125,
+      "MdR": 1.0,
+      "MnR": 10.734375
+    },
+    "17": {
+      "n": 33,
+      "R1": 48.484848484848484,
+      "R5": 69.6969696969697,
+      "R10": 87.87878787878788,
+      "MdR": 2.0,
+      "MnR": 5.545454545454546
+    },
+    "18": {
+      "n": 53,
+      "R1": 50.943396226415096,
+      "R5": 73.58490566037736,
+      "R10": 79.24528301886792,
+      "MdR": 1.0,
+      "MnR": 12.69811320754717
+    },
+    "19": {
+      "n": 24,
+      "R1": 62.5,
+      "R5": 79.16666666666666,
+      "R10": 87.5,
+      "MdR": 1.0,
+      "MnR": 6.458333333333333
+    }
+  },
+  "per_query_length": {
+    "<=6": {
+      "n": 273,
+      "R1": 33.6996336996337,
+      "R5": 59.34065934065934,
+      "R10": 74.35897435897436,
+      "MdR": 3.0,
+      "MnR": 26.86080586080586
+    },
+    "7-9": {
+      "n": 317,
+      "R1": 41.00946372239748,
+      "R5": 68.45425867507886,
+      "R10": 77.28706624605678,
+      "MdR": 2.0,
+      "MnR": 11.987381703470032
+    },
+    "10-12": {
+      "n": 220,
+      "R1": 54.090909090909086,
+      "R5": 82.72727272727273,
+      "R10": 90.45454545454545,
+      "MdR": 1.0,
+      "MnR": 7.968181818181818
+    },
+    ">=13": {
+      "n": 190,
+      "R1": 66.3157894736842,
+      "R5": 83.15789473684211,
+      "R10": 91.05263157894737,
+      "MdR": 1.0,
+      "MnR": 4.7368421052631575
+    }
+  },
+  "temporal_words": {
+    "no temporal word": {
+      "n": 937,
+      "R1": 45.67769477054429,
+      "R5": 70.97118463180362,
+      "R10": 81.32337246531483,
+      "MdR": 2.0,
+      "MnR": 13.940234791889008
+    },
+    "temporal word": {
+      "n": 63,
+      "R1": 61.904761904761905,
+      "R5": 85.71428571428571,
+      "R10": 92.06349206349206,
+      "MdR": 1.0,
+      "MnR": 11.492063492063492
+    }
+  },
+  "frame_order_probes": {
+    "original": {
+      "R1": 46.7,
+      "R5": 71.9,
+      "R10": 82.0,
+      "R50": 94.9,
+      "R100": 97.3,
+      "MedR": 2.0,
+      "MeanR": 13.786
+    },
+    "reversed": {
+      "R1": 46.7,
+      "R5": 71.9,
+      "R10": 82.0,
+      "R50": 94.9,
+      "R100": 97.3,
+      "MedR": 2.0,
+      "MeanR": 13.786
+    },
+    "shuffled": {
+      "R1": 46.7,
+      "R5": 71.9,
+      "R10": 82.0,
+      "R50": 94.9,
+      "R100": 97.3,
+      "MedR": 2.0,
+      "MeanR": 13.786
+    },
+    "middle": {
+      "R1": 29.9,
+      "R5": 56.5,
+      "R10": 66.9,
+      "R50": 84.5,
+      "R100": 90.9,
+      "MedR": 4.0,
+      "MeanR": 42.415
+    }
+  },
+  "hubness": {
+    "k": 10,
+    "N_k_skewness": 0.8979729647931656,
+    "max_N1": 8,
+    "videos_never_top1": 338,
+    "videos_never_topk": 1,
+    "top_hubs": [
+      [
+        685,
+        8
+      ],
+      [
+        335,
+        6
+      ],
+      [
+        833,
+        6
+      ],
+      [
+        41,
+        5
+      ],
+      [
+        932,
+        5
+      ]
+    ]
+  },
+  "diagnostic_dual_softmax_uses_test_queries": {
+    "n": 1000,
+    "R1": 48.8,
+    "R5": 76.5,
+    "R10": 85.8,
+    "MdR": 2.0,
+    "MnR": 11.059
+  },
+  "failures": {
+    "n": 533,
+    "query_vs_wrong_caption_cos": {
+      "mean": 0.7841439247131348,
+      "p50": 0.7944470047950745,
+      "share_cos_ge_0.9": 0.1575984990619137,
+      "share_cos_ge_0.95": 0.039399624765478425
+    }
+  },
+  "worst_queries": [
+    {
+      "query": "a man playing video games",
+      "gt": "video9808",
+      "rank": 882,
+      "top1": "video9679",
+      "top1_caption": "the demonstration of mobile rack",
+      "category": 2
+    },
+    {
+      "query": "person playing a game",
+      "gt": "video7215",
+      "rank": 789,
+      "top1": "video8459",
+      "top1_caption": "mario and friends play in a video game together",
+      "category": 12
+    },
+    {
+      "query": "a family is having coversation",
+      "gt": "video8912",
+      "rank": 744,
+      "top1": "video8048",
+      "top1_caption": "george lopez s family sits down for dinner",
+      "category": 7
+    },
+    {
+      "query": "someone is playing a first person shooter game and is making jokes",
+      "gt": "video9872",
+      "rank": 473,
+      "top1": "video7757",
+      "top1_caption": "a figure in camouflage clothing walks with bent knees through large cement rooms toward a door as people are being shot",
+      "category": 1
+    },
+    {
+      "query": "some peole are sitting in hall",
+      "gt": "video9878",
+      "rank": 440,
+      "top1": "video7444",
+      "top1_caption": "a group of people watching a screen",
+      "category": 7
+    },
+    {
+      "query": "music is playing and advertisements was showing",
+      "gt": "video8667",
+      "rank": 371,
+      "top1": "video8485",
+      "top1_caption": "foreign language music video",
+      "category": 12
+    },
+    {
+      "query": "a person is explaining something",
+      "gt": "video7166",
+      "rank": 348,
+      "top1": "video8488",
+      "top1_caption": "a woman is talking about facial care products",
+      "category": 10
+    },
+    {
+      "query": "a man playing video games",
+      "gt": "video7461",
+      "rank": 340,
+      "top1": "video9679",
+      "top1_caption": "the demonstration of mobile rack",
+      "category": 0
+    },
+    {
+      "query": "cartoons are talking to each otehr",
+      "gt": "video7619",
+      "rank": 312,
+      "top1": "video7912",
+      "top1_caption": "peter is driving in the car",
+      "category": 4
+    },
+    {
+      "query": "some people are inside of a room",
+      "gt": "video9337",
+      "rank": 258,
+      "top1": "video7825",
+      "top1_caption": "sitting and converstion 2 lady and 2 gents",
+      "category": 16
+    },
+    {
+      "query": "a man is singing",
+      "gt": "video7227",
+      "rank": 182,
+      "top1": "video9351",
+      "top1_caption": "a man is singing on stage to a huge audience he is holding a microphone",
+      "category": 1
+    },
+    {
+      "query": "there is a man shooting other people in a corridor",
+      "gt": "video7110",
+      "rank": 173,
+      "top1": "video7576",
+      "top1_caption": "men are being filmed in the darkness",
+      "category": 9
+    },
+    {
+      "query": "a man playing video games",
+      "gt": "video7710",
+      "rank": 164,
+      "top1": "video9679",
+      "top1_caption": "the demonstration of mobile rack",
+      "category": 3
+    },
+    {
+      "query": "a woman is ripping off a man clothes",
+      "gt": "video7974",
+      "rank": 158,
+      "top1": "video8825",
+      "top1_caption": "a woman holds up a leather jacket",
+      "category": 7
+    },
+    {
+      "query": "people are talking to each other",
+      "gt": "video8800",
+      "rank": 156,
+      "top1": "video8302",
+      "top1_caption": "a man talks about kim chi to a camera",
+      "category": 7
+    },
+    {
+      "query": "a woman swings her hair in front of a large sing on a brick wall",
+      "gt": "video7728",
+      "rank": 153,
+      "top1": "video8305",
+      "top1_caption": "in a music video a man is laying with women while singing",
+      "category": 0
+    },
+    {
+      "query": "a woman is talking",
+      "gt": "video9822",
+      "rank": 151,
+      "top1": "video8752",
+      "top1_caption": "a news reader describing about a news",
+      "category": 18
+    },
+    {
+      "query": "a women is doing craft and talking about that",
+      "gt": "video8686",
+      "rank": 145,
+      "top1": "video8784",
+      "top1_caption": "a woman makes crafts",
+      "category": 10
+    },
+    {
+      "query": "a person explaining a concept in a show",
+      "gt": "video7491",
+      "rank": 142,
+      "top1": "video9119",
+      "top1_caption": "a man talks about molecules and certain types of antibodies",
+      "category": 12
+    },
+    {
+      "query": "the sky roads game on the computer",
+      "gt": "video7232",
+      "rank": 140,
+      "top1": "video9336",
+      "top1_caption": "video game of a truck driving through desert obstacles",
+      "category": 2
+    },
+    {
+      "query": "a middle aged woman giving another woman a message",
+      "gt": "video8240",
+      "rank": 125,
+      "top1": "video9575",
+      "top1_caption": "the woman in the purple blouse talk as the shelves are behind her",
+      "category": 18
+    },
+    {
+      "query": "person walking around building",
+      "gt": "video7236",
+      "rank": 118,
+      "top1": "video7632",
+      "top1_caption": "a man walks between two brick buildings a dusk",
+      "category": 0
+    },
+    {
+      "query": "explainin about the scene in the net",
+      "gt": "video8860",
+      "rank": 118,
+      "top1": "video8111",
+      "top1_caption": "people are using a computer software tool",
+      "category": 13
+    },
+    {
+      "query": "a group of men carry a body covered in a sheet",
+      "gt": "video7466",
+      "rank": 113,
+      "top1": "video9032",
+      "top1_caption": "a hospital mortuary room and a doctor treat the special case",
+      "category": 4
+    },
+    {
+      "query": "a fearful animation scene",
+      "gt": "video8122",
+      "rank": 111,
+      "top1": "video8486",
+      "top1_caption": "a cartoon on a young guy cursing",
+      "category": 7
+    }
+  ],
+  "ambiguous_failures": [
+    {
+      "query": "a woman giving a photoshop tutorial",
+      "gt": "video9812",
+      "rank": 3,
+      "top1": "video9346",
+      "top1_caption": "a woman giving a photoshop tutorial"
+    },
+    {
+      "query": "a group of people are dancing in a room",
+      "gt": "video7202",
+      "rank": 2,
+      "top1": "video9957",
+      "top1_caption": "a group of people are dancing in a room"
+    },
+    {
+      "query": "a football video game is shown",
+      "gt": "video8817",
+      "rank": 2,
+      "top1": "video7478",
+      "top1_caption": "a football video game is being played"
+    },
+    {
+      "query": "a man is playing baseball",
+      "gt": "video8308",
+      "rank": 4,
+      "top1": "video7556",
+      "top1_caption": "people are playing baseball"
+    },
+    {
+      "query": "a women is doing craft and talking about that",
+      "gt": "video8686",
+      "rank": 145,
+      "top1": "video8784",
+      "top1_caption": "a woman makes crafts"
+    },
+    {
+      "query": "there is a wrestling match going on between two people",
+      "gt": "video7153",
+      "rank": 10,
+      "top1": "video8823",
+      "top1_caption": "men are doing wrestling"
+    },
+    {
+      "query": "a girl playing the game the sims",
+      "gt": "video9820",
+      "rank": 5,
+      "top1": "video9031",
+      "top1_caption": "a lady is play the sims while talking about it"
+    },
+    {
+      "query": "someone is playing a game",
+      "gt": "video9224",
+      "rank": 47,
+      "top1": "video7143",
+      "top1_caption": "someone giving demo for some game"
+    },
+    {
+      "query": "someone is playing a game",
+      "gt": "video9400",
+      "rank": 26,
+      "top1": "video7143",
+      "top1_caption": "someone giving demo for some game"
+    },
+    {
+      "query": "a video game character rides around on a motorcycle",
+      "gt": "video9832",
+      "rank": 3,
+      "top1": "video9813",
+      "top1_caption": "a man drives a motorcycle in a video game"
+    },
+    {
+      "query": "a band plays on a stage",
+      "gt": "video8925",
+      "rank": 4,
+      "top1": "video8324",
+      "top1_caption": "a rock band performs on stage"
+    },
+    {
+      "query": "a man is showing off a new vehicle",
+      "gt": "video7115",
+      "rank": 3,
+      "top1": "video7026",
+      "top1_caption": "a man is giving a review on a vehicle"
+    },
+    {
+      "query": "woman playing instruments in a field for a music video",
+      "gt": "video7586",
+      "rank": 2,
+      "top1": "video9589",
+      "top1_caption": "a woman plays instruments in a field"
+    },
+    {
+      "query": "two wrestlers are fighting on a mat",
+      "gt": "video8310",
+      "rank": 11,
+      "top1": "video8823",
+      "top1_caption": "men are doing wrestling"
+    },
+    {
+      "query": "there is no sound while the screen shows a person playing a computer game",
+      "gt": "video7203",
+      "rank": 6,
+      "top1": "video7035",
+      "top1_caption": "there is someone playing a game in a computer"
+    },
+    {
+      "query": "a man is highlighted playing basketball",
+      "gt": "video8668",
+      "rank": 3,
+      "top1": "video7763",
+      "top1_caption": "people are playing basketball"
+    },
+    {
+      "query": "a girl singing song on stage",
+      "gt": "video9202",
+      "rank": 15,
+      "top1": "video7569",
+      "top1_caption": "a woman is singing"
+    },
+    {
+      "query": "there is a man working on a car",
+      "gt": "video8246",
+      "rank": 3,
+      "top1": "video7343",
+      "top1_caption": "a guy fixing up another car"
+    },
+    {
+      "query": "he drew a beautiful picture",
+      "gt": "video7462",
+      "rank": 108,
+      "top1": "video7977",
+      "top1_caption": "someone is drawing pictures"
+    },
+    {
+      "query": "a man is talking on stage",
+      "gt": "video8919",
+      "rank": 9,
+      "top1": "video9352",
+      "top1_caption": "a man is talking to a crowd"
+    },
+    {
+      "query": "they are singing a song and playing a guitar in the stage",
+      "gt": "video9243",
+      "rank": 13,
+      "top1": "video8926",
+      "top1_caption": "a man is playing a guitar with a band in a live concert"
+    },
+    {
+      "query": "jeremy is describing a car",
+      "gt": "video9530",
+      "rank": 37,
+      "top1": "video7765",
+      "top1_caption": "a person is discussing a car"
+    },
+    {
+      "query": "models are walking the runway as part of a fashion show",
+      "gt": "video9277",
+      "rank": 5,
+      "top1": "video7730",
+      "top1_caption": "different women in colorful clothing are walking down a runway for a fashion show"
+    },
+    {
+      "query": "a man hits another man while wrestling",
+      "gt": "video8440",
+      "rank": 2,
+      "top1": "video8823",
+      "top1_caption": "men are doing wrestling"
+    },
+    {
+      "query": "people are singing on the beach",
+      "gt": "video7117",
+      "rank": 2,
+      "top1": "video7370",
+      "top1_caption": "boys and girls dancing and singing on beach"
+    }
+  ]
+}

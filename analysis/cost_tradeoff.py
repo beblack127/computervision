@@ -75,6 +75,43 @@ def xpool_sims(pool, text, frames, chunk=128):
     return torch.cat(out, 1)
 
 
+@torch.no_grad()
+def xpool_kv(pool, frames):
+    """Query-independent half of X-Pool: LayerNorm + key/value projections of every frame.
+    frames [N, F, D] -> keys, values [N, H, F, hd]. Can be computed once per gallery (index)."""
+    ca = pool.cross_attn
+    N, Fn, D = frames.shape
+    v = pool.layer_norm1(frames)
+    k = ca.k_proj(v).view(N, Fn, ca.num_heads, ca.head_dim).transpose(1, 2)
+    val = ca.v_proj(v).view(N, Fn, ca.num_heads, ca.head_dim).transpose(1, 2)
+    return k, val
+
+
+@torch.no_grad()
+def xpool_pair_sims_kv(pool, text, k_qp, v_qp):
+    """Query-dependent half of X-Pool for given pairs only: text [Q, D], k_qp / v_qp
+    [Q, P, H, F, hd] (keys/values of each query's own shortlist) -> scores [Q, P].
+    Same math as the official Transformer.forward (third_party/xpool/modules/transformer.py)."""
+    ca = pool.cross_attn
+    Q, P, H, Fn, hd = k_qp.shape
+    q = ca.q_proj(pool.layer_norm1(text)).view(Q, 1, H, 1, hd)
+    w = F.softmax((k_qp * q).sum(-1) / math.sqrt(hd), dim=-1)  # softmax over frames
+    att = (w.unsqueeze(-1) * v_qp).sum(-2).reshape(Q, P, H * hd)
+    o = pool.layer_norm2(ca.out_proj(att))
+    o = pool.layer_norm3(o + pool.dropout(pool.linear_proj(o)))
+    return torch.einsum("qd,qpd->qp", F.normalize(text, dim=-1), F.normalize(o, dim=-1))
+
+
+@torch.no_grad()
+def xpool_pair_sims(pool, text, frames, idx, chunk=128):
+    """X-Pool scores of query i against videos idx[i] only: text [Q, D], frames [N, F, D],
+    idx [Q, P] -> [Q, P]. Keys/values are projected once per video and gathered per query,
+    so the work is O(N*F) projections + O(Q*P) attention instead of O(Q*N) attention."""
+    k, v = xpool_kv(pool, frames)
+    return torch.cat([xpool_pair_sims_kv(pool, text[i:i + chunk], k[idx[i:i + chunk]], v[idx[i:i + chunk]])
+                      for i in range(0, text.shape[0], chunk)], 0)
+
+
 def two_stage(s_mean, s_xpool, P):
     """Rank by X-Pool inside the mean-pooling top-P shortlist; everything else keeps mean order
     behind the shortlist. Returns 0-based GT ranks."""
@@ -149,11 +186,11 @@ def cost_scaling(pool, text, frames, device, gallery_sizes, P, n_queries, chunk)
         t_mean, m_mean = time_it(lambda: tq @ mean_vecs.t(), device)
         t_full, m_full = time_it(lambda: xpool_sims(pool, q, fr, chunk), device)
 
-        def stage2():
-            top = torch.topk(tq @ mean_vecs.t(), min(P, N), dim=1).indices
-            for i in range(q.shape[0]):  # X-Pool only on the shortlist of each query
-                xpool_sims(pool, q[i:i + 1], fr[top[i]], chunk)
-        t_two, m_two = time_it(stage2, device, repeat=1)
+        def stage2():  # stage 1: mean-pooling shortlist; stage 2: X-Pool on the shortlist only
+            top = torch.topk(tq @ mean_vecs.t(), min(P, N), dim=1).indices  # [Q, P]
+            return xpool_pair_sims(pool, q, fr, top)                         # batched, [Q, P]
+        stage2()  # warm-up (first call pays kernel launch / allocator cost)
+        t_two, m_two = time_it(stage2, device)
         res.append({
             "gallery": N, "queries": int(q.shape[0]),
             "mean_ms": 1e3 * t_mean, "xpool_ms": 1e3 * t_full, f"two_stage_P{P}_ms": 1e3 * t_two,
@@ -198,7 +235,12 @@ def main():
     sanity = float((s_check - s_x[:k]).abs().max())
 
     rx, rm = ranks_of(s_x), ranks_of(s_m)
-    R = {"device": str(dev), "sanity_max_abs_diff_xpool_sims": sanity,
+    gpu = None
+    if dev.type == "cuda":
+        prop = torch.cuda.get_device_properties(dev)
+        gpu = {"name": prop.name, "total_memory_GB": round(prop.total_memory / 1024 ** 3, 1)}
+    R = {"device": str(dev), "gpu": gpu, "torch": torch.__version__,
+         "sanity_max_abs_diff_xpool_sims": sanity,
          "accuracy": {"xpool": metrics(rx), "mean_pool_same_encoder": metrics(rm)}}
     both = int(np.sum((rx == 0) & (rm == 0)))
     gain = int(np.sum((rx == 0) & (rm > 0)))
@@ -275,7 +317,7 @@ def main():
 
     # ---- markdown (tables only) ----
     ax_, am = R["accuracy"]["xpool"], R["accuracy"]["mean_pool_same_encoder"]
-    L = ["# Query-dependent pooling: accuracy vs cost (auto-generated)", "", f"dump: `{a.dump}`  ·  device: {dev}",
+    L = ["# Query-dependent pooling: accuracy vs cost (auto-generated)", "", f"dump: `{a.dump}`  ·  device: {dev}" + (f" ({gpu['name']}, {gpu['total_memory_GB']} GB)" if gpu else ""),
          f"sanity (re-computed X-Pool sims vs dump, max |diff|): {sanity:.2e}", "",
          "## Same trained model, two scoring rules (1k-A, t2v)", "",
          "| scoring | R@1 | R@5 | R@10 | MdR | MnR |", "|---|---|---|---|---|---|",

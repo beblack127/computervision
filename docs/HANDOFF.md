@@ -19,7 +19,7 @@
 | # | 담당 | 할 일 | 상태 |
 |---|---|---|---|
 | N1 | 사용자 | seed 0·1 진행 상황 확인: Drive `컴비 프로젝트/runs/xpool_9k_s0`, `_s1`에 `model_last.pth`가 있으면 완료. 없으면 `01_train_baseline.ipynb` 다시 실행(끝난 부분은 건너뛰고 이어서 학습) | ⏳ |
-| N2 | 사용자 | `02_analysis.ipynb` 실행(EXP=xpool_9k_s24, A100 권장) → Drive `results/xpool_9k_s24/analysis/`를 `experiments/results/xpool_9k_s24/analysis/`로 커밋 | ⏳ |
+| N2 | 사용자 | `02_analysis.ipynb` 실행(EXP=xpool_9k_s24, A100) — 11/23 완료, 결과 커밋됨. **남은 것: 2단계 검색 timing 수정본으로 A100에서 설정 셀 + 비용 셀(5)·수집 셀(6)만 재실행** → `cost/` 덮어쓰기 | 🔁 |
 | N3 | Claude | 분석 결과 해석: H1~H7 판정, Intermediate용 표·그림·정성 예시 선정 | N2 이후 |
 | N4 | 함께 | 개선 방향 1개 확정 (G2', 11/25) | N3 이후 |
 | N5 | Codex | 선정 방향 프록시 구현 + 테스트 | N4 이후 |
@@ -68,3 +68,4 @@
 - 2026-11-14 · Claude · E001(seed 24) 결과 정리: t2v R@1 46.7/R@5 71.9/R@10 82.0/MdR 2/MnR 13.8, best=last. 순서 probe(reversed·shuffled 동일, middle 29.9)로 H1 구조적 확인. 학습이 세션 3개로 나뉘었고(끊김 1, Drive 쓰기 오류로 중단 1) run_meta가 마지막 세션만 기록 → PR #4로 세션 누적 기록, 이번에 Drive 일시 오류 재시도(기록은 실패해도 학습 계속) 추가, 노트북 01을 SEEDS=[0,1] 순차 실행·자동 재개·결과 Drive results/ 수집으로 변경. seed 24 세션 기록은 sessions_reconstructed.json으로 복원(합 ≥7.27h). 남은 일: seed 0→1 학습. 다음 담당: 사용자.
 - 2026-11-14 새벽 · Claude · Proposal 작성 가이드 `docs/PROPOSAL_OUTLINE.md` 작성: 목차(배점 3항목 뼈대), 섹션별 개조식(사실·수치·출처 표시, 해석 자리는 사용자 몫으로 비움), 표·그림 9종 제안, 작성 팁·용어 통일표·제출 체크리스트, 선행연구 지도(14편), 논문 읽기 가이드. 결정 반영: 후속 연구 = Prompt Switch·T-MASS·Cap4Bridge, Proposal에는 개선 방향과 E001 수치 제외(파이프라인 검증만), 충실성 조치는 Plan 본문, AI 사용 고지 포함. 새로 확인한 사실: 논문(새 파라미터 lr 1e-5, warmup 언급 없음) vs 공식 README/코드(3e-5, warmup 10%), 클립 길이 논문 10–32초 vs annotation 10–30초. 미확인: Cap4Bridge MSR-VTT 수치, 실제 영상 50개 verify 출력. 다음 담당: 사용자(Proposal 작성).
 - 2026-11-23 · Claude · Proposal 피드백 반영: ROADMAP Phase 3에 3-B 비용-정확도 분석·3-C 실패-풀링 연결 추가, 일정 재조정(§1, §5), IDEAS에 H7·I6 추가. 새 스크립트 `analysis/cost_tradeoff.py`(같은 모델로 X-Pool vs 평균 풀링, 질의별 득실, 2단계 검색, 갤러리 1k~10k 시간·메모리) + 테스트 2개, 노트북 02에 비용 셀·아슬아슬한 실패 갤러리·결과 수집 셀 추가. 남은 일: N1(seed 0·1 확인), N2(노트북 02 실행). 다음 담당: 사용자.
+- 2026-11-23 · Claude · seed 24 노트북 02(A100) 결과를 Drive에서 가져와 `experiments/results/xpool_9k_s24/analysis/`(analysis.json·report·그림 3)와 `analysis/cost/`(cost_tradeoff.json·report·그림 2)에 커밋. 갤러리 PNG(약 15MB)는 Drive에만 둠. 핵심 수치: 같은 encoder에서 평균 풀링 R@1 42.0 vs X-Pool 46.7, 2단계 P=20(쌍 2%)에서 R@1 46.7. 버그: 2단계 timing이 질의별 for문이라 쌍 수가 1/10~1/100인데도 ~1s로 X-Pool 전체보다 느리게 측정됨 → `xpool_kv`(질의 무관 K/V 1회 투영)+`xpool_pair_sims`(shortlist만 배치 계산)로 교체, warm-up 추가, JSON에 GPU 이름·메모리 기록. 테스트 1개 추가(배치 shortlist 점수 = 전체 점수의 해당 쌍), 14 passed. CPU 확인: 갤러리 4k에서 2단계 1.1s vs 전체 5.2s. 기존 `cost_scaling`의 `two_stage_P100_ms`는 무효(재측정 필요). 다음 담당: 사용자(셀 5·6 재실행).
