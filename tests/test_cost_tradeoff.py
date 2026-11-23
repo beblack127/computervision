@@ -63,3 +63,12 @@ def test_script_end_to_end(tmp_path):
     assert sum(v["n"] for v in R["breakdown"]["frame_diversity_quartile"].values()) == 30
     for f in ["cost_report.md", "two_stage_r1_vs_P.png", "cost_scaling.png", "gain_by_diversity.png"]:
         assert (out / f).exists(), f
+
+
+def test_pair_sims_match_full(tmp_path):
+    """Batched shortlist scoring == the same pairs taken from the official all-pairs scoring."""
+    ct, pool, text, frames, s_x, _ = make_world(tmp_path)
+    s_m = ct.mean_pool_sims(text, frames)
+    top = torch.topk(s_m, 7, dim=1).indices
+    pair = ct.xpool_pair_sims(pool, text, frames, top, chunk=4)
+    assert torch.allclose(pair, torch.gather(s_x, 1, top), atol=1e-5)
