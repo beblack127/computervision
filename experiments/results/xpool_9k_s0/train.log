@@ -1,0 +1,3450 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795506738.042427  237941 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1795506738.103262  237941 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795506740.673276  237941 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1795506740.673781  237941 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Train Epoch: 1 dl: 0/5624 Loss: 2.232631
+Train Epoch: 1 dl: 10/5624 Loss: 1.663309
+Train Epoch: 1 dl: 20/5624 Loss: 1.972511
+Train Epoch: 1 dl: 30/5624 Loss: 1.607711
+Train Epoch: 1 dl: 40/5624 Loss: 1.800521
+Train Epoch: 1 dl: 50/5624 Loss: 2.049137
+Train Epoch: 1 dl: 60/5624 Loss: 1.843993
+Train Epoch: 1 dl: 70/5624 Loss: 1.802646
+Train Epoch: 1 dl: 80/5624 Loss: 2.568499
+Train Epoch: 1 dl: 90/5624 Loss: 1.452302
+Train Epoch: 1 dl: 100/5624 Loss: 1.933270
+Train Epoch: 1 dl: 110/5624 Loss: 2.157118
+Train Epoch: 1 dl: 120/5624 Loss: 1.465624
+Train Epoch: 1 dl: 130/5624 Loss: 1.933649
+Train Epoch: 1 dl: 140/5624 Loss: 2.111028
+Train Epoch: 1 dl: 150/5624 Loss: 2.541182
+Train Epoch: 1 dl: 160/5624 Loss: 1.535945
+Train Epoch: 1 dl: 170/5624 Loss: 1.474295
+Train Epoch: 1 dl: 180/5624 Loss: 1.715713
+Train Epoch: 1 dl: 190/5624 Loss: 1.247865
+Train Epoch: 1 dl: 200/5624 Loss: 2.030767
+Train Epoch: 1 dl: 210/5624 Loss: 2.056672
+Train Epoch: 1 dl: 220/5624 Loss: 1.983968
+Train Epoch: 1 dl: 230/5624 Loss: 1.696347
+Train Epoch: 1 dl: 240/5624 Loss: 1.217589
+Train Epoch: 1 dl: 250/5624 Loss: 2.798792
+Train Epoch: 1 dl: 260/5624 Loss: 1.762792
+Train Epoch: 1 dl: 270/5624 Loss: 1.184469
+Train Epoch: 1 dl: 280/5624 Loss: 1.457741
+Train Epoch: 1 dl: 290/5624 Loss: 1.456160
+Train Epoch: 1 dl: 300/5624 Loss: 0.890696
+Train Epoch: 1 dl: 310/5624 Loss: 1.755819
+Train Epoch: 1 dl: 320/5624 Loss: 0.772647
+Train Epoch: 1 dl: 330/5624 Loss: 1.685759
+Train Epoch: 1 dl: 340/5624 Loss: 1.499893
+Train Epoch: 1 dl: 350/5624 Loss: 1.584803
+Train Epoch: 1 dl: 360/5624 Loss: 1.693944
+Train Epoch: 1 dl: 370/5624 Loss: 1.540277
+Train Epoch: 1 dl: 380/5624 Loss: 1.314434
+Train Epoch: 1 dl: 390/5624 Loss: 1.383619
+Train Epoch: 1 dl: 400/5624 Loss: 1.403746
+Train Epoch: 1 dl: 410/5624 Loss: 0.924891
+Train Epoch: 1 dl: 420/5624 Loss: 0.907156
+Train Epoch: 1 dl: 430/5624 Loss: 1.426225
+Train Epoch: 1 dl: 440/5624 Loss: 1.505360
+Train Epoch: 1 dl: 450/5624 Loss: 1.500872
+Train Epoch: 1 dl: 460/5624 Loss: 1.126480
+Train Epoch: 1 dl: 470/5624 Loss: 0.922520
+Train Epoch: 1 dl: 480/5624 Loss: 0.691392
+Train Epoch: 1 dl: 490/5624 Loss: 0.642965
+Train Epoch: 1 dl: 500/5624 Loss: 1.810150
+Train Epoch: 1 dl: 510/5624 Loss: 0.523085
+Train Epoch: 1 dl: 520/5624 Loss: 1.286678
+Train Epoch: 1 dl: 530/5624 Loss: 0.605731
+Train Epoch: 1 dl: 540/5624 Loss: 0.988221
+Train Epoch: 1 dl: 550/5624 Loss: 0.565896
+Train Epoch: 1 dl: 560/5624 Loss: 0.944298
+0it [00:00, ?it/s]1it [00:06,  6.27s/it]2it [00:06,  2.86s/it]3it [00:07,  1.68s/it]4it [00:07,  1.11s/it]5it [00:07,  1.25it/s]6it [00:07,  1.61it/s]7it [00:08,  1.98it/s]8it [00:08,  2.34it/s]9it [00:09,  1.51it/s]10it [00:09,  1.87it/s]11it [00:09,  2.24it/s]12it [00:10,  2.61it/s]13it [00:10,  2.94it/s]14it [00:10,  3.23it/s]15it [00:10,  3.47it/s]16it [00:11,  3.65it/s]17it [00:14,  1.13s/it]18it [00:14,  1.16it/s]19it [00:14,  1.48it/s]20it [00:15,  1.84it/s]21it [00:15,  2.21it/s]22it [00:15,  2.57it/s]23it [00:15,  2.91it/s]24it [00:15,  3.20it/s]25it [00:16,  2.06it/s]26it [00:17,  2.43it/s]27it [00:17,  2.78it/s]28it [00:17,  3.09it/s]29it [00:17,  3.35it/s]30it [00:18,  3.56it/s]31it [00:18,  3.73it/s]32it [00:18,  1.73it/s]
+-----Val Epoch: 1, dl: 562/5624-----
+ R@1: 39.2 (window: 39.2)
+ R@5: 62.6 (window: 62.6)
+ R@10: 71.8 (window: 71.8)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 20.833 (window: 20.833)
+ Loss: 0.7031194567680359
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 39.2
+ Current Best R@1 is 39.2
+
+
+Train Epoch: 1 dl: 570/5624 Loss: 0.724407
+Train Epoch: 1 dl: 580/5624 Loss: 1.224153
+Train Epoch: 1 dl: 590/5624 Loss: 0.589727
+Train Epoch: 1 dl: 600/5624 Loss: 1.283501
+Train Epoch: 1 dl: 610/5624 Loss: 1.002403
+Train Epoch: 1 dl: 620/5624 Loss: 0.681100
+Train Epoch: 1 dl: 630/5624 Loss: 1.229455
+Train Epoch: 1 dl: 640/5624 Loss: 0.885541
+Train Epoch: 1 dl: 650/5624 Loss: 1.263191
+Train Epoch: 1 dl: 660/5624 Loss: 0.577863
+Train Epoch: 1 dl: 670/5624 Loss: 0.708111
+Train Epoch: 1 dl: 680/5624 Loss: 0.982421
+Train Epoch: 1 dl: 690/5624 Loss: 0.859137
+Train Epoch: 1 dl: 700/5624 Loss: 1.065586
+Train Epoch: 1 dl: 710/5624 Loss: 0.874799
+Train Epoch: 1 dl: 720/5624 Loss: 1.041601
+Train Epoch: 1 dl: 730/5624 Loss: 0.816176
+Train Epoch: 1 dl: 740/5624 Loss: 1.359400
+Train Epoch: 1 dl: 750/5624 Loss: 0.556810
+Train Epoch: 1 dl: 760/5624 Loss: 0.709891
+Train Epoch: 1 dl: 770/5624 Loss: 0.781166
+Train Epoch: 1 dl: 780/5624 Loss: 0.614206
+Train Epoch: 1 dl: 790/5624 Loss: 0.974812
+Train Epoch: 1 dl: 800/5624 Loss: 0.724167
+Train Epoch: 1 dl: 810/5624 Loss: 1.186900
+Train Epoch: 1 dl: 820/5624 Loss: 0.616624
+Train Epoch: 1 dl: 830/5624 Loss: 0.321853
+Train Epoch: 1 dl: 840/5624 Loss: 0.879947
+Train Epoch: 1 dl: 850/5624 Loss: 0.800755
+Train Epoch: 1 dl: 860/5624 Loss: 0.517719
+Train Epoch: 1 dl: 870/5624 Loss: 0.804507
+Train Epoch: 1 dl: 880/5624 Loss: 0.426731
+Train Epoch: 1 dl: 890/5624 Loss: 1.069749
+Train Epoch: 1 dl: 900/5624 Loss: 0.625915
+Train Epoch: 1 dl: 910/5624 Loss: 0.605626
+Train Epoch: 1 dl: 920/5624 Loss: 1.009811
+Train Epoch: 1 dl: 930/5624 Loss: 0.756983
+Train Epoch: 1 dl: 940/5624 Loss: 1.014182
+Train Epoch: 1 dl: 950/5624 Loss: 0.424700
+Train Epoch: 1 dl: 960/5624 Loss: 0.712433
+Train Epoch: 1 dl: 970/5624 Loss: 0.762594
+Train Epoch: 1 dl: 980/5624 Loss: 1.065155
+Train Epoch: 1 dl: 990/5624 Loss: 0.995449
+Train Epoch: 1 dl: 1000/5624 Loss: 0.703984
+Train Epoch: 1 dl: 1010/5624 Loss: 0.545123
+Train Epoch: 1 dl: 1020/5624 Loss: 0.478433
+Train Epoch: 1 dl: 1030/5624 Loss: 0.967761
+Train Epoch: 1 dl: 1040/5624 Loss: 0.678878
+Train Epoch: 1 dl: 1050/5624 Loss: 0.916099
+Train Epoch: 1 dl: 1060/5624 Loss: 1.236434
+Train Epoch: 1 dl: 1070/5624 Loss: 0.356022
+Train Epoch: 1 dl: 1080/5624 Loss: 0.320546
+Train Epoch: 1 dl: 1090/5624 Loss: 0.544974
+Train Epoch: 1 dl: 1100/5624 Loss: 1.040708
+Train Epoch: 1 dl: 1110/5624 Loss: 0.854716
+Train Epoch: 1 dl: 1120/5624 Loss: 0.434881
+0it [00:00, ?it/s]1it [00:05,  5.26s/it]2it [00:05,  2.31s/it]3it [00:05,  1.37s/it]4it [00:05,  1.08it/s]5it [00:06,  1.47it/s]6it [00:06,  1.89it/s]7it [00:06,  2.30it/s]8it [00:07,  2.56it/s]9it [00:09,  1.02s/it]10it [00:09,  1.28it/s]11it [00:09,  1.60it/s]12it [00:10,  1.95it/s]13it [00:10,  2.32it/s]14it [00:10,  2.68it/s]15it [00:10,  2.99it/s]16it [00:11,  3.24it/s]17it [00:12,  1.43it/s]18it [00:13,  1.78it/s]19it [00:13,  2.14it/s]20it [00:13,  2.51it/s]21it [00:13,  2.85it/s]22it [00:13,  3.15it/s]23it [00:14,  3.39it/s]24it [00:14,  3.59it/s]25it [00:15,  2.03it/s]26it [00:15,  2.40it/s]27it [00:15,  2.75it/s]28it [00:16,  3.06it/s]29it [00:16,  3.33it/s]30it [00:16,  3.55it/s]31it [00:16,  3.71it/s]32it [00:17,  1.87it/s]
+-----Val Epoch: 1, dl: 1124/5624-----
+ R@1: 41.4 (window: 40.3)
+ R@5: 64.7 (window: 63.650000000000006)
+ R@10: 76.8 (window: 74.3)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 17.159 (window: 18.996)
+ Loss: 0.5758845265954733
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 40.3
+ Current Best R@1 is 41.4
+
+
+Train Epoch: 1 dl: 1130/5624 Loss: 0.978419
+Train Epoch: 1 dl: 1140/5624 Loss: 0.440508
+Train Epoch: 1 dl: 1150/5624 Loss: 0.195664
+Train Epoch: 1 dl: 1160/5624 Loss: 0.569959
+Train Epoch: 1 dl: 1170/5624 Loss: 0.782333
+Train Epoch: 1 dl: 1180/5624 Loss: 0.497459
+Train Epoch: 1 dl: 1190/5624 Loss: 0.642123
+Train Epoch: 1 dl: 1200/5624 Loss: 0.273864
+Train Epoch: 1 dl: 1210/5624 Loss: 0.347303
+Train Epoch: 1 dl: 1220/5624 Loss: 0.475068
+Train Epoch: 1 dl: 1230/5624 Loss: 0.836685
+Train Epoch: 1 dl: 1240/5624 Loss: 0.511410
+Train Epoch: 1 dl: 1250/5624 Loss: 0.900482
+Train Epoch: 1 dl: 1260/5624 Loss: 1.172101
+Train Epoch: 1 dl: 1270/5624 Loss: 0.331123
+Train Epoch: 1 dl: 1280/5624 Loss: 0.894481
+Train Epoch: 1 dl: 1290/5624 Loss: 0.520449
+Train Epoch: 1 dl: 1300/5624 Loss: 0.661511
+Train Epoch: 1 dl: 1310/5624 Loss: 0.713288
+Train Epoch: 1 dl: 1320/5624 Loss: 0.831250
+Train Epoch: 1 dl: 1330/5624 Loss: 1.178139
+Train Epoch: 1 dl: 1340/5624 Loss: 0.773426
+Train Epoch: 1 dl: 1350/5624 Loss: 0.797426
+Train Epoch: 1 dl: 1360/5624 Loss: 0.711571
+Train Epoch: 1 dl: 1370/5624 Loss: 0.958881
+Train Epoch: 1 dl: 1380/5624 Loss: 0.561758
+Train Epoch: 1 dl: 1390/5624 Loss: 0.593503
+Train Epoch: 1 dl: 1400/5624 Loss: 0.497384
+Train Epoch: 1 dl: 1410/5624 Loss: 0.609087
+Train Epoch: 1 dl: 1420/5624 Loss: 0.223561
+Train Epoch: 1 dl: 1430/5624 Loss: 0.219028
+Train Epoch: 1 dl: 1440/5624 Loss: 1.078863
+Train Epoch: 1 dl: 1450/5624 Loss: 0.515756
+Train Epoch: 1 dl: 1460/5624 Loss: 0.473614
+Train Epoch: 1 dl: 1470/5624 Loss: 0.399110
+Train Epoch: 1 dl: 1480/5624 Loss: 0.555643
+Train Epoch: 1 dl: 1490/5624 Loss: 0.343149
+Train Epoch: 1 dl: 1500/5624 Loss: 0.739496
+Train Epoch: 1 dl: 1510/5624 Loss: 0.524724
+Train Epoch: 1 dl: 1520/5624 Loss: 0.543610
+Train Epoch: 1 dl: 1530/5624 Loss: 1.059022
+Train Epoch: 1 dl: 1540/5624 Loss: 0.459686
+Train Epoch: 1 dl: 1550/5624 Loss: 0.806746
+Train Epoch: 1 dl: 1560/5624 Loss: 0.931623
+Train Epoch: 1 dl: 1570/5624 Loss: 0.742275
+Train Epoch: 1 dl: 1580/5624 Loss: 0.563005
+Train Epoch: 1 dl: 1590/5624 Loss: 0.771291
+Train Epoch: 1 dl: 1600/5624 Loss: 0.881632
+Train Epoch: 1 dl: 1610/5624 Loss: 0.854321
+Train Epoch: 1 dl: 1620/5624 Loss: 0.682620
+Train Epoch: 1 dl: 1630/5624 Loss: 0.592774
+Train Epoch: 1 dl: 1640/5624 Loss: 0.614667
+Train Epoch: 1 dl: 1650/5624 Loss: 0.952272
+Train Epoch: 1 dl: 1660/5624 Loss: 0.312588
+Train Epoch: 1 dl: 1670/5624 Loss: 0.391911
+Train Epoch: 1 dl: 1680/5624 Loss: 0.713093
+0it [00:00, ?it/s]1it [00:05,  5.37s/it]2it [00:05,  2.36s/it]3it [00:05,  1.40s/it]4it [00:06,  1.06it/s]5it [00:06,  1.45it/s]6it [00:06,  1.86it/s]7it [00:06,  2.26it/s]8it [00:07,  2.63it/s]9it [00:08,  1.17it/s]10it [00:09,  1.50it/s]11it [00:09,  1.86it/s]12it [00:09,  2.23it/s]13it [00:09,  2.59it/s]14it [00:10,  2.82it/s]15it [00:10,  3.13it/s]16it [00:10,  3.37it/s]17it [00:13,  1.07it/s]18it [00:13,  1.38it/s]19it [00:13,  1.70it/s]20it [00:13,  2.07it/s]21it [00:14,  2.44it/s]22it [00:14,  2.79it/s]23it [00:14,  3.10it/s]24it [00:14,  3.36it/s]25it [00:15,  2.11it/s]26it [00:15,  2.48it/s]27it [00:16,  2.82it/s]28it [00:16,  3.13it/s]29it [00:16,  3.39it/s]30it [00:16,  3.59it/s]31it [00:17,  3.75it/s]32it [00:17,  1.84it/s]
+-----Val Epoch: 1, dl: 1687/5624-----
+ R@1: 41.2 (window: 40.6)
+ R@5: 67.1 (window: 64.8)
+ R@10: 77.9 (window: 75.5)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 15.93 (window: 17.974)
+ Loss: 0.5245655821636319
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 40.6
+ Current Best R@1 is 41.4
+
+
+Train Epoch: 1 dl: 1690/5624 Loss: 0.963038
+Train Epoch: 1 dl: 1700/5624 Loss: 0.593816
+Train Epoch: 1 dl: 1710/5624 Loss: 0.383389
+Train Epoch: 1 dl: 1720/5624 Loss: 0.757077
+Train Epoch: 1 dl: 1730/5624 Loss: 1.081387
+Train Epoch: 1 dl: 1740/5624 Loss: 0.548638
+Train Epoch: 1 dl: 1750/5624 Loss: 0.325748
+Train Epoch: 1 dl: 1760/5624 Loss: 0.792285
+Train Epoch: 1 dl: 1770/5624 Loss: 0.649361
+Train Epoch: 1 dl: 1780/5624 Loss: 0.212927
+Train Epoch: 1 dl: 1790/5624 Loss: 1.032774
+Train Epoch: 1 dl: 1800/5624 Loss: 0.309769
+Train Epoch: 1 dl: 1810/5624 Loss: 0.568558
+Train Epoch: 1 dl: 1820/5624 Loss: 0.646871
+Train Epoch: 1 dl: 1830/5624 Loss: 0.492191
+Train Epoch: 1 dl: 1840/5624 Loss: 0.546735
+Train Epoch: 1 dl: 1850/5624 Loss: 0.320433
+Train Epoch: 1 dl: 1860/5624 Loss: 0.477332
+Train Epoch: 1 dl: 1870/5624 Loss: 0.476652
+Train Epoch: 1 dl: 1880/5624 Loss: 0.192959
+Train Epoch: 1 dl: 1890/5624 Loss: 0.377663
+Train Epoch: 1 dl: 1900/5624 Loss: 0.242716
+Train Epoch: 1 dl: 1910/5624 Loss: 0.510359
+Train Epoch: 1 dl: 1920/5624 Loss: 0.333772
+Train Epoch: 1 dl: 1930/5624 Loss: 0.437467
+Train Epoch: 1 dl: 1940/5624 Loss: 0.750507
+Train Epoch: 1 dl: 1950/5624 Loss: 0.250493
+Train Epoch: 1 dl: 1960/5624 Loss: 0.643643
+Train Epoch: 1 dl: 1970/5624 Loss: 0.707073
+Train Epoch: 1 dl: 1980/5624 Loss: 0.870760
+Train Epoch: 1 dl: 1990/5624 Loss: 0.560137
+Train Epoch: 1 dl: 2000/5624 Loss: 0.372698
+Train Epoch: 1 dl: 2010/5624 Loss: 0.768324
+Train Epoch: 1 dl: 2020/5624 Loss: 0.522185
+Train Epoch: 1 dl: 2030/5624 Loss: 0.248639
+Train Epoch: 1 dl: 2040/5624 Loss: 0.317322
+Train Epoch: 1 dl: 2050/5624 Loss: 0.424466
+Train Epoch: 1 dl: 2060/5624 Loss: 0.615555
+Train Epoch: 1 dl: 2070/5624 Loss: 0.552879
+Train Epoch: 1 dl: 2080/5624 Loss: 0.309519
+Train Epoch: 1 dl: 2090/5624 Loss: 0.724868
+Train Epoch: 1 dl: 2100/5624 Loss: 0.183017
+Train Epoch: 1 dl: 2110/5624 Loss: 0.620216
+Train Epoch: 1 dl: 2120/5624 Loss: 0.447672
+Train Epoch: 1 dl: 2130/5624 Loss: 0.682404
+Train Epoch: 1 dl: 2140/5624 Loss: 0.469078
+Train Epoch: 1 dl: 2150/5624 Loss: 0.838114
+Train Epoch: 1 dl: 2160/5624 Loss: 0.783572
+Train Epoch: 1 dl: 2170/5624 Loss: 0.345852
+Train Epoch: 1 dl: 2180/5624 Loss: 0.770190
+Train Epoch: 1 dl: 2190/5624 Loss: 0.414644
+Train Epoch: 1 dl: 2200/5624 Loss: 0.257737
+Train Epoch: 1 dl: 2210/5624 Loss: 0.195401
+Train Epoch: 1 dl: 2220/5624 Loss: 0.353089
+Train Epoch: 1 dl: 2230/5624 Loss: 0.477092
+Train Epoch: 1 dl: 2240/5624 Loss: 0.610138
+0it [00:00, ?it/s]1it [00:05,  5.54s/it]2it [00:05,  2.44s/it]3it [00:06,  1.43s/it]4it [00:06,  1.04it/s]5it [00:06,  1.42it/s]6it [00:06,  1.82it/s]7it [00:07,  2.22it/s]8it [00:07,  2.51it/s]9it [00:08,  1.47it/s]10it [00:08,  1.84it/s]11it [00:09,  2.21it/s]12it [00:09,  2.57it/s]13it [00:09,  2.89it/s]14it [00:09,  3.17it/s]15it [00:10,  3.39it/s]16it [00:10,  3.57it/s]17it [00:11,  1.58it/s]18it [00:12,  1.82it/s]19it [00:12,  1.98it/s]20it [00:12,  2.34it/s]21it [00:13,  2.69it/s]22it [00:13,  3.02it/s]23it [00:13,  3.29it/s]24it [00:13,  3.52it/s]25it [00:14,  2.59it/s]26it [00:15,  2.03it/s]27it [00:15,  1.99it/s]28it [00:15,  2.37it/s]29it [00:16,  2.72it/s]30it [00:16,  3.04it/s]31it [00:16,  3.31it/s]32it [00:16,  1.91it/s]
+-----Val Epoch: 1, dl: 2249/5624-----
+ R@1: 41.6 (window: 40.85)
+ R@5: 68.1 (window: 65.625)
+ R@10: 79.9 (window: 76.6)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 15.579 (window: 17.37525)
+ Loss: 0.5056313145905733
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 40.85
+ Current Best R@1 is 41.6
+
+
+Train Epoch: 1 dl: 2250/5624 Loss: 0.478643
+Train Epoch: 1 dl: 2260/5624 Loss: 0.596638
+Train Epoch: 1 dl: 2270/5624 Loss: 0.318525
+Train Epoch: 1 dl: 2280/5624 Loss: 0.365389
+Train Epoch: 1 dl: 2290/5624 Loss: 0.737798
+Train Epoch: 1 dl: 2300/5624 Loss: 0.227926
+Train Epoch: 1 dl: 2310/5624 Loss: 0.783699
+Train Epoch: 1 dl: 2320/5624 Loss: 0.448362
+Train Epoch: 1 dl: 2330/5624 Loss: 0.684580
+Train Epoch: 1 dl: 2340/5624 Loss: 0.667303
+Train Epoch: 1 dl: 2350/5624 Loss: 0.450557
+Train Epoch: 1 dl: 2360/5624 Loss: 0.584098
+Train Epoch: 1 dl: 2370/5624 Loss: 1.087784
+Train Epoch: 1 dl: 2380/5624 Loss: 0.750822
+Train Epoch: 1 dl: 2390/5624 Loss: 0.438205
+Train Epoch: 1 dl: 2400/5624 Loss: 0.860483
+Train Epoch: 1 dl: 2410/5624 Loss: 0.523840
+Train Epoch: 1 dl: 2420/5624 Loss: 0.635801
+Train Epoch: 1 dl: 2430/5624 Loss: 0.670377
+Train Epoch: 1 dl: 2440/5624 Loss: 0.599000
+Train Epoch: 1 dl: 2450/5624 Loss: 0.853452
+Train Epoch: 1 dl: 2460/5624 Loss: 0.589126
+Train Epoch: 1 dl: 2470/5624 Loss: 0.729605
+Train Epoch: 1 dl: 2480/5624 Loss: 0.587303
+Train Epoch: 1 dl: 2490/5624 Loss: 0.762452
+Train Epoch: 1 dl: 2500/5624 Loss: 0.897822
+Train Epoch: 1 dl: 2510/5624 Loss: 0.589105
+Train Epoch: 1 dl: 2520/5624 Loss: 0.397292
+Train Epoch: 1 dl: 2530/5624 Loss: 0.235888
+Train Epoch: 1 dl: 2540/5624 Loss: 0.379385
+Train Epoch: 1 dl: 2550/5624 Loss: 0.278048
+Train Epoch: 1 dl: 2560/5624 Loss: 0.606119
+Train Epoch: 1 dl: 2570/5624 Loss: 0.641759
+Train Epoch: 1 dl: 2580/5624 Loss: 0.695721
+Train Epoch: 1 dl: 2590/5624 Loss: 0.297564
+Train Epoch: 1 dl: 2600/5624 Loss: 0.285327
+Train Epoch: 1 dl: 2610/5624 Loss: 0.624049
+Train Epoch: 1 dl: 2620/5624 Loss: 0.717768
+Train Epoch: 1 dl: 2630/5624 Loss: 0.546437
+Train Epoch: 1 dl: 2640/5624 Loss: 0.611335
+Train Epoch: 1 dl: 2650/5624 Loss: 0.346791
+Train Epoch: 1 dl: 2660/5624 Loss: 0.973362
+Train Epoch: 1 dl: 2670/5624 Loss: 0.244789
+Train Epoch: 1 dl: 2680/5624 Loss: 0.288532
+Train Epoch: 1 dl: 2690/5624 Loss: 0.583045
+Train Epoch: 1 dl: 2700/5624 Loss: 0.791167
+Train Epoch: 1 dl: 2710/5624 Loss: 0.379613
+Train Epoch: 1 dl: 2720/5624 Loss: 1.215672
+Train Epoch: 1 dl: 2730/5624 Loss: 0.279640
+Train Epoch: 1 dl: 2740/5624 Loss: 0.581883
+Train Epoch: 1 dl: 2750/5624 Loss: 0.373266
+Train Epoch: 1 dl: 2760/5624 Loss: 0.315083
+Train Epoch: 1 dl: 2770/5624 Loss: 0.366970
+Train Epoch: 1 dl: 2780/5624 Loss: 0.376595
+Train Epoch: 1 dl: 2790/5624 Loss: 0.509272
+Train Epoch: 1 dl: 2800/5624 Loss: 0.223714
+Train Epoch: 1 dl: 2810/5624 Loss: 0.807430
+0it [00:00, ?it/s]1it [00:04,  4.46s/it]2it [00:04,  1.98s/it]3it [00:04,  1.18s/it]4it [00:05,  1.23it/s]5it [00:05,  1.65it/s]6it [00:05,  2.08it/s]7it [00:05,  2.48it/s]8it [00:06,  2.85it/s]9it [00:08,  1.12s/it]10it [00:09,  1.18it/s]11it [00:09,  1.51it/s]12it [00:09,  1.86it/s]13it [00:09,  2.23it/s]14it [00:10,  2.50it/s]15it [00:10,  2.83it/s]16it [00:10,  3.12it/s]17it [00:12,  1.10it/s]18it [00:13,  1.41it/s]19it [00:13,  1.75it/s]20it [00:13,  2.12it/s]21it [00:13,  2.48it/s]22it [00:14,  2.83it/s]23it [00:14,  3.09it/s]24it [00:14,  3.35it/s]25it [00:15,  2.25it/s]26it [00:15,  2.61it/s]27it [00:15,  2.94it/s]28it [00:16,  3.23it/s]29it [00:16,  3.47it/s]30it [00:16,  3.66it/s]31it [00:16,  3.81it/s]32it [00:17,  1.87it/s]
+-----Val Epoch: 1, dl: 2812/5624-----
+ R@1: 41.5 (window: 40.980000000000004)
+ R@5: 69.4 (window: 66.38)
+ R@10: 80.7 (window: 77.41999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.963 (window: 16.8928)
+ Loss: 0.4874350051395595
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 40.980000000000004
+ Current Best R@1 is 41.6
+
+
+Train Epoch: 1 dl: 2820/5624 Loss: 0.454120
+Train Epoch: 1 dl: 2830/5624 Loss: 0.443415
+Train Epoch: 1 dl: 2840/5624 Loss: 0.824431
+Train Epoch: 1 dl: 2850/5624 Loss: 0.846952
+Train Epoch: 1 dl: 2860/5624 Loss: 0.716517
+Train Epoch: 1 dl: 2870/5624 Loss: 0.276701
+Train Epoch: 1 dl: 2880/5624 Loss: 0.576524
+Train Epoch: 1 dl: 2890/5624 Loss: 0.503058
+Train Epoch: 1 dl: 2900/5624 Loss: 0.369141
+Train Epoch: 1 dl: 2910/5624 Loss: 0.816628
+Train Epoch: 1 dl: 2920/5624 Loss: 0.439407
+Train Epoch: 1 dl: 2930/5624 Loss: 0.283220
+Train Epoch: 1 dl: 2940/5624 Loss: 0.349130
+Train Epoch: 1 dl: 2950/5624 Loss: 0.423064
+Train Epoch: 1 dl: 2960/5624 Loss: 0.883815
+Train Epoch: 1 dl: 2970/5624 Loss: 0.356745
+Train Epoch: 1 dl: 2980/5624 Loss: 0.403214
+Train Epoch: 1 dl: 2990/5624 Loss: 0.575866
+Train Epoch: 1 dl: 3000/5624 Loss: 0.193271
+Train Epoch: 1 dl: 3010/5624 Loss: 0.420201
+Train Epoch: 1 dl: 3020/5624 Loss: 0.877282
+Train Epoch: 1 dl: 3030/5624 Loss: 0.530623
+Train Epoch: 1 dl: 3040/5624 Loss: 0.515884
+Train Epoch: 1 dl: 3050/5624 Loss: 0.411706
+Train Epoch: 1 dl: 3060/5624 Loss: 0.782971
+Train Epoch: 1 dl: 3070/5624 Loss: 0.249697
+Train Epoch: 1 dl: 3080/5624 Loss: 0.622115
+Train Epoch: 1 dl: 3090/5624 Loss: 0.721318
+Train Epoch: 1 dl: 3100/5624 Loss: 0.397456
+Train Epoch: 1 dl: 3110/5624 Loss: 0.406998
+Train Epoch: 1 dl: 3120/5624 Loss: 0.557883
+Train Epoch: 1 dl: 3130/5624 Loss: 0.530435
+Train Epoch: 1 dl: 3140/5624 Loss: 0.581738
+Train Epoch: 1 dl: 3150/5624 Loss: 0.516649
+Train Epoch: 1 dl: 3160/5624 Loss: 0.575866
+Train Epoch: 1 dl: 3170/5624 Loss: 0.688728
+Train Epoch: 1 dl: 3180/5624 Loss: 0.673182
+Train Epoch: 1 dl: 3190/5624 Loss: 0.274118
+Train Epoch: 1 dl: 3200/5624 Loss: 0.457253
+Train Epoch: 1 dl: 3210/5624 Loss: 0.610497
+Train Epoch: 1 dl: 3220/5624 Loss: 0.725031
+Train Epoch: 1 dl: 3230/5624 Loss: 0.577030
+Train Epoch: 1 dl: 3240/5624 Loss: 0.340234
+Train Epoch: 1 dl: 3250/5624 Loss: 0.527657
+Train Epoch: 1 dl: 3260/5624 Loss: 0.537533
+Train Epoch: 1 dl: 3270/5624 Loss: 0.401801
+Train Epoch: 1 dl: 3280/5624 Loss: 0.417835
+Train Epoch: 1 dl: 3290/5624 Loss: 0.709535
+Train Epoch: 1 dl: 3300/5624 Loss: 0.272891
+Train Epoch: 1 dl: 3310/5624 Loss: 0.341112
+Train Epoch: 1 dl: 3320/5624 Loss: 0.483107
+Train Epoch: 1 dl: 3330/5624 Loss: 0.417053
+Train Epoch: 1 dl: 3340/5624 Loss: 0.621851
+Train Epoch: 1 dl: 3350/5624 Loss: 0.591475
+Train Epoch: 1 dl: 3360/5624 Loss: 0.437944
+Train Epoch: 1 dl: 3370/5624 Loss: 0.513752
+0it [00:00, ?it/s]1it [00:03,  3.24s/it]2it [00:04,  2.10s/it]3it [00:04,  1.25s/it]4it [00:05,  1.17it/s]5it [00:05,  1.58it/s]6it [00:05,  1.99it/s]7it [00:05,  2.39it/s]8it [00:06,  2.75it/s]9it [00:07,  1.30it/s]10it [00:07,  1.61it/s]11it [00:08,  1.98it/s]12it [00:08,  2.35it/s]13it [00:08,  2.69it/s]14it [00:09,  2.38it/s]15it [00:09,  2.72it/s]16it [00:09,  2.90it/s]17it [00:11,  1.58it/s]18it [00:11,  1.93it/s]19it [00:12,  1.65it/s]20it [00:12,  1.97it/s]21it [00:12,  2.33it/s]22it [00:13,  2.15it/s]23it [00:13,  2.52it/s]24it [00:13,  2.86it/s]25it [00:14,  2.83it/s]26it [00:14,  3.13it/s]27it [00:14,  2.51it/s]28it [00:15,  2.85it/s]29it [00:15,  3.15it/s]30it [00:15,  2.95it/s]31it [00:15,  3.24it/s]32it [00:16,  1.98it/s]
+-----Val Epoch: 1, dl: 3374/5624-----
+ R@1: 42.1 (window: 41.559999999999995)
+ R@5: 69.8 (window: 67.82000000000001)
+ R@10: 80.6 (window: 79.17999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.712 (window: 15.668600000000001)
+ Loss: 0.47963334200903773
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 41.559999999999995
+ Current Best R@1 is 42.1
+
+
+Train Epoch: 1 dl: 3380/5624 Loss: 0.509755
+Train Epoch: 1 dl: 3390/5624 Loss: 0.834421
+Train Epoch: 1 dl: 3400/5624 Loss: 0.716685
+Train Epoch: 1 dl: 3410/5624 Loss: 0.600981
+Train Epoch: 1 dl: 3420/5624 Loss: 1.139400
+Train Epoch: 1 dl: 3430/5624 Loss: 0.435177
+Train Epoch: 1 dl: 3440/5624 Loss: 0.614160
+Train Epoch: 1 dl: 3450/5624 Loss: 0.723394
+Train Epoch: 1 dl: 3460/5624 Loss: 0.623766
+Train Epoch: 1 dl: 3470/5624 Loss: 1.084819
+Train Epoch: 1 dl: 3480/5624 Loss: 0.314512
+Train Epoch: 1 dl: 3490/5624 Loss: 0.710764
+Train Epoch: 1 dl: 3500/5624 Loss: 0.557013
+Train Epoch: 1 dl: 3510/5624 Loss: 1.035467
+Train Epoch: 1 dl: 3520/5624 Loss: 0.629249
+Train Epoch: 1 dl: 3530/5624 Loss: 1.043823
+Train Epoch: 1 dl: 3540/5624 Loss: 0.566141
+Train Epoch: 1 dl: 3550/5624 Loss: 0.501256
+Train Epoch: 1 dl: 3560/5624 Loss: 0.636657
+Train Epoch: 1 dl: 3570/5624 Loss: 0.520399
+Train Epoch: 1 dl: 3580/5624 Loss: 0.137148
+Train Epoch: 1 dl: 3590/5624 Loss: 0.608980
+Train Epoch: 1 dl: 3600/5624 Loss: 0.345886
+Train Epoch: 1 dl: 3610/5624 Loss: 0.533650
+Train Epoch: 1 dl: 3620/5624 Loss: 0.363936
+Train Epoch: 1 dl: 3630/5624 Loss: 0.488139
+Train Epoch: 1 dl: 3640/5624 Loss: 0.381024
+Train Epoch: 1 dl: 3650/5624 Loss: 0.208301
+Train Epoch: 1 dl: 3660/5624 Loss: 0.600397
+Train Epoch: 1 dl: 3670/5624 Loss: 0.767319
+Train Epoch: 1 dl: 3680/5624 Loss: 0.444219
+Train Epoch: 1 dl: 3690/5624 Loss: 0.371383
+Train Epoch: 1 dl: 3700/5624 Loss: 0.532200
+Train Epoch: 1 dl: 3710/5624 Loss: 0.704476
+Train Epoch: 1 dl: 3720/5624 Loss: 0.636665
+Train Epoch: 1 dl: 3730/5624 Loss: 0.587688
+Train Epoch: 1 dl: 3740/5624 Loss: 0.491815
+Train Epoch: 1 dl: 3750/5624 Loss: 0.475857
+Train Epoch: 1 dl: 3760/5624 Loss: 0.498061
+Train Epoch: 1 dl: 3770/5624 Loss: 0.407054
+Train Epoch: 1 dl: 3780/5624 Loss: 0.346958
+Train Epoch: 1 dl: 3790/5624 Loss: 0.640711
+Train Epoch: 1 dl: 3800/5624 Loss: 0.471695
+Train Epoch: 1 dl: 3810/5624 Loss: 0.856965
+Train Epoch: 1 dl: 3820/5624 Loss: 0.514524
+Train Epoch: 1 dl: 3830/5624 Loss: 0.539658
+Train Epoch: 1 dl: 3840/5624 Loss: 0.729440
+Train Epoch: 1 dl: 3850/5624 Loss: 0.477358
+Train Epoch: 1 dl: 3860/5624 Loss: 0.594290
+Train Epoch: 1 dl: 3870/5624 Loss: 0.526160
+Train Epoch: 1 dl: 3880/5624 Loss: 0.187571
+Train Epoch: 1 dl: 3890/5624 Loss: 0.625804
+Train Epoch: 1 dl: 3900/5624 Loss: 0.601913
+Train Epoch: 1 dl: 3910/5624 Loss: 0.748909
+Train Epoch: 1 dl: 3920/5624 Loss: 0.778008
+Train Epoch: 1 dl: 3930/5624 Loss: 0.446978
+0it [00:00, ?it/s]1it [00:05,  5.37s/it]2it [00:05,  2.36s/it]3it [00:05,  1.39s/it]4it [00:06,  1.06it/s]5it [00:06,  1.45it/s]6it [00:06,  1.85it/s]7it [00:06,  2.18it/s]8it [00:07,  2.56it/s]9it [00:08,  1.76it/s]10it [00:08,  1.99it/s]11it [00:08,  2.36it/s]12it [00:08,  2.71it/s]13it [00:09,  3.02it/s]14it [00:09,  3.28it/s]15it [00:09,  3.47it/s]16it [00:09,  3.63it/s]17it [00:10,  2.22it/s]18it [00:11,  2.25it/s]19it [00:11,  2.61it/s]20it [00:11,  2.93it/s]21it [00:11,  3.21it/s]22it [00:12,  2.31it/s]23it [00:12,  2.65it/s]24it [00:13,  2.89it/s]25it [00:13,  2.95it/s]26it [00:14,  2.08it/s]27it [00:14,  2.45it/s]28it [00:14,  2.77it/s]29it [00:15,  3.08it/s]30it [00:15,  3.34it/s]31it [00:15,  3.56it/s]32it [00:15,  2.03it/s]
+-----Val Epoch: 1, dl: 3936/5624-----
+ R@1: 42.7 (window: 41.82000000000001)
+ R@5: 69.5 (window: 68.78)
+ R@10: 80.7 (window: 79.96000000000001)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.466 (window: 15.129999999999999)
+ Loss: 0.4696590546518564
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 41.82000000000001
+ Current Best R@1 is 42.7
+
+
+Train Epoch: 1 dl: 3940/5624 Loss: 0.518788
+Train Epoch: 1 dl: 3950/5624 Loss: 0.503694
+Train Epoch: 1 dl: 3960/5624 Loss: 0.555727
+Train Epoch: 1 dl: 3970/5624 Loss: 0.430741
+Train Epoch: 1 dl: 3980/5624 Loss: 0.720964
+Train Epoch: 1 dl: 3990/5624 Loss: 0.609553
+Train Epoch: 1 dl: 4000/5624 Loss: 0.471083
+Train Epoch: 1 dl: 4010/5624 Loss: 0.413941
+Train Epoch: 1 dl: 4020/5624 Loss: 0.568934
+Train Epoch: 1 dl: 4030/5624 Loss: 0.244876
+Train Epoch: 1 dl: 4040/5624 Loss: 0.374135
+Train Epoch: 1 dl: 4050/5624 Loss: 0.412363
+Train Epoch: 1 dl: 4060/5624 Loss: 0.907753
+Train Epoch: 1 dl: 4070/5624 Loss: 0.300830
+Train Epoch: 1 dl: 4080/5624 Loss: 0.376073
+Train Epoch: 1 dl: 4090/5624 Loss: 0.688238
+Train Epoch: 1 dl: 4100/5624 Loss: 1.039465
+Train Epoch: 1 dl: 4110/5624 Loss: 0.449753
+Train Epoch: 1 dl: 4120/5624 Loss: 0.282325
+Train Epoch: 1 dl: 4130/5624 Loss: 0.451958
+Train Epoch: 1 dl: 4140/5624 Loss: 0.503361
+Train Epoch: 1 dl: 4150/5624 Loss: 0.641074
+Train Epoch: 1 dl: 4160/5624 Loss: 0.962099
+Train Epoch: 1 dl: 4170/5624 Loss: 0.581887
+Train Epoch: 1 dl: 4180/5624 Loss: 0.486389
+Train Epoch: 1 dl: 4190/5624 Loss: 0.319804
+Train Epoch: 1 dl: 4200/5624 Loss: 0.345203
+Train Epoch: 1 dl: 4210/5624 Loss: 0.594981
+Train Epoch: 1 dl: 4220/5624 Loss: 0.671827
+Train Epoch: 1 dl: 4230/5624 Loss: 0.325977
+Train Epoch: 1 dl: 4240/5624 Loss: 0.376113
+Train Epoch: 1 dl: 4250/5624 Loss: 0.691358
+Train Epoch: 1 dl: 4260/5624 Loss: 0.502169
+Train Epoch: 1 dl: 4270/5624 Loss: 0.491827
+Train Epoch: 1 dl: 4280/5624 Loss: 0.486719
+Train Epoch: 1 dl: 4290/5624 Loss: 0.195843
+Train Epoch: 1 dl: 4300/5624 Loss: 0.208140
+Train Epoch: 1 dl: 4310/5624 Loss: 0.427244
+Train Epoch: 1 dl: 4320/5624 Loss: 0.646948
+Train Epoch: 1 dl: 4330/5624 Loss: 0.266792
+Train Epoch: 1 dl: 4340/5624 Loss: 0.362867
+Train Epoch: 1 dl: 4350/5624 Loss: 0.753465
+Train Epoch: 1 dl: 4360/5624 Loss: 0.664403
+Train Epoch: 1 dl: 4370/5624 Loss: 0.307035
+Train Epoch: 1 dl: 4380/5624 Loss: 0.381175
+Train Epoch: 1 dl: 4390/5624 Loss: 0.587636
+Train Epoch: 1 dl: 4400/5624 Loss: 0.249234
+Train Epoch: 1 dl: 4410/5624 Loss: 0.530761
+Train Epoch: 1 dl: 4420/5624 Loss: 0.720419
+Train Epoch: 1 dl: 4430/5624 Loss: 1.056677
+Train Epoch: 1 dl: 4440/5624 Loss: 1.096842
+Train Epoch: 1 dl: 4450/5624 Loss: 0.381714
+Train Epoch: 1 dl: 4460/5624 Loss: 0.369266
+Train Epoch: 1 dl: 4470/5624 Loss: 0.380521
+Train Epoch: 1 dl: 4480/5624 Loss: 0.296219
+Train Epoch: 1 dl: 4490/5624 Loss: 0.546483
+0it [00:00, ?it/s]1it [00:05,  5.58s/it]2it [00:05,  2.44s/it]3it [00:06,  1.46s/it]4it [00:06,  1.02it/s]5it [00:06,  1.40it/s]6it [00:06,  1.80it/s]7it [00:07,  2.20it/s]8it [00:07,  2.58it/s]9it [00:10,  1.10s/it]10it [00:10,  1.19it/s]11it [00:10,  1.51it/s]12it [00:10,  1.87it/s]13it [00:11,  2.24it/s]14it [00:11,  2.59it/s]15it [00:11,  2.78it/s]16it [00:11,  3.07it/s]17it [00:12,  2.13it/s]18it [00:12,  2.49it/s]19it [00:13,  2.75it/s]20it [00:13,  3.05it/s]21it [00:13,  3.32it/s]22it [00:13,  3.53it/s]23it [00:14,  3.70it/s]24it [00:14,  3.83it/s]25it [00:15,  1.86it/s]26it [00:15,  2.23it/s]27it [00:15,  2.59it/s]28it [00:16,  2.93it/s]29it [00:16,  3.22it/s]30it [00:16,  3.46it/s]31it [00:16,  3.65it/s]32it [00:17,  1.87it/s]
+-----Val Epoch: 1, dl: 4499/5624-----
+ R@1: 43.2 (window: 42.21999999999999)
+ R@5: 70.7 (window: 69.5)
+ R@10: 80.9 (window: 80.56000000000002)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.571 (window: 14.858200000000002)
+ Loss: 0.46589477779343724
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 42.21999999999999
+ Current Best R@1 is 43.2
+
+
+Train Epoch: 1 dl: 4500/5624 Loss: 0.358395
+Train Epoch: 1 dl: 4510/5624 Loss: 0.416653
+Train Epoch: 1 dl: 4520/5624 Loss: 0.436830
+Train Epoch: 1 dl: 4530/5624 Loss: 0.336768
+Train Epoch: 1 dl: 4540/5624 Loss: 0.325339
+Train Epoch: 1 dl: 4550/5624 Loss: 0.957514
+Train Epoch: 1 dl: 4560/5624 Loss: 0.321151
+Train Epoch: 1 dl: 4570/5624 Loss: 0.385440
+Train Epoch: 1 dl: 4580/5624 Loss: 0.737716
+Train Epoch: 1 dl: 4590/5624 Loss: 0.456016
+Train Epoch: 1 dl: 4600/5624 Loss: 0.425486
+Train Epoch: 1 dl: 4610/5624 Loss: 0.587776
+Train Epoch: 1 dl: 4620/5624 Loss: 0.614714
+Train Epoch: 1 dl: 4630/5624 Loss: 0.297879
+Train Epoch: 1 dl: 4640/5624 Loss: 0.351284
+Train Epoch: 1 dl: 4650/5624 Loss: 0.585026
+Train Epoch: 1 dl: 4660/5624 Loss: 0.703283
+Train Epoch: 1 dl: 4670/5624 Loss: 0.337385
+Train Epoch: 1 dl: 4680/5624 Loss: 0.562718
+Train Epoch: 1 dl: 4690/5624 Loss: 0.649582
+Train Epoch: 1 dl: 4700/5624 Loss: 0.414845
+Train Epoch: 1 dl: 4710/5624 Loss: 0.378834
+Train Epoch: 1 dl: 4720/5624 Loss: 0.825526
+Train Epoch: 1 dl: 4730/5624 Loss: 0.599031
+Train Epoch: 1 dl: 4740/5624 Loss: 0.432263
+Train Epoch: 1 dl: 4750/5624 Loss: 0.210125
+Train Epoch: 1 dl: 4760/5624 Loss: 0.465598
+Train Epoch: 1 dl: 4770/5624 Loss: 0.699683
+Train Epoch: 1 dl: 4780/5624 Loss: 0.324066
+Train Epoch: 1 dl: 4790/5624 Loss: 0.976892
+Train Epoch: 1 dl: 4800/5624 Loss: 0.275258
+Train Epoch: 1 dl: 4810/5624 Loss: 0.197623
+Train Epoch: 1 dl: 4820/5624 Loss: 0.527758
+Train Epoch: 1 dl: 4830/5624 Loss: 0.334716
+Train Epoch: 1 dl: 4840/5624 Loss: 0.421617
+Train Epoch: 1 dl: 4850/5624 Loss: 0.166572
+Train Epoch: 1 dl: 4860/5624 Loss: 0.185687
+Train Epoch: 1 dl: 4870/5624 Loss: 0.227835
+Train Epoch: 1 dl: 4880/5624 Loss: 0.267984
+Train Epoch: 1 dl: 4890/5624 Loss: 0.569692
+Train Epoch: 1 dl: 4900/5624 Loss: 0.260290
+Train Epoch: 1 dl: 4910/5624 Loss: 0.330301
+Train Epoch: 1 dl: 4920/5624 Loss: 0.241921
+Train Epoch: 1 dl: 4930/5624 Loss: 0.858264
+Train Epoch: 1 dl: 4940/5624 Loss: 0.739748
+Train Epoch: 1 dl: 4950/5624 Loss: 0.681830
+Train Epoch: 1 dl: 4960/5624 Loss: 0.415506
+Train Epoch: 1 dl: 4970/5624 Loss: 0.223195
+Train Epoch: 1 dl: 4980/5624 Loss: 0.493704
+Train Epoch: 1 dl: 4990/5624 Loss: 0.229472
+Train Epoch: 1 dl: 5000/5624 Loss: 0.362940
+Train Epoch: 1 dl: 5010/5624 Loss: 0.377530
+Train Epoch: 1 dl: 5020/5624 Loss: 0.618352
+Train Epoch: 1 dl: 5030/5624 Loss: 0.354737
+Train Epoch: 1 dl: 5040/5624 Loss: 0.438868
+Train Epoch: 1 dl: 5050/5624 Loss: 0.426184
+Train Epoch: 1 dl: 5060/5624 Loss: 0.752112
+0it [00:00, ?it/s]1it [00:03,  3.20s/it]2it [00:04,  2.36s/it]3it [00:05,  1.39s/it]4it [00:05,  1.06it/s]5it [00:05,  1.45it/s]6it [00:05,  1.81it/s]7it [00:06,  2.21it/s]8it [00:06,  2.59it/s]9it [00:06,  2.92it/s]10it [00:09,  1.08s/it]11it [00:09,  1.19it/s]12it [00:10,  1.49it/s]13it [00:10,  1.84it/s]14it [00:10,  2.21it/s]15it [00:10,  2.56it/s]16it [00:11,  2.88it/s]17it [00:11,  3.15it/s]18it [00:12,  1.41it/s]19it [00:13,  1.72it/s]20it [00:13,  2.09it/s]21it [00:13,  2.46it/s]22it [00:13,  2.81it/s]23it [00:14,  3.11it/s]24it [00:14,  3.37it/s]25it [00:14,  3.58it/s]26it [00:15,  1.99it/s]27it [00:15,  2.36it/s]28it [00:16,  2.72it/s]29it [00:16,  3.04it/s]30it [00:16,  3.31it/s]31it [00:16,  3.53it/s]32it [00:17,  1.88it/s]
+-----Val Epoch: 1, dl: 5061/5624-----
+ R@1: 43.7 (window: 42.64)
+ R@5: 70.5 (window: 69.97999999999999)
+ R@10: 80.8 (window: 80.74)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.778 (window: 14.498)
+ Loss: 0.45291402330622077
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 42.64
+ Current Best R@1 is 43.7
+
+
+Train Epoch: 1 dl: 5070/5624 Loss: 0.353101
+Train Epoch: 1 dl: 5080/5624 Loss: 0.601870
+Train Epoch: 1 dl: 5090/5624 Loss: 0.932992
+Train Epoch: 1 dl: 5100/5624 Loss: 0.925894
+Train Epoch: 1 dl: 5110/5624 Loss: 0.324287
+Train Epoch: 1 dl: 5120/5624 Loss: 0.430556
+Train Epoch: 1 dl: 5130/5624 Loss: 0.555356
+Train Epoch: 1 dl: 5140/5624 Loss: 0.596202
+Train Epoch: 1 dl: 5150/5624 Loss: 0.290583
+Train Epoch: 1 dl: 5160/5624 Loss: 0.376697
+Train Epoch: 1 dl: 5170/5624 Loss: 0.441302
+Train Epoch: 1 dl: 5180/5624 Loss: 0.649048
+Train Epoch: 1 dl: 5190/5624 Loss: 0.415879
+Train Epoch: 1 dl: 5200/5624 Loss: 0.073421
+Train Epoch: 1 dl: 5210/5624 Loss: 0.221973
+Train Epoch: 1 dl: 5220/5624 Loss: 0.294246
+Train Epoch: 1 dl: 5230/5624 Loss: 0.401784
+Train Epoch: 1 dl: 5240/5624 Loss: 0.328880
+Train Epoch: 1 dl: 5250/5624 Loss: 0.198435
+Train Epoch: 1 dl: 5260/5624 Loss: 0.251892
+Train Epoch: 1 dl: 5270/5624 Loss: 0.122869
+Train Epoch: 1 dl: 5280/5624 Loss: 0.309492
+Train Epoch: 1 dl: 5290/5624 Loss: 0.695561
+Train Epoch: 1 dl: 5300/5624 Loss: 0.346232
+Train Epoch: 1 dl: 5310/5624 Loss: 0.599603
+Train Epoch: 1 dl: 5320/5624 Loss: 0.561746
+Train Epoch: 1 dl: 5330/5624 Loss: 0.273276
+Train Epoch: 1 dl: 5340/5624 Loss: 0.523354
+Train Epoch: 1 dl: 5350/5624 Loss: 0.392442
+Train Epoch: 1 dl: 5360/5624 Loss: 0.774841
+Train Epoch: 1 dl: 5370/5624 Loss: 0.831183
+Train Epoch: 1 dl: 5380/5624 Loss: 0.225849
+Train Epoch: 1 dl: 5390/5624 Loss: 0.900389
+Train Epoch: 1 dl: 5400/5624 Loss: 0.390769
+Train Epoch: 1 dl: 5410/5624 Loss: 0.412336
+Train Epoch: 1 dl: 5420/5624 Loss: 0.389508
+Train Epoch: 1 dl: 5430/5624 Loss: 0.577456
+Train Epoch: 1 dl: 5440/5624 Loss: 0.323381
+Train Epoch: 1 dl: 5450/5624 Loss: 0.567454
+Train Epoch: 1 dl: 5460/5624 Loss: 0.239128
+Train Epoch: 1 dl: 5470/5624 Loss: 0.315403
+Train Epoch: 1 dl: 5480/5624 Loss: 0.650577
+Train Epoch: 1 dl: 5490/5624 Loss: 0.753027
+Train Epoch: 1 dl: 5500/5624 Loss: 0.679824
+Train Epoch: 1 dl: 5510/5624 Loss: 0.200537
+Train Epoch: 1 dl: 5520/5624 Loss: 0.658983
+Train Epoch: 1 dl: 5530/5624 Loss: 0.419307
+Train Epoch: 1 dl: 5540/5624 Loss: 0.317632
+Train Epoch: 1 dl: 5550/5624 Loss: 0.657564
+Train Epoch: 1 dl: 5560/5624 Loss: 0.289547
+Train Epoch: 1 dl: 5570/5624 Loss: 0.475801
+Train Epoch: 1 dl: 5580/5624 Loss: 0.371279
+Train Epoch: 1 dl: 5590/5624 Loss: 0.572414
+Train Epoch: 1 dl: 5600/5624 Loss: 0.739880
+Train Epoch: 1 dl: 5610/5624 Loss: 0.454394
+Train Epoch: 1 dl: 5620/5624 Loss: 0.117078
+0it [00:00, ?it/s]1it [00:05,  5.66s/it]2it [00:05,  2.48s/it]3it [00:06,  1.46s/it]4it [00:06,  1.00it/s]5it [00:06,  1.37it/s]6it [00:06,  1.77it/s]7it [00:07,  2.17it/s]8it [00:07,  2.55it/s]9it [00:08,  1.64it/s]10it [00:08,  2.01it/s]11it [00:09,  2.38it/s]12it [00:09,  2.72it/s]13it [00:09,  3.03it/s]14it [00:09,  3.28it/s]15it [00:09,  3.49it/s]16it [00:10,  3.53it/s]17it [00:11,  1.88it/s]18it [00:11,  2.24it/s]19it [00:11,  2.59it/s]20it [00:12,  2.92it/s]21it [00:12,  3.19it/s]22it [00:12,  3.41it/s]23it [00:12,  3.59it/s]24it [00:13,  2.02it/s]25it [00:14,  2.39it/s]26it [00:14,  2.67it/s]27it [00:14,  2.99it/s]28it [00:14,  3.21it/s]29it [00:15,  3.45it/s]30it [00:15,  3.65it/s]31it [00:15,  3.79it/s]32it [00:15,  2.03it/s]
+-----Val Epoch: 1, dl: 5624/5624-----
+ R@1: 43.5 (window: 43.04)
+ R@5: 70.8 (window: 70.26)
+ R@10: 81.0 (window: 80.8)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.149 (window: 14.335199999999997)
+ Loss: 0.4508928144350648
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 43.04
+ Current Best R@1 is 43.7
+
+
+Train Epoch: 2 dl: 0/5624 Loss: 0.321182
+Train Epoch: 2 dl: 10/5624 Loss: 0.315807
+Train Epoch: 2 dl: 20/5624 Loss: 0.677056
+Train Epoch: 2 dl: 30/5624 Loss: 0.876314
+Train Epoch: 2 dl: 40/5624 Loss: 0.448877
+Train Epoch: 2 dl: 50/5624 Loss: 0.515697
+Train Epoch: 2 dl: 60/5624 Loss: 0.357843
+Train Epoch: 2 dl: 70/5624 Loss: 0.544805
+Train Epoch: 2 dl: 80/5624 Loss: 0.429839
+Train Epoch: 2 dl: 90/5624 Loss: 0.563611
+Train Epoch: 2 dl: 100/5624 Loss: 0.344297
+Train Epoch: 2 dl: 110/5624 Loss: 0.958933
+Train Epoch: 2 dl: 120/5624 Loss: 0.372833
+Train Epoch: 2 dl: 130/5624 Loss: 0.121942
+Train Epoch: 2 dl: 140/5624 Loss: 0.161041
+Train Epoch: 2 dl: 150/5624 Loss: 0.494767
+Train Epoch: 2 dl: 160/5624 Loss: 0.269170
+Train Epoch: 2 dl: 170/5624 Loss: 0.175448
+Train Epoch: 2 dl: 180/5624 Loss: 0.851610
+Train Epoch: 2 dl: 190/5624 Loss: 0.171007
+Train Epoch: 2 dl: 200/5624 Loss: 0.432002
+Train Epoch: 2 dl: 210/5624 Loss: 0.731470
+Train Epoch: 2 dl: 220/5624 Loss: 0.542463
+Train Epoch: 2 dl: 230/5624 Loss: 0.410616
+Train Epoch: 2 dl: 240/5624 Loss: 0.350136
+Train Epoch: 2 dl: 250/5624 Loss: 0.630781
+Train Epoch: 2 dl: 260/5624 Loss: 0.291659
+Train Epoch: 2 dl: 270/5624 Loss: 0.424636
+Train Epoch: 2 dl: 280/5624 Loss: 0.665182
+Train Epoch: 2 dl: 290/5624 Loss: 0.510361
+Train Epoch: 2 dl: 300/5624 Loss: 0.305797
+Train Epoch: 2 dl: 310/5624 Loss: 0.793007
+Train Epoch: 2 dl: 320/5624 Loss: 0.483936
+Train Epoch: 2 dl: 330/5624 Loss: 0.393572
+Train Epoch: 2 dl: 340/5624 Loss: 0.605584
+Train Epoch: 2 dl: 350/5624 Loss: 0.305232
+Train Epoch: 2 dl: 360/5624 Loss: 0.313520
+Train Epoch: 2 dl: 370/5624 Loss: 0.613522
+Train Epoch: 2 dl: 380/5624 Loss: 0.849086
+Train Epoch: 2 dl: 390/5624 Loss: 0.121247
+Train Epoch: 2 dl: 400/5624 Loss: 0.460585
+Train Epoch: 2 dl: 410/5624 Loss: 0.394142
+Train Epoch: 2 dl: 420/5624 Loss: 0.408849
+Train Epoch: 2 dl: 430/5624 Loss: 0.643766
+Train Epoch: 2 dl: 440/5624 Loss: 0.419487
+Train Epoch: 2 dl: 450/5624 Loss: 0.388930
+Train Epoch: 2 dl: 460/5624 Loss: 0.561551
+Train Epoch: 2 dl: 470/5624 Loss: 0.246487
+Train Epoch: 2 dl: 480/5624 Loss: 0.173260
+Train Epoch: 2 dl: 490/5624 Loss: 0.770151
+Train Epoch: 2 dl: 500/5624 Loss: 0.311137
+Train Epoch: 2 dl: 510/5624 Loss: 0.475996
+Train Epoch: 2 dl: 520/5624 Loss: 0.535590
+Train Epoch: 2 dl: 530/5624 Loss: 0.347564
+Train Epoch: 2 dl: 540/5624 Loss: 0.271584
+Train Epoch: 2 dl: 550/5624 Loss: 0.407900
+Train Epoch: 2 dl: 560/5624 Loss: 0.204363
+0it [00:00, ?it/s]1it [00:03,  3.50s/it]2it [00:03,  1.59s/it]3it [00:03,  1.03it/s]4it [00:05,  1.05s/it]5it [00:05,  1.29it/s]6it [00:05,  1.68it/s]7it [00:05,  2.08it/s]8it [00:06,  2.46it/s]9it [00:06,  2.30it/s]10it [00:06,  2.66it/s]11it [00:07,  2.97it/s]12it [00:09,  1.04s/it]13it [00:10,  1.25it/s]14it [00:10,  1.59it/s]15it [00:10,  1.94it/s]16it [00:10,  2.30it/s]17it [00:11,  2.65it/s]18it [00:11,  2.96it/s]19it [00:11,  3.21it/s]20it [00:12,  1.57it/s]21it [00:13,  1.93it/s]22it [00:13,  2.30it/s]23it [00:13,  2.65it/s]24it [00:13,  2.98it/s]25it [00:14,  3.25it/s]26it [00:14,  3.48it/s]27it [00:14,  3.67it/s]28it [00:15,  2.04it/s]29it [00:15,  2.41it/s]30it [00:16,  2.76it/s]31it [00:16,  3.08it/s]32it [00:16,  1.94it/s]
+-----Val Epoch: 2, dl: 562/5624-----
+ R@1: 43.6 (window: 43.34)
+ R@5: 71.3 (window: 70.56)
+ R@10: 80.7 (window: 80.82000000000001)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.605 (window: 14.3138)
+ Loss: 0.4615719309076667
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 43.34
+ Current Best R@1 is 43.7
+
+
+Train Epoch: 2 dl: 570/5624 Loss: 0.461539
+Train Epoch: 2 dl: 580/5624 Loss: 0.226958
+Train Epoch: 2 dl: 590/5624 Loss: 0.392540
+Train Epoch: 2 dl: 600/5624 Loss: 0.434366
+Train Epoch: 2 dl: 610/5624 Loss: 0.584132
+Train Epoch: 2 dl: 620/5624 Loss: 0.803796
+Train Epoch: 2 dl: 630/5624 Loss: 0.852404
+Train Epoch: 2 dl: 640/5624 Loss: 0.210061
+Train Epoch: 2 dl: 650/5624 Loss: 0.351145
+Train Epoch: 2 dl: 660/5624 Loss: 0.175208
+Train Epoch: 2 dl: 670/5624 Loss: 0.617222
+Train Epoch: 2 dl: 680/5624 Loss: 0.409849
+Train Epoch: 2 dl: 690/5624 Loss: 0.319987
+Train Epoch: 2 dl: 700/5624 Loss: 0.305563
+Train Epoch: 2 dl: 710/5624 Loss: 0.200375
+Train Epoch: 2 dl: 720/5624 Loss: 0.381778
+Train Epoch: 2 dl: 730/5624 Loss: 0.591054
+Train Epoch: 2 dl: 740/5624 Loss: 0.102323
+Train Epoch: 2 dl: 750/5624 Loss: 0.308751
+Train Epoch: 2 dl: 760/5624 Loss: 0.637596
+Train Epoch: 2 dl: 770/5624 Loss: 0.460370
+Train Epoch: 2 dl: 780/5624 Loss: 0.573733
+Train Epoch: 2 dl: 790/5624 Loss: 0.260404
+Train Epoch: 2 dl: 800/5624 Loss: 0.197191
+Train Epoch: 2 dl: 810/5624 Loss: 0.363921
+Train Epoch: 2 dl: 820/5624 Loss: 0.531898
+Train Epoch: 2 dl: 830/5624 Loss: 0.431634
+Train Epoch: 2 dl: 840/5624 Loss: 0.475475
+Train Epoch: 2 dl: 850/5624 Loss: 0.469994
+Train Epoch: 2 dl: 860/5624 Loss: 0.567317
+Train Epoch: 2 dl: 870/5624 Loss: 0.555585
+Train Epoch: 2 dl: 880/5624 Loss: 0.339331
+Train Epoch: 2 dl: 890/5624 Loss: 0.195626
+Train Epoch: 2 dl: 900/5624 Loss: 0.189588
+Train Epoch: 2 dl: 910/5624 Loss: 0.279986
+Train Epoch: 2 dl: 920/5624 Loss: 0.760415
+Train Epoch: 2 dl: 930/5624 Loss: 0.542859
+Train Epoch: 2 dl: 940/5624 Loss: 0.737066
+Train Epoch: 2 dl: 950/5624 Loss: 0.349417
+Train Epoch: 2 dl: 960/5624 Loss: 0.776819
+Train Epoch: 2 dl: 970/5624 Loss: 0.285584
+Train Epoch: 2 dl: 980/5624 Loss: 0.411660
+Train Epoch: 2 dl: 990/5624 Loss: 0.200734
+Train Epoch: 2 dl: 1000/5624 Loss: 0.527390
+Train Epoch: 2 dl: 1010/5624 Loss: 0.572314
+Train Epoch: 2 dl: 1020/5624 Loss: 0.369068
+Train Epoch: 2 dl: 1030/5624 Loss: 0.627201
+Train Epoch: 2 dl: 1040/5624 Loss: 0.304482
+Train Epoch: 2 dl: 1050/5624 Loss: 0.721263
+Train Epoch: 2 dl: 1060/5624 Loss: 0.428317
+Train Epoch: 2 dl: 1070/5624 Loss: 0.139931
+Train Epoch: 2 dl: 1080/5624 Loss: 0.578176
+Train Epoch: 2 dl: 1090/5624 Loss: 0.150888
+Train Epoch: 2 dl: 1100/5624 Loss: 0.558024
+Train Epoch: 2 dl: 1110/5624 Loss: 0.458878
+Train Epoch: 2 dl: 1120/5624 Loss: 0.319366
+0it [00:00, ?it/s]1it [00:05,  5.32s/it]2it [00:05,  2.34s/it]3it [00:05,  1.38s/it]4it [00:06,  1.07it/s]5it [00:06,  1.46it/s]6it [00:06,  1.86it/s]7it [00:06,  2.27it/s]8it [00:07,  2.63it/s]9it [00:08,  1.57it/s]10it [00:08,  1.76it/s]11it [00:08,  2.14it/s]12it [00:09,  2.47it/s]13it [00:09,  2.22it/s]14it [00:09,  2.57it/s]15it [00:10,  2.90it/s]16it [00:10,  3.15it/s]17it [00:11,  1.52it/s]18it [00:12,  1.45it/s]19it [00:12,  1.79it/s]20it [00:13,  2.15it/s]21it [00:13,  2.50it/s]22it [00:13,  2.80it/s]23it [00:13,  3.11it/s]24it [00:14,  3.26it/s]25it [00:14,  3.33it/s]26it [00:15,  1.82it/s]27it [00:15,  2.19it/s]28it [00:16,  2.55it/s]29it [00:16,  2.89it/s]30it [00:16,  3.19it/s]31it [00:16,  3.43it/s]32it [00:17,  1.88it/s]
+-----Val Epoch: 2, dl: 1124/5624-----
+ R@1: 44.5 (window: 43.7)
+ R@5: 70.6 (window: 70.78)
+ R@10: 80.0 (window: 80.67999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.168 (window: 14.254199999999997)
+ Loss: 0.461057947948575
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 43.7
+ Current Best R@1 is 44.5
+
+
+Train Epoch: 2 dl: 1130/5624 Loss: 0.617278
+Train Epoch: 2 dl: 1140/5624 Loss: 0.222360
+Train Epoch: 2 dl: 1150/5624 Loss: 0.514366
+Train Epoch: 2 dl: 1160/5624 Loss: 0.222509
+Train Epoch: 2 dl: 1170/5624 Loss: 0.572283
+Train Epoch: 2 dl: 1180/5624 Loss: 0.132138
+Train Epoch: 2 dl: 1190/5624 Loss: 0.088503
+Train Epoch: 2 dl: 1200/5624 Loss: 0.406279
+Train Epoch: 2 dl: 1210/5624 Loss: 0.168312
+Train Epoch: 2 dl: 1220/5624 Loss: 0.264519
+Train Epoch: 2 dl: 1230/5624 Loss: 0.165705
+Train Epoch: 2 dl: 1240/5624 Loss: 0.371099
+Train Epoch: 2 dl: 1250/5624 Loss: 0.380224
+Train Epoch: 2 dl: 1260/5624 Loss: 0.367130
+Train Epoch: 2 dl: 1270/5624 Loss: 0.292841
+Train Epoch: 2 dl: 1280/5624 Loss: 0.402684
+Train Epoch: 2 dl: 1290/5624 Loss: 0.336500
+Train Epoch: 2 dl: 1300/5624 Loss: 0.383797
+Train Epoch: 2 dl: 1310/5624 Loss: 0.367920
+Train Epoch: 2 dl: 1320/5624 Loss: 0.270905
+Train Epoch: 2 dl: 1330/5624 Loss: 0.244760
+Train Epoch: 2 dl: 1340/5624 Loss: 0.260099
+Train Epoch: 2 dl: 1350/5624 Loss: 0.364386
+Train Epoch: 2 dl: 1360/5624 Loss: 0.633517
+Train Epoch: 2 dl: 1370/5624 Loss: 0.366313
+Train Epoch: 2 dl: 1380/5624 Loss: 0.576594
+Train Epoch: 2 dl: 1390/5624 Loss: 0.499723
+Train Epoch: 2 dl: 1400/5624 Loss: 0.414683
+Train Epoch: 2 dl: 1410/5624 Loss: 0.104883
+Train Epoch: 2 dl: 1420/5624 Loss: 0.563458
+Train Epoch: 2 dl: 1430/5624 Loss: 0.583302
+Train Epoch: 2 dl: 1440/5624 Loss: 0.332920
+Train Epoch: 2 dl: 1450/5624 Loss: 0.492860
+Train Epoch: 2 dl: 1460/5624 Loss: 0.557226
+Train Epoch: 2 dl: 1470/5624 Loss: 0.285916
+Train Epoch: 2 dl: 1480/5624 Loss: 0.511231
+Train Epoch: 2 dl: 1490/5624 Loss: 0.582147
+Train Epoch: 2 dl: 1500/5624 Loss: 0.579501
+Train Epoch: 2 dl: 1510/5624 Loss: 0.233203
+Train Epoch: 2 dl: 1520/5624 Loss: 0.483413
+Train Epoch: 2 dl: 1530/5624 Loss: 0.620444
+Train Epoch: 2 dl: 1540/5624 Loss: 0.415482
+Train Epoch: 2 dl: 1550/5624 Loss: 0.176174
+Train Epoch: 2 dl: 1560/5624 Loss: 0.386191
+Train Epoch: 2 dl: 1570/5624 Loss: 0.318792
+Train Epoch: 2 dl: 1580/5624 Loss: 0.501170
+Train Epoch: 2 dl: 1590/5624 Loss: 0.926956
+Train Epoch: 2 dl: 1600/5624 Loss: 0.215197
+Train Epoch: 2 dl: 1610/5624 Loss: 0.337315
+Train Epoch: 2 dl: 1620/5624 Loss: 0.456205
+Train Epoch: 2 dl: 1630/5624 Loss: 0.392684
+Train Epoch: 2 dl: 1640/5624 Loss: 0.324879
+Train Epoch: 2 dl: 1650/5624 Loss: 0.401237
+Train Epoch: 2 dl: 1660/5624 Loss: 0.546592
+Train Epoch: 2 dl: 1670/5624 Loss: 0.396517
+Train Epoch: 2 dl: 1680/5624 Loss: 0.423921
+0it [00:00, ?it/s]1it [00:03,  3.37s/it]2it [00:04,  1.86s/it]3it [00:04,  1.12s/it]4it [00:05,  1.00it/s]5it [00:05,  1.35it/s]6it [00:05,  1.71it/s]7it [00:06,  2.10it/s]8it [00:06,  2.48it/s]9it [00:06,  2.82it/s]10it [00:07,  1.75it/s]11it [00:07,  2.12it/s]12it [00:09,  1.11it/s]13it [00:10,  1.25it/s]14it [00:10,  1.58it/s]15it [00:10,  1.94it/s]16it [00:11,  2.30it/s]17it [00:11,  2.64it/s]18it [00:11,  2.96it/s]19it [00:11,  3.24it/s]20it [00:13,  1.52it/s]21it [00:13,  1.82it/s]22it [00:13,  2.18it/s]23it [00:14,  2.54it/s]24it [00:14,  2.88it/s]25it [00:14,  3.18it/s]26it [00:14,  3.42it/s]27it [00:14,  3.62it/s]28it [00:15,  2.25it/s]29it [00:16,  2.61it/s]30it [00:16,  2.94it/s]31it [00:16,  3.23it/s]32it [00:16,  1.91it/s]
+-----Val Epoch: 2, dl: 1687/5624-----
+ R@1: 44.8 (window: 44.02)
+ R@5: 71.1 (window: 70.86000000000001)
+ R@10: 80.9 (window: 80.67999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.392 (window: 14.218399999999999)
+ Loss: 0.46159944077953696
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 44.02
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 2 dl: 1690/5624 Loss: 0.934090
+Train Epoch: 2 dl: 1700/5624 Loss: 0.615047
+Train Epoch: 2 dl: 1710/5624 Loss: 0.592024
+Train Epoch: 2 dl: 1720/5624 Loss: 0.400267
+Train Epoch: 2 dl: 1730/5624 Loss: 0.450771
+Train Epoch: 2 dl: 1740/5624 Loss: 0.212111
+Train Epoch: 2 dl: 1750/5624 Loss: 0.386873
+Train Epoch: 2 dl: 1760/5624 Loss: 0.272963
+Train Epoch: 2 dl: 1770/5624 Loss: 0.722659
+Train Epoch: 2 dl: 1780/5624 Loss: 0.549316
+Train Epoch: 2 dl: 1790/5624 Loss: 0.284484
+Train Epoch: 2 dl: 1800/5624 Loss: 0.343475
+Train Epoch: 2 dl: 1810/5624 Loss: 0.141699
+Train Epoch: 2 dl: 1820/5624 Loss: 0.450286
+Train Epoch: 2 dl: 1830/5624 Loss: 0.424435
+Train Epoch: 2 dl: 1840/5624 Loss: 0.511064
+Train Epoch: 2 dl: 1850/5624 Loss: 0.512979
+Train Epoch: 2 dl: 1860/5624 Loss: 0.890485
+Train Epoch: 2 dl: 1870/5624 Loss: 0.246780
+Train Epoch: 2 dl: 1880/5624 Loss: 0.246974
+Train Epoch: 2 dl: 1890/5624 Loss: 0.148613
+Train Epoch: 2 dl: 1900/5624 Loss: 0.367932
+Train Epoch: 2 dl: 1910/5624 Loss: 0.123460
+Train Epoch: 2 dl: 1920/5624 Loss: 0.577651
+Train Epoch: 2 dl: 1930/5624 Loss: 0.349929
+Train Epoch: 2 dl: 1940/5624 Loss: 0.182164
+Train Epoch: 2 dl: 1950/5624 Loss: 0.236893
+Train Epoch: 2 dl: 1960/5624 Loss: 0.533433
+Train Epoch: 2 dl: 1970/5624 Loss: 0.188543
+Train Epoch: 2 dl: 1980/5624 Loss: 0.415444
+Train Epoch: 2 dl: 1990/5624 Loss: 0.448104
+Train Epoch: 2 dl: 2000/5624 Loss: 0.286628
+Train Epoch: 2 dl: 2010/5624 Loss: 0.543657
+Train Epoch: 2 dl: 2020/5624 Loss: 0.205265
+Train Epoch: 2 dl: 2030/5624 Loss: 0.852417
+Train Epoch: 2 dl: 2040/5624 Loss: 0.299517
+Train Epoch: 2 dl: 2050/5624 Loss: 0.252699
+Train Epoch: 2 dl: 2060/5624 Loss: 0.355326
+Train Epoch: 2 dl: 2070/5624 Loss: 0.260738
+Train Epoch: 2 dl: 2080/5624 Loss: 0.072591
+Train Epoch: 2 dl: 2090/5624 Loss: 0.177965
+Train Epoch: 2 dl: 2100/5624 Loss: 0.504667
+Train Epoch: 2 dl: 2110/5624 Loss: 0.321740
+Train Epoch: 2 dl: 2120/5624 Loss: 0.219181
+Train Epoch: 2 dl: 2130/5624 Loss: 0.651282
+Train Epoch: 2 dl: 2140/5624 Loss: 0.575796
+Train Epoch: 2 dl: 2150/5624 Loss: 0.432913
+Train Epoch: 2 dl: 2160/5624 Loss: 0.768453
+Train Epoch: 2 dl: 2170/5624 Loss: 0.200015
+Train Epoch: 2 dl: 2180/5624 Loss: 0.396636
+Train Epoch: 2 dl: 2190/5624 Loss: 0.083181
+Train Epoch: 2 dl: 2200/5624 Loss: 0.395478
+Train Epoch: 2 dl: 2210/5624 Loss: 0.342969
+Train Epoch: 2 dl: 2220/5624 Loss: 0.618815
+Train Epoch: 2 dl: 2230/5624 Loss: 0.417289
+Train Epoch: 2 dl: 2240/5624 Loss: 0.115123
+0it [00:00, ?it/s]1it [00:03,  3.16s/it]2it [00:03,  1.45s/it]3it [00:03,  1.11it/s]4it [00:05,  1.27s/it]5it [00:05,  1.11it/s]6it [00:05,  1.47it/s]7it [00:06,  1.80it/s]8it [00:06,  2.19it/s]9it [00:06,  2.55it/s]10it [00:07,  2.88it/s]11it [00:07,  3.16it/s]12it [00:09,  1.01s/it]13it [00:10,  1.29it/s]14it [00:10,  1.62it/s]15it [00:10,  1.98it/s]16it [00:10,  2.34it/s]17it [00:11,  2.68it/s]18it [00:11,  2.98it/s]19it [00:11,  3.23it/s]20it [00:13,  1.21it/s]21it [00:13,  1.54it/s]22it [00:14,  1.90it/s]23it [00:14,  2.27it/s]24it [00:14,  2.63it/s]25it [00:14,  2.96it/s]26it [00:15,  3.24it/s]27it [00:15,  3.47it/s]28it [00:16,  2.27it/s]29it [00:16,  2.63it/s]30it [00:16,  2.96it/s]31it [00:16,  3.24it/s]32it [00:17,  1.88it/s]
+-----Val Epoch: 2, dl: 2249/5624-----
+ R@1: 44.8 (window: 44.239999999999995)
+ R@5: 71.1 (window: 70.97999999999999)
+ R@10: 80.6 (window: 80.64000000000001)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.785 (window: 14.419799999999999)
+ Loss: 0.4648634777404368
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 44.239999999999995
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 2 dl: 2250/5624 Loss: 0.375454
+Train Epoch: 2 dl: 2260/5624 Loss: 0.247056
+Train Epoch: 2 dl: 2270/5624 Loss: 1.068286
+Train Epoch: 2 dl: 2280/5624 Loss: 0.280069
+Train Epoch: 2 dl: 2290/5624 Loss: 0.269233
+Train Epoch: 2 dl: 2300/5624 Loss: 0.110510
+Train Epoch: 2 dl: 2310/5624 Loss: 0.500700
+Train Epoch: 2 dl: 2320/5624 Loss: 0.309068
+Train Epoch: 2 dl: 2330/5624 Loss: 0.660417
+Train Epoch: 2 dl: 2340/5624 Loss: 0.401965
+Train Epoch: 2 dl: 2350/5624 Loss: 0.289416
+Train Epoch: 2 dl: 2360/5624 Loss: 0.431429
+Train Epoch: 2 dl: 2370/5624 Loss: 0.444993
+Train Epoch: 2 dl: 2380/5624 Loss: 0.513284
+Train Epoch: 2 dl: 2390/5624 Loss: 0.263195
+Train Epoch: 2 dl: 2400/5624 Loss: 0.346925
+Train Epoch: 2 dl: 2410/5624 Loss: 0.528784
+Train Epoch: 2 dl: 2420/5624 Loss: 0.305820
+Train Epoch: 2 dl: 2430/5624 Loss: 0.211193
+Train Epoch: 2 dl: 2440/5624 Loss: 0.196920
+Train Epoch: 2 dl: 2450/5624 Loss: 0.631608
+Train Epoch: 2 dl: 2460/5624 Loss: 0.503011
+Train Epoch: 2 dl: 2470/5624 Loss: 0.599275
+Train Epoch: 2 dl: 2480/5624 Loss: 0.270134
+Train Epoch: 2 dl: 2490/5624 Loss: 0.182961
+Train Epoch: 2 dl: 2500/5624 Loss: 0.398834
+Train Epoch: 2 dl: 2510/5624 Loss: 0.616227
+Train Epoch: 2 dl: 2520/5624 Loss: 0.286609
+Train Epoch: 2 dl: 2530/5624 Loss: 0.509534
+Train Epoch: 2 dl: 2540/5624 Loss: 0.216011
+Train Epoch: 2 dl: 2550/5624 Loss: 0.111756
+Train Epoch: 2 dl: 2560/5624 Loss: 0.361718
+Train Epoch: 2 dl: 2570/5624 Loss: 0.449055
+Train Epoch: 2 dl: 2580/5624 Loss: 0.133448
+Train Epoch: 2 dl: 2590/5624 Loss: 0.834913
+Train Epoch: 2 dl: 2600/5624 Loss: 0.475711
+Train Epoch: 2 dl: 2610/5624 Loss: 0.925924
+Train Epoch: 2 dl: 2620/5624 Loss: 0.363564
+Train Epoch: 2 dl: 2630/5624 Loss: 0.393400
+Train Epoch: 2 dl: 2640/5624 Loss: 0.187326
+Train Epoch: 2 dl: 2650/5624 Loss: 0.248875
+Train Epoch: 2 dl: 2660/5624 Loss: 0.165547
+Train Epoch: 2 dl: 2670/5624 Loss: 0.317752
+Train Epoch: 2 dl: 2680/5624 Loss: 0.344140
+Train Epoch: 2 dl: 2690/5624 Loss: 0.250061
+Train Epoch: 2 dl: 2700/5624 Loss: 0.267027
+Train Epoch: 2 dl: 2710/5624 Loss: 0.430855
+Train Epoch: 2 dl: 2720/5624 Loss: 0.393239
+Train Epoch: 2 dl: 2730/5624 Loss: 0.390816
+Train Epoch: 2 dl: 2740/5624 Loss: 0.228010
+Train Epoch: 2 dl: 2750/5624 Loss: 0.167476
+Train Epoch: 2 dl: 2760/5624 Loss: 0.239006
+Train Epoch: 2 dl: 2770/5624 Loss: 0.257969
+Train Epoch: 2 dl: 2780/5624 Loss: 0.274388
+Train Epoch: 2 dl: 2790/5624 Loss: 0.250639
+Train Epoch: 2 dl: 2800/5624 Loss: 0.527086
+Train Epoch: 2 dl: 2810/5624 Loss: 0.397547
+0it [00:00, ?it/s]1it [00:05,  5.26s/it]2it [00:05,  2.31s/it]3it [00:05,  1.37s/it]4it [00:06,  1.08it/s]5it [00:06,  1.47it/s]6it [00:06,  1.89it/s]7it [00:06,  2.30it/s]8it [00:06,  2.68it/s]9it [00:09,  1.05s/it]10it [00:09,  1.24it/s]11it [00:10,  1.58it/s]12it [00:10,  1.94it/s]13it [00:10,  2.31it/s]14it [00:10,  2.65it/s]15it [00:10,  2.96it/s]16it [00:11,  3.23it/s]17it [00:12,  1.74it/s]18it [00:12,  2.10it/s]19it [00:12,  2.46it/s]20it [00:13,  2.79it/s]21it [00:13,  3.00it/s]22it [00:13,  3.25it/s]23it [00:13,  3.48it/s]24it [00:14,  3.66it/s]25it [00:15,  1.75it/s]26it [00:15,  2.11it/s]27it [00:15,  2.48it/s]28it [00:16,  2.83it/s]29it [00:16,  3.13it/s]30it [00:16,  3.39it/s]31it [00:16,  3.59it/s]32it [00:17,  1.87it/s]
+-----Val Epoch: 2, dl: 2812/5624-----
+ R@1: 44.7 (window: 44.48)
+ R@5: 71.0 (window: 71.02)
+ R@10: 80.6 (window: 80.55999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 15.302 (window: 14.650400000000001)
+ Loss: 0.46058290638029575
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 44.48
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 2 dl: 2820/5624 Loss: 0.473549
+Train Epoch: 2 dl: 2830/5624 Loss: 0.334201
+Train Epoch: 2 dl: 2840/5624 Loss: 0.381226
+Train Epoch: 2 dl: 2850/5624 Loss: 0.310706
+Train Epoch: 2 dl: 2860/5624 Loss: 0.631706
+Train Epoch: 2 dl: 2870/5624 Loss: 0.221131
+Train Epoch: 2 dl: 2880/5624 Loss: 0.231092
+Train Epoch: 2 dl: 2890/5624 Loss: 0.397117
+Train Epoch: 2 dl: 2900/5624 Loss: 0.162558
+Train Epoch: 2 dl: 2910/5624 Loss: 0.187380
+Train Epoch: 2 dl: 2920/5624 Loss: 0.414453
+Train Epoch: 2 dl: 2930/5624 Loss: 0.533242
+Train Epoch: 2 dl: 2940/5624 Loss: 0.447895
+Train Epoch: 2 dl: 2950/5624 Loss: 0.660926
+Train Epoch: 2 dl: 2960/5624 Loss: 0.329339
+Train Epoch: 2 dl: 2970/5624 Loss: 0.321427
+Train Epoch: 2 dl: 2980/5624 Loss: 0.260727
+Train Epoch: 2 dl: 2990/5624 Loss: 0.482946
+Train Epoch: 2 dl: 3000/5624 Loss: 0.322578
+Train Epoch: 2 dl: 3010/5624 Loss: 0.279004
+Train Epoch: 2 dl: 3020/5624 Loss: 0.158424
+Train Epoch: 2 dl: 3030/5624 Loss: 0.137121
+Train Epoch: 2 dl: 3040/5624 Loss: 0.124864
+Train Epoch: 2 dl: 3050/5624 Loss: 0.234370
+Train Epoch: 2 dl: 3060/5624 Loss: 0.778047
+Train Epoch: 2 dl: 3070/5624 Loss: 0.303044
+Train Epoch: 2 dl: 3080/5624 Loss: 0.246527
+Train Epoch: 2 dl: 3090/5624 Loss: 0.368735
+Train Epoch: 2 dl: 3100/5624 Loss: 0.305535
+Train Epoch: 2 dl: 3110/5624 Loss: 0.546298
+Train Epoch: 2 dl: 3120/5624 Loss: 0.491633
+Train Epoch: 2 dl: 3130/5624 Loss: 0.379008
+Train Epoch: 2 dl: 3140/5624 Loss: 0.214636
+Train Epoch: 2 dl: 3150/5624 Loss: 0.372622
+Train Epoch: 2 dl: 3160/5624 Loss: 0.503551
+Train Epoch: 2 dl: 3170/5624 Loss: 0.340516
+Train Epoch: 2 dl: 3180/5624 Loss: 0.534297
+Train Epoch: 2 dl: 3190/5624 Loss: 0.315739
+Train Epoch: 2 dl: 3200/5624 Loss: 0.371879
+Train Epoch: 2 dl: 3210/5624 Loss: 0.318128
+Train Epoch: 2 dl: 3220/5624 Loss: 0.428600
+Train Epoch: 2 dl: 3230/5624 Loss: 0.368409
+Train Epoch: 2 dl: 3240/5624 Loss: 0.773599
+Train Epoch: 2 dl: 3250/5624 Loss: 0.261627
+Train Epoch: 2 dl: 3260/5624 Loss: 0.416346
+Train Epoch: 2 dl: 3270/5624 Loss: 0.295914
+Train Epoch: 2 dl: 3280/5624 Loss: 0.559878
+Train Epoch: 2 dl: 3290/5624 Loss: 0.113337
+Train Epoch: 2 dl: 3300/5624 Loss: 0.339221
+Train Epoch: 2 dl: 3310/5624 Loss: 0.557456
+Train Epoch: 2 dl: 3320/5624 Loss: 0.263521
+Train Epoch: 2 dl: 3330/5624 Loss: 0.473765
+Train Epoch: 2 dl: 3340/5624 Loss: 0.387140
+Train Epoch: 2 dl: 3350/5624 Loss: 0.412785
+Train Epoch: 2 dl: 3360/5624 Loss: 0.475183
+Train Epoch: 2 dl: 3370/5624 Loss: 0.182013
+0it [00:00, ?it/s]1it [00:05,  5.57s/it]2it [00:05,  2.44s/it]3it [00:06,  1.44s/it]4it [00:06,  1.03it/s]5it [00:06,  1.41it/s]6it [00:06,  1.81it/s]7it [00:07,  2.22it/s]8it [00:07,  2.61it/s]9it [00:09,  1.08it/s]10it [00:09,  1.40it/s]11it [00:09,  1.75it/s]12it [00:10,  2.11it/s]13it [00:10,  2.39it/s]14it [00:10,  2.73it/s]15it [00:10,  3.03it/s]16it [00:11,  3.28it/s]17it [00:12,  2.15it/s]18it [00:12,  2.18it/s]19it [00:12,  2.54it/s]20it [00:12,  2.86it/s]21it [00:13,  3.15it/s]22it [00:13,  3.25it/s]23it [00:13,  3.48it/s]24it [00:13,  3.66it/s]25it [00:14,  2.29it/s]26it [00:15,  1.94it/s]27it [00:15,  2.31it/s]28it [00:15,  2.67it/s]29it [00:16,  3.00it/s]30it [00:16,  3.28it/s]31it [00:16,  3.51it/s]32it [00:16,  1.89it/s]
+-----Val Epoch: 2, dl: 3374/5624-----
+ R@1: 44.3 (window: 44.620000000000005)
+ R@5: 71.7 (window: 71.1)
+ R@10: 80.4 (window: 80.5)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 15.049 (window: 14.7392)
+ Loss: 0.46062283171340823
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 44.620000000000005
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 2 dl: 3380/5624 Loss: 0.308957
+Train Epoch: 2 dl: 3390/5624 Loss: 0.433246
+Train Epoch: 2 dl: 3400/5624 Loss: 0.201171
+Train Epoch: 2 dl: 3410/5624 Loss: 0.499388
+Train Epoch: 2 dl: 3420/5624 Loss: 0.467834
+Train Epoch: 2 dl: 3430/5624 Loss: 0.658897
+Train Epoch: 2 dl: 3440/5624 Loss: 0.532795
+Train Epoch: 2 dl: 3450/5624 Loss: 0.572652
+Train Epoch: 2 dl: 3460/5624 Loss: 0.386518
+Train Epoch: 2 dl: 3470/5624 Loss: 0.228608
+Train Epoch: 2 dl: 3480/5624 Loss: 0.158420
+Train Epoch: 2 dl: 3490/5624 Loss: 0.595051
+Train Epoch: 2 dl: 3500/5624 Loss: 0.343850
+Train Epoch: 2 dl: 3510/5624 Loss: 0.253986
+Train Epoch: 2 dl: 3520/5624 Loss: 0.748281
+Train Epoch: 2 dl: 3530/5624 Loss: 0.454689
+Train Epoch: 2 dl: 3540/5624 Loss: 0.134508
+Train Epoch: 2 dl: 3550/5624 Loss: 0.342462
+Train Epoch: 2 dl: 3560/5624 Loss: 0.263819
+Train Epoch: 2 dl: 3570/5624 Loss: 0.153409
+Train Epoch: 2 dl: 3580/5624 Loss: 0.529003
+Train Epoch: 2 dl: 3590/5624 Loss: 0.415248
+Train Epoch: 2 dl: 3600/5624 Loss: 0.222705
+Train Epoch: 2 dl: 3610/5624 Loss: 0.140489
+Train Epoch: 2 dl: 3620/5624 Loss: 0.241699
+Train Epoch: 2 dl: 3630/5624 Loss: 0.016955
+Train Epoch: 2 dl: 3640/5624 Loss: 0.405459
+Train Epoch: 2 dl: 3650/5624 Loss: 0.130171
+Train Epoch: 2 dl: 3660/5624 Loss: 0.215052
+Train Epoch: 2 dl: 3670/5624 Loss: 0.541316
+Train Epoch: 2 dl: 3680/5624 Loss: 0.479615
+Train Epoch: 2 dl: 3690/5624 Loss: 0.209784
+Train Epoch: 2 dl: 3700/5624 Loss: 0.306507
+Train Epoch: 2 dl: 3710/5624 Loss: 0.259766
+Train Epoch: 2 dl: 3720/5624 Loss: 0.221377
+Train Epoch: 2 dl: 3730/5624 Loss: 0.152203
+Train Epoch: 2 dl: 3740/5624 Loss: 0.187993
+Train Epoch: 2 dl: 3750/5624 Loss: 0.645455
+Train Epoch: 2 dl: 3760/5624 Loss: 0.512411
+Train Epoch: 2 dl: 3770/5624 Loss: 0.562434
+Train Epoch: 2 dl: 3780/5624 Loss: 0.306494
+Train Epoch: 2 dl: 3790/5624 Loss: 0.267210
+Train Epoch: 2 dl: 3800/5624 Loss: 0.172282
+Train Epoch: 2 dl: 3810/5624 Loss: 0.964622
+Train Epoch: 2 dl: 3820/5624 Loss: 0.129216
+Train Epoch: 2 dl: 3830/5624 Loss: 0.500568
+Train Epoch: 2 dl: 3840/5624 Loss: 0.359065
+Train Epoch: 2 dl: 3850/5624 Loss: 0.240606
+Train Epoch: 2 dl: 3860/5624 Loss: 0.318855
+Train Epoch: 2 dl: 3870/5624 Loss: 0.246774
+Train Epoch: 2 dl: 3880/5624 Loss: 0.468662
+Train Epoch: 2 dl: 3890/5624 Loss: 0.595506
+Train Epoch: 2 dl: 3900/5624 Loss: 0.266422
+Train Epoch: 2 dl: 3910/5624 Loss: 0.327710
+Train Epoch: 2 dl: 3920/5624 Loss: 0.385178
+Train Epoch: 2 dl: 3930/5624 Loss: 0.678664
+0it [00:00, ?it/s]1it [00:05,  5.31s/it]2it [00:05,  2.36s/it]3it [00:05,  1.39s/it]4it [00:06,  1.05it/s]5it [00:06,  1.43it/s]6it [00:06,  1.84it/s]7it [00:06,  2.24it/s]8it [00:07,  2.61it/s]9it [00:08,  1.27it/s]10it [00:09,  1.60it/s]11it [00:09,  1.95it/s]12it [00:09,  2.32it/s]13it [00:09,  2.66it/s]14it [00:10,  2.97it/s]15it [00:10,  3.23it/s]16it [00:10,  3.45it/s]17it [00:12,  1.33it/s]18it [00:12,  1.66it/s]19it [00:12,  2.02it/s]20it [00:13,  2.39it/s]21it [00:13,  2.73it/s]22it [00:13,  2.95it/s]23it [00:13,  3.22it/s]24it [00:14,  3.46it/s]25it [00:15,  1.73it/s]26it [00:15,  2.09it/s]27it [00:15,  2.46it/s]28it [00:16,  2.81it/s]29it [00:16,  3.11it/s]30it [00:16,  3.37it/s]31it [00:16,  3.58it/s]32it [00:17,  1.88it/s]
+-----Val Epoch: 2, dl: 3936/5624-----
+ R@1: 43.7 (window: 44.46)
+ R@5: 71.3 (window: 71.24)
+ R@10: 81.4 (window: 80.78)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.727 (window: 14.850999999999999)
+ Loss: 0.4526447355747223
+ Current Best Window Average R@1 is 44.620000000000005
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 2 dl: 3940/5624 Loss: 0.190922
+Train Epoch: 2 dl: 3950/5624 Loss: 0.493989
+Train Epoch: 2 dl: 3960/5624 Loss: 0.452247
+Train Epoch: 2 dl: 3970/5624 Loss: 0.413195
+Train Epoch: 2 dl: 3980/5624 Loss: 0.126864
+Train Epoch: 2 dl: 3990/5624 Loss: 0.430622
+Train Epoch: 2 dl: 4000/5624 Loss: 0.311723
+Train Epoch: 2 dl: 4010/5624 Loss: 0.376003
+Train Epoch: 2 dl: 4020/5624 Loss: 0.364695
+Train Epoch: 2 dl: 4030/5624 Loss: 0.640693
+Train Epoch: 2 dl: 4040/5624 Loss: 0.366846
+Train Epoch: 2 dl: 4050/5624 Loss: 0.215555
+Train Epoch: 2 dl: 4060/5624 Loss: 0.390767
+Train Epoch: 2 dl: 4070/5624 Loss: 0.267949
+Train Epoch: 2 dl: 4080/5624 Loss: 0.332510
+Train Epoch: 2 dl: 4090/5624 Loss: 0.332493
+Train Epoch: 2 dl: 4100/5624 Loss: 0.112432
+Train Epoch: 2 dl: 4110/5624 Loss: 0.427665
+Train Epoch: 2 dl: 4120/5624 Loss: 0.565704
+Train Epoch: 2 dl: 4130/5624 Loss: 0.193873
+Train Epoch: 2 dl: 4140/5624 Loss: 0.198236
+Train Epoch: 2 dl: 4150/5624 Loss: 0.550559
+Train Epoch: 2 dl: 4160/5624 Loss: 0.327695
+Train Epoch: 2 dl: 4170/5624 Loss: 0.340665
+Train Epoch: 2 dl: 4180/5624 Loss: 0.238567
+Train Epoch: 2 dl: 4190/5624 Loss: 0.173759
+Train Epoch: 2 dl: 4200/5624 Loss: 0.299689
+Train Epoch: 2 dl: 4210/5624 Loss: 0.218761
+Train Epoch: 2 dl: 4220/5624 Loss: 0.919935
+Train Epoch: 2 dl: 4230/5624 Loss: 0.462380
+Train Epoch: 2 dl: 4240/5624 Loss: 0.434156
+Train Epoch: 2 dl: 4250/5624 Loss: 0.223784
+Train Epoch: 2 dl: 4260/5624 Loss: 0.401888
+Train Epoch: 2 dl: 4270/5624 Loss: 0.253627
+Train Epoch: 2 dl: 4280/5624 Loss: 0.311301
+Train Epoch: 2 dl: 4290/5624 Loss: 0.280735
+Train Epoch: 2 dl: 4300/5624 Loss: 0.397741
+Train Epoch: 2 dl: 4310/5624 Loss: 0.226049
+Train Epoch: 2 dl: 4320/5624 Loss: 0.105489
+Train Epoch: 2 dl: 4330/5624 Loss: 0.320987
+Train Epoch: 2 dl: 4340/5624 Loss: 0.398551
+Train Epoch: 2 dl: 4350/5624 Loss: 0.696369
+Train Epoch: 2 dl: 4360/5624 Loss: 0.597972
+Train Epoch: 2 dl: 4370/5624 Loss: 0.265453
+Train Epoch: 2 dl: 4380/5624 Loss: 0.298114
+Train Epoch: 2 dl: 4390/5624 Loss: 0.564202
+Train Epoch: 2 dl: 4400/5624 Loss: 0.209263
+Train Epoch: 2 dl: 4410/5624 Loss: 0.384709
+Train Epoch: 2 dl: 4420/5624 Loss: 0.780912
+Train Epoch: 2 dl: 4430/5624 Loss: 0.197628
+Train Epoch: 2 dl: 4440/5624 Loss: 0.373444
+Train Epoch: 2 dl: 4450/5624 Loss: 0.232490
+Train Epoch: 2 dl: 4460/5624 Loss: 0.188177
+Train Epoch: 2 dl: 4470/5624 Loss: 0.436385
+Train Epoch: 2 dl: 4480/5624 Loss: 0.315381
+Train Epoch: 2 dl: 4490/5624 Loss: 0.617611
+0it [00:00, ?it/s]1it [00:05,  5.20s/it]2it [00:05,  2.29s/it]3it [00:05,  1.36s/it]4it [00:05,  1.09it/s]5it [00:06,  1.48it/s]6it [00:06,  1.89it/s]7it [00:06,  2.29it/s]8it [00:06,  2.66it/s]9it [00:09,  1.13s/it]10it [00:09,  1.17it/s]11it [00:10,  1.49it/s]12it [00:10,  1.86it/s]13it [00:10,  2.23it/s]14it [00:10,  2.58it/s]15it [00:11,  2.90it/s]16it [00:11,  3.17it/s]17it [00:13,  1.43it/s]18it [00:13,  1.78it/s]19it [00:13,  2.14it/s]20it [00:13,  2.49it/s]21it [00:13,  2.84it/s]22it [00:14,  3.14it/s]23it [00:14,  3.27it/s]24it [00:14,  3.50it/s]25it [00:15,  2.31it/s]26it [00:15,  2.66it/s]27it [00:16,  2.99it/s]28it [00:16,  3.27it/s]29it [00:16,  3.50it/s]30it [00:16,  3.68it/s]31it [00:16,  3.82it/s]32it [00:17,  1.87it/s]
+-----Val Epoch: 2, dl: 4499/5624-----
+ R@1: 44.7 (window: 44.44)
+ R@5: 72.5 (window: 71.52000000000001)
+ R@10: 80.7 (window: 80.74)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.499 (window: 14.872399999999999)
+ Loss: 0.4428392704576254
+ Current Best Window Average R@1 is 44.620000000000005
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 2 dl: 4500/5624 Loss: 0.380302
+Train Epoch: 2 dl: 4510/5624 Loss: 0.148763
+Train Epoch: 2 dl: 4520/5624 Loss: 0.564876
+Train Epoch: 2 dl: 4530/5624 Loss: 0.314909
+Train Epoch: 2 dl: 4540/5624 Loss: 0.555579
+Train Epoch: 2 dl: 4550/5624 Loss: 0.131382
+Train Epoch: 2 dl: 4560/5624 Loss: 0.391877
+Train Epoch: 2 dl: 4570/5624 Loss: 0.208765
+Train Epoch: 2 dl: 4580/5624 Loss: 0.449287
+Train Epoch: 2 dl: 4590/5624 Loss: 0.377295
+Train Epoch: 2 dl: 4600/5624 Loss: 0.283291
+Train Epoch: 2 dl: 4610/5624 Loss: 0.420042
+Train Epoch: 2 dl: 4620/5624 Loss: 0.274584
+Train Epoch: 2 dl: 4630/5624 Loss: 0.432954
+Train Epoch: 2 dl: 4640/5624 Loss: 0.595234
+Train Epoch: 2 dl: 4650/5624 Loss: 0.644579
+Train Epoch: 2 dl: 4660/5624 Loss: 0.173327
+Train Epoch: 2 dl: 4670/5624 Loss: 0.158838
+Train Epoch: 2 dl: 4680/5624 Loss: 0.189422
+Train Epoch: 2 dl: 4690/5624 Loss: 0.580955
+Train Epoch: 2 dl: 4700/5624 Loss: 0.177590
+Train Epoch: 2 dl: 4710/5624 Loss: 0.228103
+Train Epoch: 2 dl: 4720/5624 Loss: 0.324554
+Train Epoch: 2 dl: 4730/5624 Loss: 0.271626
+Train Epoch: 2 dl: 4740/5624 Loss: 0.251709
+Train Epoch: 2 dl: 4750/5624 Loss: 0.337192
+Train Epoch: 2 dl: 4760/5624 Loss: 0.290054
+Train Epoch: 2 dl: 4770/5624 Loss: 0.506137
+Train Epoch: 2 dl: 4780/5624 Loss: 0.251180
+Train Epoch: 2 dl: 4790/5624 Loss: 0.309146
+Train Epoch: 2 dl: 4800/5624 Loss: 0.148057
+Train Epoch: 2 dl: 4810/5624 Loss: 0.395409
+Train Epoch: 2 dl: 4820/5624 Loss: 0.297291
+Train Epoch: 2 dl: 4830/5624 Loss: 0.215364
+Train Epoch: 2 dl: 4840/5624 Loss: 0.487415
+Train Epoch: 2 dl: 4850/5624 Loss: 0.379078
+Train Epoch: 2 dl: 4860/5624 Loss: 0.211273
+Train Epoch: 2 dl: 4870/5624 Loss: 0.489963
+Train Epoch: 2 dl: 4880/5624 Loss: 0.215477
+Train Epoch: 2 dl: 4890/5624 Loss: 0.406431
+Train Epoch: 2 dl: 4900/5624 Loss: 0.270857
+Train Epoch: 2 dl: 4910/5624 Loss: 0.588092
+Train Epoch: 2 dl: 4920/5624 Loss: 0.637480
+Train Epoch: 2 dl: 4930/5624 Loss: 0.087349
+Train Epoch: 2 dl: 4940/5624 Loss: 0.539007
+Train Epoch: 2 dl: 4950/5624 Loss: 0.325168
+Train Epoch: 2 dl: 4960/5624 Loss: 0.209171
+Train Epoch: 2 dl: 4970/5624 Loss: 0.607903
+Train Epoch: 2 dl: 4980/5624 Loss: 0.458477
+Train Epoch: 2 dl: 4990/5624 Loss: 0.176387
+Train Epoch: 2 dl: 5000/5624 Loss: 0.455563
+Train Epoch: 2 dl: 5010/5624 Loss: 0.213116
+Train Epoch: 2 dl: 5020/5624 Loss: 0.353577
+Train Epoch: 2 dl: 5030/5624 Loss: 0.308258
+Train Epoch: 2 dl: 5040/5624 Loss: 0.385429
+Train Epoch: 2 dl: 5050/5624 Loss: 0.424269
+Train Epoch: 2 dl: 5060/5624 Loss: 0.296451
+0it [00:00, ?it/s]1it [00:05,  5.58s/it]2it [00:05,  2.44s/it]3it [00:06,  1.44s/it]4it [00:06,  1.01it/s]5it [00:06,  1.38it/s]6it [00:06,  1.79it/s]7it [00:07,  2.20it/s]8it [00:07,  2.57it/s]9it [00:07,  2.27it/s]10it [00:09,  1.19it/s]11it [00:09,  1.52it/s]12it [00:10,  1.87it/s]13it [00:10,  2.18it/s]14it [00:10,  2.54it/s]15it [00:10,  2.88it/s]16it [00:11,  3.15it/s]17it [00:11,  3.38it/s]18it [00:12,  1.53it/s]19it [00:13,  1.88it/s]20it [00:13,  2.25it/s]21it [00:13,  2.60it/s]22it [00:13,  2.84it/s]23it [00:14,  3.14it/s]24it [00:14,  3.40it/s]25it [00:14,  3.60it/s]26it [00:15,  2.25it/s]27it [00:15,  2.61it/s]28it [00:15,  2.94it/s]29it [00:16,  3.23it/s]30it [00:16,  3.47it/s]31it [00:16,  3.65it/s]32it [00:16,  1.90it/s]
+-----Val Epoch: 2, dl: 5061/5624-----
+ R@1: 43.8 (window: 44.239999999999995)
+ R@5: 70.2 (window: 71.34)
+ R@10: 80.0 (window: 80.62)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.781 (window: 14.8716)
+ Loss: 0.4527914305217564
+ Current Best Window Average R@1 is 44.620000000000005
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 2 dl: 5070/5624 Loss: 0.214335
+Train Epoch: 2 dl: 5080/5624 Loss: 0.803845
+Train Epoch: 2 dl: 5090/5624 Loss: 0.336830
+Train Epoch: 2 dl: 5100/5624 Loss: 0.163349
+Train Epoch: 2 dl: 5110/5624 Loss: 0.495919
+Train Epoch: 2 dl: 5120/5624 Loss: 0.215232
+Train Epoch: 2 dl: 5130/5624 Loss: 0.365434
+Train Epoch: 2 dl: 5140/5624 Loss: 0.535747
+Train Epoch: 2 dl: 5150/5624 Loss: 0.244944
+Train Epoch: 2 dl: 5160/5624 Loss: 0.230275
+Train Epoch: 2 dl: 5170/5624 Loss: 0.288572
+Train Epoch: 2 dl: 5180/5624 Loss: 0.262057
+Train Epoch: 2 dl: 5190/5624 Loss: 0.230141
+Train Epoch: 2 dl: 5200/5624 Loss: 0.464932
+Train Epoch: 2 dl: 5210/5624 Loss: 0.309322
+Train Epoch: 2 dl: 5220/5624 Loss: 0.733387
+Train Epoch: 2 dl: 5230/5624 Loss: 0.298465
+Train Epoch: 2 dl: 5240/5624 Loss: 0.560138
+Train Epoch: 2 dl: 5250/5624 Loss: 0.393434
+Train Epoch: 2 dl: 5260/5624 Loss: 0.143314
+Train Epoch: 2 dl: 5270/5624 Loss: 0.534873
+Train Epoch: 2 dl: 5280/5624 Loss: 0.396264
+Train Epoch: 2 dl: 5290/5624 Loss: 0.311028
+Train Epoch: 2 dl: 5300/5624 Loss: 0.129861
+Train Epoch: 2 dl: 5310/5624 Loss: 0.210761
+Train Epoch: 2 dl: 5320/5624 Loss: 0.315664
+Train Epoch: 2 dl: 5330/5624 Loss: 0.342057
+Train Epoch: 2 dl: 5340/5624 Loss: 0.705853
+Train Epoch: 2 dl: 5350/5624 Loss: 0.518658
+Train Epoch: 2 dl: 5360/5624 Loss: 0.542127
+Train Epoch: 2 dl: 5370/5624 Loss: 0.110657
+Train Epoch: 2 dl: 5380/5624 Loss: 0.445362
+Train Epoch: 2 dl: 5390/5624 Loss: 0.351002
+Train Epoch: 2 dl: 5400/5624 Loss: 0.220425
+Train Epoch: 2 dl: 5410/5624 Loss: 0.257170
+Train Epoch: 2 dl: 5420/5624 Loss: 0.443973
+Train Epoch: 2 dl: 5430/5624 Loss: 0.215293
+Train Epoch: 2 dl: 5440/5624 Loss: 0.384441
+Train Epoch: 2 dl: 5450/5624 Loss: 0.352531
+Train Epoch: 2 dl: 5460/5624 Loss: 0.316818
+Train Epoch: 2 dl: 5470/5624 Loss: 0.314588
+Train Epoch: 2 dl: 5480/5624 Loss: 0.263392
+Train Epoch: 2 dl: 5490/5624 Loss: 0.367444
+Train Epoch: 2 dl: 5500/5624 Loss: 0.446207
+Train Epoch: 2 dl: 5510/5624 Loss: 0.367123
+Train Epoch: 2 dl: 5520/5624 Loss: 0.160708
+Train Epoch: 2 dl: 5530/5624 Loss: 0.535601
+Train Epoch: 2 dl: 5540/5624 Loss: 0.180135
+Train Epoch: 2 dl: 5550/5624 Loss: 0.280297
+Train Epoch: 2 dl: 5560/5624 Loss: 0.367251
+Train Epoch: 2 dl: 5570/5624 Loss: 0.159848
+Train Epoch: 2 dl: 5580/5624 Loss: 0.216827
+Train Epoch: 2 dl: 5590/5624 Loss: 0.381643
+Train Epoch: 2 dl: 5600/5624 Loss: 0.641010
+Train Epoch: 2 dl: 5610/5624 Loss: 0.366907
+Train Epoch: 2 dl: 5620/5624 Loss: 0.245211
+0it [00:00, ?it/s]1it [00:05,  5.40s/it]2it [00:05,  2.37s/it]3it [00:05,  1.40s/it]4it [00:06,  1.06it/s]5it [00:06,  1.45it/s]6it [00:06,  1.86it/s]7it [00:06,  2.27it/s]8it [00:07,  2.65it/s]9it [00:09,  1.14it/s]10it [00:09,  1.47it/s]11it [00:09,  1.82it/s]12it [00:09,  2.20it/s]13it [00:10,  2.56it/s]14it [00:10,  2.89it/s]15it [00:10,  3.16it/s]16it [00:10,  3.39it/s]17it [00:13,  1.05it/s]18it [00:13,  1.33it/s]19it [00:13,  1.67it/s]20it [00:14,  2.04it/s]21it [00:14,  2.35it/s]22it [00:14,  2.71it/s]23it [00:14,  3.03it/s]24it [00:15,  3.30it/s]25it [00:15,  2.13it/s]26it [00:16,  2.49it/s]27it [00:16,  2.84it/s]28it [00:16,  3.14it/s]29it [00:16,  3.40it/s]30it [00:17,  3.60it/s]31it [00:17,  3.75it/s]32it [00:17,  1.83it/s]
+-----Val Epoch: 2, dl: 5624/5624-----
+ R@1: 43.9 (window: 44.08)
+ R@5: 71.4 (window: 71.42)
+ R@10: 80.4 (window: 80.58)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.464 (window: 14.703999999999999)
+ Loss: 0.4460464445874095
+ Current Best Window Average R@1 is 44.620000000000005
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 3 dl: 0/5624 Loss: 0.255923
+Train Epoch: 3 dl: 10/5624 Loss: 0.326359
+Train Epoch: 3 dl: 20/5624 Loss: 0.124418
+Train Epoch: 3 dl: 30/5624 Loss: 0.361945
+Train Epoch: 3 dl: 40/5624 Loss: 0.158097
+Train Epoch: 3 dl: 50/5624 Loss: 0.135970
+Train Epoch: 3 dl: 60/5624 Loss: 0.526595
+Train Epoch: 3 dl: 70/5624 Loss: 0.318611
+Train Epoch: 3 dl: 80/5624 Loss: 0.232576
+Train Epoch: 3 dl: 90/5624 Loss: 0.250838
+Train Epoch: 3 dl: 100/5624 Loss: 0.316544
+Train Epoch: 3 dl: 110/5624 Loss: 0.281284
+Train Epoch: 3 dl: 120/5624 Loss: 0.192661
+Train Epoch: 3 dl: 130/5624 Loss: 0.339560
+Train Epoch: 3 dl: 140/5624 Loss: 0.241947
+Train Epoch: 3 dl: 150/5624 Loss: 0.188653
+Train Epoch: 3 dl: 160/5624 Loss: 0.394696
+Train Epoch: 3 dl: 170/5624 Loss: 0.368223
+Train Epoch: 3 dl: 180/5624 Loss: 0.153165
+Train Epoch: 3 dl: 190/5624 Loss: 0.279135
+Train Epoch: 3 dl: 200/5624 Loss: 0.261935
+Train Epoch: 3 dl: 210/5624 Loss: 0.375486
+Train Epoch: 3 dl: 220/5624 Loss: 0.147874
+Train Epoch: 3 dl: 230/5624 Loss: 0.153975
+Train Epoch: 3 dl: 240/5624 Loss: 0.304244
+Train Epoch: 3 dl: 250/5624 Loss: 0.268050
+Train Epoch: 3 dl: 260/5624 Loss: 0.446136
+Train Epoch: 3 dl: 270/5624 Loss: 0.131634
+Train Epoch: 3 dl: 280/5624 Loss: 0.443600
+Train Epoch: 3 dl: 290/5624 Loss: 0.394243
+Train Epoch: 3 dl: 300/5624 Loss: 0.111749
+Train Epoch: 3 dl: 310/5624 Loss: 0.233285
+Train Epoch: 3 dl: 320/5624 Loss: 0.274352
+Train Epoch: 3 dl: 330/5624 Loss: 0.130302
+Train Epoch: 3 dl: 340/5624 Loss: 0.404432
+Train Epoch: 3 dl: 350/5624 Loss: 0.297220
+Train Epoch: 3 dl: 360/5624 Loss: 0.350381
+Train Epoch: 3 dl: 370/5624 Loss: 0.163526
+Train Epoch: 3 dl: 380/5624 Loss: 0.306272
+Train Epoch: 3 dl: 390/5624 Loss: 0.416544
+Train Epoch: 3 dl: 400/5624 Loss: 0.402314
+Train Epoch: 3 dl: 410/5624 Loss: 0.256434
+Train Epoch: 3 dl: 420/5624 Loss: 0.297110
+Train Epoch: 3 dl: 430/5624 Loss: 0.399591
+Train Epoch: 3 dl: 440/5624 Loss: 0.629641
+Train Epoch: 3 dl: 450/5624 Loss: 0.593401
+Train Epoch: 3 dl: 460/5624 Loss: 0.408618
+Train Epoch: 3 dl: 470/5624 Loss: 0.333041
+Train Epoch: 3 dl: 480/5624 Loss: 0.293074
+Train Epoch: 3 dl: 490/5624 Loss: 0.285038
+Train Epoch: 3 dl: 500/5624 Loss: 0.112222
+Train Epoch: 3 dl: 510/5624 Loss: 0.241756
+Train Epoch: 3 dl: 520/5624 Loss: 0.021077
+Train Epoch: 3 dl: 530/5624 Loss: 0.275412
+Train Epoch: 3 dl: 540/5624 Loss: 0.188932
+Train Epoch: 3 dl: 550/5624 Loss: 0.505227
+Train Epoch: 3 dl: 560/5624 Loss: 0.482993
+0it [00:00, ?it/s]1it [00:05,  5.13s/it]2it [00:05,  2.26s/it]3it [00:05,  1.34s/it]4it [00:05,  1.10it/s]5it [00:06,  1.49it/s]6it [00:06,  1.80it/s]7it [00:06,  2.21it/s]8it [00:06,  2.58it/s]9it [00:09,  1.05s/it]10it [00:09,  1.22it/s]11it [00:10,  1.52it/s]12it [00:10,  1.89it/s]13it [00:10,  2.26it/s]14it [00:10,  2.62it/s]15it [00:11,  2.94it/s]16it [00:11,  3.20it/s]17it [00:12,  1.65it/s]18it [00:12,  2.01it/s]19it [00:13,  2.29it/s]20it [00:13,  2.64it/s]21it [00:13,  2.95it/s]22it [00:13,  3.20it/s]23it [00:14,  3.32it/s]24it [00:14,  3.53it/s]25it [00:15,  2.15it/s]26it [00:15,  2.48it/s]27it [00:15,  2.82it/s]28it [00:15,  3.13it/s]29it [00:16,  3.38it/s]30it [00:16,  3.59it/s]31it [00:16,  3.75it/s]32it [00:16,  1.89it/s]
+-----Val Epoch: 3, dl: 562/5624-----
+ R@1: 44.2 (window: 44.06)
+ R@5: 71.6 (window: 71.4)
+ R@10: 81.4 (window: 80.78)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.687 (window: 14.6316)
+ Loss: 0.458404241129756
+ Current Best Window Average R@1 is 44.620000000000005
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 3 dl: 570/5624 Loss: 0.357730
+Train Epoch: 3 dl: 580/5624 Loss: 0.184531
+Train Epoch: 3 dl: 590/5624 Loss: 0.140308
+Train Epoch: 3 dl: 600/5624 Loss: 0.309720
+Train Epoch: 3 dl: 610/5624 Loss: 0.239111
+Train Epoch: 3 dl: 620/5624 Loss: 0.435609
+Train Epoch: 3 dl: 630/5624 Loss: 0.361377
+Train Epoch: 3 dl: 640/5624 Loss: 0.222662
+Train Epoch: 3 dl: 650/5624 Loss: 0.168300
+Train Epoch: 3 dl: 660/5624 Loss: 0.258505
+Train Epoch: 3 dl: 670/5624 Loss: 0.178401
+Train Epoch: 3 dl: 680/5624 Loss: 0.312903
+Train Epoch: 3 dl: 690/5624 Loss: 0.350839
+Train Epoch: 3 dl: 700/5624 Loss: 0.202601
+Train Epoch: 3 dl: 710/5624 Loss: 0.300285
+Train Epoch: 3 dl: 720/5624 Loss: 0.495231
+Train Epoch: 3 dl: 730/5624 Loss: 0.317139
+Train Epoch: 3 dl: 740/5624 Loss: 0.264844
+Train Epoch: 3 dl: 750/5624 Loss: 0.326268
+Train Epoch: 3 dl: 760/5624 Loss: 0.384973
+Train Epoch: 3 dl: 770/5624 Loss: 0.123155
+Train Epoch: 3 dl: 780/5624 Loss: 0.775234
+Train Epoch: 3 dl: 790/5624 Loss: 0.161858
+Train Epoch: 3 dl: 800/5624 Loss: 0.301417
+Train Epoch: 3 dl: 810/5624 Loss: 0.335452
+Train Epoch: 3 dl: 820/5624 Loss: 0.439283
+Train Epoch: 3 dl: 830/5624 Loss: 0.638536
+Train Epoch: 3 dl: 840/5624 Loss: 0.450972
+Train Epoch: 3 dl: 850/5624 Loss: 0.441120
+Train Epoch: 3 dl: 860/5624 Loss: 0.079247
+Train Epoch: 3 dl: 870/5624 Loss: 0.190678
+Train Epoch: 3 dl: 880/5624 Loss: 0.171468
+Train Epoch: 3 dl: 890/5624 Loss: 0.391826
+Train Epoch: 3 dl: 900/5624 Loss: 0.270063
+Train Epoch: 3 dl: 910/5624 Loss: 0.518051
+Train Epoch: 3 dl: 920/5624 Loss: 0.330406
+Train Epoch: 3 dl: 930/5624 Loss: 0.134689
+Train Epoch: 3 dl: 940/5624 Loss: 0.569399
+Train Epoch: 3 dl: 950/5624 Loss: 0.122200
+Train Epoch: 3 dl: 960/5624 Loss: 0.262624
+Train Epoch: 3 dl: 970/5624 Loss: 0.180692
+Train Epoch: 3 dl: 980/5624 Loss: 0.434374
+Train Epoch: 3 dl: 990/5624 Loss: 0.243532
+Train Epoch: 3 dl: 1000/5624 Loss: 0.396586
+Train Epoch: 3 dl: 1010/5624 Loss: 0.154673
+Train Epoch: 3 dl: 1020/5624 Loss: 0.077177
+Train Epoch: 3 dl: 1030/5624 Loss: 0.098106
+Train Epoch: 3 dl: 1040/5624 Loss: 0.226028
+Train Epoch: 3 dl: 1050/5624 Loss: 0.244314
+Train Epoch: 3 dl: 1060/5624 Loss: 0.203488
+Train Epoch: 3 dl: 1070/5624 Loss: 0.157360
+Train Epoch: 3 dl: 1080/5624 Loss: 0.676433
+Train Epoch: 3 dl: 1090/5624 Loss: 0.511583
+Train Epoch: 3 dl: 1100/5624 Loss: 0.179341
+Train Epoch: 3 dl: 1110/5624 Loss: 0.226570
+Train Epoch: 3 dl: 1120/5624 Loss: 0.224280
+0it [00:00, ?it/s]1it [00:03,  3.37s/it]2it [00:05,  2.39s/it]3it [00:05,  1.43s/it]4it [00:05,  1.04it/s]5it [00:05,  1.42it/s]6it [00:06,  1.78it/s]7it [00:06,  2.18it/s]8it [00:06,  2.56it/s]9it [00:06,  2.89it/s]10it [00:08,  1.43it/s]11it [00:09,  1.06it/s]12it [00:10,  1.37it/s]13it [00:10,  1.68it/s]14it [00:10,  2.05it/s]15it [00:10,  2.41it/s]16it [00:11,  2.66it/s]17it [00:11,  2.97it/s]18it [00:11,  3.24it/s]19it [00:13,  1.51it/s]20it [00:13,  1.86it/s]21it [00:13,  2.23it/s]22it [00:13,  2.56it/s]23it [00:14,  2.89it/s]24it [00:14,  3.19it/s]25it [00:14,  3.43it/s]26it [00:14,  3.62it/s]27it [00:15,  2.11it/s]28it [00:16,  2.48it/s]29it [00:16,  2.82it/s]30it [00:16,  3.13it/s]31it [00:16,  3.38it/s]32it [00:16,  1.89it/s]
+-----Val Epoch: 3, dl: 1124/5624-----
+ R@1: 44.3 (window: 44.18000000000001)
+ R@5: 71.4 (window: 71.42)
+ R@10: 81.3 (window: 80.76)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.507 (window: 14.5876)
+ Loss: 0.4579277466982603
+ Current Best Window Average R@1 is 44.620000000000005
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 3 dl: 1130/5624 Loss: 0.188557
+Train Epoch: 3 dl: 1140/5624 Loss: 0.192681
+Train Epoch: 3 dl: 1150/5624 Loss: 0.374909
+Train Epoch: 3 dl: 1160/5624 Loss: 0.140003
+Train Epoch: 3 dl: 1170/5624 Loss: 0.253286
+Train Epoch: 3 dl: 1180/5624 Loss: 0.342144
+Train Epoch: 3 dl: 1190/5624 Loss: 0.286071
+Train Epoch: 3 dl: 1200/5624 Loss: 0.326221
+Train Epoch: 3 dl: 1210/5624 Loss: 0.236673
+Train Epoch: 3 dl: 1220/5624 Loss: 0.392619
+Train Epoch: 3 dl: 1230/5624 Loss: 0.140285
+Train Epoch: 3 dl: 1240/5624 Loss: 0.431822
+Train Epoch: 3 dl: 1250/5624 Loss: 0.060914
+Train Epoch: 3 dl: 1260/5624 Loss: 0.366224
+Train Epoch: 3 dl: 1270/5624 Loss: 0.232829
+Train Epoch: 3 dl: 1280/5624 Loss: 0.326700
+Train Epoch: 3 dl: 1290/5624 Loss: 0.635428
+Train Epoch: 3 dl: 1300/5624 Loss: 0.280192
+Train Epoch: 3 dl: 1310/5624 Loss: 0.236759
+Train Epoch: 3 dl: 1320/5624 Loss: 0.267363
+Train Epoch: 3 dl: 1330/5624 Loss: 0.131932
+Train Epoch: 3 dl: 1340/5624 Loss: 0.111836
+Train Epoch: 3 dl: 1350/5624 Loss: 0.517661
+Train Epoch: 3 dl: 1360/5624 Loss: 0.325922
+Train Epoch: 3 dl: 1370/5624 Loss: 0.155077
+Train Epoch: 3 dl: 1380/5624 Loss: 0.659681
+Train Epoch: 3 dl: 1390/5624 Loss: 0.142530
+Train Epoch: 3 dl: 1400/5624 Loss: 0.184932
+Train Epoch: 3 dl: 1410/5624 Loss: 0.366650
+Train Epoch: 3 dl: 1420/5624 Loss: 0.225527
+Train Epoch: 3 dl: 1430/5624 Loss: 0.275689
+Train Epoch: 3 dl: 1440/5624 Loss: 0.293499
+Train Epoch: 3 dl: 1450/5624 Loss: 0.338951
+Train Epoch: 3 dl: 1460/5624 Loss: 0.113736
+Train Epoch: 3 dl: 1470/5624 Loss: 0.087432
+Train Epoch: 3 dl: 1480/5624 Loss: 0.093344
+Train Epoch: 3 dl: 1490/5624 Loss: 0.144695
+Train Epoch: 3 dl: 1500/5624 Loss: 0.283821
+Train Epoch: 3 dl: 1510/5624 Loss: 0.151352
+Train Epoch: 3 dl: 1520/5624 Loss: 0.036015
+Train Epoch: 3 dl: 1530/5624 Loss: 0.194809
+Train Epoch: 3 dl: 1540/5624 Loss: 0.420182
+Train Epoch: 3 dl: 1550/5624 Loss: 0.345011
+Train Epoch: 3 dl: 1560/5624 Loss: 0.399990
+Train Epoch: 3 dl: 1570/5624 Loss: 0.278360
+Train Epoch: 3 dl: 1580/5624 Loss: 0.234319
+Train Epoch: 3 dl: 1590/5624 Loss: 0.241837
+Train Epoch: 3 dl: 1600/5624 Loss: 0.152793
+Train Epoch: 3 dl: 1610/5624 Loss: 0.224936
+Train Epoch: 3 dl: 1620/5624 Loss: 0.303852
+Train Epoch: 3 dl: 1630/5624 Loss: 0.341936
+Train Epoch: 3 dl: 1640/5624 Loss: 0.169417
+Train Epoch: 3 dl: 1650/5624 Loss: 0.831790
+Train Epoch: 3 dl: 1660/5624 Loss: 0.363354
+Train Epoch: 3 dl: 1670/5624 Loss: 0.153725
+Train Epoch: 3 dl: 1680/5624 Loss: 0.214515
+0it [00:00, ?it/s]1it [00:05,  5.36s/it]2it [00:05,  2.35s/it]3it [00:05,  1.39s/it]4it [00:06,  1.06it/s]5it [00:06,  1.45it/s]6it [00:06,  1.83it/s]7it [00:06,  2.23it/s]8it [00:07,  2.61it/s]9it [00:08,  1.82it/s]10it [00:09,  1.13it/s]11it [00:09,  1.45it/s]12it [00:10,  1.81it/s]13it [00:10,  2.18it/s]14it [00:10,  2.47it/s]15it [00:10,  2.82it/s]16it [00:11,  3.12it/s]17it [00:11,  3.36it/s]18it [00:13,  1.27it/s]19it [00:13,  1.60it/s]20it [00:13,  1.95it/s]21it [00:14,  2.31it/s]22it [00:14,  2.66it/s]23it [00:14,  2.98it/s]24it [00:14,  3.26it/s]25it [00:15,  3.49it/s]26it [00:16,  2.01it/s]27it [00:16,  2.38it/s]28it [00:16,  2.74it/s]29it [00:16,  3.05it/s]30it [00:16,  3.32it/s]31it [00:17,  3.54it/s]32it [00:17,  1.84it/s]
+-----Val Epoch: 3, dl: 1687/5624-----
+ R@1: 44.4 (window: 44.12)
+ R@5: 71.0 (window: 71.12)
+ R@10: 80.7 (window: 80.76)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.526 (window: 14.593)
+ Loss: 0.44713518116623163
+ Current Best Window Average R@1 is 44.620000000000005
+ Current Best R@1 is 44.8
+
+
+Train Epoch: 3 dl: 1690/5624 Loss: 0.476126
+Train Epoch: 3 dl: 1700/5624 Loss: 0.424082
+Train Epoch: 3 dl: 1710/5624 Loss: 0.697945
+Train Epoch: 3 dl: 1720/5624 Loss: 0.365808
+Train Epoch: 3 dl: 1730/5624 Loss: 0.520573
+Train Epoch: 3 dl: 1740/5624 Loss: 0.141745
+Train Epoch: 3 dl: 1750/5624 Loss: 0.287282
+Train Epoch: 3 dl: 1760/5624 Loss: 0.182885
+Train Epoch: 3 dl: 1770/5624 Loss: 0.193936
+Train Epoch: 3 dl: 1780/5624 Loss: 0.144079
+Train Epoch: 3 dl: 1790/5624 Loss: 0.287326
+Train Epoch: 3 dl: 1800/5624 Loss: 0.192516
+Train Epoch: 3 dl: 1810/5624 Loss: 0.355389
+Train Epoch: 3 dl: 1820/5624 Loss: 0.136263
+Train Epoch: 3 dl: 1830/5624 Loss: 0.465580
+Train Epoch: 3 dl: 1840/5624 Loss: 0.190539
+Train Epoch: 3 dl: 1850/5624 Loss: 0.126808
+Train Epoch: 3 dl: 1860/5624 Loss: 0.301216
+Train Epoch: 3 dl: 1870/5624 Loss: 0.367473
+Train Epoch: 3 dl: 1880/5624 Loss: 0.208055
+Train Epoch: 3 dl: 1890/5624 Loss: 0.785627
+Train Epoch: 3 dl: 1900/5624 Loss: 0.084753
+Train Epoch: 3 dl: 1910/5624 Loss: 0.232015
+Train Epoch: 3 dl: 1920/5624 Loss: 0.349100
+Train Epoch: 3 dl: 1930/5624 Loss: 0.492780
+Train Epoch: 3 dl: 1940/5624 Loss: 0.456566
+Train Epoch: 3 dl: 1950/5624 Loss: 0.321927
+Train Epoch: 3 dl: 1960/5624 Loss: 0.064046
+Train Epoch: 3 dl: 1970/5624 Loss: 0.333811
+Train Epoch: 3 dl: 1980/5624 Loss: 0.102085
+Train Epoch: 3 dl: 1990/5624 Loss: 0.241092
+Train Epoch: 3 dl: 2000/5624 Loss: 0.243867
+Train Epoch: 3 dl: 2010/5624 Loss: 0.402273
+Train Epoch: 3 dl: 2020/5624 Loss: 0.084448
+Train Epoch: 3 dl: 2030/5624 Loss: 0.256431
+Train Epoch: 3 dl: 2040/5624 Loss: 0.340793
+Train Epoch: 3 dl: 2050/5624 Loss: 0.076332
+Train Epoch: 3 dl: 2060/5624 Loss: 0.595346
+Train Epoch: 3 dl: 2070/5624 Loss: 0.172020
+Train Epoch: 3 dl: 2080/5624 Loss: 0.264477
+Train Epoch: 3 dl: 2090/5624 Loss: 0.273714
+Train Epoch: 3 dl: 2100/5624 Loss: 0.270514
+Train Epoch: 3 dl: 2110/5624 Loss: 0.171621
+Train Epoch: 3 dl: 2120/5624 Loss: 0.326295
+Train Epoch: 3 dl: 2130/5624 Loss: 0.427411
+Train Epoch: 3 dl: 2140/5624 Loss: 0.449685
+Train Epoch: 3 dl: 2150/5624 Loss: 0.253362
+Train Epoch: 3 dl: 2160/5624 Loss: 0.203003
+Train Epoch: 3 dl: 2170/5624 Loss: 0.434842
+Train Epoch: 3 dl: 2180/5624 Loss: 0.368911
+Train Epoch: 3 dl: 2190/5624 Loss: 0.449938
+Train Epoch: 3 dl: 2200/5624 Loss: 0.597322
+Train Epoch: 3 dl: 2210/5624 Loss: 0.261998
+Train Epoch: 3 dl: 2220/5624 Loss: 0.202009
+Train Epoch: 3 dl: 2230/5624 Loss: 0.564495
+Train Epoch: 3 dl: 2240/5624 Loss: 0.263228
+0it [00:00, ?it/s]1it [00:03,  3.47s/it]2it [00:05,  2.46s/it]3it [00:05,  1.47s/it]4it [00:05,  1.02it/s]5it [00:06,  1.37it/s]6it [00:06,  1.78it/s]7it [00:06,  2.19it/s]8it [00:06,  2.58it/s]9it [00:06,  2.92it/s]10it [00:09,  1.03s/it]11it [00:09,  1.26it/s]12it [00:10,  1.60it/s]13it [00:10,  1.96it/s]14it [00:10,  2.32it/s]15it [00:10,  2.57it/s]16it [00:11,  2.78it/s]17it [00:11,  3.08it/s]18it [00:13,  1.09it/s]19it [00:13,  1.40it/s]20it [00:14,  1.72it/s]21it [00:14,  2.09it/s]22it [00:14,  2.45it/s]23it [00:14,  2.80it/s]24it [00:15,  3.10it/s]25it [00:15,  3.36it/s]26it [00:16,  2.22it/s]27it [00:16,  2.59it/s]28it [00:16,  2.92it/s]29it [00:16,  3.21it/s]30it [00:17,  3.45it/s]31it [00:17,  3.64it/s]32it [00:17,  1.82it/s]
+-----Val Epoch: 3, dl: 2249/5624-----
+ R@1: 45.8 (window: 44.519999999999996)
+ R@5: 71.3 (window: 71.34)
+ R@10: 81.0 (window: 80.96000000000001)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.436 (window: 14.524000000000001)
+ Loss: 0.458843931555748
+ Current Best Window Average R@1 is 44.620000000000005
+ Current Best R@1 is 45.8
+
+
+Train Epoch: 3 dl: 2250/5624 Loss: 0.304853
+Train Epoch: 3 dl: 2260/5624 Loss: 0.298646
+Train Epoch: 3 dl: 2270/5624 Loss: 0.183802
+Train Epoch: 3 dl: 2280/5624 Loss: 0.255665
+Train Epoch: 3 dl: 2290/5624 Loss: 0.368977
+Train Epoch: 3 dl: 2300/5624 Loss: 0.503988
+Train Epoch: 3 dl: 2310/5624 Loss: 0.369700
+Train Epoch: 3 dl: 2320/5624 Loss: 0.245205
+Train Epoch: 3 dl: 2330/5624 Loss: 0.097875
+Train Epoch: 3 dl: 2340/5624 Loss: 0.083002
+Train Epoch: 3 dl: 2350/5624 Loss: 0.509786
+Train Epoch: 3 dl: 2360/5624 Loss: 0.325819
+Train Epoch: 3 dl: 2370/5624 Loss: 0.076152
+Train Epoch: 3 dl: 2380/5624 Loss: 0.357870
+Train Epoch: 3 dl: 2390/5624 Loss: 0.326169
+Train Epoch: 3 dl: 2400/5624 Loss: 0.213552
+Train Epoch: 3 dl: 2410/5624 Loss: 0.292153
+Train Epoch: 3 dl: 2420/5624 Loss: 0.361919
+Train Epoch: 3 dl: 2430/5624 Loss: 0.237581
+Train Epoch: 3 dl: 2440/5624 Loss: 0.459595
+Train Epoch: 3 dl: 2450/5624 Loss: 0.295279
+Train Epoch: 3 dl: 2460/5624 Loss: 0.375825
+Train Epoch: 3 dl: 2470/5624 Loss: 0.420907
+Train Epoch: 3 dl: 2480/5624 Loss: 0.238934
+Train Epoch: 3 dl: 2490/5624 Loss: 0.406683
+Train Epoch: 3 dl: 2500/5624 Loss: 0.106493
+Train Epoch: 3 dl: 2510/5624 Loss: 0.324059
+Train Epoch: 3 dl: 2520/5624 Loss: 0.461875
+Train Epoch: 3 dl: 2530/5624 Loss: 0.095052
+Train Epoch: 3 dl: 2540/5624 Loss: 0.424814
+Train Epoch: 3 dl: 2550/5624 Loss: 0.211753
+Train Epoch: 3 dl: 2560/5624 Loss: 0.275811
+Train Epoch: 3 dl: 2570/5624 Loss: 0.352506
+Train Epoch: 3 dl: 2580/5624 Loss: 0.218695
+Train Epoch: 3 dl: 2590/5624 Loss: 0.430242
+Train Epoch: 3 dl: 2600/5624 Loss: 0.277243
+Train Epoch: 3 dl: 2610/5624 Loss: 0.431494
+Train Epoch: 3 dl: 2620/5624 Loss: 0.302921
+Train Epoch: 3 dl: 2630/5624 Loss: 0.178737
+Train Epoch: 3 dl: 2640/5624 Loss: 0.404016
+Train Epoch: 3 dl: 2650/5624 Loss: 0.349380
+Train Epoch: 3 dl: 2660/5624 Loss: 0.191893
+Train Epoch: 3 dl: 2670/5624 Loss: 0.242222
+Train Epoch: 3 dl: 2680/5624 Loss: 0.360850
+Train Epoch: 3 dl: 2690/5624 Loss: 0.126769
+Train Epoch: 3 dl: 2700/5624 Loss: 0.151645
+Train Epoch: 3 dl: 2710/5624 Loss: 0.263861
+Train Epoch: 3 dl: 2720/5624 Loss: 0.290682
+Train Epoch: 3 dl: 2730/5624 Loss: 0.694597
+Train Epoch: 3 dl: 2740/5624 Loss: 0.183022
+Train Epoch: 3 dl: 2750/5624 Loss: 0.348923
+Train Epoch: 3 dl: 2760/5624 Loss: 0.594392
+Train Epoch: 3 dl: 2770/5624 Loss: 0.169472
+Train Epoch: 3 dl: 2780/5624 Loss: 0.376158
+Train Epoch: 3 dl: 2790/5624 Loss: 0.239336
+Train Epoch: 3 dl: 2800/5624 Loss: 0.442360
+Train Epoch: 3 dl: 2810/5624 Loss: 0.176995
+0it [00:00, ?it/s]1it [00:03,  3.47s/it]2it [00:03,  1.58s/it]3it [00:04,  1.21s/it]4it [00:04,  1.20it/s]5it [00:05,  1.41it/s]6it [00:05,  1.81it/s]7it [00:05,  2.21it/s]8it [00:05,  2.59it/s]9it [00:06,  2.92it/s]10it [00:07,  1.61it/s]11it [00:07,  1.97it/s]12it [00:07,  2.34it/s]13it [00:09,  1.17it/s]14it [00:10,  1.49it/s]15it [00:10,  1.85it/s]16it [00:10,  2.19it/s]17it [00:10,  2.56it/s]18it [00:11,  2.90it/s]19it [00:11,  3.19it/s]20it [00:11,  3.39it/s]21it [00:13,  1.42it/s]22it [00:13,  1.77it/s]23it [00:13,  2.13it/s]24it [00:13,  2.50it/s]25it [00:14,  2.84it/s]26it [00:14,  3.15it/s]27it [00:14,  3.40it/s]28it [00:14,  3.60it/s]29it [00:15,  2.20it/s]30it [00:15,  2.56it/s]31it [00:16,  2.90it/s]32it [00:16,  1.95it/s]
+-----Val Epoch: 3, dl: 2812/5624-----
+ R@1: 46.1 (window: 44.959999999999994)
+ R@5: 70.9 (window: 71.24000000000001)
+ R@10: 81.3 (window: 81.14)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.394 (window: 14.51)
+ Loss: 0.45651393570005894
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 44.959999999999994
+ Current Best R@1 is 46.1
+
+
+Train Epoch: 3 dl: 2820/5624 Loss: 0.559118
+Train Epoch: 3 dl: 2830/5624 Loss: 0.310482
+Train Epoch: 3 dl: 2840/5624 Loss: 0.173493
+Train Epoch: 3 dl: 2850/5624 Loss: 0.233147
+Train Epoch: 3 dl: 2860/5624 Loss: 0.155024
+Train Epoch: 3 dl: 2870/5624 Loss: 0.466573
+Train Epoch: 3 dl: 2880/5624 Loss: 0.216492
+Train Epoch: 3 dl: 2890/5624 Loss: 0.100501
+Train Epoch: 3 dl: 2900/5624 Loss: 0.503968
+Train Epoch: 3 dl: 2910/5624 Loss: 0.380579
+Train Epoch: 3 dl: 2920/5624 Loss: 0.491434
+Train Epoch: 3 dl: 2930/5624 Loss: 0.116125
+Train Epoch: 3 dl: 2940/5624 Loss: 0.228464
+Train Epoch: 3 dl: 2950/5624 Loss: 0.424570
+Train Epoch: 3 dl: 2960/5624 Loss: 0.144735
+Train Epoch: 3 dl: 2970/5624 Loss: 0.302040
+Train Epoch: 3 dl: 2980/5624 Loss: 0.277186
+Train Epoch: 3 dl: 2990/5624 Loss: 0.491895
+Train Epoch: 3 dl: 3000/5624 Loss: 0.309944
+Train Epoch: 3 dl: 3010/5624 Loss: 0.320342
+Train Epoch: 3 dl: 3020/5624 Loss: 0.531691
+Train Epoch: 3 dl: 3030/5624 Loss: 0.156961
+Train Epoch: 3 dl: 3040/5624 Loss: 0.146324
+Train Epoch: 3 dl: 3050/5624 Loss: 0.101690
+Train Epoch: 3 dl: 3060/5624 Loss: 0.314848
+Train Epoch: 3 dl: 3070/5624 Loss: 0.089513
+Train Epoch: 3 dl: 3080/5624 Loss: 0.233855
+Train Epoch: 3 dl: 3090/5624 Loss: 0.181537
+Train Epoch: 3 dl: 3100/5624 Loss: 0.161176
+Train Epoch: 3 dl: 3110/5624 Loss: 0.296871
+Train Epoch: 3 dl: 3120/5624 Loss: 0.199663
+Train Epoch: 3 dl: 3130/5624 Loss: 0.181501
+Train Epoch: 3 dl: 3140/5624 Loss: 0.131229
+Train Epoch: 3 dl: 3150/5624 Loss: 0.298127
+Train Epoch: 3 dl: 3160/5624 Loss: 0.131128
+Train Epoch: 3 dl: 3170/5624 Loss: 0.135779
+Train Epoch: 3 dl: 3180/5624 Loss: 0.324158
+Train Epoch: 3 dl: 3190/5624 Loss: 0.166713
+Train Epoch: 3 dl: 3200/5624 Loss: 0.320995
+Train Epoch: 3 dl: 3210/5624 Loss: 0.344358
+Train Epoch: 3 dl: 3220/5624 Loss: 0.273773
+Train Epoch: 3 dl: 3230/5624 Loss: 0.075048
+Train Epoch: 3 dl: 3240/5624 Loss: 0.147486
+Train Epoch: 3 dl: 3250/5624 Loss: 0.395233
+Train Epoch: 3 dl: 3260/5624 Loss: 0.459440
+Train Epoch: 3 dl: 3270/5624 Loss: 0.150316
+Train Epoch: 3 dl: 3280/5624 Loss: 0.308180
+Train Epoch: 3 dl: 3290/5624 Loss: 0.287451
+Train Epoch: 3 dl: 3300/5624 Loss: 0.351355
+Train Epoch: 3 dl: 3310/5624 Loss: 0.138674
+Train Epoch: 3 dl: 3320/5624 Loss: 0.272462
+Train Epoch: 3 dl: 3330/5624 Loss: 0.215295
+Train Epoch: 3 dl: 3340/5624 Loss: 0.198400
+Train Epoch: 3 dl: 3350/5624 Loss: 0.336576
+Train Epoch: 3 dl: 3360/5624 Loss: 0.101355
+Train Epoch: 3 dl: 3370/5624 Loss: 0.530440
+0it [00:00, ?it/s]1it [00:03,  3.39s/it]2it [00:05,  2.60s/it]3it [00:05,  1.54s/it]4it [00:05,  1.03s/it]5it [00:06,  1.34it/s]6it [00:06,  1.74it/s]7it [00:06,  2.14it/s]8it [00:06,  2.52it/s]9it [00:07,  2.85it/s]10it [00:09,  1.09it/s]11it [00:09,  1.41it/s]12it [00:09,  1.76it/s]13it [00:10,  2.14it/s]14it [00:10,  2.49it/s]15it [00:10,  2.75it/s]16it [00:10,  3.04it/s]17it [00:11,  3.29it/s]18it [00:13,  1.26it/s]19it [00:13,  1.57it/s]20it [00:13,  1.93it/s]21it [00:13,  2.30it/s]22it [00:14,  2.66it/s]23it [00:14,  2.98it/s]24it [00:14,  3.26it/s]25it [00:14,  3.49it/s]26it [00:15,  2.23it/s]27it [00:15,  2.59it/s]28it [00:16,  2.87it/s]29it [00:16,  3.16it/s]30it [00:16,  3.41it/s]31it [00:16,  3.61it/s]32it [00:17,  1.88it/s]
+-----Val Epoch: 3, dl: 3374/5624-----
+ R@1: 47.0 (window: 45.519999999999996)
+ R@5: 71.9 (window: 71.3)
+ R@10: 80.9 (window: 81.04)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.356 (window: 14.4438)
+ Loss: 0.4536905740387738
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 45.519999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 3 dl: 3380/5624 Loss: 0.343648
+Train Epoch: 3 dl: 3390/5624 Loss: 0.451257
+Train Epoch: 3 dl: 3400/5624 Loss: 0.161260
+Train Epoch: 3 dl: 3410/5624 Loss: 0.386467
+Train Epoch: 3 dl: 3420/5624 Loss: 0.398151
+Train Epoch: 3 dl: 3430/5624 Loss: 0.130899
+Train Epoch: 3 dl: 3440/5624 Loss: 0.128360
+Train Epoch: 3 dl: 3450/5624 Loss: 0.326303
+Train Epoch: 3 dl: 3460/5624 Loss: 0.454310
+Train Epoch: 3 dl: 3470/5624 Loss: 0.409231
+Train Epoch: 3 dl: 3480/5624 Loss: 0.225625
+Train Epoch: 3 dl: 3490/5624 Loss: 0.340293
+Train Epoch: 3 dl: 3500/5624 Loss: 0.042344
+Train Epoch: 3 dl: 3510/5624 Loss: 0.348977
+Train Epoch: 3 dl: 3520/5624 Loss: 0.102940
+Train Epoch: 3 dl: 3530/5624 Loss: 0.584116
+Train Epoch: 3 dl: 3540/5624 Loss: 0.143416
+Train Epoch: 3 dl: 3550/5624 Loss: 0.592066
+Train Epoch: 3 dl: 3560/5624 Loss: 0.343542
+Train Epoch: 3 dl: 3570/5624 Loss: 0.277178
+Train Epoch: 3 dl: 3580/5624 Loss: 0.160123
+Train Epoch: 3 dl: 3590/5624 Loss: 0.480679
+Train Epoch: 3 dl: 3600/5624 Loss: 0.156285
+Train Epoch: 3 dl: 3610/5624 Loss: 0.367036
+Train Epoch: 3 dl: 3620/5624 Loss: 0.363799
+Train Epoch: 3 dl: 3630/5624 Loss: 0.393462
+Train Epoch: 3 dl: 3640/5624 Loss: 0.517689
+Train Epoch: 3 dl: 3650/5624 Loss: 0.443677
+Train Epoch: 3 dl: 3660/5624 Loss: 0.079576
+Train Epoch: 3 dl: 3670/5624 Loss: 0.236169
+Train Epoch: 3 dl: 3680/5624 Loss: 0.211070
+Train Epoch: 3 dl: 3690/5624 Loss: 0.157038
+Train Epoch: 3 dl: 3700/5624 Loss: 0.213248
+Train Epoch: 3 dl: 3710/5624 Loss: 0.221677
+Train Epoch: 3 dl: 3720/5624 Loss: 0.519042
+Train Epoch: 3 dl: 3730/5624 Loss: 0.066021
+Train Epoch: 3 dl: 3740/5624 Loss: 0.107805
+Train Epoch: 3 dl: 3750/5624 Loss: 0.378951
+Train Epoch: 3 dl: 3760/5624 Loss: 0.351054
+Train Epoch: 3 dl: 3770/5624 Loss: 0.055843
+Train Epoch: 3 dl: 3780/5624 Loss: 0.080314
+Train Epoch: 3 dl: 3790/5624 Loss: 0.373196
+Train Epoch: 3 dl: 3800/5624 Loss: 0.282127
+Train Epoch: 3 dl: 3810/5624 Loss: 0.362928
+Train Epoch: 3 dl: 3820/5624 Loss: 0.095041
+Train Epoch: 3 dl: 3830/5624 Loss: 0.084084
+Train Epoch: 3 dl: 3840/5624 Loss: 0.144342
+Train Epoch: 3 dl: 3850/5624 Loss: 0.136344
+Train Epoch: 3 dl: 3860/5624 Loss: 0.668874
+Train Epoch: 3 dl: 3870/5624 Loss: 0.319384
+Train Epoch: 3 dl: 3880/5624 Loss: 0.194513
+Train Epoch: 3 dl: 3890/5624 Loss: 0.185964
+Train Epoch: 3 dl: 3900/5624 Loss: 0.365124
+Train Epoch: 3 dl: 3910/5624 Loss: 0.368305
+Train Epoch: 3 dl: 3920/5624 Loss: 0.103983
+Train Epoch: 3 dl: 3930/5624 Loss: 0.547926
+0it [00:00, ?it/s]1it [00:04,  4.98s/it]2it [00:05,  2.19s/it]3it [00:05,  1.30s/it]4it [00:05,  1.13it/s]5it [00:05,  1.53it/s]6it [00:06,  1.95it/s]7it [00:06,  2.36it/s]8it [00:06,  2.74it/s]9it [00:07,  1.64it/s]10it [00:08,  1.50it/s]11it [00:08,  1.86it/s]12it [00:09,  2.23it/s]13it [00:09,  2.59it/s]14it [00:09,  2.91it/s]15it [00:09,  3.12it/s]16it [00:10,  3.36it/s]17it [00:11,  1.32it/s]18it [00:12,  1.63it/s]19it [00:12,  1.98it/s]20it [00:12,  2.30it/s]21it [00:12,  2.64it/s]22it [00:13,  2.95it/s]23it [00:13,  3.17it/s]24it [00:13,  3.42it/s]25it [00:15,  1.58it/s]26it [00:15,  1.94it/s]27it [00:15,  2.31it/s]28it [00:15,  2.66it/s]29it [00:16,  2.99it/s]30it [00:16,  3.27it/s]31it [00:16,  3.49it/s]32it [00:16,  1.91it/s]
+-----Val Epoch: 3, dl: 3936/5624-----
+ R@1: 44.5 (window: 45.559999999999995)
+ R@5: 71.5 (window: 71.32000000000001)
+ R@10: 80.4 (window: 80.85999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.161 (window: 14.374600000000001)
+ Loss: 0.44835804821923375
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 45.559999999999995
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 3 dl: 3940/5624 Loss: 0.314870
+Train Epoch: 3 dl: 3950/5624 Loss: 0.288930
+Train Epoch: 3 dl: 3960/5624 Loss: 0.178545
+Train Epoch: 3 dl: 3970/5624 Loss: 0.394655
+Train Epoch: 3 dl: 3980/5624 Loss: 0.343985
+Train Epoch: 3 dl: 3990/5624 Loss: 0.373719
+Train Epoch: 3 dl: 4000/5624 Loss: 0.126206
+Train Epoch: 3 dl: 4010/5624 Loss: 0.316339
+Train Epoch: 3 dl: 4020/5624 Loss: 0.195272
+Train Epoch: 3 dl: 4030/5624 Loss: 0.148564
+Train Epoch: 3 dl: 4040/5624 Loss: 0.649934
+Train Epoch: 3 dl: 4050/5624 Loss: 0.272439
+Train Epoch: 3 dl: 4060/5624 Loss: 0.357365
+Train Epoch: 3 dl: 4070/5624 Loss: 0.327660
+Train Epoch: 3 dl: 4080/5624 Loss: 0.133765
+Train Epoch: 3 dl: 4090/5624 Loss: 0.840425
+Train Epoch: 3 dl: 4100/5624 Loss: 0.323196
+Train Epoch: 3 dl: 4110/5624 Loss: 0.141615
+Train Epoch: 3 dl: 4120/5624 Loss: 0.238797
+Train Epoch: 3 dl: 4130/5624 Loss: 0.016782
+Train Epoch: 3 dl: 4140/5624 Loss: 0.306695
+Train Epoch: 3 dl: 4150/5624 Loss: 0.123751
+Train Epoch: 3 dl: 4160/5624 Loss: 0.052920
+Train Epoch: 3 dl: 4170/5624 Loss: 0.439296
+Train Epoch: 3 dl: 4180/5624 Loss: 0.417963
+Train Epoch: 3 dl: 4190/5624 Loss: 0.285737
+Train Epoch: 3 dl: 4200/5624 Loss: 0.400442
+Train Epoch: 3 dl: 4210/5624 Loss: 0.252534
+Train Epoch: 3 dl: 4220/5624 Loss: 0.140136
+Train Epoch: 3 dl: 4230/5624 Loss: 0.504035
+Train Epoch: 3 dl: 4240/5624 Loss: 0.190485
+Train Epoch: 3 dl: 4250/5624 Loss: 0.244887
+Train Epoch: 3 dl: 4260/5624 Loss: 0.305345
+Train Epoch: 3 dl: 4270/5624 Loss: 0.417998
+Train Epoch: 3 dl: 4280/5624 Loss: 0.611234
+Train Epoch: 3 dl: 4290/5624 Loss: 0.498305
+Train Epoch: 3 dl: 4300/5624 Loss: 0.338467
+Train Epoch: 3 dl: 4310/5624 Loss: 0.359835
+Train Epoch: 3 dl: 4320/5624 Loss: 0.274777
+Train Epoch: 3 dl: 4330/5624 Loss: 0.137469
+Train Epoch: 3 dl: 4340/5624 Loss: 0.238893
+Train Epoch: 3 dl: 4350/5624 Loss: 0.242002
+Train Epoch: 3 dl: 4360/5624 Loss: 0.223244
+Train Epoch: 3 dl: 4370/5624 Loss: 0.419010
+Train Epoch: 3 dl: 4380/5624 Loss: 0.108971
+Train Epoch: 3 dl: 4390/5624 Loss: 0.372336
+Train Epoch: 3 dl: 4400/5624 Loss: 0.583276
+Train Epoch: 3 dl: 4410/5624 Loss: 0.123869
+Train Epoch: 3 dl: 4420/5624 Loss: 0.245165
+Train Epoch: 3 dl: 4430/5624 Loss: 0.284497
+Train Epoch: 3 dl: 4440/5624 Loss: 0.092404
+Train Epoch: 3 dl: 4450/5624 Loss: 0.270906
+Train Epoch: 3 dl: 4460/5624 Loss: 0.175457
+Train Epoch: 3 dl: 4470/5624 Loss: 0.183149
+Train Epoch: 3 dl: 4480/5624 Loss: 0.337072
+Train Epoch: 3 dl: 4490/5624 Loss: 0.451950
+0it [00:00, ?it/s]1it [00:03,  3.49s/it]2it [00:03,  1.58s/it]3it [00:03,  1.03it/s]4it [00:05,  1.18s/it]5it [00:05,  1.16it/s]6it [00:06,  1.53it/s]7it [00:06,  1.87it/s]8it [00:06,  2.26it/s]9it [00:06,  2.62it/s]10it [00:07,  2.94it/s]11it [00:07,  3.21it/s]12it [00:10,  1.05s/it]13it [00:10,  1.24it/s]14it [00:10,  1.58it/s]15it [00:10,  1.93it/s]16it [00:11,  2.30it/s]17it [00:11,  2.64it/s]18it [00:11,  2.96it/s]19it [00:11,  3.23it/s]20it [00:12,  2.65it/s]21it [00:12,  2.78it/s]22it [00:13,  2.55it/s]23it [00:13,  2.88it/s]24it [00:13,  3.18it/s]25it [00:13,  3.42it/s]26it [00:14,  3.61it/s]27it [00:14,  3.77it/s]28it [00:14,  2.68it/s]29it [00:15,  2.88it/s]30it [00:15,  2.68it/s]31it [00:15,  3.00it/s]32it [00:16,  1.99it/s]
+-----Val Epoch: 3, dl: 4499/5624-----
+ R@1: 44.9 (window: 45.660000000000004)
+ R@5: 71.1 (window: 71.34)
+ R@10: 81.0 (window: 80.92)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.232 (window: 14.315800000000001)
+ Loss: 0.4474014029838145
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 45.660000000000004
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 3 dl: 4500/5624 Loss: 0.178584
+Train Epoch: 3 dl: 4510/5624 Loss: 0.255595
+Train Epoch: 3 dl: 4520/5624 Loss: 0.752745
+Train Epoch: 3 dl: 4530/5624 Loss: 0.223558
+Train Epoch: 3 dl: 4540/5624 Loss: 0.285968
+Train Epoch: 3 dl: 4550/5624 Loss: 0.176897
+Train Epoch: 3 dl: 4560/5624 Loss: 0.240595
+Train Epoch: 3 dl: 4570/5624 Loss: 0.098148
+Train Epoch: 3 dl: 4580/5624 Loss: 0.079552
+Train Epoch: 3 dl: 4590/5624 Loss: 0.473273
+Train Epoch: 3 dl: 4600/5624 Loss: 0.349217
+Train Epoch: 3 dl: 4610/5624 Loss: 0.228552
+Train Epoch: 3 dl: 4620/5624 Loss: 0.200406
+Train Epoch: 3 dl: 4630/5624 Loss: 0.210008
+Train Epoch: 3 dl: 4640/5624 Loss: 0.469887
+Train Epoch: 3 dl: 4650/5624 Loss: 0.107666
+Train Epoch: 3 dl: 4660/5624 Loss: 0.157268
+Train Epoch: 3 dl: 4670/5624 Loss: 0.337458
+Train Epoch: 3 dl: 4680/5624 Loss: 0.196664
+Train Epoch: 3 dl: 4690/5624 Loss: 0.190720
+Train Epoch: 3 dl: 4700/5624 Loss: 0.128402
+Train Epoch: 3 dl: 4710/5624 Loss: 0.229299
+Train Epoch: 3 dl: 4720/5624 Loss: 0.310036
+Train Epoch: 3 dl: 4730/5624 Loss: 0.469672
+Train Epoch: 3 dl: 4740/5624 Loss: 0.280218
+Train Epoch: 3 dl: 4750/5624 Loss: 0.170733
+Train Epoch: 3 dl: 4760/5624 Loss: 0.121568
+Train Epoch: 3 dl: 4770/5624 Loss: 0.435207
+Train Epoch: 3 dl: 4780/5624 Loss: 0.763971
+Train Epoch: 3 dl: 4790/5624 Loss: 0.248885
+Train Epoch: 3 dl: 4800/5624 Loss: 0.069572
+Train Epoch: 3 dl: 4810/5624 Loss: 0.187799
+Train Epoch: 3 dl: 4820/5624 Loss: 0.659321
+Train Epoch: 3 dl: 4830/5624 Loss: 0.193540
+Train Epoch: 3 dl: 4840/5624 Loss: 0.297205
+Train Epoch: 3 dl: 4850/5624 Loss: 0.487319
+Train Epoch: 3 dl: 4860/5624 Loss: 0.318848
+Train Epoch: 3 dl: 4870/5624 Loss: 0.146181
+Train Epoch: 3 dl: 4880/5624 Loss: 0.275774
+Train Epoch: 3 dl: 4890/5624 Loss: 0.162417
+Train Epoch: 3 dl: 4900/5624 Loss: 0.340975
+Train Epoch: 3 dl: 4910/5624 Loss: 0.132615
+Train Epoch: 3 dl: 4920/5624 Loss: 0.427846
+Train Epoch: 3 dl: 4930/5624 Loss: 0.230480
+Train Epoch: 3 dl: 4940/5624 Loss: 0.139004
+Train Epoch: 3 dl: 4950/5624 Loss: 0.175686
+Train Epoch: 3 dl: 4960/5624 Loss: 0.271416
+Train Epoch: 3 dl: 4970/5624 Loss: 0.216041
+Train Epoch: 3 dl: 4980/5624 Loss: 0.957732
+Train Epoch: 3 dl: 4990/5624 Loss: 0.326929
+Train Epoch: 3 dl: 5000/5624 Loss: 0.110208
+Train Epoch: 3 dl: 5010/5624 Loss: 0.327341
+Train Epoch: 3 dl: 5020/5624 Loss: 0.513654
+Train Epoch: 3 dl: 5030/5624 Loss: 0.546583
+Train Epoch: 3 dl: 5040/5624 Loss: 0.227687
+Train Epoch: 3 dl: 5050/5624 Loss: 0.273642
+Train Epoch: 3 dl: 5060/5624 Loss: 0.105344
+0it [00:00, ?it/s]1it [00:03,  3.48s/it]2it [00:05,  2.62s/it]3it [00:05,  1.53s/it]4it [00:05,  1.03s/it]5it [00:06,  1.34it/s]6it [00:06,  1.74it/s]7it [00:06,  2.14it/s]8it [00:06,  2.52it/s]9it [00:08,  1.65it/s]10it [00:09,  1.16it/s]11it [00:09,  1.49it/s]12it [00:09,  1.84it/s]13it [00:10,  2.21it/s]14it [00:10,  2.56it/s]15it [00:10,  2.90it/s]16it [00:10,  3.19it/s]17it [00:11,  2.01it/s]18it [00:12,  1.65it/s]19it [00:12,  2.00it/s]20it [00:13,  2.36it/s]21it [00:13,  2.69it/s]22it [00:13,  3.01it/s]23it [00:13,  3.28it/s]24it [00:14,  3.50it/s]25it [00:14,  3.16it/s]26it [00:15,  1.96it/s]27it [00:15,  2.33it/s]28it [00:16,  2.68it/s]29it [00:16,  3.00it/s]30it [00:16,  3.28it/s]31it [00:16,  3.50it/s]32it [00:16,  1.89it/s]
+-----Val Epoch: 3, dl: 5061/5624-----
+ R@1: 45.7 (window: 45.64)
+ R@5: 70.6 (window: 71.2)
+ R@10: 81.1 (window: 80.94000000000001)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.701 (window: 14.368799999999998)
+ Loss: 0.4474234781228006
+ Current Best Window Average R@1 is 45.660000000000004
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 3 dl: 5070/5624 Loss: 0.295962
+Train Epoch: 3 dl: 5080/5624 Loss: 0.143665
+Train Epoch: 3 dl: 5090/5624 Loss: 0.569560
+Train Epoch: 3 dl: 5100/5624 Loss: 0.143544
+Train Epoch: 3 dl: 5110/5624 Loss: 0.265452
+Train Epoch: 3 dl: 5120/5624 Loss: 0.113128
+Train Epoch: 3 dl: 5130/5624 Loss: 0.113477
+Train Epoch: 3 dl: 5140/5624 Loss: 0.150403
+Train Epoch: 3 dl: 5150/5624 Loss: 0.409969
+Train Epoch: 3 dl: 5160/5624 Loss: 0.359172
+Train Epoch: 3 dl: 5170/5624 Loss: 0.286311
+Train Epoch: 3 dl: 5180/5624 Loss: 0.236513
+Train Epoch: 3 dl: 5190/5624 Loss: 0.622739
+Train Epoch: 3 dl: 5200/5624 Loss: 0.261501
+Train Epoch: 3 dl: 5210/5624 Loss: 0.284694
+Train Epoch: 3 dl: 5220/5624 Loss: 0.166822
+Train Epoch: 3 dl: 5230/5624 Loss: 0.119043
+Train Epoch: 3 dl: 5240/5624 Loss: 0.110597
+Train Epoch: 3 dl: 5250/5624 Loss: 0.249523
+Train Epoch: 3 dl: 5260/5624 Loss: 0.193272
+Train Epoch: 3 dl: 5270/5624 Loss: 0.197703
+Train Epoch: 3 dl: 5280/5624 Loss: 0.284084
+Train Epoch: 3 dl: 5290/5624 Loss: 0.322189
+Train Epoch: 3 dl: 5300/5624 Loss: 0.430810
+Train Epoch: 3 dl: 5310/5624 Loss: 0.191138
+Train Epoch: 3 dl: 5320/5624 Loss: 0.178212
+Train Epoch: 3 dl: 5330/5624 Loss: 0.198596
+Train Epoch: 3 dl: 5340/5624 Loss: 0.204622
+Train Epoch: 3 dl: 5350/5624 Loss: 0.200206
+Train Epoch: 3 dl: 5360/5624 Loss: 0.579983
+Train Epoch: 3 dl: 5370/5624 Loss: 0.315086
+Train Epoch: 3 dl: 5380/5624 Loss: 0.124702
+Train Epoch: 3 dl: 5390/5624 Loss: 0.199475
+Train Epoch: 3 dl: 5400/5624 Loss: 0.261540
+Train Epoch: 3 dl: 5410/5624 Loss: 0.347550
+Train Epoch: 3 dl: 5420/5624 Loss: 0.216561
+Train Epoch: 3 dl: 5430/5624 Loss: 0.127241
+Train Epoch: 3 dl: 5440/5624 Loss: 0.386236
+Train Epoch: 3 dl: 5450/5624 Loss: 0.177417
+Train Epoch: 3 dl: 5460/5624 Loss: 0.221623
+Train Epoch: 3 dl: 5470/5624 Loss: 0.347816
+Train Epoch: 3 dl: 5480/5624 Loss: 0.188102
+Train Epoch: 3 dl: 5490/5624 Loss: 0.474012
+Train Epoch: 3 dl: 5500/5624 Loss: 0.323162
+Train Epoch: 3 dl: 5510/5624 Loss: 0.371546
+Train Epoch: 3 dl: 5520/5624 Loss: 0.108945
+Train Epoch: 3 dl: 5530/5624 Loss: 0.122658
+Train Epoch: 3 dl: 5540/5624 Loss: 0.145911
+Train Epoch: 3 dl: 5550/5624 Loss: 0.374746
+Train Epoch: 3 dl: 5560/5624 Loss: 0.356761
+Train Epoch: 3 dl: 5570/5624 Loss: 0.262779
+Train Epoch: 3 dl: 5580/5624 Loss: 0.254481
+Train Epoch: 3 dl: 5590/5624 Loss: 0.251496
+Train Epoch: 3 dl: 5600/5624 Loss: 0.425446
+Train Epoch: 3 dl: 5610/5624 Loss: 0.291492
+Train Epoch: 3 dl: 5620/5624 Loss: 0.247965
+0it [00:00, ?it/s]1it [00:03,  3.30s/it]2it [00:03,  1.50s/it]3it [00:03,  1.08it/s]4it [00:05,  1.21s/it]5it [00:05,  1.16it/s]6it [00:05,  1.54it/s]7it [00:06,  1.92it/s]8it [00:06,  2.24it/s]9it [00:06,  2.61it/s]10it [00:06,  2.93it/s]11it [00:07,  3.20it/s]12it [00:09,  1.05s/it]13it [00:10,  1.24it/s]14it [00:10,  1.57it/s]15it [00:10,  1.93it/s]16it [00:10,  2.29it/s]17it [00:11,  2.64it/s]18it [00:11,  2.96it/s]19it [00:11,  3.11it/s]20it [00:13,  1.40it/s]21it [00:13,  1.75it/s]22it [00:13,  2.11it/s]23it [00:14,  2.48it/s]24it [00:14,  2.82it/s]25it [00:14,  3.12it/s]26it [00:14,  3.38it/s]27it [00:14,  3.58it/s]28it [00:15,  2.23it/s]29it [00:16,  2.59it/s]30it [00:16,  2.93it/s]31it [00:16,  3.22it/s]32it [00:16,  1.91it/s]
+-----Val Epoch: 3, dl: 5624/5624-----
+ R@1: 46.7 (window: 45.760000000000005)
+ R@5: 71.7 (window: 71.36)
+ R@10: 80.6 (window: 80.8)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.122 (window: 14.314400000000001)
+ Loss: 0.43979777256026864
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 45.760000000000005
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 0/5624 Loss: 0.215432
+Train Epoch: 4 dl: 10/5624 Loss: 0.077985
+Train Epoch: 4 dl: 20/5624 Loss: 0.344889
+Train Epoch: 4 dl: 30/5624 Loss: 0.106014
+Train Epoch: 4 dl: 40/5624 Loss: 0.374261
+Train Epoch: 4 dl: 50/5624 Loss: 0.261113
+Train Epoch: 4 dl: 60/5624 Loss: 0.192970
+Train Epoch: 4 dl: 70/5624 Loss: 0.314880
+Train Epoch: 4 dl: 80/5624 Loss: 0.224702
+Train Epoch: 4 dl: 90/5624 Loss: 0.222140
+Train Epoch: 4 dl: 100/5624 Loss: 0.080822
+Train Epoch: 4 dl: 110/5624 Loss: 0.330217
+Train Epoch: 4 dl: 120/5624 Loss: 0.308378
+Train Epoch: 4 dl: 130/5624 Loss: 0.460782
+Train Epoch: 4 dl: 140/5624 Loss: 0.366735
+Train Epoch: 4 dl: 150/5624 Loss: 0.443897
+Train Epoch: 4 dl: 160/5624 Loss: 0.490103
+Train Epoch: 4 dl: 170/5624 Loss: 0.133898
+Train Epoch: 4 dl: 180/5624 Loss: 0.127671
+Train Epoch: 4 dl: 190/5624 Loss: 0.439433
+Train Epoch: 4 dl: 200/5624 Loss: 0.245416
+Train Epoch: 4 dl: 210/5624 Loss: 0.299976
+Train Epoch: 4 dl: 220/5624 Loss: 0.337112
+Train Epoch: 4 dl: 230/5624 Loss: 0.201081
+Train Epoch: 4 dl: 240/5624 Loss: 0.139686
+Train Epoch: 4 dl: 250/5624 Loss: 0.373886
+Train Epoch: 4 dl: 260/5624 Loss: 0.288444
+Train Epoch: 4 dl: 270/5624 Loss: 0.122839
+Train Epoch: 4 dl: 280/5624 Loss: 0.847309
+Train Epoch: 4 dl: 290/5624 Loss: 0.031630
+Train Epoch: 4 dl: 300/5624 Loss: 0.222303
+Train Epoch: 4 dl: 310/5624 Loss: 0.258028
+Train Epoch: 4 dl: 320/5624 Loss: 0.244992
+Train Epoch: 4 dl: 330/5624 Loss: 0.330850
+Train Epoch: 4 dl: 340/5624 Loss: 0.247975
+Train Epoch: 4 dl: 350/5624 Loss: 0.319893
+Train Epoch: 4 dl: 360/5624 Loss: 0.274096
+Train Epoch: 4 dl: 370/5624 Loss: 0.519648
+Train Epoch: 4 dl: 380/5624 Loss: 0.341883
+Train Epoch: 4 dl: 390/5624 Loss: 0.324841
+Train Epoch: 4 dl: 400/5624 Loss: 0.642293
+Train Epoch: 4 dl: 410/5624 Loss: 0.742715
+Train Epoch: 4 dl: 420/5624 Loss: 0.276509
+Train Epoch: 4 dl: 430/5624 Loss: 0.090565
+Train Epoch: 4 dl: 440/5624 Loss: 0.268218
+Train Epoch: 4 dl: 450/5624 Loss: 0.286177
+Train Epoch: 4 dl: 460/5624 Loss: 0.258392
+Train Epoch: 4 dl: 470/5624 Loss: 0.041346
+Train Epoch: 4 dl: 480/5624 Loss: 0.256864
+Train Epoch: 4 dl: 490/5624 Loss: 0.129664
+Train Epoch: 4 dl: 500/5624 Loss: 0.202116
+Train Epoch: 4 dl: 510/5624 Loss: 0.184661
+Train Epoch: 4 dl: 520/5624 Loss: 0.229392
+Train Epoch: 4 dl: 530/5624 Loss: 0.138520
+Train Epoch: 4 dl: 540/5624 Loss: 0.420077
+Train Epoch: 4 dl: 550/5624 Loss: 0.262140
+Train Epoch: 4 dl: 560/5624 Loss: 0.057345
+0it [00:00, ?it/s]1it [00:05,  5.30s/it]2it [00:05,  2.36s/it]3it [00:05,  1.40s/it]4it [00:06,  1.05it/s]5it [00:06,  1.43it/s]6it [00:06,  1.84it/s]7it [00:06,  2.24it/s]8it [00:07,  2.61it/s]9it [00:09,  1.16it/s]10it [00:09,  1.50it/s]11it [00:09,  1.86it/s]12it [00:09,  2.22it/s]13it [00:10,  2.57it/s]14it [00:10,  2.78it/s]15it [00:10,  3.07it/s]16it [00:10,  3.19it/s]17it [00:12,  1.21it/s]18it [00:13,  1.53it/s]19it [00:13,  1.83it/s]20it [00:13,  2.18it/s]21it [00:13,  2.54it/s]22it [00:14,  2.88it/s]23it [00:14,  3.17it/s]24it [00:14,  3.42it/s]25it [00:15,  2.32it/s]26it [00:15,  2.68it/s]27it [00:15,  3.00it/s]28it [00:16,  3.28it/s]29it [00:16,  3.50it/s]30it [00:16,  3.68it/s]31it [00:16,  3.82it/s]32it [00:17,  1.88it/s]
+-----Val Epoch: 4, dl: 562/5624-----
+ R@1: 46.3 (window: 45.620000000000005)
+ R@5: 70.7 (window: 71.11999999999999)
+ R@10: 80.3 (window: 80.68)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.454 (window: 14.334)
+ Loss: 0.4532642336562276
+ Current Best Window Average R@1 is 45.760000000000005
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 570/5624 Loss: 0.244653
+Train Epoch: 4 dl: 580/5624 Loss: 0.200529
+Train Epoch: 4 dl: 590/5624 Loss: 0.402694
+Train Epoch: 4 dl: 600/5624 Loss: 0.131798
+Train Epoch: 4 dl: 610/5624 Loss: 0.280104
+Train Epoch: 4 dl: 620/5624 Loss: 0.046493
+Train Epoch: 4 dl: 630/5624 Loss: 0.362569
+Train Epoch: 4 dl: 640/5624 Loss: 0.324448
+Train Epoch: 4 dl: 650/5624 Loss: 0.188936
+Train Epoch: 4 dl: 660/5624 Loss: 0.497657
+Train Epoch: 4 dl: 670/5624 Loss: 0.082667
+Train Epoch: 4 dl: 680/5624 Loss: 0.396985
+Train Epoch: 4 dl: 690/5624 Loss: 0.470026
+Train Epoch: 4 dl: 700/5624 Loss: 0.389626
+Train Epoch: 4 dl: 710/5624 Loss: 0.111024
+Train Epoch: 4 dl: 720/5624 Loss: 0.253925
+Train Epoch: 4 dl: 730/5624 Loss: 0.190941
+Train Epoch: 4 dl: 740/5624 Loss: 0.100746
+Train Epoch: 4 dl: 750/5624 Loss: 0.259079
+Train Epoch: 4 dl: 760/5624 Loss: 0.314636
+Train Epoch: 4 dl: 770/5624 Loss: 0.101720
+Train Epoch: 4 dl: 780/5624 Loss: 0.322129
+Train Epoch: 4 dl: 790/5624 Loss: 0.206578
+Train Epoch: 4 dl: 800/5624 Loss: 0.084142
+Train Epoch: 4 dl: 810/5624 Loss: 0.211604
+Train Epoch: 4 dl: 820/5624 Loss: 0.174676
+Train Epoch: 4 dl: 830/5624 Loss: 0.514210
+Train Epoch: 4 dl: 840/5624 Loss: 0.349331
+Train Epoch: 4 dl: 850/5624 Loss: 0.027123
+Train Epoch: 4 dl: 860/5624 Loss: 0.750583
+Train Epoch: 4 dl: 870/5624 Loss: 0.455904
+Train Epoch: 4 dl: 880/5624 Loss: 0.096870
+Train Epoch: 4 dl: 890/5624 Loss: 0.216626
+Train Epoch: 4 dl: 900/5624 Loss: 0.056732
+Train Epoch: 4 dl: 910/5624 Loss: 0.228258
+Train Epoch: 4 dl: 920/5624 Loss: 0.104694
+Train Epoch: 4 dl: 930/5624 Loss: 0.319028
+Train Epoch: 4 dl: 940/5624 Loss: 0.193403
+Train Epoch: 4 dl: 950/5624 Loss: 0.507074
+Train Epoch: 4 dl: 960/5624 Loss: 0.482153
+Train Epoch: 4 dl: 970/5624 Loss: 0.432605
+Train Epoch: 4 dl: 980/5624 Loss: 0.396591
+Train Epoch: 4 dl: 990/5624 Loss: 0.199936
+Train Epoch: 4 dl: 1000/5624 Loss: 0.343138
+Train Epoch: 4 dl: 1010/5624 Loss: 0.145525
+Train Epoch: 4 dl: 1020/5624 Loss: 0.651376
+Train Epoch: 4 dl: 1030/5624 Loss: 0.264872
+Train Epoch: 4 dl: 1040/5624 Loss: 0.227570
+Train Epoch: 4 dl: 1050/5624 Loss: 0.055608
+Train Epoch: 4 dl: 1060/5624 Loss: 0.127878
+Train Epoch: 4 dl: 1070/5624 Loss: 0.210087
+Train Epoch: 4 dl: 1080/5624 Loss: 0.424543
+Train Epoch: 4 dl: 1090/5624 Loss: 0.127890
+Train Epoch: 4 dl: 1100/5624 Loss: 0.103218
+Train Epoch: 4 dl: 1110/5624 Loss: 0.432689
+Train Epoch: 4 dl: 1120/5624 Loss: 0.560090
+0it [00:00, ?it/s]1it [00:03,  3.46s/it]2it [00:03,  1.57s/it]3it [00:03,  1.04it/s]4it [00:05,  1.25s/it]5it [00:05,  1.12it/s]6it [00:06,  1.49it/s]7it [00:06,  1.87it/s]8it [00:06,  2.26it/s]9it [00:07,  1.40it/s]10it [00:08,  1.75it/s]11it [00:08,  2.12it/s]12it [00:10,  1.16it/s]13it [00:10,  1.48it/s]14it [00:10,  1.79it/s]15it [00:10,  2.15it/s]16it [00:11,  2.51it/s]17it [00:11,  2.02it/s]18it [00:12,  2.39it/s]19it [00:12,  2.74it/s]20it [00:13,  1.50it/s]21it [00:14,  1.86it/s]22it [00:14,  2.23it/s]23it [00:14,  2.59it/s]24it [00:14,  2.92it/s]25it [00:14,  3.21it/s]26it [00:15,  3.45it/s]27it [00:15,  3.64it/s]28it [00:16,  2.19it/s]29it [00:16,  2.56it/s]30it [00:16,  2.90it/s]31it [00:17,  3.19it/s]32it [00:17,  1.85it/s]
+-----Val Epoch: 4, dl: 1124/5624-----
+ R@1: 45.9 (window: 45.900000000000006)
+ R@5: 71.2 (window: 71.05999999999999)
+ R@10: 81.2 (window: 80.84)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.04 (window: 14.309800000000001)
+ Loss: 0.4544458230957389
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 45.900000000000006
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 1130/5624 Loss: 0.237709
+Train Epoch: 4 dl: 1140/5624 Loss: 0.084125
+Train Epoch: 4 dl: 1150/5624 Loss: 0.156308
+Train Epoch: 4 dl: 1160/5624 Loss: 0.038725
+Train Epoch: 4 dl: 1170/5624 Loss: 0.213138
+Train Epoch: 4 dl: 1180/5624 Loss: 0.166488
+Train Epoch: 4 dl: 1190/5624 Loss: 0.277849
+Train Epoch: 4 dl: 1200/5624 Loss: 0.106405
+Train Epoch: 4 dl: 1210/5624 Loss: 0.193692
+Train Epoch: 4 dl: 1220/5624 Loss: 0.417820
+Train Epoch: 4 dl: 1230/5624 Loss: 0.370776
+Train Epoch: 4 dl: 1240/5624 Loss: 0.111231
+Train Epoch: 4 dl: 1250/5624 Loss: 0.266921
+Train Epoch: 4 dl: 1260/5624 Loss: 0.497616
+Train Epoch: 4 dl: 1270/5624 Loss: 0.706293
+Train Epoch: 4 dl: 1280/5624 Loss: 0.302116
+Train Epoch: 4 dl: 1290/5624 Loss: 0.265299
+Train Epoch: 4 dl: 1300/5624 Loss: 0.140145
+Train Epoch: 4 dl: 1310/5624 Loss: 0.221507
+Train Epoch: 4 dl: 1320/5624 Loss: 0.237313
+Train Epoch: 4 dl: 1330/5624 Loss: 0.183767
+Train Epoch: 4 dl: 1340/5624 Loss: 0.237109
+Train Epoch: 4 dl: 1350/5624 Loss: 0.317095
+Train Epoch: 4 dl: 1360/5624 Loss: 0.333660
+Train Epoch: 4 dl: 1370/5624 Loss: 0.335199
+Train Epoch: 4 dl: 1380/5624 Loss: 0.250844
+Train Epoch: 4 dl: 1390/5624 Loss: 0.218883
+Train Epoch: 4 dl: 1400/5624 Loss: 0.300977
+Train Epoch: 4 dl: 1410/5624 Loss: 0.385934
+Train Epoch: 4 dl: 1420/5624 Loss: 0.279549
+Train Epoch: 4 dl: 1430/5624 Loss: 0.240007
+Train Epoch: 4 dl: 1440/5624 Loss: 0.195867
+Train Epoch: 4 dl: 1450/5624 Loss: 0.176137
+Train Epoch: 4 dl: 1460/5624 Loss: 0.387210
+Train Epoch: 4 dl: 1470/5624 Loss: 0.111430
+Train Epoch: 4 dl: 1480/5624 Loss: 0.195047
+Train Epoch: 4 dl: 1490/5624 Loss: 0.243918
+Train Epoch: 4 dl: 1500/5624 Loss: 0.227909
+Train Epoch: 4 dl: 1510/5624 Loss: 0.298428
+Train Epoch: 4 dl: 1520/5624 Loss: 0.435055
+Train Epoch: 4 dl: 1530/5624 Loss: 0.235860
+Train Epoch: 4 dl: 1540/5624 Loss: 0.280433
+Train Epoch: 4 dl: 1550/5624 Loss: 0.080883
+Train Epoch: 4 dl: 1560/5624 Loss: 0.179119
+Train Epoch: 4 dl: 1570/5624 Loss: 0.189553
+Train Epoch: 4 dl: 1580/5624 Loss: 0.200351
+Train Epoch: 4 dl: 1590/5624 Loss: 0.269186
+Train Epoch: 4 dl: 1600/5624 Loss: 0.236786
+Train Epoch: 4 dl: 1610/5624 Loss: 0.158420
+Train Epoch: 4 dl: 1620/5624 Loss: 0.189107
+Train Epoch: 4 dl: 1630/5624 Loss: 0.369793
+Train Epoch: 4 dl: 1640/5624 Loss: 0.300473
+Train Epoch: 4 dl: 1650/5624 Loss: 0.143154
+Train Epoch: 4 dl: 1660/5624 Loss: 0.088664
+Train Epoch: 4 dl: 1670/5624 Loss: 0.267237
+Train Epoch: 4 dl: 1680/5624 Loss: 0.244571
+0it [00:00, ?it/s]1it [00:05,  5.64s/it]2it [00:05,  2.48s/it]3it [00:06,  1.46s/it]4it [00:06,  1.02it/s]5it [00:06,  1.40it/s]6it [00:06,  1.80it/s]7it [00:07,  2.20it/s]8it [00:07,  2.57it/s]9it [00:10,  1.16s/it]10it [00:10,  1.14it/s]11it [00:10,  1.46it/s]12it [00:10,  1.82it/s]13it [00:11,  2.20it/s]14it [00:11,  2.56it/s]15it [00:11,  2.89it/s]16it [00:11,  3.18it/s]17it [00:12,  2.03it/s]18it [00:13,  2.39it/s]19it [00:13,  2.73it/s]20it [00:13,  3.03it/s]21it [00:13,  3.28it/s]22it [00:14,  3.48it/s]23it [00:14,  3.59it/s]24it [00:14,  3.75it/s]25it [00:15,  2.21it/s]26it [00:15,  2.57it/s]27it [00:15,  2.91it/s]28it [00:16,  3.20it/s]29it [00:16,  3.44it/s]30it [00:16,  3.64it/s]31it [00:16,  3.78it/s]32it [00:17,  1.87it/s]
+-----Val Epoch: 4, dl: 1687/5624-----
+ R@1: 45.5 (window: 46.019999999999996)
+ R@5: 71.2 (window: 71.08)
+ R@10: 81.8 (window: 81.0)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.044 (window: 14.272200000000002)
+ Loss: 0.4553020419552922
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 46.019999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 1690/5624 Loss: 0.123485
+Train Epoch: 4 dl: 1700/5624 Loss: 0.191743
+Train Epoch: 4 dl: 1710/5624 Loss: 0.141972
+Train Epoch: 4 dl: 1720/5624 Loss: 0.380595
+Train Epoch: 4 dl: 1730/5624 Loss: 0.134401
+Train Epoch: 4 dl: 1740/5624 Loss: 0.327297
+Train Epoch: 4 dl: 1750/5624 Loss: 0.098409
+Train Epoch: 4 dl: 1760/5624 Loss: 0.215143
+Train Epoch: 4 dl: 1770/5624 Loss: 0.183865
+Train Epoch: 4 dl: 1780/5624 Loss: 0.184088
+Train Epoch: 4 dl: 1790/5624 Loss: 0.218758
+Train Epoch: 4 dl: 1800/5624 Loss: 0.465629
+Train Epoch: 4 dl: 1810/5624 Loss: 0.638538
+Train Epoch: 4 dl: 1820/5624 Loss: 0.364157
+Train Epoch: 4 dl: 1830/5624 Loss: 0.172854
+Train Epoch: 4 dl: 1840/5624 Loss: 0.438632
+Train Epoch: 4 dl: 1850/5624 Loss: 0.255387
+Train Epoch: 4 dl: 1860/5624 Loss: 0.154582
+Train Epoch: 4 dl: 1870/5624 Loss: 0.353398
+Train Epoch: 4 dl: 1880/5624 Loss: 0.237178
+Train Epoch: 4 dl: 1890/5624 Loss: 0.207907
+Train Epoch: 4 dl: 1900/5624 Loss: 0.412019
+Train Epoch: 4 dl: 1910/5624 Loss: 0.375369
+Train Epoch: 4 dl: 1920/5624 Loss: 0.274443
+Train Epoch: 4 dl: 1930/5624 Loss: 0.517928
+Train Epoch: 4 dl: 1940/5624 Loss: 0.209899
+Train Epoch: 4 dl: 1950/5624 Loss: 0.676911
+Train Epoch: 4 dl: 1960/5624 Loss: 0.151145
+Train Epoch: 4 dl: 1970/5624 Loss: 0.150836
+Train Epoch: 4 dl: 1980/5624 Loss: 0.129950
+Train Epoch: 4 dl: 1990/5624 Loss: 0.215478
+Train Epoch: 4 dl: 2000/5624 Loss: 0.229476
+Train Epoch: 4 dl: 2010/5624 Loss: 0.278815
+Train Epoch: 4 dl: 2020/5624 Loss: 0.449939
+Train Epoch: 4 dl: 2030/5624 Loss: 0.096728
+Train Epoch: 4 dl: 2040/5624 Loss: 0.244333
+Train Epoch: 4 dl: 2050/5624 Loss: 0.127309
+Train Epoch: 4 dl: 2060/5624 Loss: 0.195441
+Train Epoch: 4 dl: 2070/5624 Loss: 0.255972
+Train Epoch: 4 dl: 2080/5624 Loss: 0.335587
+Train Epoch: 4 dl: 2090/5624 Loss: 0.331029
+Train Epoch: 4 dl: 2100/5624 Loss: 0.103090
+Train Epoch: 4 dl: 2110/5624 Loss: 0.443184
+Train Epoch: 4 dl: 2120/5624 Loss: 0.292542
+Train Epoch: 4 dl: 2130/5624 Loss: 0.138191
+Train Epoch: 4 dl: 2140/5624 Loss: 0.054967
+Train Epoch: 4 dl: 2150/5624 Loss: 0.361162
+Train Epoch: 4 dl: 2160/5624 Loss: 0.299401
+Train Epoch: 4 dl: 2170/5624 Loss: 0.370512
+Train Epoch: 4 dl: 2180/5624 Loss: 0.257096
+Train Epoch: 4 dl: 2190/5624 Loss: 0.187451
+Train Epoch: 4 dl: 2200/5624 Loss: 0.123131
+Train Epoch: 4 dl: 2210/5624 Loss: 0.079902
+Train Epoch: 4 dl: 2220/5624 Loss: 0.250292
+Train Epoch: 4 dl: 2230/5624 Loss: 0.237823
+Train Epoch: 4 dl: 2240/5624 Loss: 0.130022
+0it [00:00, ?it/s]1it [00:05,  5.15s/it]2it [00:05,  2.27s/it]3it [00:05,  1.36s/it]4it [00:05,  1.08it/s]5it [00:06,  1.47it/s]6it [00:06,  1.88it/s]7it [00:06,  2.28it/s]8it [00:06,  2.65it/s]9it [00:09,  1.06s/it]10it [00:09,  1.24it/s]11it [00:09,  1.57it/s]12it [00:10,  1.93it/s]13it [00:10,  2.30it/s]14it [00:10,  2.64it/s]15it [00:10,  2.95it/s]16it [00:11,  3.21it/s]17it [00:11,  2.23it/s]18it [00:12,  2.57it/s]19it [00:12,  2.88it/s]20it [00:12,  3.15it/s]21it [00:12,  3.38it/s]22it [00:13,  3.56it/s]23it [00:13,  3.71it/s]24it [00:13,  3.84it/s]25it [00:15,  1.59it/s]26it [00:15,  1.95it/s]27it [00:15,  2.32it/s]28it [00:15,  2.67it/s]29it [00:16,  3.00it/s]30it [00:16,  3.27it/s]31it [00:16,  3.50it/s]32it [00:16,  1.90it/s]
+-----Val Epoch: 4, dl: 2249/5624-----
+ R@1: 45.2 (window: 45.92)
+ R@5: 71.0 (window: 71.16)
+ R@10: 81.7 (window: 81.11999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.607 (window: 14.0534)
+ Loss: 0.45439758663997054
+ Current Best Window Average R@1 is 46.019999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 2250/5624 Loss: 0.428354
+Train Epoch: 4 dl: 2260/5624 Loss: 0.223703
+Train Epoch: 4 dl: 2270/5624 Loss: 0.212141
+Train Epoch: 4 dl: 2280/5624 Loss: 0.270427
+Train Epoch: 4 dl: 2290/5624 Loss: 0.213916
+Train Epoch: 4 dl: 2300/5624 Loss: 0.223290
+Train Epoch: 4 dl: 2310/5624 Loss: 0.592700
+Train Epoch: 4 dl: 2320/5624 Loss: 0.183490
+Train Epoch: 4 dl: 2330/5624 Loss: 0.456555
+Train Epoch: 4 dl: 2340/5624 Loss: 0.032603
+Train Epoch: 4 dl: 2350/5624 Loss: 0.226072
+Train Epoch: 4 dl: 2360/5624 Loss: 0.309893
+Train Epoch: 4 dl: 2370/5624 Loss: 0.155269
+Train Epoch: 4 dl: 2380/5624 Loss: 0.144946
+Train Epoch: 4 dl: 2390/5624 Loss: 0.211829
+Train Epoch: 4 dl: 2400/5624 Loss: 0.061729
+Train Epoch: 4 dl: 2410/5624 Loss: 0.259171
+Train Epoch: 4 dl: 2420/5624 Loss: 0.473238
+Train Epoch: 4 dl: 2430/5624 Loss: 0.057909
+Train Epoch: 4 dl: 2440/5624 Loss: 0.147680
+Train Epoch: 4 dl: 2450/5624 Loss: 0.099658
+Train Epoch: 4 dl: 2460/5624 Loss: 0.333643
+Train Epoch: 4 dl: 2470/5624 Loss: 0.335365
+Train Epoch: 4 dl: 2480/5624 Loss: 0.212244
+Train Epoch: 4 dl: 2490/5624 Loss: 0.325334
+Train Epoch: 4 dl: 2500/5624 Loss: 0.335611
+Train Epoch: 4 dl: 2510/5624 Loss: 0.132855
+Train Epoch: 4 dl: 2520/5624 Loss: 0.486062
+Train Epoch: 4 dl: 2530/5624 Loss: 0.192553
+Train Epoch: 4 dl: 2540/5624 Loss: 0.198971
+Train Epoch: 4 dl: 2550/5624 Loss: 0.078991
+Train Epoch: 4 dl: 2560/5624 Loss: 0.506366
+Train Epoch: 4 dl: 2570/5624 Loss: 0.170564
+Train Epoch: 4 dl: 2580/5624 Loss: 0.234490
+Train Epoch: 4 dl: 2590/5624 Loss: 0.206058
+Train Epoch: 4 dl: 2600/5624 Loss: 0.055716
+Train Epoch: 4 dl: 2610/5624 Loss: 0.356109
+Train Epoch: 4 dl: 2620/5624 Loss: 0.103243
+Train Epoch: 4 dl: 2630/5624 Loss: 0.148173
+Train Epoch: 4 dl: 2640/5624 Loss: 0.065829
+Train Epoch: 4 dl: 2650/5624 Loss: 0.477628
+Train Epoch: 4 dl: 2660/5624 Loss: 0.159950
+Train Epoch: 4 dl: 2670/5624 Loss: 0.215070
+Train Epoch: 4 dl: 2680/5624 Loss: 0.284359
+Train Epoch: 4 dl: 2690/5624 Loss: 0.129706
+Train Epoch: 4 dl: 2700/5624 Loss: 0.227997
+Train Epoch: 4 dl: 2710/5624 Loss: 0.466715
+Train Epoch: 4 dl: 2720/5624 Loss: 0.463609
+Train Epoch: 4 dl: 2730/5624 Loss: 0.451935
+Train Epoch: 4 dl: 2740/5624 Loss: 0.283362
+Train Epoch: 4 dl: 2750/5624 Loss: 0.385796
+Train Epoch: 4 dl: 2760/5624 Loss: 0.319220
+Train Epoch: 4 dl: 2770/5624 Loss: 0.428346
+Train Epoch: 4 dl: 2780/5624 Loss: 0.168502
+Train Epoch: 4 dl: 2790/5624 Loss: 0.465945
+Train Epoch: 4 dl: 2800/5624 Loss: 0.367799
+Train Epoch: 4 dl: 2810/5624 Loss: 0.056471
+0it [00:00, ?it/s]1it [00:05,  5.29s/it]2it [00:05,  2.32s/it]3it [00:05,  1.39s/it]4it [00:06,  1.06it/s]5it [00:06,  1.41it/s]6it [00:06,  1.81it/s]7it [00:06,  2.21it/s]8it [00:07,  2.59it/s]9it [00:09,  1.04s/it]10it [00:09,  1.26it/s]11it [00:10,  1.60it/s]12it [00:10,  1.96it/s]13it [00:10,  2.26it/s]14it [00:10,  2.62it/s]15it [00:11,  2.95it/s]16it [00:11,  3.23it/s]17it [00:12,  2.16it/s]18it [00:12,  2.50it/s]19it [00:12,  2.82it/s]20it [00:12,  3.11it/s]21it [00:13,  3.35it/s]22it [00:13,  3.53it/s]23it [00:13,  3.62it/s]24it [00:13,  3.76it/s]25it [00:14,  2.25it/s]26it [00:14,  2.61it/s]27it [00:15,  2.94it/s]28it [00:15,  2.96it/s]29it [00:15,  3.25it/s]30it [00:16,  3.48it/s]31it [00:16,  3.66it/s]32it [00:16,  1.94it/s]
+-----Val Epoch: 4, dl: 2812/5624-----
+ R@1: 45.6 (window: 45.699999999999996)
+ R@5: 71.0 (window: 71.02000000000001)
+ R@10: 81.7 (window: 81.34)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.045 (window: 14.038)
+ Loss: 0.4546466856263578
+ Current Best Window Average R@1 is 46.019999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 2820/5624 Loss: 0.481709
+Train Epoch: 4 dl: 2830/5624 Loss: 0.300034
+Train Epoch: 4 dl: 2840/5624 Loss: 0.154989
+Train Epoch: 4 dl: 2850/5624 Loss: 0.288068
+Train Epoch: 4 dl: 2860/5624 Loss: 0.259812
+Train Epoch: 4 dl: 2870/5624 Loss: 0.333147
+Train Epoch: 4 dl: 2880/5624 Loss: 0.516579
+Train Epoch: 4 dl: 2890/5624 Loss: 0.106948
+Train Epoch: 4 dl: 2900/5624 Loss: 0.414070
+Train Epoch: 4 dl: 2910/5624 Loss: 0.130601
+Train Epoch: 4 dl: 2920/5624 Loss: 0.290488
+Train Epoch: 4 dl: 2930/5624 Loss: 0.122069
+Train Epoch: 4 dl: 2940/5624 Loss: 0.338145
+Train Epoch: 4 dl: 2950/5624 Loss: 0.607832
+Train Epoch: 4 dl: 2960/5624 Loss: 0.193533
+Train Epoch: 4 dl: 2970/5624 Loss: 0.096670
+Train Epoch: 4 dl: 2980/5624 Loss: 0.152318
+Train Epoch: 4 dl: 2990/5624 Loss: 0.255805
+Train Epoch: 4 dl: 3000/5624 Loss: 0.190921
+Train Epoch: 4 dl: 3010/5624 Loss: 0.258012
+Train Epoch: 4 dl: 3020/5624 Loss: 0.141637
+Train Epoch: 4 dl: 3030/5624 Loss: 0.424155
+Train Epoch: 4 dl: 3040/5624 Loss: 0.367682
+Train Epoch: 4 dl: 3050/5624 Loss: 0.050510
+Train Epoch: 4 dl: 3060/5624 Loss: 0.153138
+Train Epoch: 4 dl: 3070/5624 Loss: 0.404614
+Train Epoch: 4 dl: 3080/5624 Loss: 0.290379
+Train Epoch: 4 dl: 3090/5624 Loss: 0.247222
+Train Epoch: 4 dl: 3100/5624 Loss: 0.301029
+Train Epoch: 4 dl: 3110/5624 Loss: 0.180808
+Train Epoch: 4 dl: 3120/5624 Loss: 0.253050
+Train Epoch: 4 dl: 3130/5624 Loss: 0.149939
+Train Epoch: 4 dl: 3140/5624 Loss: 0.102046
+Train Epoch: 4 dl: 3150/5624 Loss: 0.236259
+Train Epoch: 4 dl: 3160/5624 Loss: 0.321965
+Train Epoch: 4 dl: 3170/5624 Loss: 0.099904
+Train Epoch: 4 dl: 3180/5624 Loss: 0.498950
+Train Epoch: 4 dl: 3190/5624 Loss: 0.368181
+Train Epoch: 4 dl: 3200/5624 Loss: 0.198227
+Train Epoch: 4 dl: 3210/5624 Loss: 0.374880
+Train Epoch: 4 dl: 3220/5624 Loss: 0.231423
+Train Epoch: 4 dl: 3230/5624 Loss: 0.505599
+Train Epoch: 4 dl: 3240/5624 Loss: 0.238892
+Train Epoch: 4 dl: 3250/5624 Loss: 0.540606
+Train Epoch: 4 dl: 3260/5624 Loss: 0.217409
+Train Epoch: 4 dl: 3270/5624 Loss: 0.302511
+Train Epoch: 4 dl: 3280/5624 Loss: 0.125175
+Train Epoch: 4 dl: 3290/5624 Loss: 0.136905
+Train Epoch: 4 dl: 3300/5624 Loss: 0.111666
+Train Epoch: 4 dl: 3310/5624 Loss: 0.200619
+Train Epoch: 4 dl: 3320/5624 Loss: 0.398814
+Train Epoch: 4 dl: 3330/5624 Loss: 0.175835
+Train Epoch: 4 dl: 3340/5624 Loss: 0.228712
+Train Epoch: 4 dl: 3350/5624 Loss: 0.492981
+Train Epoch: 4 dl: 3360/5624 Loss: 0.252033
+Train Epoch: 4 dl: 3370/5624 Loss: 0.288021
+0it [00:00, ?it/s]1it [00:05,  5.57s/it]2it [00:05,  2.44s/it]3it [00:06,  1.46s/it]4it [00:06,  1.02it/s]5it [00:06,  1.39it/s]6it [00:06,  1.79it/s]7it [00:07,  2.18it/s]8it [00:07,  2.56it/s]9it [00:09,  1.26it/s]10it [00:09,  1.61it/s]11it [00:09,  1.98it/s]12it [00:09,  2.35it/s]13it [00:10,  2.65it/s]14it [00:10,  2.95it/s]15it [00:10,  3.21it/s]16it [00:10,  3.42it/s]17it [00:13,  1.01it/s]18it [00:13,  1.30it/s]19it [00:13,  1.64it/s]20it [00:14,  2.01it/s]21it [00:14,  2.38it/s]22it [00:14,  2.73it/s]23it [00:14,  3.04it/s]24it [00:15,  3.31it/s]25it [00:15,  2.27it/s]26it [00:16,  2.63it/s]27it [00:16,  2.95it/s]28it [00:16,  3.24it/s]29it [00:16,  3.47it/s]30it [00:17,  3.66it/s]31it [00:17,  3.80it/s]32it [00:17,  1.83it/s]
+-----Val Epoch: 4, dl: 3374/5624-----
+ R@1: 45.5 (window: 45.540000000000006)
+ R@5: 70.9 (window: 71.05999999999999)
+ R@10: 81.7 (window: 81.61999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.975 (window: 13.9422)
+ Loss: 0.4554994129575789
+ Current Best Window Average R@1 is 46.019999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 3380/5624 Loss: 0.582964
+Train Epoch: 4 dl: 3390/5624 Loss: 0.166779
+Train Epoch: 4 dl: 3400/5624 Loss: 0.223200
+Train Epoch: 4 dl: 3410/5624 Loss: 0.275129
+Train Epoch: 4 dl: 3420/5624 Loss: 0.156335
+Train Epoch: 4 dl: 3430/5624 Loss: 0.134646
+Train Epoch: 4 dl: 3440/5624 Loss: 0.420425
+Train Epoch: 4 dl: 3450/5624 Loss: 0.298383
+Train Epoch: 4 dl: 3460/5624 Loss: 0.404895
+Train Epoch: 4 dl: 3470/5624 Loss: 0.195177
+Train Epoch: 4 dl: 3480/5624 Loss: 0.149223
+Train Epoch: 4 dl: 3490/5624 Loss: 0.047811
+Train Epoch: 4 dl: 3500/5624 Loss: 0.173481
+Train Epoch: 4 dl: 3510/5624 Loss: 0.226130
+Train Epoch: 4 dl: 3520/5624 Loss: 0.273637
+Train Epoch: 4 dl: 3530/5624 Loss: 0.177054
+Train Epoch: 4 dl: 3540/5624 Loss: 0.224004
+Train Epoch: 4 dl: 3550/5624 Loss: 0.461457
+Train Epoch: 4 dl: 3560/5624 Loss: 0.706475
+Train Epoch: 4 dl: 3570/5624 Loss: 0.193499
+Train Epoch: 4 dl: 3580/5624 Loss: 0.262411
+Train Epoch: 4 dl: 3590/5624 Loss: 0.163514
+Train Epoch: 4 dl: 3600/5624 Loss: 0.199718
+Train Epoch: 4 dl: 3610/5624 Loss: 0.054600
+Train Epoch: 4 dl: 3620/5624 Loss: 0.093485
+Train Epoch: 4 dl: 3630/5624 Loss: 0.194234
+Train Epoch: 4 dl: 3640/5624 Loss: 0.517691
+Train Epoch: 4 dl: 3650/5624 Loss: 0.063371
+Train Epoch: 4 dl: 3660/5624 Loss: 0.128540
+Train Epoch: 4 dl: 3670/5624 Loss: 0.623372
+Train Epoch: 4 dl: 3680/5624 Loss: 0.107830
+Train Epoch: 4 dl: 3690/5624 Loss: 0.284173
+Train Epoch: 4 dl: 3700/5624 Loss: 0.261782
+Train Epoch: 4 dl: 3710/5624 Loss: 0.268004
+Train Epoch: 4 dl: 3720/5624 Loss: 0.339607
+Train Epoch: 4 dl: 3730/5624 Loss: 0.218977
+Train Epoch: 4 dl: 3740/5624 Loss: 0.528804
+Train Epoch: 4 dl: 3750/5624 Loss: 0.118497
+Train Epoch: 4 dl: 3760/5624 Loss: 0.188392
+Train Epoch: 4 dl: 3770/5624 Loss: 0.234083
+Train Epoch: 4 dl: 3780/5624 Loss: 0.188331
+Train Epoch: 4 dl: 3790/5624 Loss: 0.122864
+Train Epoch: 4 dl: 3800/5624 Loss: 0.217999
+Train Epoch: 4 dl: 3810/5624 Loss: 0.170414
+Train Epoch: 4 dl: 3820/5624 Loss: 0.392838
+Train Epoch: 4 dl: 3830/5624 Loss: 0.393627
+Train Epoch: 4 dl: 3840/5624 Loss: 0.537602
+Train Epoch: 4 dl: 3850/5624 Loss: 0.311759
+Train Epoch: 4 dl: 3860/5624 Loss: 0.218491
+Train Epoch: 4 dl: 3870/5624 Loss: 0.262713
+Train Epoch: 4 dl: 3880/5624 Loss: 0.345814
+Train Epoch: 4 dl: 3890/5624 Loss: 0.359611
+Train Epoch: 4 dl: 3900/5624 Loss: 0.336231
+Train Epoch: 4 dl: 3910/5624 Loss: 0.218002
+Train Epoch: 4 dl: 3920/5624 Loss: 0.258533
+Train Epoch: 4 dl: 3930/5624 Loss: 0.028298
+0it [00:00, ?it/s]1it [00:03,  3.38s/it]2it [00:03,  1.54s/it]3it [00:04,  1.40s/it]4it [00:05,  1.13s/it]5it [00:05,  1.22it/s]6it [00:06,  1.60it/s]7it [00:06,  1.99it/s]8it [00:06,  2.37it/s]9it [00:07,  2.37it/s]10it [00:07,  2.50it/s]11it [00:08,  1.73it/s]12it [00:10,  1.01it/s]13it [00:10,  1.31it/s]14it [00:10,  1.65it/s]15it [00:11,  2.01it/s]16it [00:11,  2.38it/s]17it [00:11,  2.73it/s]18it [00:11,  3.04it/s]19it [00:11,  3.29it/s]20it [00:13,  1.73it/s]21it [00:13,  2.09it/s]22it [00:13,  2.45it/s]23it [00:13,  2.67it/s]24it [00:14,  2.99it/s]25it [00:14,  3.27it/s]26it [00:14,  3.31it/s]27it [00:15,  2.37it/s]28it [00:15,  2.62it/s]29it [00:15,  2.95it/s]30it [00:16,  3.23it/s]31it [00:16,  3.46it/s]32it [00:16,  1.92it/s]
+-----Val Epoch: 4, dl: 3936/5624-----
+ R@1: 45.9 (window: 45.540000000000006)
+ R@5: 70.7 (window: 70.96000000000001)
+ R@10: 81.3 (window: 81.64)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.029 (window: 13.940000000000001)
+ Loss: 0.4510431797243655
+ Current Best Window Average R@1 is 46.019999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 3940/5624 Loss: 0.076279
+Train Epoch: 4 dl: 3950/5624 Loss: 0.221030
+Train Epoch: 4 dl: 3960/5624 Loss: 0.538807
+Train Epoch: 4 dl: 3970/5624 Loss: 0.152482
+Train Epoch: 4 dl: 3980/5624 Loss: 0.443144
+Train Epoch: 4 dl: 3990/5624 Loss: 0.232576
+Train Epoch: 4 dl: 4000/5624 Loss: 0.435856
+Train Epoch: 4 dl: 4010/5624 Loss: 0.296310
+Train Epoch: 4 dl: 4020/5624 Loss: 0.352231
+Train Epoch: 4 dl: 4030/5624 Loss: 0.063526
+Train Epoch: 4 dl: 4040/5624 Loss: 0.260059
+Train Epoch: 4 dl: 4050/5624 Loss: 0.437316
+Train Epoch: 4 dl: 4060/5624 Loss: 0.299684
+Train Epoch: 4 dl: 4070/5624 Loss: 0.163285
+Train Epoch: 4 dl: 4080/5624 Loss: 0.262614
+Train Epoch: 4 dl: 4090/5624 Loss: 0.462978
+Train Epoch: 4 dl: 4100/5624 Loss: 0.065199
+Train Epoch: 4 dl: 4110/5624 Loss: 0.198996
+Train Epoch: 4 dl: 4120/5624 Loss: 0.286772
+Train Epoch: 4 dl: 4130/5624 Loss: 0.139377
+Train Epoch: 4 dl: 4140/5624 Loss: 0.598270
+Train Epoch: 4 dl: 4150/5624 Loss: 0.327679
+Train Epoch: 4 dl: 4160/5624 Loss: 0.337155
+Train Epoch: 4 dl: 4170/5624 Loss: 0.131954
+Train Epoch: 4 dl: 4180/5624 Loss: 0.241043
+Train Epoch: 4 dl: 4190/5624 Loss: 0.173072
+Train Epoch: 4 dl: 4200/5624 Loss: 0.518058
+Train Epoch: 4 dl: 4210/5624 Loss: 0.320654
+Train Epoch: 4 dl: 4220/5624 Loss: 0.351358
+Train Epoch: 4 dl: 4230/5624 Loss: 0.296455
+Train Epoch: 4 dl: 4240/5624 Loss: 0.073174
+Train Epoch: 4 dl: 4250/5624 Loss: 0.211827
+Train Epoch: 4 dl: 4260/5624 Loss: 0.417982
+Train Epoch: 4 dl: 4270/5624 Loss: 0.263484
+Train Epoch: 4 dl: 4280/5624 Loss: 0.264377
+Train Epoch: 4 dl: 4290/5624 Loss: 0.362935
+Train Epoch: 4 dl: 4300/5624 Loss: 0.492932
+Train Epoch: 4 dl: 4310/5624 Loss: 0.181740
+Train Epoch: 4 dl: 4320/5624 Loss: 0.101069
+Train Epoch: 4 dl: 4330/5624 Loss: 0.369798
+Train Epoch: 4 dl: 4340/5624 Loss: 0.176650
+Train Epoch: 4 dl: 4350/5624 Loss: 0.200694
+Train Epoch: 4 dl: 4360/5624 Loss: 0.199826
+Train Epoch: 4 dl: 4370/5624 Loss: 0.272689
+Train Epoch: 4 dl: 4380/5624 Loss: 0.245649
+Train Epoch: 4 dl: 4390/5624 Loss: 0.354650
+Train Epoch: 4 dl: 4400/5624 Loss: 0.521376
+Train Epoch: 4 dl: 4410/5624 Loss: 0.353156
+Train Epoch: 4 dl: 4420/5624 Loss: 0.254193
+Train Epoch: 4 dl: 4430/5624 Loss: 0.061711
+Train Epoch: 4 dl: 4440/5624 Loss: 0.033851
+Train Epoch: 4 dl: 4450/5624 Loss: 0.352862
+Train Epoch: 4 dl: 4460/5624 Loss: 0.106718
+Train Epoch: 4 dl: 4470/5624 Loss: 0.152189
+Train Epoch: 4 dl: 4480/5624 Loss: 0.183093
+Train Epoch: 4 dl: 4490/5624 Loss: 0.480154
+0it [00:00, ?it/s]1it [00:05,  5.81s/it]2it [00:06,  2.54s/it]3it [00:06,  1.49s/it]4it [00:06,  1.00s/it]5it [00:06,  1.34it/s]6it [00:07,  1.73it/s]7it [00:07,  2.13it/s]8it [00:07,  2.51it/s]9it [00:08,  1.42it/s]10it [00:09,  1.78it/s]11it [00:10,  1.48it/s]12it [00:10,  1.85it/s]13it [00:10,  2.22it/s]14it [00:10,  2.48it/s]15it [00:11,  2.83it/s]16it [00:11,  3.11it/s]17it [00:11,  3.01it/s]18it [00:12,  3.27it/s]19it [00:13,  1.24it/s]20it [00:14,  1.56it/s]21it [00:14,  1.90it/s]22it [00:14,  2.27it/s]23it [00:14,  2.63it/s]24it [00:15,  2.96it/s]25it [00:15,  3.24it/s]26it [00:15,  3.47it/s]27it [00:16,  2.38it/s]28it [00:16,  2.73it/s]29it [00:16,  3.05it/s]30it [00:17,  3.32it/s]31it [00:17,  3.54it/s]32it [00:17,  1.82it/s]
+-----Val Epoch: 4, dl: 4499/5624-----
+ R@1: 45.6 (window: 45.56)
+ R@5: 71.3 (window: 70.98)
+ R@10: 81.9 (window: 81.66000000000001)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.049 (window: 13.941000000000003)
+ Loss: 0.4505950331222266
+ Current Best Window Average R@1 is 46.019999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 4500/5624 Loss: 0.269885
+Train Epoch: 4 dl: 4510/5624 Loss: 0.428976
+Train Epoch: 4 dl: 4520/5624 Loss: 0.286607
+Train Epoch: 4 dl: 4530/5624 Loss: 0.216084
+Train Epoch: 4 dl: 4540/5624 Loss: 0.275354
+Train Epoch: 4 dl: 4550/5624 Loss: 0.281329
+Train Epoch: 4 dl: 4560/5624 Loss: 0.486137
+Train Epoch: 4 dl: 4570/5624 Loss: 0.238897
+Train Epoch: 4 dl: 4580/5624 Loss: 0.133170
+Train Epoch: 4 dl: 4590/5624 Loss: 0.311261
+Train Epoch: 4 dl: 4600/5624 Loss: 0.335432
+Train Epoch: 4 dl: 4610/5624 Loss: 0.125673
+Train Epoch: 4 dl: 4620/5624 Loss: 0.312983
+Train Epoch: 4 dl: 4630/5624 Loss: 0.114663
+Train Epoch: 4 dl: 4640/5624 Loss: 0.308860
+Train Epoch: 4 dl: 4650/5624 Loss: 0.391525
+Train Epoch: 4 dl: 4660/5624 Loss: 0.117580
+Train Epoch: 4 dl: 4670/5624 Loss: 0.375526
+Train Epoch: 4 dl: 4680/5624 Loss: 0.076051
+Train Epoch: 4 dl: 4690/5624 Loss: 0.256016
+Train Epoch: 4 dl: 4700/5624 Loss: 0.387689
+Train Epoch: 4 dl: 4710/5624 Loss: 0.216348
+Train Epoch: 4 dl: 4720/5624 Loss: 0.304938
+Train Epoch: 4 dl: 4730/5624 Loss: 0.595526
+Train Epoch: 4 dl: 4740/5624 Loss: 0.306424
+Train Epoch: 4 dl: 4750/5624 Loss: 0.075244
+Train Epoch: 4 dl: 4760/5624 Loss: 0.090703
+Train Epoch: 4 dl: 4770/5624 Loss: 0.314561
+Train Epoch: 4 dl: 4780/5624 Loss: 0.459820
+Train Epoch: 4 dl: 4790/5624 Loss: 0.185111
+Train Epoch: 4 dl: 4800/5624 Loss: 0.293717
+Train Epoch: 4 dl: 4810/5624 Loss: 0.320509
+Train Epoch: 4 dl: 4820/5624 Loss: 0.107703
+Train Epoch: 4 dl: 4830/5624 Loss: 0.200182
+Train Epoch: 4 dl: 4840/5624 Loss: 0.149401
+Train Epoch: 4 dl: 4850/5624 Loss: 0.251031
+Train Epoch: 4 dl: 4860/5624 Loss: 0.239970
+Train Epoch: 4 dl: 4870/5624 Loss: 0.461876
+Train Epoch: 4 dl: 4880/5624 Loss: 0.380745
+Train Epoch: 4 dl: 4890/5624 Loss: 0.463715
+Train Epoch: 4 dl: 4900/5624 Loss: 0.294963
+Train Epoch: 4 dl: 4910/5624 Loss: 0.194499
+Train Epoch: 4 dl: 4920/5624 Loss: 0.304438
+Train Epoch: 4 dl: 4930/5624 Loss: 0.275826
+Train Epoch: 4 dl: 4940/5624 Loss: 0.244122
+Train Epoch: 4 dl: 4950/5624 Loss: 0.181231
+Train Epoch: 4 dl: 4960/5624 Loss: 0.086195
+Train Epoch: 4 dl: 4970/5624 Loss: 0.269181
+Train Epoch: 4 dl: 4980/5624 Loss: 0.477278
+Train Epoch: 4 dl: 4990/5624 Loss: 0.212712
+Train Epoch: 4 dl: 5000/5624 Loss: 0.301711
+Train Epoch: 4 dl: 5010/5624 Loss: 0.583023
+Train Epoch: 4 dl: 5020/5624 Loss: 0.254462
+Train Epoch: 4 dl: 5030/5624 Loss: 0.262889
+Train Epoch: 4 dl: 5040/5624 Loss: 0.236050
+Train Epoch: 4 dl: 5050/5624 Loss: 0.376152
+Train Epoch: 4 dl: 5060/5624 Loss: 0.278934
+0it [00:00, ?it/s]1it [00:03,  3.72s/it]2it [00:05,  2.33s/it]3it [00:05,  1.40s/it]4it [00:05,  1.06it/s]5it [00:05,  1.44it/s]6it [00:06,  1.84it/s]7it [00:06,  2.24it/s]8it [00:06,  2.62it/s]9it [00:07,  2.41it/s]10it [00:07,  2.08it/s]11it [00:07,  2.44it/s]12it [00:08,  2.78it/s]13it [00:08,  3.07it/s]14it [00:08,  3.30it/s]15it [00:09,  2.02it/s]16it [00:09,  2.39it/s]17it [00:11,  1.50it/s]18it [00:11,  1.85it/s]19it [00:11,  2.21it/s]20it [00:11,  2.57it/s]21it [00:12,  2.90it/s]22it [00:12,  3.19it/s]23it [00:14,  1.33it/s]24it [00:14,  1.65it/s]25it [00:14,  1.97it/s]26it [00:14,  2.34it/s]27it [00:15,  2.70it/s]28it [00:15,  3.01it/s]29it [00:15,  3.29it/s]30it [00:15,  3.51it/s]31it [00:16,  2.41it/s]32it [00:16,  1.91it/s]
+-----Val Epoch: 4, dl: 5061/5624-----
+ R@1: 46.0 (window: 45.72)
+ R@5: 71.4 (window: 71.06000000000002)
+ R@10: 81.8 (window: 81.68)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.051 (window: 14.0298)
+ Loss: 0.45184686058200896
+ Current Best Window Average R@1 is 46.019999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 4 dl: 5070/5624 Loss: 0.263314
+Train Epoch: 4 dl: 5080/5624 Loss: 0.280996
+Train Epoch: 4 dl: 5090/5624 Loss: 0.201069
+Train Epoch: 4 dl: 5100/5624 Loss: 0.238769
+Train Epoch: 4 dl: 5110/5624 Loss: 0.202268
+Train Epoch: 4 dl: 5120/5624 Loss: 0.099100
+Train Epoch: 4 dl: 5130/5624 Loss: 0.434326
+Train Epoch: 4 dl: 5140/5624 Loss: 0.461312
+Train Epoch: 4 dl: 5150/5624 Loss: 0.308714
+Train Epoch: 4 dl: 5160/5624 Loss: 0.472987
+Train Epoch: 4 dl: 5170/5624 Loss: 0.085206
+Train Epoch: 4 dl: 5180/5624 Loss: 0.118554
+Train Epoch: 4 dl: 5190/5624 Loss: 0.096379
+Train Epoch: 4 dl: 5200/5624 Loss: 0.182015
+Train Epoch: 4 dl: 5210/5624 Loss: 0.456582
+Train Epoch: 4 dl: 5220/5624 Loss: 0.154585
+Train Epoch: 4 dl: 5230/5624 Loss: 0.214214
+Train Epoch: 4 dl: 5240/5624 Loss: 0.214285
+Train Epoch: 4 dl: 5250/5624 Loss: 0.398069
+Train Epoch: 4 dl: 5260/5624 Loss: 0.352850
+Train Epoch: 4 dl: 5270/5624 Loss: 0.343547
+Train Epoch: 4 dl: 5280/5624 Loss: 0.179534
+Train Epoch: 4 dl: 5290/5624 Loss: 0.298323
+Train Epoch: 4 dl: 5300/5624 Loss: 0.048226
+Train Epoch: 4 dl: 5310/5624 Loss: 0.326738
+Train Epoch: 4 dl: 5320/5624 Loss: 0.123546
+Train Epoch: 4 dl: 5330/5624 Loss: 0.288902
+Train Epoch: 4 dl: 5340/5624 Loss: 0.233421
+Train Epoch: 4 dl: 5350/5624 Loss: 0.224508
+Train Epoch: 4 dl: 5360/5624 Loss: 0.505751
+Train Epoch: 4 dl: 5370/5624 Loss: 0.338988
+Train Epoch: 4 dl: 5380/5624 Loss: 0.182736
+Train Epoch: 4 dl: 5390/5624 Loss: 0.227970
+Train Epoch: 4 dl: 5400/5624 Loss: 0.157213
+Train Epoch: 4 dl: 5410/5624 Loss: 0.294391
+Train Epoch: 4 dl: 5420/5624 Loss: 0.214140
+Train Epoch: 4 dl: 5430/5624 Loss: 0.268118
+Train Epoch: 4 dl: 5440/5624 Loss: 0.473346
+Train Epoch: 4 dl: 5450/5624 Loss: 0.327541
+Train Epoch: 4 dl: 5460/5624 Loss: 0.113446
+Train Epoch: 4 dl: 5470/5624 Loss: 0.332767
+Train Epoch: 4 dl: 5480/5624 Loss: 0.302127
+Train Epoch: 4 dl: 5490/5624 Loss: 0.385241
+Train Epoch: 4 dl: 5500/5624 Loss: 0.389251
+Train Epoch: 4 dl: 5510/5624 Loss: 0.306271
+Train Epoch: 4 dl: 5520/5624 Loss: 0.304315
+Train Epoch: 4 dl: 5530/5624 Loss: 0.132972
+Train Epoch: 4 dl: 5540/5624 Loss: 0.235075
+Train Epoch: 4 dl: 5550/5624 Loss: 0.043957
+Train Epoch: 4 dl: 5560/5624 Loss: 0.207326
+Train Epoch: 4 dl: 5570/5624 Loss: 0.265550
+Train Epoch: 4 dl: 5580/5624 Loss: 0.148320
+Train Epoch: 4 dl: 5590/5624 Loss: 0.172832
+Train Epoch: 4 dl: 5600/5624 Loss: 0.214460
+Train Epoch: 4 dl: 5610/5624 Loss: 0.172624
+Train Epoch: 4 dl: 5620/5624 Loss: 0.097819
+0it [00:00, ?it/s]1it [00:05,  5.77s/it]2it [00:06,  2.56s/it]3it [00:06,  1.50s/it]4it [00:06,  1.01s/it]5it [00:06,  1.37it/s]6it [00:07,  1.77it/s]7it [00:07,  2.17it/s]8it [00:07,  2.56it/s]9it [00:10,  1.22s/it]10it [00:10,  1.09it/s]11it [00:11,  1.37it/s]12it [00:11,  1.66it/s]13it [00:11,  2.03it/s]14it [00:11,  2.39it/s]15it [00:12,  2.67it/s]16it [00:12,  2.98it/s]17it [00:14,  1.31it/s]18it [00:14,  1.65it/s]19it [00:14,  2.02it/s]20it [00:14,  2.34it/s]21it [00:15,  2.69it/s]22it [00:15,  3.01it/s]23it [00:15,  3.29it/s]24it [00:15,  3.51it/s]25it [00:16,  2.28it/s]26it [00:16,  2.64it/s]27it [00:17,  2.96it/s]28it [00:17,  3.25it/s]29it [00:17,  3.48it/s]30it [00:17,  3.66it/s]31it [00:18,  3.80it/s]32it [00:18,  1.75it/s]
+-----Val Epoch: 4, dl: 5624/5624-----
+ R@1: 46.2 (window: 45.839999999999996)
+ R@5: 71.1 (window: 71.08000000000001)
+ R@10: 81.9 (window: 81.72)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.99 (window: 14.018799999999999)
+ Loss: 0.44562592590227723
+ Current Best Window Average R@1 is 46.019999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 0/5624 Loss: 0.219710
+Train Epoch: 5 dl: 10/5624 Loss: 0.266027
+Train Epoch: 5 dl: 20/5624 Loss: 0.238109
+Train Epoch: 5 dl: 30/5624 Loss: 0.255301
+Train Epoch: 5 dl: 40/5624 Loss: 0.103992
+Train Epoch: 5 dl: 50/5624 Loss: 0.174616
+Train Epoch: 5 dl: 60/5624 Loss: 0.148725
+Train Epoch: 5 dl: 70/5624 Loss: 0.347192
+Train Epoch: 5 dl: 80/5624 Loss: 0.400110
+Train Epoch: 5 dl: 90/5624 Loss: 0.112284
+Train Epoch: 5 dl: 100/5624 Loss: 0.309429
+Train Epoch: 5 dl: 110/5624 Loss: 0.464534
+Train Epoch: 5 dl: 120/5624 Loss: 0.334402
+Train Epoch: 5 dl: 130/5624 Loss: 0.243348
+Train Epoch: 5 dl: 140/5624 Loss: 0.155517
+Train Epoch: 5 dl: 150/5624 Loss: 0.257407
+Train Epoch: 5 dl: 160/5624 Loss: 0.376907
+Train Epoch: 5 dl: 170/5624 Loss: 0.325429
+Train Epoch: 5 dl: 180/5624 Loss: 0.091091
+Train Epoch: 5 dl: 190/5624 Loss: 0.166255
+Train Epoch: 5 dl: 200/5624 Loss: 0.147161
+Train Epoch: 5 dl: 210/5624 Loss: 0.080893
+Train Epoch: 5 dl: 220/5624 Loss: 0.065890
+Train Epoch: 5 dl: 230/5624 Loss: 0.261568
+Train Epoch: 5 dl: 240/5624 Loss: 0.227337
+Train Epoch: 5 dl: 250/5624 Loss: 0.397294
+Train Epoch: 5 dl: 260/5624 Loss: 0.167008
+Train Epoch: 5 dl: 270/5624 Loss: 0.098379
+Train Epoch: 5 dl: 280/5624 Loss: 0.383396
+Train Epoch: 5 dl: 290/5624 Loss: 0.247364
+Train Epoch: 5 dl: 300/5624 Loss: 0.431023
+Train Epoch: 5 dl: 310/5624 Loss: 0.114280
+Train Epoch: 5 dl: 320/5624 Loss: 0.129561
+Train Epoch: 5 dl: 330/5624 Loss: 0.224594
+Train Epoch: 5 dl: 340/5624 Loss: 0.292153
+Train Epoch: 5 dl: 350/5624 Loss: 0.171917
+Train Epoch: 5 dl: 360/5624 Loss: 0.360294
+Train Epoch: 5 dl: 370/5624 Loss: 0.225825
+Train Epoch: 5 dl: 380/5624 Loss: 0.248563
+Train Epoch: 5 dl: 390/5624 Loss: 0.045508
+Train Epoch: 5 dl: 400/5624 Loss: 0.328704
+Train Epoch: 5 dl: 410/5624 Loss: 0.427837
+Train Epoch: 5 dl: 420/5624 Loss: 0.230535
+Train Epoch: 5 dl: 430/5624 Loss: 0.079070
+Train Epoch: 5 dl: 440/5624 Loss: 0.353174
+Train Epoch: 5 dl: 450/5624 Loss: 0.151781
+Train Epoch: 5 dl: 460/5624 Loss: 0.085279
+Train Epoch: 5 dl: 470/5624 Loss: 0.200678
+Train Epoch: 5 dl: 480/5624 Loss: 0.122034
+Train Epoch: 5 dl: 490/5624 Loss: 0.231690
+Train Epoch: 5 dl: 500/5624 Loss: 0.303080
+Train Epoch: 5 dl: 510/5624 Loss: 0.051584
+Train Epoch: 5 dl: 520/5624 Loss: 0.236085
+Train Epoch: 5 dl: 530/5624 Loss: 0.160980
+Train Epoch: 5 dl: 540/5624 Loss: 0.492996
+Train Epoch: 5 dl: 550/5624 Loss: 0.188569
+Train Epoch: 5 dl: 560/5624 Loss: 0.221889
+0it [00:00, ?it/s]1it [00:05,  5.81s/it]2it [00:06,  2.54s/it]3it [00:06,  1.51s/it]4it [00:06,  1.02s/it]5it [00:06,  1.35it/s]6it [00:07,  1.75it/s]7it [00:07,  2.14it/s]8it [00:07,  2.52it/s]9it [00:08,  1.75it/s]10it [00:09,  1.75it/s]11it [00:09,  2.11it/s]12it [00:09,  2.47it/s]13it [00:09,  2.80it/s]14it [00:10,  3.08it/s]15it [00:10,  3.31it/s]16it [00:10,  3.33it/s]17it [00:11,  2.38it/s]18it [00:13,  1.19it/s]19it [00:13,  1.51it/s]20it [00:13,  1.85it/s]21it [00:13,  2.17it/s]22it [00:14,  2.54it/s]23it [00:14,  2.87it/s]24it [00:14,  3.17it/s]25it [00:14,  3.41it/s]26it [00:15,  2.22it/s]27it [00:15,  2.58it/s]28it [00:16,  2.92it/s]29it [00:16,  3.21it/s]30it [00:16,  3.45it/s]31it [00:16,  3.64it/s]32it [00:17,  1.87it/s]
+-----Val Epoch: 5, dl: 562/5624-----
+ R@1: 46.3 (window: 46.0)
+ R@5: 70.9 (window: 71.08)
+ R@10: 82.0 (window: 81.78)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.981 (window: 14.02)
+ Loss: 0.44816243182867765
+ Current Best Window Average R@1 is 46.019999999999996
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 570/5624 Loss: 0.588192
+Train Epoch: 5 dl: 580/5624 Loss: 0.135691
+Train Epoch: 5 dl: 590/5624 Loss: 0.307656
+Train Epoch: 5 dl: 600/5624 Loss: 0.329838
+Train Epoch: 5 dl: 610/5624 Loss: 0.113989
+Train Epoch: 5 dl: 620/5624 Loss: 0.242750
+Train Epoch: 5 dl: 630/5624 Loss: 0.477729
+Train Epoch: 5 dl: 640/5624 Loss: 0.299812
+Train Epoch: 5 dl: 650/5624 Loss: 0.170108
+Train Epoch: 5 dl: 660/5624 Loss: 0.143595
+Train Epoch: 5 dl: 670/5624 Loss: 0.386989
+Train Epoch: 5 dl: 680/5624 Loss: 0.453398
+Train Epoch: 5 dl: 690/5624 Loss: 0.265960
+Train Epoch: 5 dl: 700/5624 Loss: 0.113230
+Train Epoch: 5 dl: 710/5624 Loss: 0.448454
+Train Epoch: 5 dl: 720/5624 Loss: 0.392195
+Train Epoch: 5 dl: 730/5624 Loss: 0.137026
+Train Epoch: 5 dl: 740/5624 Loss: 0.162985
+Train Epoch: 5 dl: 750/5624 Loss: 0.155184
+Train Epoch: 5 dl: 760/5624 Loss: 0.280524
+Train Epoch: 5 dl: 770/5624 Loss: 0.197832
+Train Epoch: 5 dl: 780/5624 Loss: 0.086989
+Train Epoch: 5 dl: 790/5624 Loss: 0.101976
+Train Epoch: 5 dl: 800/5624 Loss: 0.235298
+Train Epoch: 5 dl: 810/5624 Loss: 0.200404
+Train Epoch: 5 dl: 820/5624 Loss: 0.125390
+Train Epoch: 5 dl: 830/5624 Loss: 0.494308
+Train Epoch: 5 dl: 840/5624 Loss: 0.180818
+Train Epoch: 5 dl: 850/5624 Loss: 0.191370
+Train Epoch: 5 dl: 860/5624 Loss: 0.132341
+Train Epoch: 5 dl: 870/5624 Loss: 0.403741
+Train Epoch: 5 dl: 880/5624 Loss: 0.326975
+Train Epoch: 5 dl: 890/5624 Loss: 0.327758
+Train Epoch: 5 dl: 900/5624 Loss: 0.108543
+Train Epoch: 5 dl: 910/5624 Loss: 0.237763
+Train Epoch: 5 dl: 920/5624 Loss: 0.071115
+Train Epoch: 5 dl: 930/5624 Loss: 0.311225
+Train Epoch: 5 dl: 940/5624 Loss: 0.352840
+Train Epoch: 5 dl: 950/5624 Loss: 0.229196
+Train Epoch: 5 dl: 960/5624 Loss: 0.063237
+Train Epoch: 5 dl: 970/5624 Loss: 0.234116
+Train Epoch: 5 dl: 980/5624 Loss: 0.204984
+Train Epoch: 5 dl: 990/5624 Loss: 0.225604
+Train Epoch: 5 dl: 1000/5624 Loss: 0.421106
+Train Epoch: 5 dl: 1010/5624 Loss: 0.321382
+Train Epoch: 5 dl: 1020/5624 Loss: 0.300074
+Train Epoch: 5 dl: 1030/5624 Loss: 0.157157
+Train Epoch: 5 dl: 1040/5624 Loss: 0.032869
+Train Epoch: 5 dl: 1050/5624 Loss: 0.190735
+Train Epoch: 5 dl: 1060/5624 Loss: 0.250742
+Train Epoch: 5 dl: 1070/5624 Loss: 0.210985
+Train Epoch: 5 dl: 1080/5624 Loss: 0.207712
+Train Epoch: 5 dl: 1090/5624 Loss: 0.201471
+Train Epoch: 5 dl: 1100/5624 Loss: 0.230896
+Train Epoch: 5 dl: 1110/5624 Loss: 0.426505
+Train Epoch: 5 dl: 1120/5624 Loss: 0.289669
+0it [00:00, ?it/s]1it [00:03,  3.88s/it]2it [00:04,  1.74s/it]3it [00:05,  1.63s/it]4it [00:05,  1.09s/it]5it [00:06,  1.28it/s]6it [00:06,  1.64it/s]7it [00:06,  2.04it/s]8it [00:06,  2.43it/s]9it [00:07,  2.78it/s]10it [00:07,  3.08it/s]11it [00:09,  1.01s/it]12it [00:10,  1.29it/s]13it [00:10,  1.60it/s]14it [00:10,  1.97it/s]15it [00:10,  2.27it/s]16it [00:11,  2.63it/s]17it [00:11,  2.96it/s]18it [00:11,  3.24it/s]19it [00:12,  1.85it/s]20it [00:13,  1.73it/s]21it [00:13,  2.09it/s]22it [00:13,  2.42it/s]23it [00:14,  2.77it/s]24it [00:14,  3.08it/s]25it [00:14,  3.34it/s]26it [00:14,  3.55it/s]27it [00:15,  2.73it/s]28it [00:16,  2.38it/s]29it [00:16,  2.73it/s]30it [00:16,  3.05it/s]31it [00:16,  3.32it/s]32it [00:16,  1.89it/s]
+-----Val Epoch: 5, dl: 1124/5624-----
+ R@1: 46.4 (window: 46.10000000000001)
+ R@5: 71.5 (window: 71.24)
+ R@10: 82.2 (window: 81.96000000000001)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.954 (window: 14.005)
+ Loss: 0.4488950087688863
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 46.10000000000001
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 1130/5624 Loss: 0.271925
+Train Epoch: 5 dl: 1140/5624 Loss: 0.422246
+Train Epoch: 5 dl: 1150/5624 Loss: 0.326360
+Train Epoch: 5 dl: 1160/5624 Loss: 0.450547
+Train Epoch: 5 dl: 1170/5624 Loss: 0.072507
+Train Epoch: 5 dl: 1180/5624 Loss: 0.346897
+Train Epoch: 5 dl: 1190/5624 Loss: 0.313510
+Train Epoch: 5 dl: 1200/5624 Loss: 0.265059
+Train Epoch: 5 dl: 1210/5624 Loss: 0.207853
+Train Epoch: 5 dl: 1220/5624 Loss: 0.209836
+Train Epoch: 5 dl: 1230/5624 Loss: 0.103372
+Train Epoch: 5 dl: 1240/5624 Loss: 0.086099
+Train Epoch: 5 dl: 1250/5624 Loss: 0.312161
+Train Epoch: 5 dl: 1260/5624 Loss: 0.278807
+Train Epoch: 5 dl: 1270/5624 Loss: 0.080275
+Train Epoch: 5 dl: 1280/5624 Loss: 0.221969
+Train Epoch: 5 dl: 1290/5624 Loss: 0.321476
+Train Epoch: 5 dl: 1300/5624 Loss: 0.121118
+Train Epoch: 5 dl: 1310/5624 Loss: 0.245632
+Train Epoch: 5 dl: 1320/5624 Loss: 0.163155
+Train Epoch: 5 dl: 1330/5624 Loss: 0.080835
+Train Epoch: 5 dl: 1340/5624 Loss: 0.274931
+Train Epoch: 5 dl: 1350/5624 Loss: 0.020148
+Train Epoch: 5 dl: 1360/5624 Loss: 0.080294
+Train Epoch: 5 dl: 1370/5624 Loss: 0.299083
+Train Epoch: 5 dl: 1380/5624 Loss: 0.646721
+Train Epoch: 5 dl: 1390/5624 Loss: 0.253396
+Train Epoch: 5 dl: 1400/5624 Loss: 0.390391
+Train Epoch: 5 dl: 1410/5624 Loss: 0.136406
+Train Epoch: 5 dl: 1420/5624 Loss: 0.280868
+Train Epoch: 5 dl: 1430/5624 Loss: 0.023613
+Train Epoch: 5 dl: 1440/5624 Loss: 0.073858
+Train Epoch: 5 dl: 1450/5624 Loss: 0.212292
+Train Epoch: 5 dl: 1460/5624 Loss: 0.384386
+Train Epoch: 5 dl: 1470/5624 Loss: 0.043480
+Train Epoch: 5 dl: 1480/5624 Loss: 0.101275
+Train Epoch: 5 dl: 1490/5624 Loss: 0.157900
+Train Epoch: 5 dl: 1500/5624 Loss: 0.162258
+Train Epoch: 5 dl: 1510/5624 Loss: 0.195607
+Train Epoch: 5 dl: 1520/5624 Loss: 0.317870
+Train Epoch: 5 dl: 1530/5624 Loss: 0.287762
+Train Epoch: 5 dl: 1540/5624 Loss: 0.048314
+Train Epoch: 5 dl: 1550/5624 Loss: 0.138326
+Train Epoch: 5 dl: 1560/5624 Loss: 0.118154
+Train Epoch: 5 dl: 1570/5624 Loss: 0.413317
+Train Epoch: 5 dl: 1580/5624 Loss: 0.334274
+Train Epoch: 5 dl: 1590/5624 Loss: 0.278405
+Train Epoch: 5 dl: 1600/5624 Loss: 0.223809
+Train Epoch: 5 dl: 1610/5624 Loss: 0.073196
+Train Epoch: 5 dl: 1620/5624 Loss: 0.362455
+Train Epoch: 5 dl: 1630/5624 Loss: 0.204589
+Train Epoch: 5 dl: 1640/5624 Loss: 0.265940
+Train Epoch: 5 dl: 1650/5624 Loss: 0.191327
+Train Epoch: 5 dl: 1660/5624 Loss: 0.252369
+Train Epoch: 5 dl: 1670/5624 Loss: 0.356672
+Train Epoch: 5 dl: 1680/5624 Loss: 0.436587
+0it [00:00, ?it/s]1it [00:03,  3.61s/it]2it [00:05,  2.81s/it]3it [00:06,  1.66s/it]4it [00:06,  1.11s/it]5it [00:06,  1.25it/s]6it [00:06,  1.64it/s]7it [00:07,  2.03it/s]8it [00:07,  2.42it/s]9it [00:07,  2.76it/s]10it [00:09,  1.16it/s]11it [00:09,  1.49it/s]12it [00:10,  1.85it/s]13it [00:10,  2.21it/s]14it [00:10,  2.47it/s]15it [00:10,  2.80it/s]16it [00:11,  3.10it/s]17it [00:11,  3.34it/s]18it [00:12,  2.07it/s]19it [00:12,  2.43it/s]20it [00:12,  2.55it/s]21it [00:13,  2.87it/s]22it [00:13,  3.15it/s]23it [00:13,  3.39it/s]24it [00:13,  3.57it/s]25it [00:15,  1.60it/s]26it [00:15,  1.93it/s]27it [00:15,  2.30it/s]28it [00:16,  2.66it/s]29it [00:16,  2.99it/s]30it [00:16,  3.27it/s]31it [00:16,  3.50it/s]32it [00:16,  1.88it/s]
+-----Val Epoch: 5, dl: 1687/5624-----
+ R@1: 45.9 (window: 46.160000000000004)
+ R@5: 71.6 (window: 71.3)
+ R@10: 82.0 (window: 81.97999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.063 (window: 14.0078)
+ Loss: 0.4516706895083189
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 46.160000000000004
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 1690/5624 Loss: 0.271037
+Train Epoch: 5 dl: 1700/5624 Loss: 0.364581
+Train Epoch: 5 dl: 1710/5624 Loss: 0.115302
+Train Epoch: 5 dl: 1720/5624 Loss: 0.303420
+Train Epoch: 5 dl: 1730/5624 Loss: 0.346263
+Train Epoch: 5 dl: 1740/5624 Loss: 0.551563
+Train Epoch: 5 dl: 1750/5624 Loss: 0.184173
+Train Epoch: 5 dl: 1760/5624 Loss: 0.407376
+Train Epoch: 5 dl: 1770/5624 Loss: 0.289248
+Train Epoch: 5 dl: 1780/5624 Loss: 0.378377
+Train Epoch: 5 dl: 1790/5624 Loss: 0.123776
+Train Epoch: 5 dl: 1800/5624 Loss: 0.287672
+Train Epoch: 5 dl: 1810/5624 Loss: 0.493506
+Train Epoch: 5 dl: 1820/5624 Loss: 0.232686
+Train Epoch: 5 dl: 1830/5624 Loss: 0.276114
+Train Epoch: 5 dl: 1840/5624 Loss: 0.242485
+Train Epoch: 5 dl: 1850/5624 Loss: 0.101976
+Train Epoch: 5 dl: 1860/5624 Loss: 0.173597
+Train Epoch: 5 dl: 1870/5624 Loss: 0.070086
+Train Epoch: 5 dl: 1880/5624 Loss: 0.179133
+Train Epoch: 5 dl: 1890/5624 Loss: 0.204701
+Train Epoch: 5 dl: 1900/5624 Loss: 0.284218
+Train Epoch: 5 dl: 1910/5624 Loss: 0.087705
+Train Epoch: 5 dl: 1920/5624 Loss: 0.217284
+Train Epoch: 5 dl: 1930/5624 Loss: 0.219929
+Train Epoch: 5 dl: 1940/5624 Loss: 0.209670
+Train Epoch: 5 dl: 1950/5624 Loss: 0.328101
+Train Epoch: 5 dl: 1960/5624 Loss: 0.295730
+Train Epoch: 5 dl: 1970/5624 Loss: 0.227656
+Train Epoch: 5 dl: 1980/5624 Loss: 0.055709
+Train Epoch: 5 dl: 1990/5624 Loss: 0.173786
+Train Epoch: 5 dl: 2000/5624 Loss: 0.537493
+Train Epoch: 5 dl: 2010/5624 Loss: 0.210224
+Train Epoch: 5 dl: 2020/5624 Loss: 0.552882
+Train Epoch: 5 dl: 2030/5624 Loss: 0.193460
+Train Epoch: 5 dl: 2040/5624 Loss: 0.276258
+Train Epoch: 5 dl: 2050/5624 Loss: 0.202943
+Train Epoch: 5 dl: 2060/5624 Loss: 0.119916
+Train Epoch: 5 dl: 2070/5624 Loss: 0.308772
+Train Epoch: 5 dl: 2080/5624 Loss: 0.614230
+Train Epoch: 5 dl: 2090/5624 Loss: 0.038681
+Train Epoch: 5 dl: 2100/5624 Loss: 0.252505
+Train Epoch: 5 dl: 2110/5624 Loss: 0.234328
+Train Epoch: 5 dl: 2120/5624 Loss: 0.090347
+Train Epoch: 5 dl: 2130/5624 Loss: 0.093955
+Train Epoch: 5 dl: 2140/5624 Loss: 0.090803
+Train Epoch: 5 dl: 2150/5624 Loss: 0.404475
+Train Epoch: 5 dl: 2160/5624 Loss: 0.697966
+Train Epoch: 5 dl: 2170/5624 Loss: 0.131671
+Train Epoch: 5 dl: 2180/5624 Loss: 0.238329
+Train Epoch: 5 dl: 2190/5624 Loss: 0.212061
+Train Epoch: 5 dl: 2200/5624 Loss: 0.291810
+Train Epoch: 5 dl: 2210/5624 Loss: 0.204181
+Train Epoch: 5 dl: 2220/5624 Loss: 0.250580
+Train Epoch: 5 dl: 2230/5624 Loss: 0.014030
+Train Epoch: 5 dl: 2240/5624 Loss: 0.156758
+0it [00:00, ?it/s]1it [00:03,  3.35s/it]2it [00:05,  2.70s/it]3it [00:05,  1.58s/it]4it [00:06,  1.06s/it]5it [00:06,  1.31it/s]6it [00:06,  1.70it/s]7it [00:06,  2.10it/s]8it [00:07,  2.48it/s]9it [00:07,  2.83it/s]10it [00:07,  2.25it/s]11it [00:08,  2.60it/s]12it [00:08,  2.87it/s]13it [00:08,  3.16it/s]14it [00:09,  1.68it/s]15it [00:10,  2.04it/s]16it [00:10,  2.40it/s]17it [00:10,  2.74it/s]18it [00:11,  2.92it/s]19it [00:11,  3.19it/s]20it [00:11,  3.31it/s]21it [00:11,  3.51it/s]22it [00:14,  1.10it/s]23it [00:14,  1.41it/s]24it [00:14,  1.76it/s]25it [00:14,  2.13it/s]26it [00:15,  2.49it/s]27it [00:15,  2.84it/s]28it [00:15,  3.14it/s]29it [00:15,  3.39it/s]30it [00:16,  2.15it/s]31it [00:16,  2.52it/s]32it [00:17,  1.87it/s]
+-----Val Epoch: 5, dl: 2249/5624-----
+ R@1: 46.3 (window: 46.220000000000006)
+ R@5: 71.0 (window: 71.22)
+ R@10: 82.0 (window: 82.02000000000001)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.993 (window: 13.996199999999998)
+ Loss: 0.451419819612056
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 46.220000000000006
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 2250/5624 Loss: 0.049041
+Train Epoch: 5 dl: 2260/5624 Loss: 0.289439
+Train Epoch: 5 dl: 2270/5624 Loss: 0.049137
+Train Epoch: 5 dl: 2280/5624 Loss: 0.082450
+Train Epoch: 5 dl: 2290/5624 Loss: 0.364485
+Train Epoch: 5 dl: 2300/5624 Loss: 0.146870
+Train Epoch: 5 dl: 2310/5624 Loss: 0.230282
+Train Epoch: 5 dl: 2320/5624 Loss: 0.229942
+Train Epoch: 5 dl: 2330/5624 Loss: 0.142730
+Train Epoch: 5 dl: 2340/5624 Loss: 0.132632
+Train Epoch: 5 dl: 2350/5624 Loss: 0.104884
+Train Epoch: 5 dl: 2360/5624 Loss: 0.239793
+Train Epoch: 5 dl: 2370/5624 Loss: 0.327953
+Train Epoch: 5 dl: 2380/5624 Loss: 0.213503
+Train Epoch: 5 dl: 2390/5624 Loss: 0.212646
+Train Epoch: 5 dl: 2400/5624 Loss: 0.144432
+Train Epoch: 5 dl: 2410/5624 Loss: 0.132732
+Train Epoch: 5 dl: 2420/5624 Loss: 0.215189
+Train Epoch: 5 dl: 2430/5624 Loss: 0.103052
+Train Epoch: 5 dl: 2440/5624 Loss: 0.179266
+Train Epoch: 5 dl: 2450/5624 Loss: 0.198394
+Train Epoch: 5 dl: 2460/5624 Loss: 0.319840
+Train Epoch: 5 dl: 2470/5624 Loss: 0.200195
+Train Epoch: 5 dl: 2480/5624 Loss: 0.209441
+Train Epoch: 5 dl: 2490/5624 Loss: 0.232930
+Train Epoch: 5 dl: 2500/5624 Loss: 0.135313
+Train Epoch: 5 dl: 2510/5624 Loss: 0.181656
+Train Epoch: 5 dl: 2520/5624 Loss: 0.019212
+Train Epoch: 5 dl: 2530/5624 Loss: 0.275399
+Train Epoch: 5 dl: 2540/5624 Loss: 0.413543
+Train Epoch: 5 dl: 2550/5624 Loss: 0.333461
+Train Epoch: 5 dl: 2560/5624 Loss: 0.163502
+Train Epoch: 5 dl: 2570/5624 Loss: 0.367131
+Train Epoch: 5 dl: 2580/5624 Loss: 0.126027
+Train Epoch: 5 dl: 2590/5624 Loss: 0.395589
+Train Epoch: 5 dl: 2600/5624 Loss: 0.153786
+Train Epoch: 5 dl: 2610/5624 Loss: 0.686379
+Train Epoch: 5 dl: 2620/5624 Loss: 0.229702
+Train Epoch: 5 dl: 2630/5624 Loss: 0.254019
+Train Epoch: 5 dl: 2640/5624 Loss: 0.120302
+Train Epoch: 5 dl: 2650/5624 Loss: 0.149982
+Train Epoch: 5 dl: 2660/5624 Loss: 0.137947
+Train Epoch: 5 dl: 2670/5624 Loss: 0.191484
+Train Epoch: 5 dl: 2680/5624 Loss: 0.068359
+Train Epoch: 5 dl: 2690/5624 Loss: 0.092846
+Train Epoch: 5 dl: 2700/5624 Loss: 0.280698
+Train Epoch: 5 dl: 2710/5624 Loss: 0.181151
+Train Epoch: 5 dl: 2720/5624 Loss: 0.353472
+Train Epoch: 5 dl: 2730/5624 Loss: 0.261322
+Train Epoch: 5 dl: 2740/5624 Loss: 0.256334
+Train Epoch: 5 dl: 2750/5624 Loss: 0.207445
+Train Epoch: 5 dl: 2760/5624 Loss: 0.082584
+Train Epoch: 5 dl: 2770/5624 Loss: 0.397125
+Train Epoch: 5 dl: 2780/5624 Loss: 0.089899
+Train Epoch: 5 dl: 2790/5624 Loss: 0.117941
+Train Epoch: 5 dl: 2800/5624 Loss: 0.241063
+Train Epoch: 5 dl: 2810/5624 Loss: 0.123977
+0it [00:00, ?it/s]1it [00:04,  4.09s/it]2it [00:04,  1.83s/it]3it [00:04,  1.10s/it]4it [00:05,  1.02s/it]5it [00:05,  1.35it/s]6it [00:05,  1.75it/s]7it [00:06,  2.15it/s]8it [00:06,  2.53it/s]9it [00:07,  1.42it/s]10it [00:08,  1.74it/s]11it [00:08,  2.11it/s]12it [00:09,  1.29it/s]13it [00:10,  1.63it/s]14it [00:10,  1.99it/s]15it [00:10,  2.35it/s]16it [00:10,  2.69it/s]17it [00:11,  2.62it/s]18it [00:11,  2.94it/s]19it [00:12,  2.21it/s]20it [00:13,  1.52it/s]21it [00:13,  1.85it/s]22it [00:13,  2.22it/s]23it [00:14,  2.58it/s]24it [00:14,  2.91it/s]25it [00:14,  3.20it/s]26it [00:14,  3.43it/s]27it [00:15,  3.62it/s]28it [00:15,  2.06it/s]29it [00:16,  2.43it/s]30it [00:16,  2.78it/s]31it [00:16,  3.09it/s]32it [00:16,  1.89it/s]
+-----Val Epoch: 5, dl: 2812/5624-----
+ R@1: 46.7 (window: 46.31999999999999)
+ R@5: 71.1 (window: 71.22)
+ R@10: 81.7 (window: 81.97999999999999)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.052 (window: 14.008600000000001)
+ Loss: 0.45238214591518044
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 46.31999999999999
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 2820/5624 Loss: 0.256251
+Train Epoch: 5 dl: 2830/5624 Loss: 0.180191
+Train Epoch: 5 dl: 2840/5624 Loss: 0.140915
+Train Epoch: 5 dl: 2850/5624 Loss: 0.285112
+Train Epoch: 5 dl: 2860/5624 Loss: 0.772744
+Train Epoch: 5 dl: 2870/5624 Loss: 0.159142
+Train Epoch: 5 dl: 2880/5624 Loss: 0.274249
+Train Epoch: 5 dl: 2890/5624 Loss: 0.200912
+Train Epoch: 5 dl: 2900/5624 Loss: 0.338892
+Train Epoch: 5 dl: 2910/5624 Loss: 0.125676
+Train Epoch: 5 dl: 2920/5624 Loss: 0.175013
+Train Epoch: 5 dl: 2930/5624 Loss: 0.218696
+Train Epoch: 5 dl: 2940/5624 Loss: 0.207367
+Train Epoch: 5 dl: 2950/5624 Loss: 0.189892
+Train Epoch: 5 dl: 2960/5624 Loss: 0.159921
+Train Epoch: 5 dl: 2970/5624 Loss: 0.202956
+Train Epoch: 5 dl: 2980/5624 Loss: 0.190193
+Train Epoch: 5 dl: 2990/5624 Loss: 0.192529
+Train Epoch: 5 dl: 3000/5624 Loss: 0.279344
+Train Epoch: 5 dl: 3010/5624 Loss: 0.252186
+Train Epoch: 5 dl: 3020/5624 Loss: 0.184734
+Train Epoch: 5 dl: 3030/5624 Loss: 0.187570
+Train Epoch: 5 dl: 3040/5624 Loss: 0.249000
+Train Epoch: 5 dl: 3050/5624 Loss: 0.117029
+Train Epoch: 5 dl: 3060/5624 Loss: 0.283903
+Train Epoch: 5 dl: 3070/5624 Loss: 0.256429
+Train Epoch: 5 dl: 3080/5624 Loss: 0.528868
+Train Epoch: 5 dl: 3090/5624 Loss: 0.215916
+Train Epoch: 5 dl: 3100/5624 Loss: 0.206754
+Train Epoch: 5 dl: 3110/5624 Loss: 0.339284
+Train Epoch: 5 dl: 3120/5624 Loss: 0.174486
+Train Epoch: 5 dl: 3130/5624 Loss: 0.279577
+Train Epoch: 5 dl: 3140/5624 Loss: 0.228555
+Train Epoch: 5 dl: 3150/5624 Loss: 0.089493
+Train Epoch: 5 dl: 3160/5624 Loss: 0.482047
+Train Epoch: 5 dl: 3170/5624 Loss: 0.535564
+Train Epoch: 5 dl: 3180/5624 Loss: 0.347016
+Train Epoch: 5 dl: 3190/5624 Loss: 0.084343
+Train Epoch: 5 dl: 3200/5624 Loss: 0.122293
+Train Epoch: 5 dl: 3210/5624 Loss: 0.184999
+Train Epoch: 5 dl: 3220/5624 Loss: 0.191851
+Train Epoch: 5 dl: 3230/5624 Loss: 0.137967
+Train Epoch: 5 dl: 3240/5624 Loss: 0.260541
+Train Epoch: 5 dl: 3250/5624 Loss: 0.014920
+Train Epoch: 5 dl: 3260/5624 Loss: 0.091584
+Train Epoch: 5 dl: 3270/5624 Loss: 0.138306
+Train Epoch: 5 dl: 3280/5624 Loss: 0.210160
+Train Epoch: 5 dl: 3290/5624 Loss: 0.133260
+Train Epoch: 5 dl: 3300/5624 Loss: 0.234052
+Train Epoch: 5 dl: 3310/5624 Loss: 0.094752
+Train Epoch: 5 dl: 3320/5624 Loss: 0.176535
+Train Epoch: 5 dl: 3330/5624 Loss: 0.389770
+Train Epoch: 5 dl: 3340/5624 Loss: 0.232673
+Train Epoch: 5 dl: 3350/5624 Loss: 0.163459
+Train Epoch: 5 dl: 3360/5624 Loss: 0.509747
+Train Epoch: 5 dl: 3370/5624 Loss: 0.079080
+0it [00:00, ?it/s]1it [00:05,  5.46s/it]2it [00:05,  2.39s/it]3it [00:05,  1.41s/it]4it [00:06,  1.05it/s]5it [00:06,  1.44it/s]6it [00:06,  1.85it/s]7it [00:06,  2.26it/s]8it [00:07,  2.65it/s]9it [00:09,  1.16it/s]10it [00:09,  1.49it/s]11it [00:09,  1.83it/s]12it [00:09,  2.20it/s]13it [00:10,  2.49it/s]14it [00:10,  2.82it/s]15it [00:10,  3.11it/s]16it [00:10,  3.34it/s]17it [00:11,  1.87it/s]18it [00:12,  2.23it/s]19it [00:12,  2.59it/s]20it [00:13,  1.65it/s]21it [00:13,  2.01it/s]22it [00:14,  2.38it/s]23it [00:14,  2.73it/s]24it [00:14,  2.97it/s]25it [00:14,  3.25it/s]26it [00:15,  3.48it/s]27it [00:15,  3.66it/s]28it [00:15,  2.46it/s]29it [00:16,  2.81it/s]30it [00:16,  3.12it/s]31it [00:16,  3.37it/s]32it [00:16,  1.89it/s]
+-----Val Epoch: 5, dl: 3374/5624-----
+ R@1: 46.5 (window: 46.36)
+ R@5: 71.2 (window: 71.28)
+ R@10: 82.1 (window: 82.0)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 14.003 (window: 14.013)
+ Loss: 0.45197966368868947
+Saving current best: model_best.pth ...
+ Current Best Window Average R@1 is 46.36
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 3380/5624 Loss: 0.207237
+Train Epoch: 5 dl: 3390/5624 Loss: 0.061289
+Train Epoch: 5 dl: 3400/5624 Loss: 0.152281
+Train Epoch: 5 dl: 3410/5624 Loss: 0.169865
+Train Epoch: 5 dl: 3420/5624 Loss: 0.218933
+Train Epoch: 5 dl: 3430/5624 Loss: 0.454981
+Train Epoch: 5 dl: 3440/5624 Loss: 0.261503
+Train Epoch: 5 dl: 3450/5624 Loss: 0.392875
+Train Epoch: 5 dl: 3460/5624 Loss: 0.147749
+Train Epoch: 5 dl: 3470/5624 Loss: 0.208442
+Train Epoch: 5 dl: 3480/5624 Loss: 0.477768
+Train Epoch: 5 dl: 3490/5624 Loss: 0.351235
+Train Epoch: 5 dl: 3500/5624 Loss: 0.260298
+Train Epoch: 5 dl: 3510/5624 Loss: 0.544337
+Train Epoch: 5 dl: 3520/5624 Loss: 0.111343
+Train Epoch: 5 dl: 3530/5624 Loss: 0.266488
+Train Epoch: 5 dl: 3540/5624 Loss: 0.141729
+Train Epoch: 5 dl: 3550/5624 Loss: 0.437991
+Train Epoch: 5 dl: 3560/5624 Loss: 0.112142
+Train Epoch: 5 dl: 3570/5624 Loss: 0.092601
+Train Epoch: 5 dl: 3580/5624 Loss: 0.222101
+Train Epoch: 5 dl: 3590/5624 Loss: 0.171313
+Train Epoch: 5 dl: 3600/5624 Loss: 0.235861
+Train Epoch: 5 dl: 3610/5624 Loss: 0.519008
+Train Epoch: 5 dl: 3620/5624 Loss: 0.182823
+Train Epoch: 5 dl: 3630/5624 Loss: 0.355371
+Train Epoch: 5 dl: 3640/5624 Loss: 0.140698
+Train Epoch: 5 dl: 3650/5624 Loss: 0.088681
+Train Epoch: 5 dl: 3660/5624 Loss: 0.307772
+Train Epoch: 5 dl: 3670/5624 Loss: 0.036773
+Train Epoch: 5 dl: 3680/5624 Loss: 0.243853
+Train Epoch: 5 dl: 3690/5624 Loss: 0.164763
+Train Epoch: 5 dl: 3700/5624 Loss: 0.722523
+Train Epoch: 5 dl: 3710/5624 Loss: 0.268177
+Train Epoch: 5 dl: 3720/5624 Loss: 0.415056
+Train Epoch: 5 dl: 3730/5624 Loss: 0.262680
+Train Epoch: 5 dl: 3740/5624 Loss: 0.092522
+Train Epoch: 5 dl: 3750/5624 Loss: 0.183778
+Train Epoch: 5 dl: 3760/5624 Loss: 0.153561
+Train Epoch: 5 dl: 3770/5624 Loss: 0.206267
+Train Epoch: 5 dl: 3780/5624 Loss: 0.416530
+Train Epoch: 5 dl: 3790/5624 Loss: 0.209112
+Train Epoch: 5 dl: 3800/5624 Loss: 0.269397
+Train Epoch: 5 dl: 3810/5624 Loss: 0.366946
+Train Epoch: 5 dl: 3820/5624 Loss: 0.186700
+Train Epoch: 5 dl: 3830/5624 Loss: 0.182601
+Train Epoch: 5 dl: 3840/5624 Loss: 0.171843
+Train Epoch: 5 dl: 3850/5624 Loss: 0.175059
+Train Epoch: 5 dl: 3860/5624 Loss: 0.164620
+Train Epoch: 5 dl: 3870/5624 Loss: 0.157085
+Train Epoch: 5 dl: 3880/5624 Loss: 0.579224
+Train Epoch: 5 dl: 3890/5624 Loss: 0.123357
+Train Epoch: 5 dl: 3900/5624 Loss: 0.191657
+Train Epoch: 5 dl: 3910/5624 Loss: 0.174888
+Train Epoch: 5 dl: 3920/5624 Loss: 0.268552
+Train Epoch: 5 dl: 3930/5624 Loss: 0.283437
+0it [00:00, ?it/s]1it [00:03,  3.29s/it]2it [00:03,  1.53s/it]3it [00:05,  1.78s/it]4it [00:05,  1.17s/it]5it [00:06,  1.17it/s]6it [00:06,  1.55it/s]7it [00:06,  1.95it/s]8it [00:06,  2.34it/s]9it [00:07,  2.68it/s]10it [00:07,  3.00it/s]11it [00:09,  1.02s/it]12it [00:10,  1.28it/s]13it [00:10,  1.61it/s]14it [00:10,  1.98it/s]15it [00:10,  2.35it/s]16it [00:11,  2.69it/s]17it [00:11,  2.99it/s]18it [00:11,  3.26it/s]19it [00:13,  1.61it/s]20it [00:13,  1.97it/s]21it [00:13,  2.30it/s]22it [00:13,  2.66it/s]23it [00:14,  2.98it/s]24it [00:14,  3.26it/s]25it [00:14,  3.49it/s]26it [00:14,  3.67it/s]27it [00:15,  2.24it/s]28it [00:15,  2.60it/s]29it [00:16,  2.93it/s]30it [00:16,  3.22it/s]31it [00:16,  3.46it/s]32it [00:16,  1.91it/s]
+-----Val Epoch: 5, dl: 3936/5624-----
+ R@1: 46.2 (window: 46.31999999999999)
+ R@5: 71.1 (window: 71.2)
+ R@10: 81.9 (window: 81.93999999999998)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.992 (window: 14.020600000000002)
+ Loss: 0.4515187512151897
+ Current Best Window Average R@1 is 46.36
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 3940/5624 Loss: 0.392011
+Train Epoch: 5 dl: 3950/5624 Loss: 0.169985
+Train Epoch: 5 dl: 3960/5624 Loss: 0.364583
+Train Epoch: 5 dl: 3970/5624 Loss: 0.145675
+Train Epoch: 5 dl: 3980/5624 Loss: 0.220003
+Train Epoch: 5 dl: 3990/5624 Loss: 0.194491
+Train Epoch: 5 dl: 4000/5624 Loss: 0.183600
+Train Epoch: 5 dl: 4010/5624 Loss: 0.222090
+Train Epoch: 5 dl: 4020/5624 Loss: 0.070894
+Train Epoch: 5 dl: 4030/5624 Loss: 0.130448
+Train Epoch: 5 dl: 4040/5624 Loss: 0.289981
+Train Epoch: 5 dl: 4050/5624 Loss: 0.165488
+Train Epoch: 5 dl: 4060/5624 Loss: 0.310602
+Train Epoch: 5 dl: 4070/5624 Loss: 0.356202
+Train Epoch: 5 dl: 4080/5624 Loss: 0.441161
+Train Epoch: 5 dl: 4090/5624 Loss: 0.223785
+Train Epoch: 5 dl: 4100/5624 Loss: 0.245028
+Train Epoch: 5 dl: 4110/5624 Loss: 0.262976
+Train Epoch: 5 dl: 4120/5624 Loss: 0.688214
+Train Epoch: 5 dl: 4130/5624 Loss: 0.212719
+Train Epoch: 5 dl: 4140/5624 Loss: 0.246046
+Train Epoch: 5 dl: 4150/5624 Loss: 0.063877
+Train Epoch: 5 dl: 4160/5624 Loss: 0.392703
+Train Epoch: 5 dl: 4170/5624 Loss: 0.415954
+Train Epoch: 5 dl: 4180/5624 Loss: 0.191560
+Train Epoch: 5 dl: 4190/5624 Loss: 0.203198
+Train Epoch: 5 dl: 4200/5624 Loss: 0.162763
+Train Epoch: 5 dl: 4210/5624 Loss: 0.110413
+Train Epoch: 5 dl: 4220/5624 Loss: 0.343993
+Train Epoch: 5 dl: 4230/5624 Loss: 0.101185
+Train Epoch: 5 dl: 4240/5624 Loss: 0.491151
+Train Epoch: 5 dl: 4250/5624 Loss: 0.321812
+Train Epoch: 5 dl: 4260/5624 Loss: 0.202913
+Train Epoch: 5 dl: 4270/5624 Loss: 0.566588
+Train Epoch: 5 dl: 4280/5624 Loss: 0.168839
+Train Epoch: 5 dl: 4290/5624 Loss: 0.441709
+Train Epoch: 5 dl: 4300/5624 Loss: 0.183060
+Train Epoch: 5 dl: 4310/5624 Loss: 0.183905
+Train Epoch: 5 dl: 4320/5624 Loss: 0.140062
+Train Epoch: 5 dl: 4330/5624 Loss: 0.125255
+Train Epoch: 5 dl: 4340/5624 Loss: 0.327373
+Train Epoch: 5 dl: 4350/5624 Loss: 0.420055
+Train Epoch: 5 dl: 4360/5624 Loss: 0.421677
+Train Epoch: 5 dl: 4370/5624 Loss: 0.152505
+Train Epoch: 5 dl: 4380/5624 Loss: 0.157050
+Train Epoch: 5 dl: 4390/5624 Loss: 0.217121
+Train Epoch: 5 dl: 4400/5624 Loss: 0.402039
+Train Epoch: 5 dl: 4410/5624 Loss: 0.553022
+Train Epoch: 5 dl: 4420/5624 Loss: 0.230407
+Train Epoch: 5 dl: 4430/5624 Loss: 0.110198
+Train Epoch: 5 dl: 4440/5624 Loss: 0.343374
+Train Epoch: 5 dl: 4450/5624 Loss: 0.478622
+Train Epoch: 5 dl: 4460/5624 Loss: 0.147214
+Train Epoch: 5 dl: 4470/5624 Loss: 0.254958
+Train Epoch: 5 dl: 4480/5624 Loss: 0.389974
+Train Epoch: 5 dl: 4490/5624 Loss: 0.147320
+0it [00:00, ?it/s]1it [00:05,  5.44s/it]2it [00:05,  2.39s/it]3it [00:05,  1.41s/it]4it [00:06,  1.05it/s]5it [00:06,  1.44it/s]6it [00:06,  1.84it/s]7it [00:06,  2.24it/s]8it [00:07,  2.62it/s]9it [00:08,  1.30it/s]10it [00:09,  1.65it/s]11it [00:09,  2.01it/s]12it [00:09,  2.38it/s]13it [00:09,  2.72it/s]14it [00:10,  3.02it/s]15it [00:10,  3.28it/s]16it [00:10,  3.48it/s]17it [00:12,  1.07it/s]18it [00:13,  1.36it/s]19it [00:13,  1.70it/s]20it [00:13,  2.07it/s]21it [00:13,  2.44it/s]22it [00:14,  2.72it/s]23it [00:14,  3.04it/s]24it [00:14,  3.31it/s]25it [00:15,  2.14it/s]26it [00:15,  2.51it/s]27it [00:16,  2.85it/s]28it [00:16,  3.15it/s]29it [00:16,  3.40it/s]30it [00:16,  3.60it/s]31it [00:16,  3.75it/s]32it [00:17,  1.86it/s]
+-----Val Epoch: 5, dl: 4499/5624-----
+ R@1: 46.0 (window: 46.339999999999996)
+ R@5: 71.1 (window: 71.1)
+ R@10: 81.9 (window: 81.92)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.972 (window: 14.0024)
+ Loss: 0.45164240850135684
+ Current Best Window Average R@1 is 46.36
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 4500/5624 Loss: 0.197763
+Train Epoch: 5 dl: 4510/5624 Loss: 0.216040
+Train Epoch: 5 dl: 4520/5624 Loss: 0.142820
+Train Epoch: 5 dl: 4530/5624 Loss: 0.627463
+Train Epoch: 5 dl: 4540/5624 Loss: 0.227300
+Train Epoch: 5 dl: 4550/5624 Loss: 0.127518
+Train Epoch: 5 dl: 4560/5624 Loss: 0.221828
+Train Epoch: 5 dl: 4570/5624 Loss: 0.064320
+Train Epoch: 5 dl: 4580/5624 Loss: 0.092617
+Train Epoch: 5 dl: 4590/5624 Loss: 0.151705
+Train Epoch: 5 dl: 4600/5624 Loss: 0.362378
+Train Epoch: 5 dl: 4610/5624 Loss: 0.355693
+Train Epoch: 5 dl: 4620/5624 Loss: 0.077551
+Train Epoch: 5 dl: 4630/5624 Loss: 0.474719
+Train Epoch: 5 dl: 4640/5624 Loss: 0.535967
+Train Epoch: 5 dl: 4650/5624 Loss: 0.448594
+Train Epoch: 5 dl: 4660/5624 Loss: 0.316289
+Train Epoch: 5 dl: 4670/5624 Loss: 0.045173
+Train Epoch: 5 dl: 4680/5624 Loss: 0.148653
+Train Epoch: 5 dl: 4690/5624 Loss: 0.144660
+Train Epoch: 5 dl: 4700/5624 Loss: 0.148416
+Train Epoch: 5 dl: 4710/5624 Loss: 0.235834
+Train Epoch: 5 dl: 4720/5624 Loss: 0.212248
+Train Epoch: 5 dl: 4730/5624 Loss: 0.169126
+Train Epoch: 5 dl: 4740/5624 Loss: 0.131881
+Train Epoch: 5 dl: 4750/5624 Loss: 0.182498
+Train Epoch: 5 dl: 4760/5624 Loss: 0.524534
+Train Epoch: 5 dl: 4770/5624 Loss: 0.074975
+Train Epoch: 5 dl: 4780/5624 Loss: 0.171574
+Train Epoch: 5 dl: 4790/5624 Loss: 0.054018
+Train Epoch: 5 dl: 4800/5624 Loss: 0.120975
+Train Epoch: 5 dl: 4810/5624 Loss: 0.208516
+Train Epoch: 5 dl: 4820/5624 Loss: 0.212864
+Train Epoch: 5 dl: 4830/5624 Loss: 0.155194
+Train Epoch: 5 dl: 4840/5624 Loss: 0.193690
+Train Epoch: 5 dl: 4850/5624 Loss: 0.288570
+Train Epoch: 5 dl: 4860/5624 Loss: 0.265922
+Train Epoch: 5 dl: 4870/5624 Loss: 0.238328
+Train Epoch: 5 dl: 4880/5624 Loss: 0.436672
+Train Epoch: 5 dl: 4890/5624 Loss: 0.353729
+Train Epoch: 5 dl: 4900/5624 Loss: 0.162404
+Train Epoch: 5 dl: 4910/5624 Loss: 0.164454
+Train Epoch: 5 dl: 4920/5624 Loss: 0.115714
+Train Epoch: 5 dl: 4930/5624 Loss: 0.251441
+Train Epoch: 5 dl: 4940/5624 Loss: 0.198206
+Train Epoch: 5 dl: 4950/5624 Loss: 0.106981
+Train Epoch: 5 dl: 4960/5624 Loss: 0.179062
+Train Epoch: 5 dl: 4970/5624 Loss: 0.202303
+Train Epoch: 5 dl: 4980/5624 Loss: 0.330942
+Train Epoch: 5 dl: 4990/5624 Loss: 0.129390
+Train Epoch: 5 dl: 5000/5624 Loss: 0.710939
+Train Epoch: 5 dl: 5010/5624 Loss: 0.240174
+Train Epoch: 5 dl: 5020/5624 Loss: 0.115120
+Train Epoch: 5 dl: 5030/5624 Loss: 0.152483
+Train Epoch: 5 dl: 5040/5624 Loss: 0.199512
+Train Epoch: 5 dl: 5050/5624 Loss: 0.291601
+Train Epoch: 5 dl: 5060/5624 Loss: 0.398192
+0it [00:00, ?it/s]1it [00:05,  5.41s/it]2it [00:05,  2.37s/it]3it [00:05,  1.40s/it]4it [00:06,  1.05it/s]5it [00:06,  1.44it/s]6it [00:06,  1.85it/s]7it [00:06,  2.25it/s]8it [00:07,  2.64it/s]9it [00:09,  1.14it/s]10it [00:09,  1.46it/s]11it [00:09,  1.82it/s]12it [00:09,  2.19it/s]13it [00:10,  2.55it/s]14it [00:10,  2.88it/s]15it [00:10,  3.16it/s]16it [00:10,  3.39it/s]17it [00:13,  1.06s/it]18it [00:13,  1.23it/s]19it [00:14,  1.53it/s]20it [00:14,  1.89it/s]21it [00:14,  2.26it/s]22it [00:14,  2.62it/s]23it [00:15,  2.95it/s]24it [00:15,  3.23it/s]25it [00:16,  1.95it/s]26it [00:16,  2.32it/s]27it [00:16,  2.68it/s]28it [00:17,  3.00it/s]29it [00:17,  3.28it/s]30it [00:17,  3.51it/s]31it [00:17,  3.68it/s]32it [00:18,  1.78it/s]
+-----Val Epoch: 5, dl: 5061/5624-----
+ R@1: 46.0 (window: 46.28)
+ R@5: 71.1 (window: 71.12)
+ R@10: 81.9 (window: 81.9)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.974 (window: 13.9986)
+ Loss: 0.45154792815446854
+ Current Best Window Average R@1 is 46.36
+ Current Best R@1 is 47.0
+
+
+Train Epoch: 5 dl: 5070/5624 Loss: 0.477172
+Train Epoch: 5 dl: 5080/5624 Loss: 0.335301
+Train Epoch: 5 dl: 5090/5624 Loss: 0.321957
+Train Epoch: 5 dl: 5100/5624 Loss: 0.213775
+Train Epoch: 5 dl: 5110/5624 Loss: 0.165439
+Train Epoch: 5 dl: 5120/5624 Loss: 0.048699
+Train Epoch: 5 dl: 5130/5624 Loss: 0.159504
+Train Epoch: 5 dl: 5140/5624 Loss: 0.283360
+Train Epoch: 5 dl: 5150/5624 Loss: 0.207558
+Train Epoch: 5 dl: 5160/5624 Loss: 0.299023
+Train Epoch: 5 dl: 5170/5624 Loss: 0.296474
+Train Epoch: 5 dl: 5180/5624 Loss: 0.072916
+Train Epoch: 5 dl: 5190/5624 Loss: 0.221683
+Train Epoch: 5 dl: 5200/5624 Loss: 0.181796
+Train Epoch: 5 dl: 5210/5624 Loss: 0.187847
+Train Epoch: 5 dl: 5220/5624 Loss: 0.384642
+Train Epoch: 5 dl: 5230/5624 Loss: 0.130791
+Train Epoch: 5 dl: 5240/5624 Loss: 0.193263
+Train Epoch: 5 dl: 5250/5624 Loss: 0.177101
+Train Epoch: 5 dl: 5260/5624 Loss: 0.093366
+Train Epoch: 5 dl: 5270/5624 Loss: 0.238398
+Train Epoch: 5 dl: 5280/5624 Loss: 0.110980
+Train Epoch: 5 dl: 5290/5624 Loss: 0.236714
+Train Epoch: 5 dl: 5300/5624 Loss: 0.434395
+Train Epoch: 5 dl: 5310/5624 Loss: 0.340200
+Train Epoch: 5 dl: 5320/5624 Loss: 0.229844
+Train Epoch: 5 dl: 5330/5624 Loss: 0.089673
+Train Epoch: 5 dl: 5340/5624 Loss: 0.143157
+Train Epoch: 5 dl: 5350/5624 Loss: 0.078024
+Train Epoch: 5 dl: 5360/5624 Loss: 0.175979
+Train Epoch: 5 dl: 5370/5624 Loss: 0.248058
+Train Epoch: 5 dl: 5380/5624 Loss: 0.088984
+Train Epoch: 5 dl: 5390/5624 Loss: 0.197647
+Train Epoch: 5 dl: 5400/5624 Loss: 0.227673
+Train Epoch: 5 dl: 5410/5624 Loss: 0.280769
+Train Epoch: 5 dl: 5420/5624 Loss: 0.181152
+Train Epoch: 5 dl: 5430/5624 Loss: 0.317247
+Train Epoch: 5 dl: 5440/5624 Loss: 0.279195
+Train Epoch: 5 dl: 5450/5624 Loss: 0.115473
+Train Epoch: 5 dl: 5460/5624 Loss: 0.267318
+Train Epoch: 5 dl: 5470/5624 Loss: 0.233579
+Train Epoch: 5 dl: 5480/5624 Loss: 0.231294
+Train Epoch: 5 dl: 5490/5624 Loss: 0.069637
+Train Epoch: 5 dl: 5500/5624 Loss: 0.344948
+Train Epoch: 5 dl: 5510/5624 Loss: 0.077627
+Train Epoch: 5 dl: 5520/5624 Loss: 0.127564
+Train Epoch: 5 dl: 5530/5624 Loss: 0.493576
+Train Epoch: 5 dl: 5540/5624 Loss: 0.501237
+Train Epoch: 5 dl: 5550/5624 Loss: 0.260774
+Train Epoch: 5 dl: 5560/5624 Loss: 0.119065
+Train Epoch: 5 dl: 5570/5624 Loss: 0.172551
+Train Epoch: 5 dl: 5580/5624 Loss: 0.093274
+Train Epoch: 5 dl: 5590/5624 Loss: 0.343050
+Train Epoch: 5 dl: 5600/5624 Loss: 0.098787
+Train Epoch: 5 dl: 5610/5624 Loss: 0.107758
+Train Epoch: 5 dl: 5620/5624 Loss: 0.206157
+0it [00:00, ?it/s]1it [00:03,  3.49s/it]2it [00:05,  2.53s/it]3it [00:05,  1.51s/it]4it [00:05,  1.01s/it]5it [00:06,  1.34it/s]6it [00:06,  1.71it/s]7it [00:06,  2.11it/s]8it [00:06,  2.50it/s]9it [00:07,  2.85it/s]10it [00:08,  1.28it/s]11it [00:09,  1.62it/s]12it [00:09,  1.97it/s]13it [00:09,  2.33it/s]14it [00:09,  2.67it/s]15it [00:10,  2.97it/s]16it [00:10,  3.20it/s]17it [00:10,  3.41it/s]18it [00:12,  1.58it/s]19it [00:12,  1.93it/s]20it [00:12,  2.28it/s]21it [00:13,  2.35it/s]22it [00:13,  2.70it/s]23it [00:13,  3.02it/s]24it [00:13,  3.29it/s]25it [00:13,  3.51it/s]26it [00:14,  2.22it/s]27it [00:15,  2.58it/s]28it [00:15,  2.91it/s]29it [00:15,  2.34it/s]30it [00:16,  2.70it/s]31it [00:16,  3.02it/s]32it [00:16,  1.93it/s]
+-----Val Epoch: 5, dl: 5624/5624-----
+ R@1: 46.0 (window: 46.14)
+ R@5: 71.1 (window: 71.12)
+ R@10: 81.9 (window: 81.94000000000001)
+ MedR: 2.0 (window: 2.0)
+ MeanR: 13.972 (window: 13.9826)
+ Loss: 0.4515433497726917
+ Current Best Window Average R@1 is 46.36
+ Current Best R@1 is 47.0
+
+

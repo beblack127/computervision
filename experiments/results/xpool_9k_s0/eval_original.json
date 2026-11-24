@@ -1,0 +1,45 @@
+{
+  "ckpt": "/content/cv_drive/runs/xpool_9k_s0/model_best.pth",
+  "frame_order": "original",
+  "eval_seconds": 43.1,
+  "t2v": {
+    "R1": 46.5,
+    "R5": 71.2,
+    "R10": 82.1,
+    "R50": 95.3,
+    "R100": 97.1,
+    "MedR": 2.0,
+    "MeanR": 14.003
+  },
+  "v2t": {
+    "R1": 44.6,
+    "R5": 72.7,
+    "R10": 83.2,
+    "R50": 96.4,
+    "R100": 98.6,
+    "MedR": 2.0,
+    "MeanR": 8.582
+  },
+  "load_info": {
+    "dropped_legacy_keys": [],
+    "load_result": "<All keys matched successfully>"
+  },
+  "env": {
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.14.1+cu130",
+    "cuda_available": true,
+    "cpu_count": 12,
+    "transformers": "4.46.3",
+    "torchvision": "0.29.1+cu130",
+    "opencv": "4.14.0",
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "gpu_total_memory_GB": 39.49,
+    "cuda": "13.0",
+    "cudnn": 92800,
+    "ram_total_GB": 83.5,
+    "disk_free_GB": 193.6,
+    "repo_commit": "ad800576a81dee2921d63a9960404755d5db2d8a",
+    "repo_dirty": false
+  }
+}
