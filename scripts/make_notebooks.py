@@ -232,10 +232,46 @@ def analysis():
     return nb
 
 
+def pooling_budget():
+    nb = nbf.v4.new_notebook()
+    nb.cells = [
+        nbf.v4.new_markdown_cell(
+            "# 03 · Query-dependent pooling on a budget (Intermediate: limitation + initial idea)\n"
+            "Inference only (no training). Uses `runs/<EXP>/dump_model_best/dump_original.pt` and "
+            "`runs/<EXP>/model_best.pth` of every finished seed.\n\n"
+            "Runtime: **A100** (timing table). Expected: a few minutes. Run cells 0 → 1 → 2 → 3 in order "
+            "(cell 1 pulls the latest code; do not skip it)."),
+        nbf.v4.new_code_cell(SETUP + "\nEXPS = ['xpool_9k_s24', 'xpool_9k_s0', 'xpool_9k_s1']\n"
+                             "RUN_DIRS = [f'{DRIVE_ROOT}/runs/{e}' for e in EXPS]\n"
+                             "for r in RUN_DIRS:\n"
+                             "    assert os.path.exists(f'{r}/dump_model_best/dump_original.pt') and os.path.exists(f'{r}/model_best.pth'), r\n"
+                             "OUT = f'{DRIVE_ROOT}/runs/pooling_budget'\n"),
+        nbf.v4.new_code_cell(CLONE),
+        nbf.v4.new_code_cell(
+            "# ==== 2. Mean vs U-Pool vs X-Pool, attention sharpness, two-stage budgets, hubness, timing ====\n"
+            "runs = ' '.join(RUN_DIRS)\n"
+            "!PYTHONPATH=src python analysis/pooling_budget.py --runs {runs} --out_dir {OUT}\n"),
+        nbf.v4.new_code_cell(
+            "# ==== 3. Copy results (small files) to Drive results/pooling_budget/ ====\n"
+            "import shutil\n"
+            "dst = f'{DRIVE_ROOT}/results/pooling_budget'\n"
+            "if os.path.exists(dst):\n"
+            "    shutil.rmtree(dst)\n"
+            "shutil.copytree(OUT, dst)\n"
+            "!ls -la {dst}\n"),
+    ]
+    return nb
+
+
 def main():
+    import sys
     os.makedirs(OUT, exist_ok=True)
-    for name, fn in [("00_go_no_go.ipynb", go_no_go), ("01_train_baseline.ipynb", train_baseline),
-                     ("02_analysis.ipynb", analysis)]:
+    allnb = [("00_go_no_go.ipynb", go_no_go), ("01_train_baseline.ipynb", train_baseline),
+             ("02_analysis.ipynb", analysis), ("03_pooling_budget.ipynb", pooling_budget)]
+    only = sys.argv[1:]  # optional: names of notebooks to (re)generate, e.g. 03_pooling_budget.ipynb
+    for name, fn in allnb:
+        if only and name not in only:
+            continue
         nb = fn()
         nb.metadata["accelerator"] = "GPU"
         nb.metadata["colab"] = {"provenance": [], "gpuType": "A100", "machine_shape": "hm"}
