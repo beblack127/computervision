@@ -28,6 +28,22 @@
 
 표기 대응: 채팅과 ROADMAP의 **D1 = I1**(시간 순서), **D6 = I6**(비용 인식), **S = 안전 트랙**(I5, T-MASS 방식).
 
+### 2-1. Intermediate 선택 (11/28): I6을 문헌 확인 후 재구성 → `analysis/pooling_budget.py`, 노트북 03
+
+문헌 확인 결과(11/28 검색):
+- **고정 P 2단계**(평균 풀링 shortlist → 질의 조건 풀링 재정렬)는 X-Pool 부록 C와 Bain et al. 2022("A CLIP-Hitchhiker's Guide to Long Video Retrieval")에 이미 있음 → **기존 연구(E1)**.
+- **질의별 재정렬 깊이 조절**(첫 단계 점수의 확신도로 shortlist 길이 결정)은 IR의 ranked-list truncation / dynamic cutoff 계열(Culpepper et al. ADCS 2016, Lien et al. ICTIR 2019, Bahri et al. SIGIR 2020 Choppy, Meng et al. SIGIR 2024)과 adaptive re-ranking·early-exit 연구, 영상 검색의 confidence 기반 cascade(CoVRAGE, arXiv 2609.10008)에 이미 있음 → **기존 아이디어를 가져온 것(E2, adapted)**. 처음에 "우리 아이디어"로 제안했던 것은 철회.
+- **U-Pool**(학습된 X-Pool head에 균일 attention을 넣어 질의 무관 벡터로 만들고, 그것으로 X-Pool 이득을 "투영층 몫 vs 질의 조건 attention 몫"으로 분해 + 첫 단계로 사용): 검색 범위(X-Pool 본문·부록, Bain et al. 2022, EERCF, ProCLIP, Prompt Switch, TeachCLIP, QB-Norm, RLT 계열)에서 같은 것을 찾지 못함 → **우리 아이디어(O1/O2)**로 제시하되, "균일 가중치 대조군"은 다른 논문(예: SCALAR, arXiv 2609.15335)에도 흔한 ablation이라 그 점을 밝히고, 주장은 "학습된 X-Pool head를 그대로 질의 무관 인덱스로 재사용"과 "그 결과로 얻는 정확도-비용 곡선"에 한정.
+
+| ID | 아이디어 | 대응 | 출처 구분 | 평가 |
+|---|---|---|---|---|
+| E1 | 평균 풀링 shortlist(고정 P) → X-Pool 재정렬 | L2 비용 | 기존 (X-Pool 부록 C; Bain et al. 2022) | 학습 없음, seed 3개 |
+| E2 | 첫 단계 top1–top2 점수 차로 질의별 P 결정(평균 예산을 라벨 없이 맞춤) | L2 비용 | 기존 아이디어 적용 (RLT/dynamic cutoff) | 학습 없음 |
+| E3 | **QB-Norm**(Dynamic Inverted Softmax): 학습 캡션 5,000개 querybank, β=20·k=1(논문 기본값, 우리 test로 조정 안 함) | L1 hubness (정확도) | 기존 (Bogolin et al., CVPR 2022) | 학습 없음 |
+| B | 점수 융합 s_X-Pool + λ·s_(U-Pool 또는 mean), λ=1 사전 고정(다른 λ는 민감도로만) | L3 상보성 (정확도) | 일반 앙상블 (독창성 주장 안 함) | 학습 없음 |
+| I7 = O1/O2 | **U-Pool**: X-Pool head + 균일 attention = 질의 무관·사전 계산 가능한 영상 벡터. ① 이득 분해(mean → U-Pool → X-Pool), ② attention 날카로움(logit × α) 곡선, ③ 첫 단계로 사용(+E2) | L2 비용, L3 상보성, H6 | 우리 아이디어 (위 검색 범위 기준) | 학습 없음 |
+
+
 ## 3. 선별 절차
 
 1. **프록시**: 재현 모델의 CLIP 특징을 고정하고 head만 학습(`proxy/`, 실행당 수 분). 아이디어마다 seed 3개를 돌려 프록시 baseline(`xpool` head)과 비교합니다. 평균 이득이 **+0.5 R@1 이상이고 seed 간 일관**되면 통과입니다.
