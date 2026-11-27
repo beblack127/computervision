@@ -24,7 +24,7 @@
 | N4 | 함께 | 개선 방향 1개 확정 (G2', 11/25) | N3 이후 |
 | N5 | Codex | 선정 방향 프록시 구현 + 테스트 | N4 이후 |
 | N6 | 사용자 | 프록시 실행 → (가능하면) full run 1회 | N5 이후 |
-| N7 | Claude | seed 0·1 결과 들어오면 3 seed 재현 표, G1 판정, LOG E002·E003 | N1 이후 |
+| N7 | Claude | seed 0·1 결과 들어오면 3 seed 재현 표, G1 판정, LOG E002·E003 | ✅ 11/28 (`reproduction_3seed.md`, G1 통과) |
 | N8 | 사용자 | Intermediate 작성(11/27~29) → Claude 점검 | |
 
 ### 이전 할 일 (11/14 기준)
@@ -71,3 +71,4 @@
 - 2026-11-23 · Claude · seed 24 노트북 02(A100) 결과를 Drive에서 가져와 `experiments/results/xpool_9k_s24/analysis/`(analysis.json·report·그림 3)와 `analysis/cost/`(cost_tradeoff.json·report·그림 2)에 커밋. 갤러리 PNG(약 15MB)는 Drive에만 둠. 핵심 수치: 같은 encoder에서 평균 풀링 R@1 42.0 vs X-Pool 46.7, 2단계 P=20(쌍 2%)에서 R@1 46.7. 버그: 2단계 timing이 질의별 for문이라 쌍 수가 1/10~1/100인데도 ~1s로 X-Pool 전체보다 느리게 측정됨 → `xpool_kv`(질의 무관 K/V 1회 투영)+`xpool_pair_sims`(shortlist만 배치 계산)로 교체, warm-up 추가, JSON에 GPU 이름·메모리 기록. 테스트 1개 추가(배치 shortlist 점수 = 전체 점수의 해당 쌍), 14 passed. CPU 확인: 갤러리 4k에서 2단계 1.1s vs 전체 5.2s. 기존 `cost_scaling`의 `two_stage_P100_ms`는 무효(재측정 필요). 다음 담당: 사용자(셀 5·6 재실행).
 - 2026-11-23 · Claude · 2단계 timing 재측정 결과 커밋(A100-SXM4-80GB, torch 2.14.1). 질의 1000개 순위 계산: 갤러리 1k/10k에서 평균 0.23/0.67 ms, X-Pool 96/866 ms, 2단계 P=100 23/32 ms(X-Pool 대비 4.2×/27×). 정확도 수치는 이전과 동일. 주의: 2단계 시간에는 갤러리 전체 K/V 투영이 포함돼 있고(오프라인 계산 가능), 2단계 최대 메모리(1.0~1.7GB)는 shortlist gather 때문에 평균 풀링보다 큼. 다음: N3(해석·결정표). 다음 담당: Claude/사용자(11/25 방향 결정).
 - 2026-11-25 · Claude · E002(seed 0) 결과 커밋 `experiments/results/xpool_9k_s0/`, LOG E002 기록. t2v best 46.5/71.2/82.1/2/14.0, last 46.0, A100 40GB 세션 1개 6.13h, peak 17.66GB. seed 24와 같은 패턴(순서 probe 동일, middle 30.0). 남은 일: seed 1(E003) → 3 seed 표·G1 판정(N7). 다음 담당: 사용자(seed 1 학습).
+- 2026-11-28 · Claude · E003(seed 1) 결과 커밋 `experiments/results/xpool_9k_s1/`: t2v best 45.3/73.0/82.0/2/13.1, last 44.7, A100 40GB 1세션 6.11h. 새 스크립트 `analysis/seed_summary.py`(+테스트)로 `experiments/results/reproduction_3seed.{json,md}` 생성: t2v R@1 best 46.17±0.76 (46.7/46.5/45.3), last 45.80±1.01, v2t best 44.63±0.85; 공식 ckpt 46.9 대비 −0.73 → G1 통과(±1.0 이내). best−last 0.0/0.5/0.6. 세 seed 모두 순서 probe 동일·middle 29.3~30.0. 다음: Intermediate 초안 리뷰, 개선 방향 확정(G2'). 다음 담당: 사용자.
