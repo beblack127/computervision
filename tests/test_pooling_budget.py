@@ -74,6 +74,8 @@ def test_adaptive_budget_is_label_free_and_exact():
 def test_script_end_to_end(tmp_path):
     a, *_ = make_run(tmp_path, "run_a", seed=0)
     b, *_ = make_run(tmp_path, "run_b", seed=1)
+    for d in (a, b):  # querybank of "training" captions
+        torch.save({"text_embeds": torch.randn(60, 512)}, d / "querybank_9k_5000.pt")
     out = tmp_path / "out"
     env = dict(os.environ, PYTHONPATH=os.path.join(ROOT, "src"))
     subprocess.check_call([sys.executable, os.path.join(ROOT, "analysis", "pooling_budget.py"), "--runs", str(a), str(b),
@@ -84,5 +86,34 @@ def test_script_end_to_end(tmp_path):
     assert R["two_stage"]["E1_mean_fixed"][-1]["R1"] == R["scoring"]["xpool"]["R1"]
     S = json.load(open(out / "summary.json"))
     assert S["n"] == 2 and len(S["timing_first_run"]) == 2
+    acc = S["accuracy_no_training"]
+    assert "xpool + QB-Norm" in acc and "fusion xpool+1.0*upool" in acc
+    assert abs(acc["xpool"]["R1"]["mean"] - S["scoring"]["xpool"]["R1"]["mean"]) < 1e-9
     for f in ["pooling_budget_report.md", "r1_vs_budget.png", "r1_vs_alpha.png"]:
         assert (out / f).exists(), f
+
+
+def test_qb_norm_dis_properties():
+    import pooling_budget as pb
+    import cost_tradeoff as ct
+    g = torch.Generator().manual_seed(0)
+    s_q = torch.rand(30, 30, generator=g)
+    flat_bank = torch.full((50, 30), 0.3)                    # no item is special -> rankings unchanged
+    out, _ = pb.qb_norm_dis(s_q, flat_bank)
+    assert (ct.ranks_of(out) == ct.ranks_of(s_q)).all()
+    hub_bank = torch.rand(50, 30, generator=g) * 0.1
+    hub_bank[:, 7] = 0.9                                     # video 7 is close to every bank query
+    s = s_q.clone(); s[:, 7] = s.max(1).values + 0.01        # ... and wins every test query
+    out, frac = pb.qb_norm_dis(s, hub_bank)
+    assert frac == 1.0 and (out.argmax(1) != 7).all()        # the hub is demoted
+
+
+def test_sample_captions(tmp_path):
+    import embed_querybank as eq
+    (tmp_path / "MSRVTT_train.9k.csv").write_text("video_id\nvideo1\nvideo2\n")
+    (tmp_path / "MSRVTT_JSFUSION_test.csv").write_text("key,vid_key,video_id,sentence\nk,v,video9,s\n")
+    sents = [{"video_id": v, "caption": f"{v} cap {i}", "sen_id": i} for i in range(5) for v in ["video1", "video2", "video9"]]
+    json.dump({"videos": [], "sentences": sents}, open(tmp_path / "MSRVTT_data.json", "w"))
+    texts, vids = eq.sample_captions(str(tmp_path), n=6, seed=0)
+    assert len(texts) == 6 and "video9" not in vids
+    assert eq.sample_captions(str(tmp_path), n=6, seed=0)[0] == texts   # reproducible

@@ -18,6 +18,11 @@ Inference only, no training. For each trained run (dump + model_best.pth):
    Adaptive thresholds are chosen from first-stage scores only (no labels) to hit a target average budget,
    so no test-set tuning is involved.
 3. Hubness of mean / U-Pool / X-Pool scores, and GPU timing of the ranking stage.
+4. Accuracy without training (if RUN/querybank_*.pt exists, see analysis/embed_querybank.py):
+     QB-Norm with Dynamic Inverted Softmax [existing: Bogolin et al., CVPR 2022], querybank of 5,000
+     TRAINING captions, beta = 20 and k = 1 as in the paper (not tuned on our test set);
+     score fusion s_X-Pool + lambda * s_(U-Pool | mean), lambda = 1 fixed a priori (other lambdas are
+     reported only as a sensitivity check, there is no validation split).
 
   python analysis/pooling_budget.py --runs RUNS/xpool_9k_s24 RUNS/xpool_9k_s0 RUNS/xpool_9k_s1 \
       --out_dir RUNS/pooling_budget
@@ -114,6 +119,19 @@ def adaptive_P(gap, budget, p_lo, p_hi):
     return P
 
 
+# ---------------------------------------------------------------- QB-Norm (Bogolin et al. 2022)
+def qb_norm_dis(s_q, s_bank, beta=20.0, k=1):
+    """Dynamic Inverted Softmax. s_q [Q, V] test similarities, s_bank [B, V] querybank similarities.
+    eta_q(j) = exp(beta s_q(j)) / sum_b exp(beta s_b(j)) if the raw top-1 of q is in the activation
+    set A (gallery items that are top-k for some bank query), else the raw scores. Returned in log
+    space (monotonic per query, so rankings are identical)."""
+    A = torch.zeros(s_q.shape[1], dtype=torch.bool)
+    A[torch.topk(s_bank, k, dim=1).indices.flatten()] = True
+    normed = beta * s_q - torch.logsumexp(beta * s_bank, dim=0)[None, :]
+    use = A[s_q.argmax(1)]
+    return torch.where(use[:, None], normed, s_q), float(use.float().mean())
+
+
 # ---------------------------------------------------------------- hubness
 def hubness(sims, k=10):
     Q, V = sims.shape
@@ -191,7 +209,9 @@ def analyze_run(run_dir, a, device):
     R["scoring"] = {"mean": metrics(rm), "upool": metrics(ru), "xpool": metrics(rx)}
     R["alpha_sweep"] = []
     for al in a.alphas:
-        s = s_x if al == 1.0 else (s_u if al == 0.0 else xpool_sims_alpha(pool, text, frames, al))
+        s = s_x if al == 1.0 else (s_u if al == 0.0 else
+                                   xpool_sims_alpha(pool.to(device), text.to(device), frames.to(device), al).cpu())
+        pool.cpu()
         R["alpha_sweep"].append(dict(metrics(ranks_of(s)), alpha=al))
     c = {"mean": rm == 0, "upool": ru == 0, "xpool": rx == 0}
     R["top1_transitions"] = {
@@ -203,6 +223,29 @@ def analyze_run(run_dir, a, device):
         "oracle_any_of_three": int((c["mean"] | c["upool"] | c["xpool"]).sum()),
     }
     R["hubness"] = {"mean": hubness(s_m), "upool": hubness(s_u), "xpool": hubness(s_x)}
+
+    # ---- accuracy without training: score fusion (a priori lambda) and QB-Norm (paper defaults)
+    acc = {"xpool": metrics(rx)}
+    for lam in a.lambdas:
+        acc[f"fusion xpool+{lam}*upool"] = metrics(ranks_of(s_x + lam * s_u))
+        acc[f"fusion xpool+{lam}*mean"] = metrics(ranks_of(s_x + lam * s_m))
+    qb_path = os.path.join(run_dir, a.querybank)
+    if os.path.exists(qb_path):
+        bank = torch.load(qb_path, weights_only=False)["text_embeds"].float()
+        pd = pool.to(device)
+        s_bx = xpool_sims(pd, bank.to(device), frames.to(device), 128).cpu()
+        pool.cpu()
+        s_bm, s_bu = mean_pool_sims(bank, frames), upool_sims(pool, bank, frames)
+        R["querybank"] = {"path": a.querybank, "n": int(bank.shape[0]), "beta": a.beta, "k": 1}
+        for name, sq, sb in [("xpool", s_x, s_bx), ("mean", s_m, s_bm), ("upool", s_u, s_bu),
+                             (f"fusion xpool+{a.lambda_main}*upool", s_x + a.lambda_main * s_u, s_bx + a.lambda_main * s_bu)]:
+            sn, frac = qb_norm_dis(sq, sb, a.beta, 1)
+            acc[f"{name} + QB-Norm"] = dict(metrics(ranks_of(sn)), frac_queries_normalised=frac)
+            if name == "xpool":
+                R["hubness"]["xpool + QB-Norm"] = hubness(sn)
+        for b in a.beta_sweep:  # sensitivity only
+            acc[f"xpool + QB-Norm (beta={b})"] = metrics(ranks_of(qb_norm_dis(s_x, s_bx, b, 1)[0]))
+    R["accuracy_no_training"] = acc
 
     fam = {"E1_mean_fixed": [], "O1_upool_fixed": []}
     for name, s1 in [("E1_mean_fixed", s_m), ("O1_upool_fixed", s_u)]:
@@ -242,7 +285,9 @@ def summarize(runs):
                         for i, row in enumerate(runs[0]["alpha_sweep"])]
     S["top1_transitions"] = {k: _ms([r["top1_transitions"][k] for r in runs]) for k in runs[0]["top1_transitions"]}
     S["hubness"] = {k: {m: _ms([r["hubness"][k][m] for r in runs]) for m in ["N_k_skewness", "max_N1", "videos_never_top1"]}
-                    for k in ["mean", "upool", "xpool"]}
+                    for k in runs[0]["hubness"] if all(k in r["hubness"] for r in runs)}
+    S["accuracy_no_training"] = {k: {m: _ms([r["accuracy_no_training"][k][m] for r in runs]) for m in ["R1", "R5", "R10", "MnR"]}
+                                 for k in runs[0]["accuracy_no_training"] if all(k in r["accuracy_no_training"] for r in runs)}
     S["two_stage"] = {}
     for fam, rows in runs[0]["two_stage"].items():
         S["two_stage"][fam] = [{"budget": _ms([r["two_stage"][fam][i]["budget"] for r in runs]),
@@ -284,6 +329,10 @@ def to_md(S):
         L += [f"| {r.get('P', r.get('target'))} | {r['budget']['mean']:.1f} | {f2(r['R1'])} | {f2(r['R5'])} | {f2(r['R10'])} | {f2(r['MnR'])} |"
               for r in rows]
         L.append("")
+    L += ["## 6. Accuracy without training (λ = 1 and β = 20 fixed a priori; other values = sensitivity only)", "",
+          "| method | R@1 | R@5 | R@10 | MnR |", "|---|---|---|---|---|"]
+    L += [f"| {k} | {f2(v['R1'])} | {f2(v['R5'])} | {f2(v['R10'])} | {f2(v['MnR'])} |" for k, v in S["accuracy_no_training"].items()]
+    L.append("")
     if "timing_first_run" in S:
         g = S.get("gpu") or {}
         L += [f"## 5. Ranking-stage time (first run, {g.get('name', 'cpu')}, 1000 queries, ms)", ""]
@@ -335,6 +384,11 @@ def main():
     p.add_argument("--timing_P", type=int, nargs="+", default=[5, 20])
     p.add_argument("--timing_budget", type=float, default=5)
     p.add_argument("--skip_timing", action="store_true")
+    p.add_argument("--querybank", default="querybank_9k_5000.pt", help="file inside each run dir (optional)")
+    p.add_argument("--beta", type=float, default=20.0, help="QB-Norm inverse temperature (paper default)")
+    p.add_argument("--beta_sweep", type=float, nargs="+", default=[10.0, 40.0])
+    p.add_argument("--lambda_main", type=float, default=1.0)
+    p.add_argument("--lambdas", type=float, nargs="+", default=[0.25, 0.5, 1.0, 2.0])
     a = p.parse_args()
     a.adaptive = [tuple(int(x) for x in s.split(":")) for s in a.adaptive]
     os.makedirs(a.out_dir, exist_ok=True)

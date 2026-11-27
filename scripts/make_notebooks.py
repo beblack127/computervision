@@ -239,7 +239,7 @@ def pooling_budget():
             "# 03 · Query-dependent pooling on a budget (Intermediate: limitation + initial idea)\n"
             "Inference only (no training). Uses `runs/<EXP>/dump_model_best/dump_original.pt` and "
             "`runs/<EXP>/model_best.pth` of every finished seed.\n\n"
-            "Runtime: **A100** (timing table). Expected: a few minutes. Run cells 0 → 1 → 2 → 3 in order "
+            "Runtime: **A100** (timing table). Expected: about 10–20 minutes. Run ALL cells in order "
             "(cell 1 pulls the latest code; do not skip it)."),
         nbf.v4.new_code_cell(SETUP + "\nEXPS = ['xpool_9k_s24', 'xpool_9k_s0', 'xpool_9k_s1']\n"
                              "RUN_DIRS = [f'{DRIVE_ROOT}/runs/{e}' for e in EXPS]\n"
@@ -248,7 +248,13 @@ def pooling_budget():
                              "OUT = f'{DRIVE_ROOT}/runs/pooling_budget'\n"),
         nbf.v4.new_code_cell(CLONE),
         nbf.v4.new_code_cell(
-            "# ==== 2. Mean vs U-Pool vs X-Pool, attention sharpness, two-stage budgets, hubness, timing ====\n"
+            "# ==== 2a. QB-Norm querybank: 5,000 TRAINING captions embedded with each run's text encoder ====\n"
+            "for r in RUN_DIRS:\n"
+            "    if not os.path.exists(f'{r}/querybank_9k_5000.pt'):\n"
+            "        !PYTHONPATH=src python analysis/embed_querybank.py --ckpt {r}/model_best.pth "
+            "--data_dir third_party/xpool/data/MSRVTT --out {r}/querybank_9k_5000.pt\n"),
+        nbf.v4.new_code_cell(
+            "# ==== 2. Mean vs U-Pool vs X-Pool, attention sharpness, two-stage budgets, hubness, QB-Norm, fusion, timing ====\n"
             "runs = ' '.join(RUN_DIRS)\n"
             "!PYTHONPATH=src python analysis/pooling_budget.py --runs {runs} --out_dir {OUT}\n"),
         nbf.v4.new_code_cell(

@@ -39,6 +39,8 @@
 |---|---|---|---|---|
 | E1 | 평균 풀링 shortlist(고정 P) → X-Pool 재정렬 | L2 비용 | 기존 (X-Pool 부록 C; Bain et al. 2022) | 학습 없음, seed 3개 |
 | E2 | 첫 단계 top1–top2 점수 차로 질의별 P 결정(평균 예산을 라벨 없이 맞춤) | L2 비용 | 기존 아이디어 적용 (RLT/dynamic cutoff) | 학습 없음 |
+| E3 | **QB-Norm**(Dynamic Inverted Softmax): 학습 캡션 5,000개 querybank, β=20·k=1(논문 기본값, 우리 test로 조정 안 함) | L1 hubness (정확도) | 기존 (Bogolin et al., CVPR 2022) | 학습 없음 |
+| B | 점수 융합 s_X-Pool + λ·s_(U-Pool 또는 mean), λ=1 사전 고정(다른 λ는 민감도로만) | L3 상보성 (정확도) | 일반 앙상블 (독창성 주장 안 함) | 학습 없음 |
 | I7 = O1/O2 | **U-Pool**: X-Pool head + 균일 attention = 질의 무관·사전 계산 가능한 영상 벡터. ① 이득 분해(mean → U-Pool → X-Pool), ② attention 날카로움(logit × α) 곡선, ③ 첫 단계로 사용(+E2) | L2 비용, L3 상보성, H6 | 우리 아이디어 (위 검색 범위 기준) | 학습 없음 |
 
 
