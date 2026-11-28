@@ -1,0 +1,20 @@
+{
+  "xpool_9k_s24": {
+    "n_evals": 50,
+    "max_single_R1": 46.8,
+    "last_R1": 46.7,
+    "max_window_R1": 46.660000000000004
+  },
+  "xpool_9k_s0": {
+    "n_evals": 50,
+    "max_single_R1": 47.0,
+    "last_R1": 46.0,
+    "max_window_R1": 46.36
+  },
+  "xpool_9k_s1": {
+    "n_evals": 50,
+    "max_single_R1": 45.9,
+    "last_R1": 44.7,
+    "max_window_R1": 45.36
+  }
+}
