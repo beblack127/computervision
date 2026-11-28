@@ -14,18 +14,22 @@
 - 검증 완료(GPU/실데이터): 공식 9k ckpt 재평가 t2v R@1 46.9(논문과 동일), MSR-VTT 영상 10,000개 누락 없음, A100에서 0.704 s/step, 이어서 학습해도 결과 동일(E001 세션 간 7개 step 비교)
 - 검증 완료(CPU): 테스트 11개 통과(HF `datasets` 설치 환경 포함)
 
-## 다음 할 일 (11/23~, Intermediate)
+## 다음 할 일 (11/28~, Final) — 계획은 `ROADMAP.md` §1·Phase 5
 
 | # | 담당 | 할 일 | 상태 |
 |---|---|---|---|
-| N1 | 사용자 | seed 0·1 진행 상황 확인: Drive `컴비 프로젝트/runs/xpool_9k_s0`, `_s1`에 `model_last.pth`가 있으면 완료. 없으면 `01_train_baseline.ipynb` 다시 실행(끝난 부분은 건너뛰고 이어서 학습) | ⏳ |
-| N2 | 사용자 | `02_analysis.ipynb` 실행(EXP=xpool_9k_s24, A100-SXM4-80GB) — 11/23 완료, 2단계 timing 재측정까지 커밋됨 | ✅ |
-| N3 | Claude | 분석 결과 해석: H1~H7 판정, Intermediate용 표·그림·정성 예시 선정 | N2 이후 |
-| N4 | 함께 | 개선 방향 1개 확정 (G2', 11/25) | N3 이후 |
-| N5 | Codex | 선정 방향 프록시 구현 + 테스트 | N4 이후 |
-| N6 | 사용자 | 프록시 실행 → (가능하면) full run 1회 | N5 이후 |
-| N7 | Claude | seed 0·1 결과 들어오면 3 seed 재현 표, G1 판정, LOG E002·E003 | ✅ 11/28 (`reproduction_3seed.md`, G1 통과) |
-| N8 | 사용자 | Intermediate 작성(11/27~29) → Claude 점검 | |
+| F0 | 사용자 | Intermediate 작성·제출(11/29 23:59). 가이드 `docs/INTERMEDIATE_OUTLINE.md` → Claude 점검(문장 X) | ⏳ |
+| F1 | Claude | 사전 분석 스크립트: 질의별 최적 α 상한, 최적 α와 질의 길이 관계, U-Pool/X-Pool 질의별 선택 상한 (dump 사용, 학습 없음) | 11/30 |
+| F2 | Claude/Codex | F1(혼합 풀링)·F2(적응형 temperature)를 `src/tvr/`에 플래그로 구현 + 테스트(플래그 off 비트 동일, g=1·α=1이면 X-Pool과 동일), proxy HEADS 추가, 학습 노트북에 플래그 인자 | 11/30–12/1 |
+| F3 | Claude | 문헌 재확인: TCMA, EERCF, T-MASS leakage 내용 → IDEAS §2-2 갱신 | 11/30 |
+| F4 | 사용자 | 사전 분석(15분) + 특징 추출 + proxy 실행 | 12/1–3 |
+| F5 | 함께 | G2(12/3): 주·예비 방법 확정 | |
+| F6 | 사용자 | 주 방법 seed 24 full run → G3a(12/6) → seed 0·1 → G3(12/10) | 12/3–10 |
+| F7 | 사용자/Claude | ablation 1회, 2단계 비용 재측정, 정성 예시 | 12/10–12 |
+| F8 | Claude | Final 작성 가이드 `docs/FINAL_OUTLINE.md`, 이후 초안 점검 | 12/12– |
+
+### 이전 할 일 (11/23~, Intermediate) — 모두 완료 또는 대체
+- N1 seed 0·1 ✅ (E002, E003) · N2 노트북 02 ✅ · N3 해석 ✅ · N4 방향 확정 ✅(비용 한계 + U-Pool) · N5·N6 → 노트북 03으로 대체 ✅ · N7 3 seed 표 ✅ · N8 → F0
 
 ### 이전 할 일 (11/14 기준)
 
@@ -76,3 +80,4 @@
 - 2026-11-28 · Claude · 사용자 결정: Intermediate = 비용(U-Pool, 우리) + 정확도(QB-Norm, 기존) + 점수 융합. `analysis/embed_querybank.py`(9k 학습 캡션 5,000개, 1k-A 테스트 영상 제외 확인) 추가, `pooling_budget.py`에 QB-Norm(DIS, β=20·k=1 논문값)·융합(λ=1 사전 고정)·QB 후 hubness 추가, 테스트 2개 추가(전체 21 passed). 노트북 03에 querybank 셀(2a) 추가. 다음: 사용자가 노트북 03 전체 실행(A100, 10–20분 예상). 다음 담당: 사용자.
 - 2026-11-28 · Claude · 노트북 03 결과 커밋 `experiments/results/pooling_budget/`(A100-SXM4-80GB, seed 3개, sanity ≤1.6e-7). R@1: mean 41.8±0.6 → U-Pool 43.2±0.2 → X-Pool 46.2±0.8(이득 4.4 중 1.4 투영층, 3.0 질의 조건 attention). α 곡선 R@1 최대 α=1(46.2); α=1.5에서 R@10 82.4. 2단계: P=20에서 E1·O1 모두 46.2(=X-Pool), 작은 P에서 O1이 E1보다 0.2~0.4 높으나 std(≈0.6) 안; MnR은 O1이 일관되게 낮음(P=20 15.5 vs 16.9). 적응형 깊이(E2/O2)는 같은 예산의 고정 P보다 나쁨(예산 5: E2 42.2 vs E1 45.2). 시간(10k): X-Pool 866ms, 2단계 P=20 14.1ms. QB-Norm(β=20, k=1): hubness skew 0.89→0.55지만 R@1 46.2→45.2, 질의 97%가 정규화됨(활성 집합이 갤러리 대부분); β=40(민감도)은 R@1 45.9·R@10 83.2. 융합(λ=1) R@1 45.3(upool)/45.1(mean) → 개선 없음. 다음: 사용자 보고서 작성, Claude 초안 검토. 다음 담당: 사용자.
 - 2026-11-28 · Claude · Intermediate 작성 가이드 `docs/INTERMEDIATE_OUTLINE.md`(목차, 섹션별 개조식 재료·출처, 표·그림 목록, 감점 주의, 체크리스트). 제출한 Proposal을 읽고 정정 항목 정리(GPU 80GB→seed 0·1은 40GB, CLIP4Clip 과일반화, 인용 번호). 학습 곡선 그림 `analysis/plot_curves.py` → `experiments/results/figures/learning_curves.png`(+json). 문장은 쓰지 않음. 다음 담당: 사용자(보고서 작성).
+- 2026-11-28 · Claude · Final 계획 확정(사용자 승인, A100 약 35h). 주 F1 질의별 혼합 풀링, 예비 F2 질의 적응형 temperature. 문헌: TCMA(arXiv 2510.10180)에 적응형 temperature·질의 무관+조건 결합 있음 → F2 기존 적용, F1은 범위 좁혀 주장. T-MASS 공식 코드에 leakage 경고 → 보류. ROADMAP(일정·Phase 5/6·예산·fallback·변경 이력), IDEAS §2-2, INTERMEDIATE_OUTLINE(1.3 T-MASS 주의, 3.7 Final 계획, 참고문헌 [13]) 갱신. 다음: 사용자 Intermediate 제출(11/29), 이후 11/30 사전 분석·F1/F2 구현 시작. 다음 담당: 사용자 → Claude.

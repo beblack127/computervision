@@ -2,7 +2,7 @@
 
 > 마감: **2026-11-29(일) 23:59 KST**. 한국어 Word → PDF로 LMS 제출.
 > 배점: 총 5점 = Proposal 요약(배점 없음, 필수) + **Baseline reproduction 2점** + **Limitation analysis & initial idea 3점**
-> 작성 기준일: 11/28. 수치는 모두 `experiments/results/`의 JSON/MD에서 가져왔고, 출처 파일을 옆에 적었습니다.
+> 작성 기준일: 11/28 (17시 갱신: Final 계획 확정, T-MASS 주의 추가). 수치는 모두 `experiments/results/`의 JSON/MD에서 가져왔고, 출처 파일을 옆에 적었습니다.
 > 제출한 Proposal(`JaehyunKim_Assignment2_Proposal_Report.docx`)을 읽고 이어지도록 구성했습니다.
 
 ---
@@ -99,6 +99,7 @@ AI 도구 사용 고지
 #### 1.3 베이스라인과 관련 연구 📊 표 2 (Proposal 표 "2.5 종합" 축약)
 - X-Pool (Gorti et al., CVPR 2022): 텍스트 임베딩을 query, 12개 프레임 임베딩을 key/value로 쓰는 cross-attention으로 **질의마다 다른 영상 벡터**를 만듦. MSR-VTT 9k t2v R@1 46.9 `[논문]`
 - 관련 연구 요약은 Proposal 표를 한 줄씩만: CLIP4Clip 43.1(mean)/44.5(seqTransf), Prompt Switch 46.1(47.8 with X-Pool), T-MASS 50.2 `[논문]`
+- ⚠️ **T-MASS 50.2 주의 (11/28 확인)**: 공식 코드 저장소가 "data leakage가 확인된 코드이므로 사용하지 말라"는 문구와 함께 보관(archive) 상태로 표시됨(relatedrepos 등 저장소 목록에서 확인, 무엇이 새는지는 아직 미확인 ✅). 수치를 그대로 쓰되 "공식 코드에 leakage 문제가 보고됨"을 각주로 달기를 권장
 - **새로 추가할 관련 연구** (3장에서 쓰는 것, 참고문헌에도 추가):
   - Bain et al. 2022 (CLIP-Hitchhiker): 질의 무관 집계로 전체 순위 → 상위 K개만 질의 조건 집계로 재정렬 `[논문]`
   - QB-Norm (Bogolin et al., CVPR 2022): 학습 질의 묶음(querybank)으로 hubness를 줄이는 재정규화, 재학습 불필요 `[논문]`
@@ -338,12 +339,16 @@ AI 도구 사용 고지
   - ✅ U-Pool은 평균 풀링과 같은 비용으로 R@1 +1.4, MnR −1.6 → 더 나은 1단계 / 인덱스
   - ❌ U-Pool 1단계의 R@1 이득은 seed 편차 안
   - ❌ 확신도 기반 적응형 깊이, QB-Norm, 단순 점수 융합은 R@1을 올리지 못함
-- Final 방향 후보 (과제: Final에서는 **베이스라인보다 나은 방법 필수**):
-  - 학습 없는 후처리로는 R@1이 오르지 않았으므로 **학습 단계**에서 다루기
-  - 후보 1: 질의별로 "X-Pool이 필요한지/어느 점수를 믿을지"를 학습하는 장치(oracle 52.0이 보여준 상보성 활용)
-  - 후보 2: 학습 중 hubness 억제 또는 캡션이 거의 같은 영상을 오답으로 밀어내지 않는 손실(라벨 모호성 15.8%)
+- Final 계획 (11/28 확정, 과제: Final에서는 **베이스라인보다 나은 방법 필수**, 비교 기준 = 3 seed 평균 46.17 ± 0.76):
+  - 학습 없는 후처리로는 R@1이 오르지 않았으므로 **학습 단계**에서 다룸
+  - **주 방법 F1 – 질의별 혼합 풀링**: 같은 풀링 모듈의 U-Pool 경로(질의 무관)와 X-Pool 경로(질의 조건)를 텍스트로 예측한 가중치로 섞어 처음부터 함께 학습. U-Pool 경로에도 대조 손실을 줘서 2단계 검색의 1단계 인덱스로도 쓰도록 함
+    - 근거: 세 점수 중 하나라도 맞힌 질의 52.0%(현재 46.2), attention이 순위를 망친 질의 37개, 고정 비율 융합은 실패 → 질의마다 비율이 달라야 함
+    - 출처 구분: 질의 무관 표현과 질의 조건 표현을 함께 쓰는 구조는 기존 연구에 있음(TCMA [13], EERCF) → **같은 모듈 공유, 텍스트 기반 혼합, 정확도와 2단계 효율을 함께 노리는 점**을 본인 기여로 주장(Final 전에 문헌 재확인)
+  - **예비 방법 F2 – 질의 적응형 attention temperature**: 텍스트로 attention 세기를 예측. 근거: α 곡선에서 R@1 최적(α=1)과 R@10 최적(α=1.5)이 다름. 출처: 기존 아이디어(TCMA [13]의 text-adaptive dynamic temperature) 적용
+  - 보류: 학습 중 hubness 억제·거짓 음성 완화(X-Pool은 이미 hubness가 약하고 QB-Norm이 실패해 근거 약함), T-MASS(공식 코드 leakage 문제 확인 전 보류)
+  - 선별 절차: 풀링 모듈만 바꾸므로 proxy(CLIP 특징 고정, 풀링만 학습, 수 분)로 먼저 비교 → full run
   - 검증 방식: seed 3개, best와 last 모두 보고, 표준편차보다 큰 개선만 주장
-- 💭 [해석] Final 후보 중 어느 쪽이 3장의 분석과 가장 직접 연결되는지 본인 판단으로 한 줄. Final 방향은 아직 확정 전이므로 "후보"로 쓰기
+- 💭 [해석] F1이 3장의 분석(이득 분해, 상보성 52.0, 융합 실패)과 어떻게 이어지는지 본인 말로 한두 줄. 아직 결과가 없으므로 "계획"으로 쓰고, 성능을 예단하지 않기
 
 #### 3.8 출처 구분 📊 표 9 (과제 필수 요구)
 | 접근 | 구분 | 인용 |
@@ -363,6 +368,7 @@ AI 도구 사용 고지
 - [10] S.-V. Bogolin, I. Croitoru, H. Jin, Y. Liu, S. Albanie, "Cross Modal Retrieval with Querybank Normalisation," CVPR, pp. 5194–5205, 2022
 - [11] Y.-C. Lien, D. Cohen, W. B. Croft, "An Assumption-Free Approach to the Dynamic Truncation of Ranked Lists," ICTIR, 2019
 - [12] D. Bahri, Y. Tay, C. Zheng, D. Metzler, A. Tomkins, "Choppy: Cut Transformer for Ranked List Truncation," SIGIR, 2020
+- [13] TCMA: Text-Conditioned Multi-granularity Alignment for Drone Cross-Modal Text-Video Retrieval, arXiv:2510.10180 ✅ 저자·학회 확인 (Final 계획에서 F1·F2의 관련 연구로 인용)
 - (선택) X. Cheng et al., "Improving Video-Text Retrieval by Multi-Stream Corpus Alignment and Dual Softmax Loss," arXiv:2109.04290, 2021 (CAMoE, dual softmax) ✅ 확인
 - (선택) M. Radovanović, A. Nanopoulos, M. Ivanović, "Hubs in Space," JMLR, 2010 (hubness 개념) ✅ 확인
 - ⚠️ 본문에서 수치를 인용할 때마다 번호를 붙이고, 참고문헌 형식을 Proposal과 통일
@@ -447,7 +453,8 @@ AI 도구 사용 고지
 - [ ] 표준편차 안의 차이를 개선으로 쓰지 않음
 - [ ] 테스트셋 조정값(α, β 민감도)을 결과로 쓰지 않음
 - [ ] 모든 수치에 출처 파일과 일치하는지 확인(아래 부록 A)
-- [ ] 참고문헌 [9]~[12] 추가, 형식 통일
+- [ ] 참고문헌 [9]~[13] 추가, 형식 통일
+- [ ] T-MASS 50.2에 leakage 각주(1.3), Final 계획은 F1 주·F2 예비로 일치(3.7)
 - [ ] AI 사용 고지가 실제 사용 범위와 일치
 - [ ] PDF로 변환 후 그림 깨짐 확인
 
